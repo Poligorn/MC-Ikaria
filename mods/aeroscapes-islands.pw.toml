@@ -1,13 +1,13 @@
 name = "Aero Islands [for Create Aeronautics]"
-filename = "aeroscapes-1.1.0.jar"
+filename = "aeroscapes-1.1.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/tGVwBATM/versions/Mhc3yUIl/aeroscapes-1.1.0.jar"
+url = "https://cdn.modrinth.com/data/tGVwBATM/versions/bzJ2edxy/aeroscapes-1.1.1.jar"
 hash-format = "sha512"
-hash = "c03e2e0c4e39e621ddd87652e914098c6b4b0ea72e201cbf5036644c62493c69c2f40421ef48df7c41fe2b75f285fc09bfd4a62674edcad78966303678aef672"
+hash = "6ced9b88562a3f14f3fc2cbc8b496557a7b1e5908b27f5813bc5784a9246bd7560f83b6045f85455aa8b93b54ac2613d3cf0032a53229a1a336732f9b03eb5a5"
 
 [update]
 [update.modrinth]
 mod-id = "tGVwBATM"
-version = "Mhc3yUIl"
+version = "bzJ2edxy"
