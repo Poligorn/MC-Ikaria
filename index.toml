@@ -5833,8 +5833,48 @@ file = "config/yacl.json5"
 hash = "121b93764159be6fb7dab523b29a844e2bb78400ce8c48f52135a097e9b0006e"
 
 [[files]]
+file = "docs/getting-started/index.md"
+hash = "1dd453ca6c55fd7755b79c15e92fe61e48508f4cffe524aa1e6a151308af37a7"
+
+[[files]]
+file = "docs/getting-started/installation.md"
+hash = "41bc2973574e5a68156d4984a10ac2c830eb44602db3d44e1e4e713500cc33f3"
+
+[[files]]
+file = "docs/guides/index.md"
+hash = "b23857bff58984f3694d19714d773f721917fb15c011a74423d93babb7fbc155"
+
+[[files]]
+file = "docs/images/e9caf0241540d114795aa9d755694357_fd3c06d5-5255-4a11-beeb-5e6342862079.jpg"
+hash = "01a52600d142832be317fd1decfb3d590af2ef287bc2f17d12a753bd51958ec7"
+
+[[files]]
+file = "docs/images/logo.jpg"
+hash = "52184909e8ba518e6354fd981f23f7f4aea742223987342ab02f671db07e40fe"
+
+[[files]]
+file = "docs/images/text-logo.png"
+hash = "1a84949c58982c59ddedcdd13429a5f3b4470e3b1e7315491167d57e96dfdbb3"
+
+[[files]]
 file = "docs/index.md"
-hash = "7fcba3f9abf869346952f30204bcf1a587d61872fbba85e6a85733761e117659"
+hash = "3d348f455bf43509729f91ff39a9d7d3725c50f9f24e9813f4a8d05d84ed1e2b"
+
+[[files]]
+file = "docs/mechanics/index.md"
+hash = "2d07264b2c8a4de3103ef5f395367cf4cba4a2b2f3f36d6a00e044133582fd58"
+
+[[files]]
+file = "docs/mods/index.md"
+hash = "be40036801bfde5d7fd92a549c8e45543367b472d2ae90c928f47f23e75749b8"
+
+[[files]]
+file = "docs/mods/mod-list.md"
+hash = "abeef28313405270ee4c4dd8ab292323bd18eb6fd9197bdc3dba050c8abc9af3"
+
+[[files]]
+file = "docs/stylesheets/extra.css"
+hash = "7169dbaa7949f21e51d4ea52e881faa6a7558c0ca9c6cd93672799a4838975f8"
 
 [[files]]
 file = "kubejs/assets/kubejs/lang/ru_ru.json"
@@ -5962,7 +6002,7 @@ hash = "afbec2b71cbf2b28e986a95cfb8523a644ab23c8aee994818c7dd4b5d952c2fe"
 
 [[files]]
 file = "mkdocs.yml"
-hash = "a2d16e3db3f3432ce3585dd7006e061d81b8581f89c8c99c69247d105bd74197"
+hash = "cc6f33a153ee4dcf9e7d04f28cf5d9367de2b261c998be5c6743e9355b757765"
 
 [[files]]
 file = "mods/aero_cam_sync.pw.toml"
