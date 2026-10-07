@@ -3,7 +3,7 @@ name: Release -> 3 builds + announce
 # Любой push/merge в main собирает 3 билда, создаёт Release и постит анонс.
 on:
   push:
-    branches: [release]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
