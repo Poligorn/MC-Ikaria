@@ -1,0 +1,124 @@
+name: Release -> 3 builds + announce
+
+# Любой push/merge в main собирает 3 билда, создаёт Release и постит анонс.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-main
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Go (для packwiz)
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: Set up Java (для packwiz-installer)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install packwiz
+        run: |
+          go install github.com/packwiz/packwiz@latest
+          echo "$HOME/go/bin" >> "$GITHUB_PATH"
+
+      - name: Read pack metadata
+        id: meta
+        run: python .github/scripts/pack_meta.py
+
+      - name: Check if tag already exists
+        id: tagcheck
+        run: |
+          if git rev-parse "${{ steps.meta.outputs.tag }}" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "::warning::Тег ${{ steps.meta.outputs.tag }} уже существует — поднимите version в pack.toml"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Refresh pack index
+        if: steps.tagcheck.outputs.exists == 'false'
+        run: packwiz refresh
+
+      - name: Generate changelog
+        if: steps.tagcheck.outputs.exists == 'false'
+        id: changelog
+        env:
+          TAG: ${{ steps.meta.outputs.tag }}
+        run: python .github/scripts/changelog.py
+
+      # ---------- BUILD 1: Modrinth (.mrpack) ----------
+      - name: Build Modrinth pack
+        if: steps.tagcheck.outputs.exists == 'false'
+        run: |
+          mkdir -p dist
+          packwiz modrinth export -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
+
+      # ---------- BUILD 2: CurseForge (.zip) ----------
+      - name: Build CurseForge pack
+        if: steps.tagcheck.outputs.exists == 'false'
+        run: |
+          packwiz curseforge export -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}-curseforge.zip"
+
+      # ---------- BUILD 3: Manual ZIP (jars + configs) ----------
+      - name: Build manual ZIP
+        if: steps.tagcheck.outputs.exists == 'false'
+        id: manual
+        env:
+          SLUG: ${{ steps.meta.outputs.slug }}
+          VERSION: ${{ steps.meta.outputs.version }}
+          MC: ${{ steps.meta.outputs.mc }}
+          LOADER: ${{ steps.meta.outputs.loader }}
+          LOADER_VERSION: ${{ steps.meta.outputs.loader_version }}
+        run: python .github/scripts/build_manual_zip.py
+
+      - name: List artifacts
+        if: steps.tagcheck.outputs.exists == 'false'
+        run: ls -lh dist/
+
+      - name: Create GitHub Release
+        if: steps.tagcheck.outputs.exists == 'false'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.tag }}
+          name: ${{ steps.meta.outputs.name }} ${{ steps.meta.outputs.tag }}
+          body_path: CHANGELOG_RELEASE.md
+          files: dist/*
+          draft: false
+          prerelease: false
+
+      - name: Announce in Discord
+        if: steps.tagcheck.outputs.exists == 'false'
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_ANNOUNCE_WEBHOOK }}
+          PING_ROLE_ID: ${{ vars.DISCORD_PING_ROLE_ID }}
+          PACK_NAME: ${{ steps.meta.outputs.name }}
+          VERSION: ${{ steps.meta.outputs.version }}
+          TAG: ${{ steps.meta.outputs.tag }}
+          MC: ${{ steps.meta.outputs.mc }}
+          LOADER: ${{ steps.meta.outputs.loader }}
+          LOADER_VERSION: ${{ steps.meta.outputs.loader_version }}
+          MODS_SUMMARY: ${{ steps.changelog.outputs.mods_summary }}
+          REPO: ${{ github.repository }}
+        run: python .github/scripts/notify_release.py
