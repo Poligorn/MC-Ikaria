@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
-"""Постит анонс новой версии модпака в публичный канал Discord."""
+"""Постит анонс новой версии модпака в публичный канал Discord.
+
+Cloudflare перед Discord отдаёт 403/1010 на дефолтный User-Agent Python,
+поэтому заголовки задаём вручную и повторяем отправку при 429/5xx.
+"""
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -10,9 +15,48 @@ from pathlib import Path
 DESC_LIMIT = 3800
 COLOR_RELEASE = 0xD4A574  # steampunk bronze
 
+HEADERS = {
+    "Content-Type": "application/json",
+    "User-Agent": "DiscordBot (https://github.com/packwiz/packwiz, 1.0)",
+    "Accept": "application/json",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+RETRIES = 3
+RETRY_BACKOFF = 3
+
+
+def send(webhook: str, payload: dict) -> bool:
+    """Отправляет webhook с ретраями на 429 и 5xx."""
+    url = webhook + "?wait=true"
+    body = json.dumps(payload).encode()
+    for attempt in range(1, RETRIES + 1):
+        req = urllib.request.Request(url, data=body, headers=HEADERS, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                print(f"Анонс отправлен, HTTP {resp.status}")
+                return True
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode()[:500]
+            retryable = e.code == 429 or 500 <= e.code < 600
+            print(f"Попытка {attempt}/{RETRIES}: Discord вернул {e.code} — {detail}",
+                  file=sys.stderr)
+            if not retryable or attempt == RETRIES:
+                if e.code == 403 and "1010" in detail:
+                    print("→ Cloudflare отклонил запрос. Проверьте права вебхука "
+                          "и что URL скопирован полностью.", file=sys.stderr)
+                return False
+            time.sleep(RETRY_BACKOFF * attempt)
+        except urllib.error.URLError as e:
+            print(f"Попытка {attempt}/{RETRIES}: сетевая ошибка — {e.reason}", file=sys.stderr)
+            if attempt == RETRIES:
+                return False
+            time.sleep(RETRY_BACKOFF * attempt)
+    return False
+
 
 def main() -> int:
-    webhook = os.environ.get("WEBHOOK", "")
+    webhook = os.environ.get("WEBHOOK", "").strip()
     if not webhook:
         print("DISCORD_ANNOUNCE_WEBHOOK не задан — пропускаю отправку")
         return 0
@@ -67,18 +111,7 @@ def main() -> int:
     if role_id:
         payload["content"] = f"<@&{role_id}> вышла новая версия — **{tag}**"
 
-    req = urllib.request.Request(
-        webhook + "?wait=true",
-        data=json.dumps(payload).encode(),
-        headers={"Content-Type": "application/json"},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            print(f"Анонс отправлен, HTTP {resp.status}")
-    except urllib.error.HTTPError as e:
-        print(f"Discord вернул {e.code}: {e.read().decode()[:500]}", file=sys.stderr)
-        return 1
-    return 0
+    return 0 if send(webhook, payload) else 1
 
 
 if __name__ == "__main__":

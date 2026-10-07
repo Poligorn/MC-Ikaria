@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Постит коммиты из dev в приватный Discord-канал одним embed-ом."""
+"""Постит коммиты из dev в приватный Discord-канал одним embed-ом.
+
+Cloudflare перед Discord отдаёт 403/1010 на дефолтный User-Agent Python,
+поэтому заголовки задаём вручную и повторяем отправку при 429/5xx.
+"""
 import json
 import os
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -11,6 +16,17 @@ MAX_COMMITS = 10
 EMBED_DESC_LIMIT = 4000
 COLOR_DEV = 0x5865F2       # discord blurple
 COLOR_FORCED = 0xE67E22    # orange, если был force-push
+
+# Заголовки, которые проходят Cloudflare (обычный Discord-совместимый UA)
+HEADERS = {
+    "Content-Type": "application/json",
+    "User-Agent": "DiscordBot (https://github.com/packwiz/packwiz, 1.0)",
+    "Accept": "application/json",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+RETRIES = 3
+RETRY_BACKOFF = 3  # секунды, умножается на номер попытки
 
 
 def sh(*args: str) -> str:
@@ -45,8 +61,37 @@ def changed_files(rng: str) -> tuple[int, list[str]]:
     return len(files), mods
 
 
+def send(webhook: str, payload: dict) -> bool:
+    """Отправляет webhook с ретраями на 429 и 5xx."""
+    url = webhook + "?wait=true"
+    body = json.dumps(payload).encode()
+    for attempt in range(1, RETRIES + 1):
+        req = urllib.request.Request(url, data=body, headers=HEADERS, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                print(f"Отправлено, HTTP {resp.status}")
+                return True
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode()[:500]
+            retryable = e.code == 429 or 500 <= e.code < 600
+            print(f"Попытка {attempt}/{RETRIES}: Discord вернул {e.code} — {detail}",
+                  file=sys.stderr)
+            if not retryable or attempt == RETRIES:
+                if e.code == 403 and "1010" in detail:
+                    print("→ Cloudflare отклонил запрос. Проверьте права вебхука "
+                          "и что URL скопирован полностью.", file=sys.stderr)
+                return False
+            time.sleep(RETRY_BACKOFF * attempt)
+        except urllib.error.URLError as e:
+            print(f"Попытка {attempt}/{RETRIES}: сетевая ошибка — {e.reason}", file=sys.stderr)
+            if attempt == RETRIES:
+                return False
+            time.sleep(RETRY_BACKOFF * attempt)
+    return False
+
+
 def main() -> int:
-    webhook = os.environ.get("WEBHOOK", "")
+    webhook = os.environ.get("WEBHOOK", "").strip()
     if not webhook:
         print("DISCORD_DEV_WEBHOOK не задан — пропускаю отправку")
         return 0
@@ -89,18 +134,7 @@ def main() -> int:
     }
     payload = {"username": "Dev Feed", "embeds": [embed], "allowed_mentions": {"parse": []}}
 
-    req = urllib.request.Request(
-        webhook + "?wait=true",
-        data=json.dumps(payload).encode(),
-        headers={"Content-Type": "application/json"},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            print(f"Отправлено, HTTP {resp.status}")
-    except urllib.error.HTTPError as e:
-        print(f"Discord вернул {e.code}: {e.read().decode()[:500]}", file=sys.stderr)
-        return 1
-    return 0
+    return 0 if send(webhook, payload) else 1
 
 
 if __name__ == "__main__":
