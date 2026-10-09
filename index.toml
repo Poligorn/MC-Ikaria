@@ -5966,7 +5966,7 @@ hash = "5e6af70a2e2fdca0017e0772b22d504f418990216b683e9df87ff5a74d610216"
 
 [[files]]
 file = "docs/mods/mod-list.md"
-hash = "b850bb9c8b43a2dbbe6da4e24ddd99ca9dc5b1cd526ef7329e225d64ed21ea68"
+hash = "cedb2ac3fc1c50f0a7b353331156d4aa93e25cecb19cb170b1790bdde2a235e2"
 
 [[files]]
 file = "docs/planning/backlog.md"
@@ -6009,291 +6009,291 @@ file = "kubejs/assets/asi/models/item/modopedia_books/wildlander_diary.json"
 hash = "bbe58aef92c7a8bbd6bf5ff05c2321987185fe835d2e73a6aac3723a7f7e6bd1"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/categories/kinetics.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/categories/kinetics.json"
 hash = "3daaf5334569fd6e227a267da08578b67d26e3618e31e556f6080d726cf3e135"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/categories/machines.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/categories/machines.json"
 hash = "bef3783e2eb3dfc861a43de8c74f049f855cb92942e0bf9bf3f8dd4d462701df"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/categories/preface.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/categories/preface.json"
 hash = "ae31f97738e53931e3e272af1e0f72e583063bf43de81c70ebbbf7f1aec50e38"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/categories/progress.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/categories/progress.json"
 hash = "8bd91e5fd3d2209967bbfb082dfe0883972d4456390ec3bbeae7389aefa04b4d"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/entries/addons.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/entries/addons.json"
 hash = "f4efea18f7bf4e0160b92ca3589c2eaef4145cf9fbb9630bac914dd099a82495"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/entries/alloys.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/entries/alloys.json"
 hash = "d058f6ae1fd54c2bc8753e7a5c47197203084c24b9c45a9472904739456d63a6"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/entries/cover.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/entries/cover.json"
 hash = "691d6da986b3ea5e03046371f7e14414a618e2eeb0c39445667699c5db16a43c"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/entries/deploy.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/entries/deploy.json"
 hash = "f88dedaf97f39aa6f72fd5e07d6f9e444423015dccbf4473eccc747b3c63ff14"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/entries/how_pages.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/entries/how_pages.json"
 hash = "50c62c35daff2835d78748103304b29e78fb398ef8b15f74694d81050a16a3a2"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/entries/stress.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/entries/stress.json"
 hash = "9a17f5dd69bef9fb97b934012a098338fc1b7edbaf805313cb09e57f3c53545e"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/entries/transmission.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/entries/transmission.json"
 hash = "08ea34cfda1d11c3445101a204e46659bbd13101f4226856784add1779f5d3fd"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en/entries/workshop.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/en_us/entries/workshop.json"
 hash = "61beb6ca9827ba515e7b61cf77d52e1b390bbca5b55af8c21349366a49e79959"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/categories/kinetics.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/categories/kinetics.json"
 hash = "2d839319efdeac4e2f258d406d37f9a1baede11d348b02e5a81f2f7bcb39dd5d"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/categories/machines.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/categories/machines.json"
 hash = "037c10eefb3b234d90300cafda4d668d36b5eb537a458f2e3f21c6fb2e4a2073"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/categories/preface.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/categories/preface.json"
 hash = "a45b7a3ee2d09ddbc0f9837f554e8a6f243bd2b0d3acad82ddddd017800e2211"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/categories/progress.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/categories/progress.json"
 hash = "e90504b5ac106d0b2125a63472e769eebb1fb98255880b3c92ff987dffb60556"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/entries/addons.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/entries/addons.json"
 hash = "7efbaebb03bf1ffb8dad11f20edcbb9ea7f29bc0edc87065af48b9182a5e5bdf"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/entries/alloys.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/entries/alloys.json"
 hash = "0acb5d768ec2d59b83ea4f3f7a1ec7c93cea5614081f275896be00bb7fb32c06"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/entries/cover.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/entries/cover.json"
 hash = "f099a33251bc6708b357f1bce3d262687c8f8174497dfc8298753ff016241c43"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/entries/deploy.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/entries/deploy.json"
 hash = "2815cbfcb1d093be24c8706c5748979cee2d110c9b3d09fb092d1d065d287ed6"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/entries/how_pages.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/entries/how_pages.json"
 hash = "d31e7168b62686a0144512f60cbfdef5917804cbd3e2c43e09e34c864fb864dd"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/entries/stress.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/entries/stress.json"
 hash = "82f6ae45fefd41f51024a2135348bd26e2c21ec99e29d6cad7254e03328fb9fa"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/entries/transmission.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/entries/transmission.json"
 hash = "bd36035bfc4813d8c1317f23fcd78e08bcef6fe386ad8ca97ae2363a0e272e8b"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru/entries/workshop.json"
+file = "kubejs/assets/asi/modopedia/books/mechanist_diary/ru_ru/entries/workshop.json"
 hash = "384f60370b758447efd8e78fdf1b06af1163a17595a7ae9ee3fee55966c8fce9"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/categories/personal.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/categories/personal.json"
 hash = "c6c61f8c9610099d2494ada614e48c9dabc053e1d0ace270ddac69196280b13a"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/categories/preface.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/categories/preface.json"
 hash = "a2b49b249a363c70916175bde25016b37af75292ac861a0a87f87c87cfb9aff2"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/categories/sky.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/categories/sky.json"
 hash = "e60a009e1a1686f81744bbba9d6d3f16b45d88792905ecf44867a5a76eae611c"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/categories/vessel.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/categories/vessel.json"
 hash = "4221943fc6942c5557192d4f3140a3d80b08962e7cff9675582a628f581c35ce"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/entries/cover.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/entries/cover.json"
 hash = "09c2814806831061c666a6753b75f4025f5fff46ea35ffefd58b9b5b205aa895"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/entries/engines.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/entries/engines.json"
 hash = "006f83e61cc1f4907942dcc3c2ddae5d9ca6d04b5442d74ed97500134474d515"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/entries/glider.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/entries/glider.json"
 hash = "5f1829fdd8d63d254a37c8fcc394e95b18490ce288bbcbb04646cf3549e0f48d"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/entries/how_pages.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/entries/how_pages.json"
 hash = "10867cb91d6c07595f322b50fab8efa790223f968de64f4118f10666681ca994"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/entries/hull.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/entries/hull.json"
 hash = "2e1a10706221bbb032263fcaf0cc8c3718e96761fffc2ee60dbd3c672f4a3e8b"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/entries/nav.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/entries/nav.json"
 hash = "991fbdec552e61a271f3472382ba33543d3470cf287f67eccca8e1b63a93fc62"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/entries/raids.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/entries/raids.json"
 hash = "7b07f4ba1b0295422b815c5a57f202cc77e908a522d456db0da210fcb41ad595"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/en/entries/wings.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/en_us/entries/wings.json"
 hash = "ae29c7733c349513e69aed3b142715caa55db123c1fc8838597f30d519780aba"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/categories/personal.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/categories/personal.json"
 hash = "e20e408ecc01e72f12adb513d14030b33c5f81c5627af4de3afccc2432c5a69c"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/categories/preface.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/categories/preface.json"
 hash = "8556afe953f0caeb3483445a089388861a57b9dd6e00c77d5d6d7a4719b016cb"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/categories/sky.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/categories/sky.json"
 hash = "75ee37d222002790bc3005067e62f3d1481ace2998611275c195113d2626d0e6"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/categories/vessel.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/categories/vessel.json"
 hash = "c8e59d89c41f8d4609800a3787579588a3b82ecce28cb47eacc96d46471aedd6"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/entries/cover.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/entries/cover.json"
 hash = "5f914ea46f00cd3676494cfdf2c76877a263bad0352a5c9943ca6a0ec2f885ba"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/entries/engines.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/entries/engines.json"
 hash = "6c587e8ee043bc69ec12c076ec6a6f2e0cda7a5702c3fe9233f6f489d9b77bce"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/entries/glider.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/entries/glider.json"
 hash = "3898d775127898270ad1197dd2ed8fc458cc8812f39749f84cd105b0f73831cd"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/entries/how_pages.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/entries/how_pages.json"
 hash = "6dfb5e98d70db6b5bfae023c2346ce8f653e739b2922acb3a70c2b2990269565"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/entries/hull.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/entries/hull.json"
 hash = "3d0d1ea705b0de4d89e9a71aa2acd7ad5eeb6e80752a86d8427e82008dfc7cab"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/entries/nav.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/entries/nav.json"
 hash = "4fe65ca56bd2665dbaedf9ebdd85f9027a0c2f94daeb79f5901e93f34f82a3d6"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/entries/raids.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/entries/raids.json"
 hash = "2fe6b9dd7435e459917ec61bd923459080faadc77c38cb656116efdc40b13707"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru/entries/wings.json"
+file = "kubejs/assets/asi/modopedia/books/skyward_diary/ru_ru/entries/wings.json"
 hash = "2918de7a5beec22fe6913abaae22b1a7f059136ed2991fd12a419f397d22c6af"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/categories/beasts.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/categories/beasts.json"
 hash = "f2fe2e7f62374f90bbdb02b615ae1ea98eb95dfd261ae1296099e65086191217"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/categories/portals.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/categories/portals.json"
 hash = "d1fa920bef998d989b9e0b35124a3f67d6cff131f9097a7dd2c4586c6e9b2566"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/categories/preface.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/categories/preface.json"
 hash = "934a6551e80e372945f0127f9e1dd7223a9af292beee2d2dfb4f71f88463b673"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/categories/ruins.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/categories/ruins.json"
 hash = "98c238660f6c4f58f4a7816d0562d14a511eeebfc7eeecf826ac0f1db4b78978"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/entries/cover.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/entries/cover.json"
 hash = "0443f360cad345a5ad969c129bca0a5474b56d21a1ce5b917345361f2b552e19"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/entries/dims.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/entries/dims.json"
 hash = "7198bb175aa8e9deb0c8c1ee42350b6b79d39fc14bf0250e13578d1df206d945"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/entries/dungeons.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/entries/dungeons.json"
 hash = "b4df19a47b7ddbaaf955928b6aa796f7818854c31dec2090f4eb8e2e1a7c9b52"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/entries/how_pages.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/entries/how_pages.json"
 hash = "7753633de8e3bf7c1fb3a04c38946ab2a1cfa94d82a6c593a61de82bbdf7ba3d"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/entries/loot.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/entries/loot.json"
 hash = "282dc2c8c573219de2aaeb0aa7d113d4c83da4cc97fb7c6ce2b2db9eee31cc4b"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/entries/mobs.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/entries/mobs.json"
 hash = "4977a99bf1d3fe73f6ce07734550c0b50cda95938c254338c9b39527a9082a7c"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/entries/sky_threats.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/entries/sky_threats.json"
 hash = "5f8b326ffabe5908be55a9464368eed22cbcadecac284de7e2ffc83f7487812f"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en/entries/wormholes.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/en_us/entries/wormholes.json"
 hash = "60d69de88b9c22da9fb16cc52b8762b90c92f0a74f4a3ad79ba33f063fa8b6f5"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/categories/beasts.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/categories/beasts.json"
 hash = "2f2de719c7de08c6fcb848e3284a6b56b45addc19fefd78c4c1b5cac7ead5f41"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/categories/portals.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/categories/portals.json"
 hash = "68fb7e1b5affe05dd545601434504cb01fdd2f646e350e78f0c785a644946758"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/categories/preface.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/categories/preface.json"
 hash = "5d860fd9bcdb3d688140882beba498085fb2b067205dd59096229b1ce7136671"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/categories/ruins.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/categories/ruins.json"
 hash = "a2321dc97a2ce77b19cbb42419e28cc60940e5aeb6928307b0c97c8ecdf4aad9"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/entries/cover.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/entries/cover.json"
 hash = "d1e8c584b1e89f6df638584eba329b96460b7dbe09e295b921a392ef1c6cada1"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/entries/dims.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/entries/dims.json"
 hash = "359c0e79c19c9a70b45814fc7b1ff9b875f1a654c9edd41d568f6bd2fe07fb9f"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/entries/dungeons.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/entries/dungeons.json"
 hash = "ac51b2d26ec13c68fe0965a80b2d0bc4d8c8901dd54585b9bd26122c9cbb5e35"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/entries/how_pages.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/entries/how_pages.json"
 hash = "6bc53b8fd3725ea7afb42ea100d0fdd565a9a7003ad7fe10cd067bb105c73348"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/entries/loot.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/entries/loot.json"
 hash = "b3d2a0b14fa943977c005ce001d6d64512167c8b64fe59867dfbf66018788139"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/entries/mobs.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/entries/mobs.json"
 hash = "5c80f81a38c86009c3989f01882aab52c147fae6d1cff590fe8110626980c365"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/entries/sky_threats.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/entries/sky_threats.json"
 hash = "1995231988d424f9250130438d167558762af33e0e7bfd2feb035e94e6907c66"
 
 [[files]]
-file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru/entries/wormholes.json"
+file = "kubejs/assets/asi/modopedia/books/wildlander_diary/ru_ru/entries/wormholes.json"
 hash = "6fc407b0f673e93cecddd1f5f31c19d64c32ec16092f35a87f4efbc3577f6f4c"
 
 [[files]]
