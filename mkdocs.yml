@@ -12,29 +12,30 @@ edit_uri: edit/dev/docs/
 theme:
   name: material
   language: ru
-  
+  logo: images/icaria-icon.png
+  favicon: images/favicon.png
+
   palette:
-    # Light mode - Sky theme
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: light blue
-      accent: pink
-      toggle:
-        icon: material/weather-sunny
-        name: Переключить на тёмную тему
-    
-    # Dark mode - Night sky
+    # Dark (Icaria night sky) — default / system dark
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: pink
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Переключить на светлую тему
+    # Light (day sky) — system light
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
-        name: Переключить на светлую тему
-  
+        name: Переключить на тёмную тему
+
   font:
-    text: Roboto
-    code: Courier New
+    text: Nunito
+    code: Roboto Mono
   
   features:
     - navigation.instant
@@ -57,9 +58,11 @@ theme:
     repo: fontawesome/brands/github
     logo: material/airplane
 
-# Custom CSS
+# Custom CSS / JS
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascripts/icaria.js
 
 # Markdown Extensions
 markdown_extensions:
@@ -145,5 +148,4 @@ extra:
 
 # Copyright
 copyright: |
-  Copyright &copy; 2026 Ikaria Team<br>
-  <small>🎈 Будущее имя: Aeronautics Ikaria</small>
+  Copyright &copy; 2026 Ikaria Team · Aeronautics Icaria

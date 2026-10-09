@@ -1,6 +1,8 @@
 <div class="hero-section" markdown>
 
-# AERONAUTICS IKARIA
+# Aeronautics Icaria {: .hero-sr-only }
+
+![Логотип Aeronautics Icaria — ледяной циан AERONAUTICS и медное ICARIA на ночном небе](images/icaria-logo.jpg){ .hero-logo .pixel }
 
 ### Небесные острова, воздушные корабли и червоточины
 
@@ -9,6 +11,11 @@
 [Отсылки к EVE Online](lore/eve-online.md){ .md-button }
 
 </div>
+
+<figure markdown>
+  ![Обложка Aeronautics Icaria: малиновый аэростат, острова и логотип с лозой](images/icaria-balloon.jpg){ .pack-cover .pixel }
+  <figcaption>Официальный арт пака</figcaption>
+</figure>
 
 ---
 
