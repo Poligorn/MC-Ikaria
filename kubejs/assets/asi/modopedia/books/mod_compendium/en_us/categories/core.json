@@ -1,0 +1,12 @@
+{
+  "title": "Core",
+  "icon": {
+    "id": "minecraft:piston"
+  },
+  "landing_text": "Create and Create Aeronautics. No Mekanism, IE, AE2, or Botania.",
+  "entries": [
+    "create_aero",
+    "create"
+  ],
+  "sort_num": 0
+}

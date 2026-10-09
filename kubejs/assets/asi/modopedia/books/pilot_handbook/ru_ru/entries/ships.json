@@ -1,0 +1,26 @@
+{
+  "title": "Корабли",
+  "icon": {
+    "id": "minecraft:oak_boat"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Create Aeronautics",
+          "text": "Корабль — контрапшен Create на суб-уровне Sable. Двигатели: пропеллеры, горячий воздух, пар.$(br)$(br)Valkyrien Skies 2 в паке нет."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Опасности",
+          "text": "Hostile Skies присылает рейды дирижаблей. Дальше 1500 блоков от спавна мобы носят огнестрел Gunsmithing."
+        }
+      ]
+    }
+  ]
+}

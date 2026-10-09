@@ -1,0 +1,12 @@
+{
+  "title": "Экипаж",
+  "icon": {
+    "id": "kubejs:pilot_license_cadet"
+  },
+  "landing_text": "Ранги пилота и сервер Online.",
+  "entries": [
+    "licenses",
+    "online"
+  ],
+  "sort_num": 1
+}

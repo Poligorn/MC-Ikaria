@@ -1,0 +1,12 @@
+{
+  "title": "Полёт",
+  "icon": {
+    "id": "minecraft:elytra"
+  },
+  "landing_text": "Планер, аэролит и корабли Create Aeronautics.",
+  "entries": [
+    "glider",
+    "ships"
+  ],
+  "sort_num": 1
+}

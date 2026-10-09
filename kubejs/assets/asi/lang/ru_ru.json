@@ -1,0 +1,11 @@
+{
+  "book.asi.pilot_handbook.title": "Справочник пилота",
+  "book.asi.pilot_handbook.subtitle": "MC ASI Online",
+  "book.asi.pilot_handbook.landing": "Вводный журнал пака Aeronautics Ikaria: остров, полёт, квесты.",
+  "book.asi.void_almanac.title": "Альманах пустоты",
+  "book.asi.void_almanac.subtitle": "Червоточины",
+  "book.asi.void_almanac.landing": "Порталы Eve Wormhole Portals и ранги экипажа — вдохновлено механикой EVE Online.",
+  "book.asi.mod_compendium.title": "Компендиум модов",
+  "book.asi.mod_compendium.subtitle": "Ядро сборки",
+  "book.asi.mod_compendium.landing": "Create Aeronautics, выживание и демо страницы рецепта. Полный список — в документации MkDocs."
+}

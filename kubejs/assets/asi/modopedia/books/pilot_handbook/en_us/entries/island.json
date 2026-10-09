@@ -1,0 +1,52 @@
+{
+  "title": "Sky island",
+  "icon": {
+    "id": "minecraft:grass_block"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "ASI hub",
+          "text": "KubeJS places a shared island around Y 200. Forgiving Void softens void falls.$(br)$(br)Do not jump without a glider."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 30,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:compass"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:map"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "ftbquests:book"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

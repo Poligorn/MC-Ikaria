@@ -1,0 +1,28 @@
+{
+  "title": "Рецепт на странице",
+  "icon": {
+    "id": "minecraft:crafting_table"
+  },
+  "assigned_items": [
+    "minecraft:map"
+  ],
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Демо шаблона",
+          "text": "Ниже стандартный ванильный рецепт карты — проверка компонента modopedia:page/crafting. Рецепты пака смотрите в EMI."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/crafting",
+          "recipe": "minecraft:map"
+        }
+      ]
+    }
+  ]
+}

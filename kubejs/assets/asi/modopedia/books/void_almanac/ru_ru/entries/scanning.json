@@ -1,0 +1,52 @@
+{
+  "title": "Разведка",
+  "icon": {
+    "id": "minecraft:recovery_compass"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Радар и детектор",
+          "text": "Portal Radar показывает направление и примерную дистанцию.$(br)$(br)Portal Detector читает класс, цвет, оставшееся время и число использований.$(br)$(br)Осколки падают из сколлапсировавших дыр."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 30,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:ender_pearl"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:ender_eye"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:compass"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

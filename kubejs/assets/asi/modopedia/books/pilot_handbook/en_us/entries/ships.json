@@ -1,0 +1,26 @@
+{
+  "title": "Ships",
+  "icon": {
+    "id": "minecraft:oak_boat"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Create Aeronautics",
+          "text": "A ship is a Create contraption on a Sable sub-level. Propellers, hot air, steam.$(br)$(br)Valkyrien Skies 2 is not in this pack."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Threats",
+          "text": "Hostile Skies sends airship raids. Beyond 1500 blocks from spawn, mobs carry Gunsmithing firearms."
+        }
+      ]
+    }
+  ]
+}

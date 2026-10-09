@@ -1,0 +1,12 @@
+{
+  "title": "Start",
+  "icon": {
+    "id": "minecraft:compass"
+  },
+  "landing_text": "First join, hub island, quest journal.",
+  "entries": [
+    "welcome",
+    "island"
+  ],
+  "sort_num": 0
+}

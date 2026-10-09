@@ -1,0 +1,28 @@
+{
+  "title": "Paraglider",
+  "icon": {
+    "id": "minecraft:phantom_membrane"
+  },
+  "assigned_items": [
+    "minecraft:stick"
+  ],
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Aerolite",
+          "text": "The default paraglider recipe is removed. Use Aeroscapes aerolite and sticks.$(br)$(br)Clockwork wings come later: elytra, Create brass, golden aerolite."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/crafting",
+          "recipe": "minecraft:stick"
+        }
+      ]
+    }
+  ]
+}

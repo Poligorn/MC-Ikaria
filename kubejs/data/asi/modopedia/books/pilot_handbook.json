@@ -1,0 +1,9 @@
+{
+  "title": "book.asi.pilot_handbook.title",
+  "subtitle": "book.asi.pilot_handbook.subtitle",
+  "landing_text": "book.asi.pilot_handbook.landing",
+  "type": {
+    "id": "modopedia:classic"
+  },
+  "creative_tab": "minecraft:tools_and_utilities"
+}

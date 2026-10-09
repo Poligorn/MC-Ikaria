@@ -1,0 +1,26 @@
+{
+  "title": "Online",
+  "icon": {
+    "id": "minecraft:name_tag"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Not CCP canon",
+          "text": "No Jita, empires, or ISK. Online means the server: OPAC claims, Numismatics markets, Hostile Skies raids."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Fleet",
+          "text": "A Create Aeronautics ship stands in for warp: you build hull and engines. Wormholes are a separate mod."
+        }
+      ]
+    }
+  ]
+}

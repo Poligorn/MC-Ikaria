@@ -1,0 +1,52 @@
+{
+  "title": "Scanning",
+  "icon": {
+    "id": "minecraft:recovery_compass"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Radar and detector",
+          "text": "Portal Radar shows direction and rough range.$(br)$(br)Portal Detector reads class, color, remaining time, and uses.$(br)$(br)Shards drop from collapsed holes."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 30,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:ender_pearl"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:ender_eye"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:compass"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -54,11 +54,12 @@ PlayerEvents.loggedIn(event => {
       `execute in minecraft:${dim} run tp ${p.username} ${ASI_SPAWN_X} ${ASI_SPAWN_Y} ${ASI_SPAWN_Z}`
     );
 
-    // Выдаём книгу квестов в последний слот хотбара
+    // Выдаём книгу квестов и тестовый справочник пилота (Modopedia)
     p.runCommandSilent(`item replace entity ${p.username} hotbar.8 with ftbquests:book`);
+    p.runCommandSilent(`item replace entity ${p.username} hotbar.7 with modopedia:book[modopedia:book="asi:pilot_handbook"]`);
 
     p.tell(Text.gold('Добро пожаловать на Небесный Остров. Ваше приключение начинается здесь...'));
-    p.tell(Text.aqua('Книга квестов в последнем слоте хотбара!'));
+    p.tell(Text.aqua('Книга квестов и справочник пилота в хотбаре!'));
     
     console.info('[ASI] Игрок ' + p.name.string + ' заспавнен на острове.');
   });

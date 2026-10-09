@@ -1,0 +1,52 @@
+{
+  "title": "Food and loot",
+  "icon": {
+    "id": "minecraft:bread"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Kitchen",
+          "text": "Farmer's Delight, End's Delight, Chef's Delight, Botany Pots, Starcatcher.$(br)$(br)Structure chests: Lootr. Locked chests: Clavis."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 30,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:bread"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:carrot"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:fishing_rod"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

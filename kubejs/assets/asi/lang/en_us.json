@@ -1,0 +1,11 @@
+{
+  "book.asi.pilot_handbook.title": "Pilot Handbook",
+  "book.asi.pilot_handbook.subtitle": "MC ASI Online",
+  "book.asi.pilot_handbook.landing": "Intro journal for Aeronautics Ikaria: island, flight, quests.",
+  "book.asi.void_almanac.title": "Void Almanac",
+  "book.asi.void_almanac.subtitle": "Wormholes",
+  "book.asi.void_almanac.landing": "Eve Wormhole Portals and crew ranks, inspired by EVE Online wormhole play.",
+  "book.asi.mod_compendium.title": "Mod Compendium",
+  "book.asi.mod_compendium.subtitle": "Pack core",
+  "book.asi.mod_compendium.landing": "Create Aeronautics, survival, and a sample recipe page. Full list is in the MkDocs site."
+}

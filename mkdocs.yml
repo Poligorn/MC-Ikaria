@@ -4,9 +4,9 @@ site_author: Ikaria Team
 site_url: https://poligorn.github.io/MC-ASI-Online/
 
 # Repository
-repo_name: poligorn/MC-ASI-Online
-repo_url: https://poligorn.github.io/MC-ASI-Online/
-edit_uri: edit/main/docs/
+repo_name: Poligorn/MC-ASI-Online
+repo_url: https://github.com/Poligorn/MC-ASI-Online
+edit_uri: edit/dev/docs/
 
 # Theme
 theme:
@@ -123,15 +123,19 @@ nav:
       - mechanics/index.md
       - Летающие острова: mechanics/flying-islands.md
       - Воздушные корабли: mechanics/airships.md
+  - Лор:
+      - lore/index.md
+      - Отсылки к EVE Online: lore/eve-online.md
   - Гайды:
       - guides/index.md
       - Первые шаги: guides/getting-started-guide.md
+      - Книги Modopedia: guides/modopedia.md
 
 # Extra
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/Poligorn/Aeronautics-SkyIslands-Modpack
+      link: https://github.com/Poligorn/MC-ASI-Online
       name: GitHub
     - icon: fontawesome/brands/discord
       link: https://discord.gg/7zqnTUaDm2

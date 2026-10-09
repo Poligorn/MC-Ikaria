@@ -1,0 +1,12 @@
+{
+  "title": "Survival",
+  "icon": {
+    "id": "minecraft:bread"
+  },
+  "landing_text": "Food, mapping, a sample recipe page.",
+  "entries": [
+    "food",
+    "recipe_demo"
+  ],
+  "sort_num": 1
+}

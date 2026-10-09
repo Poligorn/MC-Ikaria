@@ -1,0 +1,12 @@
+{
+  "title": "Crew",
+  "icon": {
+    "id": "kubejs:pilot_license_cadet"
+  },
+  "landing_text": "Pilot ranks and the Online server.",
+  "entries": [
+    "licenses",
+    "online"
+  ],
+  "sort_num": 1
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Старт",
+  "icon": {
+    "id": "minecraft:compass"
+  },
+  "landing_text": "Первый вход, хаб и журнал квестов.",
+  "entries": [
+    "welcome",
+    "island"
+  ],
+  "sort_num": 0
+}

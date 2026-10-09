@@ -1,0 +1,12 @@
+{
+  "title": "Wormholes",
+  "icon": {
+    "id": "minecraft:ender_pearl"
+  },
+  "landing_text": "Eve Wormhole Portals: unstable gates.",
+  "entries": [
+    "classes",
+    "scanning"
+  ],
+  "sort_num": 0
+}

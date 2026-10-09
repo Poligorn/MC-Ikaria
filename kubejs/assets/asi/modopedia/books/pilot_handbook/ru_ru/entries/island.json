@@ -1,0 +1,52 @@
+{
+  "title": "Небесный остров",
+  "icon": {
+    "id": "minecraft:grass_block"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Хаб ASI",
+          "text": "KubeJS ставит общий остров около Y 200. Падение в пустоту смягчает Forgiving Void, но край всё равно опасен.$(br)$(br)Не прыгайте вниз без планера."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 30,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:compass"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:map"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "ftbquests:book"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
