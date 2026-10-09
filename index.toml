@@ -5922,7 +5922,7 @@ hash = "ed7e5e5409dd8cf394ac671ef9bc0544685f9a16a2d6488ff3b8b64762403397"
 
 [[files]]
 file = "docs/index.md"
-hash = "b7146df1b727eb71e4ac28d18bdd60b0a70a95a63daffef63a2839f1ec6708e2"
+hash = "7d5921ca20a39d26c5bd73989fbfe1195b129d68460313866a4a7a69306b9893"
 
 [[files]]
 file = "docs/javascripts/icaria.js"
@@ -5962,7 +5962,7 @@ hash = "b850bb9c8b43a2dbbe6da4e24ddd99ca9dc5b1cd526ef7329e225d64ed21ea68"
 
 [[files]]
 file = "docs/stylesheets/extra.css"
-hash = "5f9f76a13f226ffa0a707476fe009e08b05a2947452f360a190a942f41db3ee8"
+hash = "51df00eb8ed56abf4ae7648ff754b5d275462ead5127e029415da038c14287a5"
 
 [[files]]
 file = "kubejs/assets/asi/lang/en_us.json"
