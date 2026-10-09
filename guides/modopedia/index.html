@@ -1172,7 +1172,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Три тестовые книги
+        Авторы и тома
       
     </span>
   </a>
@@ -1183,7 +1183,18 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как получить в игре
+        Как получить
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сбор страниц и unlock
       
     </span>
   </a>
@@ -1205,7 +1216,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как добавить ещё одну книгу
+        О чём тома (факты пака)
       
     </span>
   </a>
@@ -1433,7 +1444,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Три тестовые книги
+        Авторы и тома
       
     </span>
   </a>
@@ -1444,7 +1455,18 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как получить в игре
+        Как получить
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сбор страниц и unlock
       
     </span>
   </a>
@@ -1466,7 +1488,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как добавить ещё одну книгу
+        О чём тома (факты пака)
       
     </span>
   </a>
@@ -1541,80 +1563,91 @@
   
 
 
-<h1 id="modopedia">Книги Modopedia<a class="headerlink" href="#modopedia" title="Permanent link">&para;</a></h1>
-<p>В паке уже есть мод <strong>Modopedia</strong> 1.1.11 для NeoForge 1.21.1 (<code>mods/modopedia.pw.toml</code>, Modrinth <code>SYrakyVL</code>). Добавлять его через Packwiz не нужно.</p>
-<p>Тестовые книги — датапак + ресурспак в <strong>KubeJS</strong> (так пак уже кладёт структуры <code>asi:</code> и языковые файлы). Формат сверен с <a href="https://moddedmc.wiki/en/project/modopedia/docs/books/overview">документацией Modopedia</a> (версия мода <strong>1.1.11</strong>, MC <strong>1.21.1</strong>).</p>
-<h2 id="_1">Три тестовые книги<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="modopedia">Дневники Трёх (Modopedia)<a class="headerlink" href="#modopedia" title="Permanent link">&para;</a></h1>
+<p>В паке <strong>Modopedia</strong> 1.1.11 для NeoForge 1.21.1 (<code>mods/modopedia.pw.toml</code>). Три тестовых гайда заменены на <strong>дневники основателей</strong>: обложки целы, страницы раскиданы по сундукам.</p>
+<p>Формат сверен с <a href="https://moddedmc.wiki/en/project/modopedia/docs/books/book-json">Book JSON</a>, <a href="https://moddedmc.wiki/en/project/modopedia/docs/books/book-textures">Book Textures</a> и <a href="https://moddedmc.wiki/en/project/modopedia/docs/books/book-types">Book Types</a> (classic + <code>locked_view_type</code>). Контент — только механики, которые есть в <code>mods/*.pw.toml</code> и в доках пака; нейро-рефы вроде «Ash Colossus» в текст не попали.</p>
+<h2 id="_1">Авторы и тома<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Имена из журнала FTB (<em>The Mechanist / The Skyward / The Wildlander</em>) и слоя «Дневники Трех» на доске. Полные имена — чтобы у каждого был голос.</p>
 <table>
 <thead>
 <tr>
 <th>ID</th>
-<th>Название</th>
-<th>О чём</th>
+<th>Том</th>
+<th>Автор</th>
+<th>Голос</th>
+<th>Стиль GUI</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>asi:pilot_handbook</code></td>
-<td>Справочник пилота</td>
-<td>Вводный гайд пака: остров, полёт, квесты</td>
+<td><code>asi:mechanist_diary</code></td>
+<td>Чертежи Механика</td>
+<td><strong>Элиас Верн</strong> (Механик)</td>
+<td>Пометки <code>※</code>, только измеренное, без выдуманных SU</td>
+<td>коричневая обложка, золотая скоба <code>modopedia:brown_gold</code></td>
 </tr>
 <tr>
-<td><code>asi:void_almanac</code></td>
-<td>Альманах пустоты</td>
-<td>EVE-inspired червоточины и ранги</td>
+<td><code>asi:skyward_diary</code></td>
+<td>Бортовой журнал Небохода</td>
+<td><strong>Кайра Шторм</strong> (Небоход)</td>
+<td>Вахтенные записи, погода, высота</td>
+<td>синяя обложка, серебро <code>modopedia:blue_silver</code></td>
 </tr>
 <tr>
-<td><code>asi:mod_compendium</code></td>
-<td>Компендиум модов</td>
-<td>Обзор ядра пака + страница ванильного рецепта</td>
+<td><code>asi:wildlander_diary</code></td>
+<td>Полевой дневник Следопыта</td>
+<td><strong>Рован Пепельный</strong> (Следопыт)</td>
+<td>Карточки бестиария, шкала ●…●●●●</td>
+<td>красная обложка, железо <code>modopedia:red_iron</code></td>
 </tr>
 </tbody>
 </table>
-<p>Тип книг: <code>modopedia:classic</code> (категории → записи → страницы). В записях есть текст, галерея предметов (<code>modopedia:item_gallery</code>) и шаблон рецепта (<code>modopedia:page/crafting</code>).</p>
-<p>Локализации контента: <code>ru_ru</code> и <code>en_us</code>. Заголовки предметов книг — ключи в <code>kubejs/assets/asi/lang/</code>.</p>
-<h2 id="_2">Как получить в игре<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Лендинг classic: баннер = <code>title</code> / <strong>Оглавление</strong>, под лентой = <code>subtitle</code> + <code>landing_text</code> (<strong>Подзаголовок</strong>), справа список категорий (<strong>Главы</strong>). Закрытые главы видны полупрозрачно (<code>locked_view_type: translucent</code>).</p>
+<p>Текстуры предметов — перекраска официальных иконок Modopedia (MIT, Favouriteless) плюс точка-эмблема на корешке. GUI-рамки — встроенные classic, не копия PNG в пак. Модели: <code>kubejs/assets/asi/models/item/modopedia_books/</code>.</p>
+<h2 id="_2">Как получить<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Первый вход:</strong> справочник пилота кладётся в хотбар рядом с книгой квестов.</li>
-<li><strong>Крафт</strong> (KubeJS, <code>kubejs/server_scripts/Recipes/modopedia_books.js</code>):<ul>
-<li>книга + карта → справочник пилота;</li>
-<li>книга + жемчуг Края → альманах пустоты;</li>
-<li>книга + компас → компендиум модов.</li>
-</ul>
-</li>
-<li><strong>Творчество:</strong> книги попадают во вкладку Search и в <code>minecraft:tools_and_utilities</code>.</li>
+<li><strong>Первый вход.</strong> <code>player.give()</code> кладёт три обложки и книгу FTB. Старый <code>/item replace … ${p.username}</code> от имени игрока не срабатывал (нет прав + пустой username) — книги не появлялись. Повторная выдача: <code>/asi resetplayer</code> и перезаход или <code>/asi givediaries</code> (оператор).</li>
+<li><strong>Крафт обложки</strong> (<code>kubejs/server_scripts/Recipes/modopedia_books.js</code>): книга + компас / карта / кость.</li>
+<li><strong>Страницы</strong> — девять предметов <code>kubejs:diary_page_*</code> в сундуках (<code>LootType.CHEST</code>, ~5.5% на тип листа). Lootr крутит таблицу на игрока.</li>
 <li>
-<p>Команды:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/give @s modopedia:book[modopedia:book="asi:pilot_handbook"]
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>/give @s modopedia:book[modopedia:book="asi:void_almanac"]
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>/give @s modopedia:book[modopedia:book="asi:mod_compendium"]
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>/modopedia open book asi:pilot_handbook
+<p>Куски:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/give @s modopedia:book[modopedia:book="asi:mechanist_diary"]
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>/give @s modopedia:book[modopedia:book="asi:skyward_diary"]
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>/give @s modopedia:book[modopedia:book="asi:wildlander_diary"]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>/modopedia open book asi:skyward_diary
 </span></code></pre></div>
 </li>
 </ol>
-<p>Предмет книги — <code>modopedia:book</code>. ID гайда хранится в data component <strong><code>modopedia:book</code></strong> (ResourceLocation), см. исходники Modopedia (<code>MDataComponents</code>, <code>MBookItem</code>).</p>
-<h2 id="_3">Где лежат файлы<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>kubejs/data/asi/modopedia/books/&lt;book_id&gt;.json          # datapack: book.json
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>kubejs/assets/asi/modopedia/books/&lt;book_id&gt;/&lt;lang&gt;/
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    categories/&lt;id&gt;.json
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    entries/&lt;id&gt;.json
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>kubejs/assets/asi/lang/ru_ru.json
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>kubejs/assets/asi/lang/en_us.json
-</span></code></pre></div>
-<p>KubeJS подхватывает <code>kubejs/data/</code> как датапак и <code>kubejs/assets/</code> как ресурспак. После добавления файлов в репозиторий выполните <code>packwiz refresh</code>.</p>
-<h2 id="_4">Как добавить ещё одну книгу<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Предмет книги — <code>modopedia:book</code>, ID тома в компоненте <code>modopedia:book</code>.</p>
+<h2 id="unlock">Сбор страниц и unlock<a class="headerlink" href="#unlock" title="Permanent link">&para;</a></h2>
+<p>Modopedia 1.1.11 <strong>не</strong> запирает главу предметом напрямую. Есть поле <code>advancement</code> у категории и записи.</p>
+<p>Цепочка в паке:</p>
 <ol>
-<li>Создайте <code>kubejs/data/&lt;namespace&gt;/modopedia/books/&lt;id&gt;.json</code> с полями <code>title</code>, при желании <code>subtitle</code>, <code>landing_text</code>, <code>creative_tab</code>, <code>type</code>.</li>
-<li>Создайте content set: <code>kubejs/assets/&lt;namespace&gt;/modopedia/books/&lt;id&gt;/ru_ru/categories/</code> и <code>.../entries/</code>.</li>
-<li>В категории перечислите <code>entries</code> по id файлов записей. Для <code>modopedia:classic</code> запись без категории на лендинге не появится.</li>
-<li>Страница — объект с <code>components</code>: либо <code>{ "type": "modopedia:text", "text": "..." }</code>, либо <code>{ "template": "modopedia:page/headered_text", ... }</code>, либо <code>{ "template": "modopedia:page/crafting", "recipe": "minecraft:stick" }</code>.</li>
-<li>Предметы в галерее: <code>modopedia:item_gallery</code> + display <code>modopedia:simple</code> / <code>grid</code> / <code>cycling</code>.</li>
-<li>Добавьте ключи в lang, рецепт или <code>/give</code>, затем <code>packwiz refresh</code>.</li>
+<li>Лист в сундуке (<code>diary_chest_loot.js</code>).</li>
+<li>Advancement <code>asi:diary/&lt;key&gt;</code> — триггер <code>inventory_changed</code>.</li>
+<li>Категория и её записи ссылаются на этот advancement.</li>
+<li>Предисловие каждого тома <strong>без</strong> advancement — обложку можно читать сразу.</li>
+<li>Тост advancement + сообщение в чат (<code>diary_page_pickup.js</code>).</li>
 </ol>
-<p>Официальная схема: <a href="https://moddedmc.wiki/en/project/modopedia/docs/books/book-json">Book JSON</a>, <a href="https://github.com/Favouriteless/Modopedia/blob/main/docs/books/category-json.mdx">Categories</a>, <a href="https://github.com/Favouriteless/Modopedia/blob/main/docs/books/entry-json.mdx">Entries</a>, <a href="https://github.com/Favouriteless/Modopedia/blob/main/docs/books/templates.mdx">Templates</a>.</p>
+<p>Корень дерева: скрытый <code>asi:diary/root</code> (тик). Это ближайший рабочий вариант к «страница из сундука открывает главу» без отдельного мода-квестбука.</p>
+<h2 id="_3">Где лежат файлы<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>kubejs/data/asi/modopedia/books/&lt;book_id&gt;.json
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>kubejs/data/asi/advancement/diary/
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>kubejs/assets/asi/modopedia/books/&lt;book_id&gt;/&lt;lang&gt;/{categories,entries}/
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>kubejs/assets/asi/models/item/modopedia_books/
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>kubejs/assets/asi/textures/item/
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>kubejs/startup_scripts/diary_pages.js
+</span></code></pre></div>
+<p>Локали <code>ru_ru</code> и <code>en_us</code> синхронизированы по id файлов.</p>
+<h2 id="_4">О чём тома (факты пака)<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Механик:</strong> стресс/RPM Create без выдуманных SU, вал/шестерни, пресс/миксер/мельница, деплойер/пила/вентилятор, андезит→латунь, список аддонов пака.</li>
+<li><strong>Небоход:</strong> Paragliders + аэролит, Clockwork-крылья (рецепт пака), корабль = Create Aeronautics + Sable (VS2 нет), тяга из <code>aeronautics-server.toml</code>, Hostile Skies, Discovery, Waystones: Sable.</li>
+<li><strong>Следопыт:</strong> More Mobs / пиглины / стража / Hordium без выдуманных боссов, дикий сектор 1500, Eve Wormhole Portals, Незер/Энд/Deeper Darker/Stellarity, YUNG + Dungeons Arise + деревни в небе, Artifacts / Lootr / Clavis.</li>
+</ul>
 <div class="admonition warning">
-<p class="admonition-title">Чего этот пак не проверяет автоматически</p>
-<p>JSON валидируется синтаксически. Открыть GUI книги в клиенте Minecraft в этой среде нельзя: нужны установленные моды. Если книга не открывается, смотрите лог Modopedia (<code>Error attempting to load book</code>) и язык клиента (<code>ru_ru</code> / <code>en_us</code>).</p>
+<p class="admonition-title">Чего эта среда не проверяет</p>
+<p>JSON валиден синтаксически. Клиент Minecraft с модами здесь не запускается: GUI книги, точный ID каждого предмета Create 6 и дроп LootJS на Lootr нужно смотреть в игре. Если книга не открывается — лог Modopedia и язык клиента (<code>ru_ru</code> / <code>en_us</code>).</p>
 </div>
 
 
