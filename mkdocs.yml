@@ -33,9 +33,9 @@ theme:
         icon: material/weather-night
         name: Переключить на тёмную тему
 
-  font:
-    text: Nunito
-    code: Roboto Mono
+  # Own CSS loads Tiny5 + Golos Text with an explicit Cyrillic subset.
+  # Material's font loader requests Latin-only and would drop glyphs.
+  font: false
   
   features:
     - navigation.instant

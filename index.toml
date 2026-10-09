@@ -5906,7 +5906,7 @@ hash = "9ee813f596e5e8937361d6e78d2b8a8818679ebf1588ca488f7f19b2997da592"
 
 [[files]]
 file = "docs/images/favicon.png"
-hash = "da3d4bd1479befde4e4f88aebbe9d91c4c6d13972b70ca8341cd8e58bb999abb"
+hash = "992dadbdddab100b1232b352a250ed2efa502db1447174e9d617e8b8686f525c"
 
 [[files]]
 file = "docs/images/icaria-balloon.jpg"
@@ -5914,11 +5914,7 @@ hash = "1e1e66294d7ad6cbbde5ac9852eea23f6118a281181c0688a4d6fd16bc45ed55"
 
 [[files]]
 file = "docs/images/icaria-icon.png"
-hash = "a9bd82bd532f421add6e0ae15c5988d10d141702bb99ec3f0ed0536650e3780b"
-
-[[files]]
-file = "docs/images/icaria-logo.jpg"
-hash = "d84c9d7d66d6abda08e46aa9bf8e4fb9fc7450caa1299345d733f079913434b1"
+hash = "85a7f1e4254447f46af94c4492cc5a2e2fac99f76dfb2a4937e0e9abcbd3cf49"
 
 [[files]]
 file = "docs/images/starfield.png"
@@ -5926,7 +5922,7 @@ hash = "ed7e5e5409dd8cf394ac671ef9bc0544685f9a16a2d6488ff3b8b64762403397"
 
 [[files]]
 file = "docs/index.md"
-hash = "530f95cf6dd6e6e1399bcd00247861b98b93bb1db76ed69e129736b37063dcf4"
+hash = "b7146df1b727eb71e4ac28d18bdd60b0a70a95a63daffef63a2839f1ec6708e2"
 
 [[files]]
 file = "docs/javascripts/icaria.js"
@@ -5934,7 +5930,7 @@ hash = "ccd294e0c5f383470600b6bffc63194679b41ff61c864acd977c47ca94e384d4"
 
 [[files]]
 file = "docs/lore/eve-online.md"
-hash = "6b252ca8848b2d786cc159b4eb82479b4ed2fca7cdd7d0cda7b9b573864ef6bf"
+hash = "f02fbbf5943bedaa0e0a44f779ae9caf496ad5e756b751e8343646ba68e26651"
 
 [[files]]
 file = "docs/lore/index.md"
@@ -5966,7 +5962,7 @@ hash = "b850bb9c8b43a2dbbe6da4e24ddd99ca9dc5b1cd526ef7329e225d64ed21ea68"
 
 [[files]]
 file = "docs/stylesheets/extra.css"
-hash = "ec167f3de69241bca20e324289176318f06bc5d4e8886115bae04305dc9ab1ad"
+hash = "5f9f76a13f226ffa0a707476fe009e08b05a2947452f360a190a942f41db3ee8"
 
 [[files]]
 file = "kubejs/assets/asi/lang/en_us.json"
@@ -6262,7 +6258,7 @@ hash = "afbec2b71cbf2b28e986a95cfb8523a644ab23c8aee994818c7dd4b5d952c2fe"
 
 [[files]]
 file = "mkdocs.yml"
-hash = "b1f82af664d9482cea792a08ec2bc6bf4f48fb204110edbbb35b4ba89722d99d"
+hash = "b2a66017fde677ff7c7edcb5488fecf9793c4217761acd1adcebfe59b7183b7f"
 
 [[files]]
 file = "mods/aero_cam_sync.pw.toml"

@@ -1,21 +1,16 @@
 <div class="hero-section" markdown>
 
-# Aeronautics Icaria {: .hero-sr-only }
+# Aeronautics Icaria
 
-![Логотип Aeronautics Icaria — ледяной циан AERONAUTICS и медное ICARIA на ночном небе](images/icaria-logo.jpg){ .hero-logo .pixel }
+Небесные острова, воздушные корабли и червоточины.
 
-### Небесные острова, воздушные корабли и червоточины
+![Обложка Aeronautics Icaria: малиновый аэростат, экипаж и летающие острова](images/icaria-balloon.jpg){ .pack-cover .pixel }
 
 [Установка](getting-started/installation.md){ .md-button .md-button--primary }
 [Список модов](mods/mod-list.md){ .md-button }
 [Отсылки к EVE Online](lore/eve-online.md){ .md-button }
 
 </div>
-
-<figure markdown>
-  ![Обложка Aeronautics Icaria: малиновый аэростат, острова и логотип с лозой](images/icaria-balloon.jpg){ .pack-cover .pixel }
-  <figcaption>Официальный арт пака</figcaption>
-</figure>
 
 ---
 
