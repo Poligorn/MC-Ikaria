@@ -5974,11 +5974,11 @@ hash = "b393a20761433deb97b9def0b25835860924dfedb424d382ced0ce157a7c0e18"
 
 [[files]]
 file = "docs/planning/roadmap.md"
-hash = "dccb1297bb91c318f24f4c1079f34a58481673df308b22020e184b619eadd951"
+hash = "157e35c4aa658644f8a23ed649bb2a0e3b63b103e9f3796a2d24bd5ebce54413"
 
 [[files]]
 file = "docs/stylesheets/extra.css"
-hash = "d870233d8f1d967a5485e71c641c71b5d41f21782cb6e0bb399fc1dfcfae2130"
+hash = "70fb310729d0c1746d376702610d7c569718786ae1ecebc8cb48c1ff499a4a62"
 
 [[files]]
 file = "kubejs/assets/asi/lang/en_us.json"
