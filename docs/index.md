@@ -115,6 +115,14 @@
 
     [:octicons-arrow-right-24: Гайды](guides/index.md)
 
+-   :material-map-clock:{ .lg .middle } __Планирование__
+
+    ---
+
+    Роадмап, канбан и концепт с доски Miro
+
+    [:octicons-arrow-right-24: Роадмап](planning/roadmap.md)
+
 </div>
 
 ---

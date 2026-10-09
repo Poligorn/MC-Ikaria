@@ -133,6 +133,11 @@ nav:
       - guides/index.md
       - Первые шаги: guides/getting-started-guide.md
       - Книги Modopedia: guides/modopedia.md
+  - Планирование:
+      - planning/index.md
+      - Роадмап: planning/roadmap.md
+      - Бэклог: planning/backlog.md
+      - Концепция: planning/concept.md
 
 # Extra
 extra:

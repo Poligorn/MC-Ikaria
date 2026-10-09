@@ -167,7 +167,7 @@ EVE здесь — **источник механик и атмосферы**: н
 !!! note "Не путать"
     В паке также есть ванильные/декоративные рамки (**Frame Changer**) и Waystones. Это не червоточины EVE.
 
-### Лицензии пилота
+### Лицензии пилота {: #pilot-licenses }
 
 KubeJS регистрирует предметы рангов (`kubejs/startup_scripts/pilot_license.js`) и слот Curios `license`:
 

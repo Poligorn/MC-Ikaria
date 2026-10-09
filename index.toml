@@ -5922,7 +5922,7 @@ hash = "ed7e5e5409dd8cf394ac671ef9bc0544685f9a16a2d6488ff3b8b64762403397"
 
 [[files]]
 file = "docs/index.md"
-hash = "7d5921ca20a39d26c5bd73989fbfe1195b129d68460313866a4a7a69306b9893"
+hash = "350a8757ac4ef57c6cf727d6ca1e479929d4d2cf8eba0ffb58a6c5c2214d2b61"
 
 [[files]]
 file = "docs/javascripts/icaria.js"
@@ -5930,7 +5930,7 @@ hash = "ccd294e0c5f383470600b6bffc63194679b41ff61c864acd977c47ca94e384d4"
 
 [[files]]
 file = "docs/lore/eve-online.md"
-hash = "f02fbbf5943bedaa0e0a44f779ae9caf496ad5e756b751e8343646ba68e26651"
+hash = "298681ed7fa356b0359e137dc34e5a734434a4c16721db12114a58aa8fccbe37"
 
 [[files]]
 file = "docs/lore/index.md"
@@ -5961,8 +5961,24 @@ file = "docs/mods/mod-list.md"
 hash = "b850bb9c8b43a2dbbe6da4e24ddd99ca9dc5b1cd526ef7329e225d64ed21ea68"
 
 [[files]]
+file = "docs/planning/backlog.md"
+hash = "4eb5c06232aa727d64b6cf147991a2ed75daf653806a31d69f217fc04c27434a"
+
+[[files]]
+file = "docs/planning/concept.md"
+hash = "21f7bff04659f73aacba99c9e1f103f8e6e847cf7ff72436b7c20f32a054bf86"
+
+[[files]]
+file = "docs/planning/index.md"
+hash = "b393a20761433deb97b9def0b25835860924dfedb424d382ced0ce157a7c0e18"
+
+[[files]]
+file = "docs/planning/roadmap.md"
+hash = "dccb1297bb91c318f24f4c1079f34a58481673df308b22020e184b619eadd951"
+
+[[files]]
 file = "docs/stylesheets/extra.css"
-hash = "6771a518aad3a75fd1b054f864cee180131dd8dec5feb44facbae5a74dfcaa02"
+hash = "d870233d8f1d967a5485e71c641c71b5d41f21782cb6e0bb399fc1dfcfae2130"
 
 [[files]]
 file = "kubejs/assets/asi/lang/en_us.json"
@@ -6258,7 +6274,7 @@ hash = "afbec2b71cbf2b28e986a95cfb8523a644ab23c8aee994818c7dd4b5d952c2fe"
 
 [[files]]
 file = "mkdocs.yml"
-hash = "b2a66017fde677ff7c7edcb5488fecf9793c4217761acd1adcebfe59b7183b7f"
+hash = "40c1d42deb7f9a474de8a85dd312a200c2ff4cf388ff4c2cdd8079950814e6a2"
 
 [[files]]
 file = "mods/aero_cam_sync.pw.toml"
