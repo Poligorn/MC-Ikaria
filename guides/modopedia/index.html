@@ -1608,7 +1608,7 @@
 <ol>
 <li><strong>Первый вход.</strong> <code>player.give()</code> кладёт три обложки и книгу FTB. Старый <code>/item replace … ${p.username}</code> от имени игрока не срабатывал (нет прав + пустой username) — книги не появлялись. Повторная выдача: <code>/asi resetplayer</code> и перезаход или <code>/asi givediaries</code> (оператор).</li>
 <li><strong>Крафт обложки</strong> (<code>kubejs/server_scripts/Recipes/modopedia_books.js</code>): книга + компас / карта / кость.</li>
-<li><strong>Страницы</strong> — девять предметов <code>kubejs:diary_page_*</code> в сундуках (<code>LootType.CHEST</code>, ~5.5% на тип листа). Lootr крутит таблицу на игрока.</li>
+<li><strong>Страницы</strong> — девять предметов <code>kubejs:diary_page_*</code> в сундуках (LootJS <code>addTableModifier</code> по таблицам <code>chests</code>, ~5.5% на тип листа). Lootr крутит таблицу на игрока.</li>
 <li>
 <p>Куски:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/give @s modopedia:book[modopedia:book="asi:mechanist_diary"]
