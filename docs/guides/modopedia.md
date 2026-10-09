@@ -22,7 +22,7 @@
 
 1. **Первый вход.** `player.give()` кладёт три обложки и книгу FTB. Старый `/item replace … ${p.username}` от имени игрока не срабатывал (нет прав + пустой username) — книги не появлялись. Повторная выдача: `/asi resetplayer` и перезаход или `/asi givediaries` (оператор).
 2. **Крафт обложки** (`kubejs/server_scripts/Recipes/modopedia_books.js`): книга + компас / карта / кость.
-3. **Страницы** — девять предметов `kubejs:diary_page_*` в сундуках (`LootType.CHEST`, ~5.5% на тип листа). Lootr крутит таблицу на игрока.
+3. **Страницы** — девять предметов `kubejs:diary_page_*` в сундуках (LootJS `addTableModifier` по таблицам `chests`, ~5.5% на тип листа). Lootr крутит таблицу на игрока.
 4. Куски:
 
     ```

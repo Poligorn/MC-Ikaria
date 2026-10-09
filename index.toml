@@ -5910,7 +5910,7 @@ hash = "77e6dfb9e72d62ae2b1b21d0a3d3dcc8f6978359e5d16f9e69df64c4bcf85007"
 
 [[files]]
 file = "docs/guides/modopedia.md"
-hash = "91ab65757352f3f4c8acf90c27ca1ee195ec327f5de24294b6b2c059247ef24e"
+hash = "620bc848fd11ab47f4e413095eb5e8141956cee00cead060351289253781941c"
 
 [[files]]
 file = "docs/images/favicon.png"
@@ -6458,7 +6458,7 @@ hash = "9fa4ee67318d216d647469f1e680d5f0bf96586a45f074b2284daff447835aee"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_chest_loot.js"
-hash = "8d10f042230c69f2e0babe7fe6d83128b64717969a0241fa571715dcc11aa28e"
+hash = "809d66ddfb6f53f515ad916266f3d95d29de40e336a026b077173467e584add7"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_page_pickup.js"

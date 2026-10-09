@@ -1,5 +1,5 @@
 // Листы дневников в сундуках структур (Lootr крутит таблицу на игрока).
-// LootJS 3.x: modifiers + LootType.CHEST + LootEntry.randomChance
+// Rhino в KubeJS не понимает spread (...array) — addLoot по одному.
 const DIARY_PAGE_ITEMS = [
   'kubejs:diary_page_mechanist_kinetics',
   'kubejs:diary_page_mechanist_machines',
@@ -13,6 +13,8 @@ const DIARY_PAGE_ITEMS = [
 ]
 
 LootJS.modifiers(event => {
-  const entries = DIARY_PAGE_ITEMS.map(id => LootEntry.of(id).randomChance(0.055))
-  event.addTableModifier(/.*chests.*/).addLoot(...entries)
+  let modifier = event.addTableModifier(/.*chests.*/)
+  for (let i = 0; i < DIARY_PAGE_ITEMS.length; i++) {
+    modifier.addLoot(LootEntry.of(DIARY_PAGE_ITEMS[i]).randomChance(0.055))
+  }
 })
