@@ -5978,7 +5978,7 @@ hash = "157e35c4aa658644f8a23ed649bb2a0e3b63b103e9f3796a2d24bd5ebce54413"
 
 [[files]]
 file = "docs/stylesheets/extra.css"
-hash = "70fb310729d0c1746d376702610d7c569718786ae1ecebc8cb48c1ff499a4a62"
+hash = "a43174b3782cf3f6bd182c46563d9367c4f715d06d4264a7704b332dbdff2dcd"
 
 [[files]]
 file = "kubejs/assets/asi/lang/en_us.json"
