@@ -1,0 +1,75 @@
+{
+  "title": "Andesite to brass",
+  "icon": {
+    "id": "create:andesite_alloy"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Two gates",
+          "text": "Early age: Andesite Alloy — casings, simple machines, first shafts. Mid: brass (copper + zinc in a heated basin) unlocks smarter machines and brass casings.$(br)$(br)※ This pack has no Mekanism and no Immersive Engineering. After Create come addons, not another tech stack."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:andesite_alloy"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:zinc_ingot"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:brass_ingot"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:brass_sheet"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:brass_casing"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:precision_mechanism"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_progress",
+  "assigned_items": [
+    "create:andesite_alloy",
+    "create:brass_ingot"
+  ]
+}

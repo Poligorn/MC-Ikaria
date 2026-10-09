@@ -1,0 +1,59 @@
+{
+  "title": "Что тащить",
+  "icon": {
+    "id": "minecraft:chest"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Карточка: добыча",
+          "text": "Artifacts — сокровища с исследования. Lootr — сундук на игрока. Clavis — замок-мини-игра. Sky Whale Ship — лут «кита», если доберётесь. Licenses пилота в слот Curios в репозитории не падают с этих сундуков: выдачу сервер ещё не настроил.$(br)$(br)⚠ Последняя карточка. Дыра за моей спиной гудит. Если листа больше не будет — не дописывайте за меня колосса из пепла."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 2,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:chest"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:diamond"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:map"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:bone"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_ruins"
+}

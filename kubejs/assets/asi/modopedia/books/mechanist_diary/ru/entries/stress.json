@@ -1,0 +1,30 @@
+{
+  "title": "Стресс и RPM",
+  "icon": {
+    "id": "create:shaft"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Замер сети",
+          "text": "Create считает две вещи: скорость вала (RPM) и стресс (SU). Источник задаёт потолок сети. Машина ест стресс; чем выше RPM на ней, тем больше ест.$(br)$(br)※ Если стресс выше потолка — сеть встаёт. Не «ломается», просто клинит."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Поля",
+          "text": "Точных SU по станку здесь не пишу: они пляшут от версии Create. Смотрите оверлей Create (Goggle / стресс-метр) и EMI.$(br)$(br)Источник крутит. Потребитель сопротивляется. Всё."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_kinetics",
+  "assigned_items": [
+    "create:shaft"
+  ]
+}

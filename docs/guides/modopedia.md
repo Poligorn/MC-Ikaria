@@ -1,63 +1,71 @@
-# Книги Modopedia
+# Дневники Трёх (Modopedia)
 
-В паке уже есть мод **Modopedia** 1.1.11 для NeoForge 1.21.1 (`mods/modopedia.pw.toml`, Modrinth `SYrakyVL`). Добавлять его через Packwiz не нужно.
+В паке **Modopedia** 1.1.11 для NeoForge 1.21.1 (`mods/modopedia.pw.toml`). Три тестовых гайда заменены на **дневники основателей**: обложки целы, страницы раскиданы по сундукам.
 
-Тестовые книги — датапак + ресурспак в **KubeJS** (так пак уже кладёт структуры `asi:` и языковые файлы). Формат сверен с [документацией Modopedia](https://moddedmc.wiki/en/project/modopedia/docs/books/overview) (версия мода **1.1.11**, MC **1.21.1**).
+Формат сверен с [Book JSON](https://moddedmc.wiki/en/project/modopedia/docs/books/book-json), [Book Textures](https://moddedmc.wiki/en/project/modopedia/docs/books/book-textures) и [Book Types](https://moddedmc.wiki/en/project/modopedia/docs/books/book-types) (classic + `locked_view_type`). Контент — только механики, которые есть в `mods/*.pw.toml` и в доках пака; нейро-рефы вроде «Ash Colossus» в текст не попали.
 
-## Три тестовые книги
+## Авторы и тома
 
-| ID | Название | О чём |
-|----|----------|--------|
-| `asi:pilot_handbook` | Справочник пилота | Вводный гайд пака: остров, полёт, квесты |
-| `asi:void_almanac` | Альманах пустоты | EVE-inspired червоточины и ранги |
-| `asi:mod_compendium` | Компендиум модов | Обзор ядра пака + страница ванильного рецепта |
+Имена из журнала FTB (*The Mechanist / The Skyward / The Wildlander*) и слоя «Дневники Трех» на доске. Полные имена — чтобы у каждого был голос.
 
-Тип книг: `modopedia:classic` (категории → записи → страницы). В записях есть текст, галерея предметов (`modopedia:item_gallery`) и шаблон рецепта (`modopedia:page/crafting`).
+| ID | Том | Автор | Голос | Стиль GUI |
+|----|-----|-------|-------|-----------|
+| `asi:mechanist_diary` | Чертежи Механика | **Элиас Верн** (Механик) | Пометки `※`, только измеренное, без выдуманных SU | коричневая обложка, золотая скоба `modopedia:brown_gold` |
+| `asi:skyward_diary` | Бортовой журнал Небохода | **Кайра Шторм** (Небоход) | Вахтенные записи, погода, высота | синяя обложка, серебро `modopedia:blue_silver` |
+| `asi:wildlander_diary` | Полевой дневник Следопыта | **Рован Пепельный** (Следопыт) | Карточки бестиария, шкала ●…●●●● | красная обложка, железо `modopedia:red_iron` |
 
-Локализации контента: `ru_ru` и `en_us`. Заголовки предметов книг — ключи в `kubejs/assets/asi/lang/`.
+Лендинг classic: баннер = `title` / **Оглавление**, под лентой = `subtitle` + `landing_text` (**Подзаголовок**), справа список категорий (**Главы**). Закрытые главы видны полупрозрачно (`locked_view_type: translucent`).
 
-## Как получить в игре
+Текстуры предметов — перекраска официальных иконок Modopedia (MIT, Favouriteless) плюс точка-эмблема на корешке. GUI-рамки — встроенные classic, не копия PNG в пак. Модели: `kubejs/assets/asi/models/item/modopedia_books/`.
 
-1. **Первый вход:** справочник пилота кладётся в хотбар рядом с книгой квестов.
-2. **Крафт** (KubeJS, `kubejs/server_scripts/Recipes/modopedia_books.js`):
-    - книга + карта → справочник пилота;
-    - книга + жемчуг Края → альманах пустоты;
-    - книга + компас → компендиум модов.
-3. **Творчество:** книги попадают во вкладку Search и в `minecraft:tools_and_utilities`.
-4. Команды:
+## Как получить
+
+1. **Первый вход.** `player.give()` кладёт три обложки и книгу FTB. Старый `/item replace … ${p.username}` от имени игрока не срабатывал (нет прав + пустой username) — книги не появлялись. Повторная выдача: `/asi resetplayer` и перезаход или `/asi givediaries` (оператор).
+2. **Крафт обложки** (`kubejs/server_scripts/Recipes/modopedia_books.js`): книга + компас / карта / кость.
+3. **Страницы** — девять предметов `kubejs:diary_page_*` в сундуках (`LootType.CHEST`, ~5.5% на тип листа). Lootr крутит таблицу на игрока.
+4. Куски:
 
     ```
-    /give @s modopedia:book[modopedia:book="asi:pilot_handbook"]
-    /give @s modopedia:book[modopedia:book="asi:void_almanac"]
-    /give @s modopedia:book[modopedia:book="asi:mod_compendium"]
-    /modopedia open book asi:pilot_handbook
+    /give @s modopedia:book[modopedia:book="asi:mechanist_diary"]
+    /give @s modopedia:book[modopedia:book="asi:skyward_diary"]
+    /give @s modopedia:book[modopedia:book="asi:wildlander_diary"]
+    /modopedia open book asi:skyward_diary
     ```
 
-Предмет книги — `modopedia:book`. ID гайда хранится в data component **`modopedia:book`** (ResourceLocation), см. исходники Modopedia (`MDataComponents`, `MBookItem`).
+Предмет книги — `modopedia:book`, ID тома в компоненте `modopedia:book`.
+
+## Сбор страниц и unlock
+
+Modopedia 1.1.11 **не** запирает главу предметом напрямую. Есть поле `advancement` у категории и записи.
+
+Цепочка в паке:
+
+1. Лист в сундуке (`diary_chest_loot.js`).
+2. Advancement `asi:diary/<key>` — триггер `inventory_changed`.
+3. Категория и её записи ссылаются на этот advancement.
+4. Предисловие каждого тома **без** advancement — обложку можно читать сразу.
+5. Тост advancement + сообщение в чат (`diary_page_pickup.js`).
+
+Корень дерева: скрытый `asi:diary/root` (тик). Это ближайший рабочий вариант к «страница из сундука открывает главу» без отдельного мода-квестбука.
 
 ## Где лежат файлы
 
 ```
-kubejs/data/asi/modopedia/books/<book_id>.json          # datapack: book.json
-kubejs/assets/asi/modopedia/books/<book_id>/<lang>/
-    categories/<id>.json
-    entries/<id>.json
-kubejs/assets/asi/lang/ru_ru.json
-kubejs/assets/asi/lang/en_us.json
+kubejs/data/asi/modopedia/books/<book_id>.json
+kubejs/data/asi/advancement/diary/
+kubejs/assets/asi/modopedia/books/<book_id>/<lang>/{categories,entries}/
+kubejs/assets/asi/models/item/modopedia_books/
+kubejs/assets/asi/textures/item/
+kubejs/startup_scripts/diary_pages.js
 ```
 
-KubeJS подхватывает `kubejs/data/` как датапак и `kubejs/assets/` как ресурспак. После добавления файлов в репозиторий выполните `packwiz refresh`.
+Локали `ru_ru` и `en_us` синхронизированы по id файлов.
 
-## Как добавить ещё одну книгу
+## О чём тома (факты пака)
 
-1. Создайте `kubejs/data/<namespace>/modopedia/books/<id>.json` с полями `title`, при желании `subtitle`, `landing_text`, `creative_tab`, `type`.
-2. Создайте content set: `kubejs/assets/<namespace>/modopedia/books/<id>/ru_ru/categories/` и `.../entries/`.
-3. В категории перечислите `entries` по id файлов записей. Для `modopedia:classic` запись без категории на лендинге не появится.
-4. Страница — объект с `components`: либо `{ "type": "modopedia:text", "text": "..." }`, либо `{ "template": "modopedia:page/headered_text", ... }`, либо `{ "template": "modopedia:page/crafting", "recipe": "minecraft:stick" }`.
-5. Предметы в галерее: `modopedia:item_gallery` + display `modopedia:simple` / `grid` / `cycling`.
-6. Добавьте ключи в lang, рецепт или `/give`, затем `packwiz refresh`.
+- **Механик:** стресс/RPM Create без выдуманных SU, вал/шестерни, пресс/миксер/мельница, деплойер/пила/вентилятор, андезит→латунь, список аддонов пака.
+- **Небоход:** Paragliders + аэролит, Clockwork-крылья (рецепт пака), корабль = Create Aeronautics + Sable (VS2 нет), тяга из `aeronautics-server.toml`, Hostile Skies, Discovery, Waystones: Sable.
+- **Следопыт:** More Mobs / пиглины / стража / Hordium без выдуманных боссов, дикий сектор 1500, Eve Wormhole Portals, Незер/Энд/Deeper Darker/Stellarity, YUNG + Dungeons Arise + деревни в небе, Artifacts / Lootr / Clavis.
 
-Официальная схема: [Book JSON](https://moddedmc.wiki/en/project/modopedia/docs/books/book-json), [Categories](https://github.com/Favouriteless/Modopedia/blob/main/docs/books/category-json.mdx), [Entries](https://github.com/Favouriteless/Modopedia/blob/main/docs/books/entry-json.mdx), [Templates](https://github.com/Favouriteless/Modopedia/blob/main/docs/books/templates.mdx).
-
-!!! warning "Чего этот пак не проверяет автоматически"
-    JSON валидируется синтаксически. Открыть GUI книги в клиенте Minecraft в этой среде нельзя: нужны установленные моды. Если книга не открывается, смотрите лог Modopedia (`Error attempting to load book`) и язык клиента (`ru_ru` / `en_us`).
+!!! warning "Чего эта среда не проверяет"
+    JSON валиден синтаксически. Клиент Minecraft с модами здесь не запускается: GUI книги, точный ID каждого предмета Create 6 и дроп LootJS на Lootr нужно смотреть в игре. Если книга не открывается — лог Modopedia и язык клиента (`ru_ru` / `en_us`).

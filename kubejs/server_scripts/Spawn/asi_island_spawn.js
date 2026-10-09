@@ -50,16 +50,36 @@ PlayerEvents.loggedIn(event => {
     if (!p) return;
 
     const dim = ASI_DIM.replace('minecraft:', '');
-    p.runCommandSilent(
-      `execute in minecraft:${dim} run tp ${p.username} ${ASI_SPAWN_X} ${ASI_SPAWN_Y} ${ASI_SPAWN_Z}`
-    );
+    // Не /tp и не /item replace от имени игрока: в 1.21 у новичка нет прав,
+    // p.username часто пустой — команды молча не срабатывали, книги не появлялись.
+    if (typeof p.teleportTo === 'function') {
+      try {
+        p.teleportTo(ASI_SPAWN_X, ASI_SPAWN_Y, ASI_SPAWN_Z)
+      } catch (e) {
+        const name = p.username || (p.name && p.name.string) || ''
+        if (name) {
+          event.server.runCommandSilent(
+            `execute in minecraft:${dim} run tp ${name} ${ASI_SPAWN_X} ${ASI_SPAWN_Y} ${ASI_SPAWN_Z}`
+          )
+        }
+      }
+    } else {
+      const name = p.username || (p.name && p.name.string) || ''
+      if (name) {
+        event.server.runCommandSilent(
+          `execute in minecraft:${dim} run tp ${name} ${ASI_SPAWN_X} ${ASI_SPAWN_Y} ${ASI_SPAWN_Z}`
+        )
+      }
+    }
 
-    // Выдаём книгу квестов и тестовый справочник пилота (Modopedia)
-    p.runCommandSilent(`item replace entity ${p.username} hotbar.8 with ftbquests:book`);
-    p.runCommandSilent(`item replace entity ${p.username} hotbar.7 with modopedia:book[modopedia:book="asi:pilot_handbook"]`);
+    const diary = id => Item.of(`modopedia:book[modopedia:book="${id}"]`)
+    p.give(Item.of('ftbquests:book'))
+    p.give(diary('asi:mechanist_diary'))
+    p.give(diary('asi:skyward_diary'))
+    p.give(diary('asi:wildlander_diary'))
 
     p.tell(Text.gold('Добро пожаловать на Небесный Остров. Ваше приключение начинается здесь...'));
-    p.tell(Text.aqua('Книга квестов и справочник пилота в хотбаре!'));
+    p.tell(Text.aqua('Три дневника основателей и книга квестов — в инвентаре. Страницы ищите в сундуках.'));
     
     console.info('[ASI] Игрок ' + p.name.string + ' заспавнен на острове.');
   });

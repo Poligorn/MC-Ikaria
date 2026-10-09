@@ -1,0 +1,14 @@
+{
+  "title": "book.asi.mechanist_diary.title",
+  "subtitle": "book.asi.mechanist_diary.subtitle",
+  "landing_text": "book.asi.mechanist_diary.landing",
+  "type": {
+    "id": "modopedia:classic",
+    "locked_view_type": "translucent"
+  },
+  "texture": "modopedia:brown_gold",
+  "model": "asi:item/modopedia_books/mechanist_diary",
+  "text_colour": "3D2914",
+  "header_colour": "8B6914",
+  "creative_tab": "minecraft:tools_and_utilities"
+}

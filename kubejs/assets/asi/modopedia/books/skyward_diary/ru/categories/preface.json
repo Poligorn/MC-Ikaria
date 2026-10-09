@@ -1,0 +1,12 @@
+{
+  "title": "Вахта",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "landing_text": "Кайра Шторм — Небоход из журнала основателей. Пишу как вахтенный журнал, не как учебник.",
+  "entries": [
+    "cover",
+    "how_pages"
+  ],
+  "sort_num": 0
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Андезит → латунь",
+  "icon": {
+    "id": "create:andesite_alloy"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Два порога",
+          "text": "Ранний век: Andesite Alloy — кожухи, простые машины, первые валы. Средний: латунь (медь + цинк в нагретой чаше) открывает умные машины и латунные кожухи.$(br)$(br)※ В этом паке нет Mekanism и Immersive Engineering. Дальше Create — аддоны, не «следующий техмод»."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:andesite_alloy"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:zinc_ingot"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:brass_ingot"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:brass_sheet"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:brass_casing"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:precision_mechanism"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_progress",
+  "assigned_items": [
+    "create:andesite_alloy",
+    "create:brass_ingot"
+  ]
+}

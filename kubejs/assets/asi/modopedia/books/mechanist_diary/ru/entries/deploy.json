@@ -1,0 +1,76 @@
+{
+  "title": "Руки и воздух",
+  "icon": {
+    "id": "create:deployer"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Деплойер, пила, вентилятор",
+          "text": "Деплойер ставит и применяет предметы — конвейерная «рука». Механическая пила режет дерево и камень по рецептам Create. Закрытый вентилятор гонит воздух: сушка, копчение, промывка зависят от того, что перед ним.$(br)$(br)※ Рецепты — EMI, не моя память."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:deployer"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:mechanical_saw"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:encased_fan"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:belt_connector"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:andesite_funnel"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:depot"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_machines",
+  "assigned_items": [
+    "create:deployer",
+    "create:mechanical_saw",
+    "create:encased_fan"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Glider",
+  "icon": {
+    "id": "paraglider:paraglider"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Day. Quiet, island height",
+          "text": "Personal flight is Paragliders, not elytra. The vanilla leather recipe is removed. You need Aeroscapes aerolite and sticks.$(br)$(br)✎ Stamina is a mod config. I will not write «fly forever» — I never did."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "paraglider:paraglider"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "aeroscapes:aerolite_twig"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:stick"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_glider",
+  "assigned_items": [
+    "paraglider:paraglider",
+    "aeroscapes:aerolite_twig"
+  ]
+}

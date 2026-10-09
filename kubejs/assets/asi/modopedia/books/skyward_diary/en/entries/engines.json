@@ -1,0 +1,27 @@
+{
+  "title": "Thrust",
+  "icon": {
+    "id": "minecraft:furnace"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Day. Headwind",
+          "text": "Aeronautics engines: propellers (wood, andesite, smart, propeller bearing), hot air and steam. Pack config defaults hotAirStrength and steamStrength to 1.5 kpg per m³. Burner and steam valve have caps.$(br)$(br)✎ A potato cannon on a ship has recoil — do not mount it on the rail without a plan."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Note",
+          "text": "I will not draft a bridge block-for-block. Aeronautics moves its layouts. Use EMI and your first raft. Create stress still applies on a ship — Mechanist was right."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_airship"
+}

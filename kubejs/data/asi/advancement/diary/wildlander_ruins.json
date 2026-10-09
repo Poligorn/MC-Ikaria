@@ -1,0 +1,29 @@
+{
+  "parent": "asi:diary/root",
+  "display": {
+    "icon": {
+      "id": "kubejs:diary_page_wildlander_ruins"
+    },
+    "title": {
+      "translate": "adv.asi.diary.wildlander_ruins.title"
+    },
+    "description": {
+      "translate": "adv.asi.diary.wildlander_ruins.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_page": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "kubejs:diary_page_wildlander_ruins"
+          }
+        ]
+      }
+    }
+  }
+}

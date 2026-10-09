@@ -1,0 +1,26 @@
+{
+  "title": "Wildlander",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Rovan Ash",
+          "text": "Mechanist measured shafts, Skyward altitude. I measured what bites. In the Founders' journal I am the Wildlander.$(br)$(br)⚠ Danger ratings are my scale, not HP from code. I will not invent another mob's health."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "At the rim",
+          "text": "I leave the diary at the portal. If the hole closes while I am inside, the map ends. Do not sketch an «Ash Colossus» in the margin: that beast is not in the pack."
+        }
+      ]
+    }
+  ]
+}

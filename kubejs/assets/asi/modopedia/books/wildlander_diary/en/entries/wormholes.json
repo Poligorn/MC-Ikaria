@@ -1,0 +1,30 @@
+{
+  "title": "Wormholes",
+  "icon": {
+    "id": "minecraft:ender_pearl"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Card: hole",
+          "text": "Eve Wormhole Portals is the only blunt EVE reference. Portals spawn on their own, live a limited time, and have a jump / mass limit. Classes: Unstable, Standard, Massive. Nine colours are a signature, not CCP factions.$(br)$(br)⚠ Radar: bearing and rough range. Detector: class, colour, time, remaining uses. Shards drop on collapse. Radar recipes come earlier than the detector (mod description)."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Do not mix",
+          "text": "Frame Changer and Waystones are not wormholes. There is no New Eden, Jita, or CONCORD in this pack. A hole in the sky, not CCP canon."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_portals",
+  "assigned_items": [
+    "minecraft:ender_pearl"
+  ]
+}

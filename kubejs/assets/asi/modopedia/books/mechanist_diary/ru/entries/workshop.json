@@ -1,0 +1,76 @@
+{
+  "title": "Пресс и чаша",
+  "icon": {
+    "id": "create:mechanical_press"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Три станка",
+          "text": "Пресс — листы и уплотнение. Смеситель над чашей — сплавы и еда (Slice & Dice потом подключит кухню). Мельница — порошки.$(br)$(br)※ Смеситель без нагрева чаши не даст латунь. Горелка (Blaze Burner) — отдельный шаг, не декорация."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:mechanical_press"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:mechanical_mixer"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:basin"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:millstone"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:blaze_burner"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:whisk"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_machines",
+  "assigned_items": [
+    "create:mechanical_press",
+    "create:mechanical_mixer",
+    "create:millstone"
+  ]
+}

@@ -43,9 +43,22 @@ ServerEvents.commandRegistry(event => {
           const player = ctx.source.player;
           if (player) {
             player.persistentData.putBoolean('asi_started', false);
-            ctx.source.sendSystemMessage(Text.yellow('[ASI] Твой флаг спавна сброшен. Перезайди — снова заспавнишься на острове с книгой.'));
+            ctx.source.sendSystemMessage(Text.yellow('[ASI] Твой флаг спавна сброшен. Перезайди — снова заспавнишься на острове с дневниками.'));
           }
           return 1;
+        }))
+
+      // /asi givediaries — выдать три обложки (если спавн уже прошёл)
+      .then(Commands.literal('givediaries')
+        .executes(ctx => {
+          const player = ctx.source.player
+          if (!player) return 0
+          const diary = id => Item.of(`modopedia:book[modopedia:book="${id}"]`)
+          player.give(diary('asi:mechanist_diary'))
+          player.give(diary('asi:skyward_diary'))
+          player.give(diary('asi:wildlander_diary'))
+          ctx.source.sendSystemMessage(Text.green('[ASI] Выданы три дневника основателей.'))
+          return 1
         }))
 
       // /asi status  — показать текущее состояние флагов

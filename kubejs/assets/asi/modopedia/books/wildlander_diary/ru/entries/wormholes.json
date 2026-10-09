@@ -1,0 +1,30 @@
+{
+  "title": "Червоточины",
+  "icon": {
+    "id": "minecraft:ender_pearl"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Карточка: дыра",
+          "text": "Eve Wormhole Portals — единственный явный EVE-референс. Порталы спавнятся сами, живут ограниченное время, имеют лимит проходов («масса»). Классы: Unstable, Standard, Massive. Девять цветов — сигнатура, не фракции CCP.$(br)$(br)⚠ Радар — направление и грубая дистанция. Детектор — класс, цвет, время, остаток проходов. Осколки падают с коллапса. Рецепты радара раньше детектора (по описанию мода)."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Не путать",
+          "text": "Frame Changer и Waystones — не червоточины. New Eden, Jita и CONCORD в паке нет. Это дыра в небо, не канон CCP."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_portals",
+  "assigned_items": [
+    "minecraft:ender_pearl"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "title": "След",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "landing_text": "Рован Пепельный — Следопыт из журнала основателей. Карточки и оценки опасности — мои, не таблица мода.",
+  "entries": [
+    "cover",
+    "how_pages"
+  ],
+  "sort_num": 0
+}

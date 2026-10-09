@@ -1,0 +1,13 @@
+{
+  "title": "Ruins",
+  "icon": {
+    "id": "minecraft:mossy_cobblestone"
+  },
+  "landing_text": "The ruins leaf. Dungeons and loot that actually generate.",
+  "entries": [
+    "dungeons",
+    "loot"
+  ],
+  "sort_num": 3,
+  "advancement": "asi:diary/wildlander_ruins"
+}

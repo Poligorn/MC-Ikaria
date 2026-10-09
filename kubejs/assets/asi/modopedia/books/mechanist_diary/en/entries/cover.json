@@ -1,0 +1,26 @@
+{
+  "title": "I am the Mechanist",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Elias Verne",
+          "text": "They called me Mechanist before the Ascension. Skyward charted wind, Wildlander beasts. I kept the gears.$(br)$(br)※ Margin notes are measurements. If a number is missing, the pack does not have it. I will not invent one."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Workshop below",
+          "text": "I went to the lower islands to finish an automated line. The binding stayed on the bench. If you are reading this I am gone; I hope the machines still turn."
+        }
+      ]
+    }
+  ]
+}

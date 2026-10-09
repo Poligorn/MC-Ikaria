@@ -1,0 +1,13 @@
+{
+  "title": "Кинетика",
+  "icon": {
+    "id": "create:cogwheel"
+  },
+  "landing_text": "Лист из сундука с пометкой «кинетика». Без него эти чертежи не читаются.",
+  "entries": [
+    "stress",
+    "transmission"
+  ],
+  "sort_num": 1,
+  "advancement": "asi:diary/mechanist_kinetics"
+}

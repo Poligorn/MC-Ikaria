@@ -1,0 +1,62 @@
+{
+  "title": "Clockwork-крылья",
+  "icon": {
+    "id": "minecraft:elytra"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "День. Позже, когда будет латунь",
+          "text": "Крылья Clockwork — не старт. Рецепт пака: элитры, латунный лист Create, золотой аэролит, пружина и гироскоп Simulated, альтиметр Supplementaries. Ванильный рецепт мода снят.$(br)$(br)✎ Это личный ранец, не корабль."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 2,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:elytra"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:brass_sheet"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "aeroscapes:golden_aerolite_twig"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "supplementaries:altimeter"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_glider",
+  "assigned_items": [
+    "clockwork:clockwork_wings"
+  ]
+}

@@ -1,11 +1,11 @@
 {
-  "book.asi.pilot_handbook.title": "Справочник пилота",
-  "book.asi.pilot_handbook.subtitle": "MC ASI Online",
-  "book.asi.pilot_handbook.landing": "Вводный журнал пака Aeronautics Ikaria: остров, полёт, квесты.",
-  "book.asi.void_almanac.title": "Альманах пустоты",
-  "book.asi.void_almanac.subtitle": "Червоточины",
-  "book.asi.void_almanac.landing": "Порталы Eve Wormhole Portals и ранги экипажа — вдохновлено механикой EVE Online.",
-  "book.asi.mod_compendium.title": "Компендиум модов",
-  "book.asi.mod_compendium.subtitle": "Ядро сборки",
-  "book.asi.mod_compendium.landing": "Create Aeronautics, выживание и демо страницы рецепта. Полный список — в документации MkDocs."
+  "book.asi.mechanist_diary.title": "Чертежи Механика",
+  "book.asi.mechanist_diary.subtitle": "Элиас Верн",
+  "book.asi.mechanist_diary.landing": "Переплёт нашли на нижнем острове, у остывшей мастерской. Страницы вырваны. Если найдёте лист в сундуке — вложите в этот том: главы откроются сами.",
+  "book.asi.skyward_diary.title": "Бортовой журнал Небохода",
+  "book.asi.skyward_diary.subtitle": "Кайра Шторм",
+  "book.asi.skyward_diary.landing": "Журнал нашли в корзине аэростата. Последняя пометка оборвана ветром. Листы разбросаны по сундукам архипелага — без них главы закрыты.",
+  "book.asi.wildlander_diary.title": "Полевой дневник Следопыта",
+  "book.asi.wildlander_diary.subtitle": "Рован Пепельный",
+  "book.asi.wildlander_diary.landing": "Дневник брошен у кромки червоточины. Автор не вернулся. Карточки бестиария и схемы руин лежат в сундуках — без них записи закрыты."
 }

@@ -1,11 +1,11 @@
 {
-  "book.asi.pilot_handbook.title": "Pilot Handbook",
-  "book.asi.pilot_handbook.subtitle": "MC ASI Online",
-  "book.asi.pilot_handbook.landing": "Intro journal for Aeronautics Ikaria: island, flight, quests.",
-  "book.asi.void_almanac.title": "Void Almanac",
-  "book.asi.void_almanac.subtitle": "Wormholes",
-  "book.asi.void_almanac.landing": "Eve Wormhole Portals and crew ranks, inspired by EVE Online wormhole play.",
-  "book.asi.mod_compendium.title": "Mod Compendium",
-  "book.asi.mod_compendium.subtitle": "Pack core",
-  "book.asi.mod_compendium.landing": "Create Aeronautics, survival, and a sample recipe page. Full list is in the MkDocs site."
+  "book.asi.mechanist_diary.title": "The Mechanist's Drafts",
+  "book.asi.mechanist_diary.subtitle": "Elias Verne",
+  "book.asi.mechanist_diary.landing": "The binding was left on a lower island, beside a cold workshop. Pages are missing. A leaf from a chest will unlock its chapter in this volume.",
+  "book.asi.skyward_diary.title": "Skyward's Flight Log",
+  "book.asi.skyward_diary.subtitle": "Kaira Storm",
+  "book.asi.skyward_diary.landing": "Found in a balloon basket. The last note is torn by wind. Collect the scattered leaves from chests to open the locked chapters.",
+  "book.asi.wildlander_diary.title": "The Wildlander's Field Notes",
+  "book.asi.wildlander_diary.subtitle": "Rovan Ash",
+  "book.asi.wildlander_diary.landing": "Left at a wormhole rim. The author never came back. Bestiary cards and ruin notes sit in chests — chapters stay locked until you find them."
 }

@@ -1,9 +1,0 @@
-{
-  "title": "book.asi.void_almanac.title",
-  "subtitle": "book.asi.void_almanac.subtitle",
-  "landing_text": "book.asi.void_almanac.landing",
-  "type": {
-    "id": "modopedia:classic"
-  },
-  "creative_tab": "minecraft:tools_and_utilities"
-}

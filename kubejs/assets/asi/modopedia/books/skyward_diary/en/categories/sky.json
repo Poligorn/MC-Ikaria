@@ -1,0 +1,13 @@
+{
+  "title": "Sky",
+  "icon": {
+    "id": "minecraft:spyglass"
+  },
+  "landing_text": "The sky leaf. Raids, charts, stones on deck.",
+  "entries": [
+    "raids",
+    "nav"
+  ],
+  "sort_num": 3,
+  "advancement": "asi:diary/skyward_sky"
+}

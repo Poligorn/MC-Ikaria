@@ -1,0 +1,12 @@
+{
+  "title": "Trail",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "landing_text": "Rovan Ash — the Wildlander of the Founders' journal. Danger ratings are mine, not a mod table.",
+  "entries": [
+    "cover",
+    "how_pages"
+  ],
+  "sort_num": 0
+}

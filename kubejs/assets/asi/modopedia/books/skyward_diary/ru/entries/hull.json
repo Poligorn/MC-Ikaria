@@ -1,0 +1,27 @@
+{
+  "title": "Корабль",
+  "icon": {
+    "id": "minecraft:oak_boat"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "День. Облачность, высота ~220",
+          "text": "Корабль — контрапшен Create, который уходит в суб-уровень Sable. Valkyrien Skies 2 в паке нет, не ищите.$(br)$(br)✎ Камера на палубе: Aeronautics Camera Sync. Клайм на корпус: Create Aeronautics: Claims (рядом с OPAC)."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Сборка",
+          "text": "Корпус и каюты: Encased, Copycats+, Interiors, Design n' Decor (+ совместимость с Aeronautics), Bells & Whistles. Frame Changer — рамки Незер, не червоточины. Киты в небе — структуры Sky Whale Ship, не ваш корабль."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_airship"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Личный полёт",
+  "icon": {
+    "id": "paraglider:paraglider"
+  },
+  "landing_text": "Лист «планёр». Пока его нет — эта вахта запечатана.",
+  "entries": [
+    "glider",
+    "wings"
+  ],
+  "sort_num": 1,
+  "advancement": "asi:diary/skyward_glider"
+}

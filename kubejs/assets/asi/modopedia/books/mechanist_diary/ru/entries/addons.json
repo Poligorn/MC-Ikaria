@@ -1,0 +1,27 @@
+{
+  "title": "Что стоит в паке",
+  "icon": {
+    "id": "create:brass_hand"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Список, не мечта",
+          "text": "Encased, Connected, Copycats+, Interiors, Design n' Decor, Bells & Whistles, Slice & Dice, Numismatics, Marketplace, Horse Power, Totem Factory, Winery, Better Villagers, Gunsmithing, Big Cannons, Radars, Clockwork.$(br)$(br)※ Корабль — не этот том. Смотрите журнал Небохода. Деньги — Numismatics, не ISK."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Последняя помета",
+          "text": "Если линия собрана, оставьте её работать. Я пошёл проверить паровой котёл на уступе и не вернулся. Не ищите номер SU котла у меня на полях — его здесь нет."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_progress"
+}

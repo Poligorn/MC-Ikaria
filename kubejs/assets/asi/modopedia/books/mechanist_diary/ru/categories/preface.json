@@ -1,0 +1,12 @@
+{
+  "title": "Переплёт",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "landing_text": "Элиас Верн, которого в Aeronautics Journal зовут Механиком. Пишу от первого лица — как в черновике у верстака.",
+  "entries": [
+    "cover",
+    "how_pages"
+  ],
+  "sort_num": 0
+}

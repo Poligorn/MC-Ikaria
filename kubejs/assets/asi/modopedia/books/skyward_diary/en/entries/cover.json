@@ -1,0 +1,26 @@
+{
+  "title": "Skyward on watch",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Kaira Storm",
+          "text": "Day unnumbered. Wind from the northwest, the island rolls. They called me Skyward: wind, cloud, building in the air. Mechanist counted cogs, Wildlander tracks. I counted altitude.$(br)$(br)✎ Altitude is approximate. A Supplementaries altimeter lies in a storm."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Last sortie",
+          "text": "I went to shut a burner on a balloon over the storm archipelago. The log stayed in the basket. If a page is wet, that is rain, not blood."
+        }
+      ]
+    }
+  ]
+}

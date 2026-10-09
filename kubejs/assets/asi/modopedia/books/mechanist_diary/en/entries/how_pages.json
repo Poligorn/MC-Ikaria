@@ -1,0 +1,26 @@
+{
+  "title": "How to read this",
+  "icon": {
+    "id": "minecraft:paper"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Torn leaves",
+          "text": "Chapters stay locked until the matching leaf is in your inventory. Island, mine, and dungeon chests — Lootr rolls loot per player.$(br)$(br)※ The cover is given on the starter island. Craft: book + compass if you lose the volume."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Note",
+          "text": "Do not confuse this with the FTB Aeronautics Journal: that quest is still a stub. These are the diaries. EMI will beat my sketches on recipes."
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,0 @@
-{
-  "title": "book.asi.mod_compendium.title",
-  "subtitle": "book.asi.mod_compendium.subtitle",
-  "landing_text": "book.asi.mod_compendium.landing",
-  "type": {
-    "id": "modopedia:classic"
-  },
-  "creative_tab": "minecraft:tools_and_utilities"
-}

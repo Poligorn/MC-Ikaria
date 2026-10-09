@@ -1,0 +1,12 @@
+{
+  "title": "Binding",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "landing_text": "Elias Verne — the Mechanist in the Aeronautics Journal. First person, like notes on a bench.",
+  "entries": [
+    "cover",
+    "how_pages"
+  ],
+  "sort_num": 0
+}

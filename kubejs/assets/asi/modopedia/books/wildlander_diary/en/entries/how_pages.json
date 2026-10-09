@@ -1,0 +1,26 @@
+{
+  "title": "How to read a trail",
+  "icon": {
+    "id": "minecraft:paper"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Cards",
+          "text": "A chapter opens when its chest leaf reaches you. The cover is given at spawn. Lost it — book + bone. Lootr: a structure chest is yours, not shared.$(br)$(br)⚠ Clavis locks some chests behind a minigame. Better play, better loot. That is the mod, not my rating."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Scale",
+          "text": "● quiet island  ·  ●● wild sector  ·  ●●● hole / dungeon  ·  ●●●● Nether and deeper. Author scale, not a server rule."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Планёр",
+  "icon": {
+    "id": "paraglider:paraglider"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "День. Тихо, высота острова",
+          "text": "Личный полёт — Paragliders, не элитры. Ванильный рецепт с кожей снят. Нужен аэролит островов Aeroscapes и палки.$(br)$(br)✎ Стамна настраивается в конфиге мода. Не пишу «летайте бесконечно» — я так не летала."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "paraglider:paraglider"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "aeroscapes:aerolite_twig"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:stick"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_glider",
+  "assigned_items": [
+    "paraglider:paraglider",
+    "aeroscapes:aerolite_twig"
+  ]
+}

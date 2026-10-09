@@ -1,0 +1,27 @@
+{
+  "title": "Course",
+  "icon": {
+    "id": "minecraft:compass"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Day. Break in the cloud",
+          "text": "Create Aeronautics Discovery: flyovers, a Soaring Trader with structure maps, sub-level collisions. Normal Waystones are uncraftable. On a Sable deck you need Waystones: Sable. UI is Waystones Plus. Map is Xaero.$(br)$(br)✎ Wormholes are not warp. That is Wildlander's volume."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Break",
+          "text": "Altitude dropping. Burner running blue. If the log ends here, do not look under the island. Look downwind."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_sky"
+}
