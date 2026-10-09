@@ -542,7 +542,8 @@ body,
 
 [data-md-color-scheme="slate"] .md-typeset p,
 [data-md-color-scheme="slate"] .md-typeset li,
-[data-md-color-scheme="slate"] .md-typeset td {
+[data-md-color-scheme="slate"] .md-typeset td,
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   color: #e8eef8;
 }
 
