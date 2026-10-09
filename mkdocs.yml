@@ -33,8 +33,7 @@ theme:
         icon: material/weather-night
         name: Переключить на тёмную тему
 
-  # Own CSS loads Tiny5 + Golos Text with an explicit Cyrillic subset.
-  # Material's font loader requests Latin-only and would drop glyphs.
+  # Self-hosted Minecraft Rus (docs/assets/fonts). Material's Google loader is off.
   font: false
   
   features:

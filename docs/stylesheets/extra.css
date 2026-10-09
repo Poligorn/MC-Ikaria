@@ -1,10 +1,14 @@
 /* Aeronautics Icaria — тема документации по арту пака */
 
-/* Tiny5: pixel headings, Google Fonts subsets cyrillic + cyrillic-ext + latin.
-   Golos Text: body, same subsets (Paratype, designed for Russian UI).
-   Pixelify Sans / Nunito are not used: Pixelify Cyrillic is broken; Material's
-   Nunito loader does not request the cyrillic subset. */
-@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;700&family=Tiny5&display=swap&subset=cyrillic,cyrillic-ext,latin");
+@font-face {
+  font-family: "Minecraft Rus";
+  src:
+    url("../assets/fonts/MinecraftRus.woff2") format("woff2"),
+    url("../assets/fonts/MinecraftRus.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --icaria-navy-950: #071018;
@@ -21,14 +25,45 @@
   --icaria-vine: #5a9a58;
   --icaria-cloud: #e8eef8;
   --icaria-text-dark: #1a2438;
-  --icaria-pixel: "Tiny5", "Golos Text", system-ui, sans-serif;
-  --md-text-font: "Golos Text";
-  --md-code-font: "ui-monospace", "Roboto Mono", monospace;
+  --icaria-font: "Minecraft Rus", sans-serif;
+  --icaria-pixel: var(--icaria-font);
+  --md-text-font: "Minecraft Rus";
+  --md-code-font: "Minecraft Rus";
+}
+
+html {
+  font-synthesis: none;
 }
 
 body,
+.md-typeset,
+.md-nav,
+.md-header,
+.md-tabs,
+.md-footer,
+.md-search,
+.md-dialog,
+.md-sidebar,
+.md-typeset code,
+.md-typeset pre,
+.md-typeset kbd {
+  font-family: var(--icaria-font);
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+}
+
 .md-typeset {
-  font-family: "Golos Text", system-ui, sans-serif;
+  line-height: 1.85;
+}
+
+.md-typeset strong,
+.md-typeset b,
+.md-typeset em,
+.md-typeset i {
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
 }
 
 .pixel,
@@ -200,7 +235,7 @@ body,
 .md-nav__link--active {
   background-color: rgba(26, 95, 160, 0.22);
   border-left-color: #1a5fa0;
-  font-weight: 700;
+  font-weight: 400;
   color: #071018 !important;
 }
 
@@ -219,28 +254,29 @@ body,
 
 .md-typeset {
   color: var(--icaria-text-dark);
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.85;
 }
 
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
-  font-family: var(--icaria-pixel);
+  font-family: var(--icaria-font);
   font-weight: 400;
-  letter-spacing: 0.03em;
-  line-height: 1.25;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
 }
 
 .md-typeset h1 {
   color: #16345c;
-  font-size: 1.85rem;
+  font-size: 2rem;
   border-bottom: 2px solid #e0a04a;
   padding-bottom: 0.45rem;
 }
 
 .md-typeset h2 {
   color: #16345c;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   border-left: 3px solid #7ed7ea;
   padding-left: 0.85rem;
   margin-top: 2rem;
@@ -248,7 +284,7 @@ body,
 
 .md-typeset h3 {
   color: #a85c18;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .md-typeset p,
@@ -294,8 +330,12 @@ body,
   padding: 0.15rem 0.4rem;
   border-radius: 2px;
   border: 1px solid #1a5fa0;
-  font-size: 0.82em;
+  font-size: 0.95em;
+  line-height: 1.7;
   word-break: break-word;
+  font-family: var(--icaria-font);
+  font-weight: 400;
+  font-synthesis: none;
 }
 
 .md-typeset pre {
@@ -369,7 +409,7 @@ body,
 
 .md-typeset a {
   color: #0c5f8a;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }

@@ -5881,6 +5881,14 @@ file = "config/yacl.json5"
 hash = "121b93764159be6fb7dab523b29a844e2bb78400ce8c48f52135a097e9b0006e"
 
 [[files]]
+file = "docs/assets/fonts/MinecraftRus.ttf"
+hash = "0978efb8361f1c756d8bad6d00989240c826b10d4bb588881f8cc0d4624f93fc"
+
+[[files]]
+file = "docs/assets/fonts/MinecraftRus.woff2"
+hash = "ef005b105530d37135ba5e2591afd175d33abfdb2572480865140a348e730d4a"
+
+[[files]]
 file = "docs/getting-started/first-launch.md"
 hash = "b500a57b5d69a78cadbd9e1cef8a7e2f807b003c5d6c31f72b3ffa85c2a91407"
 
@@ -5978,7 +5986,7 @@ hash = "157e35c4aa658644f8a23ed649bb2a0e3b63b103e9f3796a2d24bd5ebce54413"
 
 [[files]]
 file = "docs/stylesheets/extra.css"
-hash = "a43174b3782cf3f6bd182c46563d9367c4f715d06d4264a7704b332dbdff2dcd"
+hash = "dbd7c5f7e9a2a4ae897eff0e6c2fb7c4d90515cff19463461d1cec9adfefe577"
 
 [[files]]
 file = "kubejs/assets/asi/lang/en_us.json"
@@ -6274,7 +6282,7 @@ hash = "afbec2b71cbf2b28e986a95cfb8523a644ab23c8aee994818c7dd4b5d952c2fe"
 
 [[files]]
 file = "mkdocs.yml"
-hash = "40c1d42deb7f9a474de8a85dd312a200c2ff4cf388ff4c2cdd8079950814e6a2"
+hash = "e8dc5ab868adaaa3b929cf0cf4335d1c212950edb32c80f8dd9de10d67230b46"
 
 [[files]]
 file = "mods/aero_cam_sync.pw.toml"
