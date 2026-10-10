@@ -625,10 +625,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Стартовый остров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как проверить на новом мире
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Что взять с собой с острова
@@ -639,7 +656,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Мир вокруг
@@ -650,7 +667,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Лицензии пилота
@@ -1438,10 +1455,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Стартовый остров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как проверить на новом мире
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Что взять с собой с острова
@@ -1452,7 +1486,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Мир вокруг
@@ -1463,7 +1497,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Лицензии пилота
@@ -1549,25 +1583,35 @@
 <li>Структура <code>asi:starter_island</code> ставится в оверворлде от угла <strong>(-8, 200, -8)</strong>.</li>
 <li>Точка спавна игрока — со смещением <strong>[+12, +5, +12]</strong> от угла (центр площадки).</li>
 <li>Мировой спавн фиксируется, <code>spawnRadius</code> = 0.</li>
-<li>Флаг сервера <code>asi_island_placed</code> и флаг игрока <code>asi_started</code> не дают ставить остров и телепортировать повторно.</li>
+<li>Флаг сервера <code>asi_island_placed</code> ставится <strong>только если</strong> под точкой спавна уже есть блок (не воздух).</li>
+<li>Флаг игрока <code>asi_started</code> — только после успешного телепорта на землю; иначе вход повторит попытку.</li>
 </ul>
 <p>Сообщение при входе: «Добро пожаловать на Небесный Остров…» Книга квестов FTB и <strong>три дневника основателей</strong> (Modopedia) выдаются через <code>player.give()</code> — не командой <code>/item replace</code> (см. <a href="../../guides/modopedia/">дневники</a>).</p>
-<p>Отладочные команды (если включены в <code>asi_island_debug.js</code>): <code>/asi resetisland</code>, <code>/asi placenow</code>, <code>/asi resetplayer</code>, <code>/asi status</code>.</p>
-<h2 id="_3">Что взять с собой с острова<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Остров ставится в <code>ServerEvents.loaded</code> <strong>сразу</strong> (без паузы 5 с). На первом входе телепорт повторяется каждые 10 тиков, пока не появится земля, максимум ~20 с.</p>
+<p>Отладочные команды: <code>/asi resetisland</code>, <code>/asi placenow</code>, <code>/asi resetplayer</code>, <code>/asi status</code> (флаг + есть ли блок под спавном).</p>
+<h3 id="_3">Как проверить на новом мире<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Удалите мир (или создайте новый).</li>
+<li>Зайдите один раз: должны оказаться на площадке около <strong>4.5, 205, 4.5</strong>, не в пустоте.</li>
+<li>В логе сервера: <code>[ASI] Остров на месте</code> и <code>[ASI] Игрок … на острове</code>.</li>
+<li><code>/asi status</code> — флаг <code>true</code>, земля <code>true</code>.</li>
+<li>Если земля <code>false</code>: <code>/asi placenow</code>, затем <code>/asi resetplayer</code> и перезайдите.</li>
+</ol>
+<h2 id="_4">Что взять с собой с острова<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Откройте <strong>Aeronautics Journal</strong> (FTB Quests) — текст про трёх Основателей.</li>
 <li>Откройте три <strong>дневника основателей</strong> (Modopedia). Предисловие доступно сразу; остальные главы — за листами из сундуков.</li>
 <li>Не прыгайте в пустоту без плана: сработает <a href="../../mods/mod-list/">Forgiving Void</a>, но падение всё равно опасно.</li>
 <li>Для личного полёта нужен <strong>параглайдер</strong> (рецепт переведён на аэролит Aero Islands) — см. <a href="../../guides/getting-started-guide/">первые шаги</a>.</li>
 </ol>
-<h2 id="_4">Мир вокруг<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">Мир вокруг<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Генерация островов: <strong>Aero Islands</strong> (Aeroscapes) для Create Aeronautics.</li>
 <li>Пустое небо: <strong>Clear Void</strong>, <strong>Smooth Skies</strong>.</li>
 <li>Чужие корабли вдали: события <strong>Create Aeronautics Discovery</strong> и рейды <strong>Hostile Skies</strong>.</li>
 <li>Нестабильные порталы: <strong>Eve Wormhole Portals</strong> — <a href="../../lore/eve-online/">отсылки к EVE</a>.</li>
 </ul>
-<h2 id="_5">Лицензии пилота<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">Лицензии пилота<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>Предметы <code>kubejs:pilot_license_*</code> (кадет → второй офицер → первый офицер → капитан → админ) регистрируются в KubeJS и надеваются в слот Curios <code>license</code>. В репозитории <strong>нет</strong> рецептов и квестов, которые выдают эти предметы: выдачу должен настроить сервер. Подробнее: <a href="../../lore/eve-online/">лор</a>.</p>
 
 
