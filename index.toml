@@ -6985,6 +6985,11 @@ hash = "6bc414cc0f2d4c078fe83f384d786343f701f371d657c5279b5b0df1595804bd"
 metafile = true
 
 [[files]]
+file = "mods/no-void-structures.pw.toml"
+hash = "381953b94e1187e81a1c48b72b910efee862aa3b30812c77df79dd613f97a43c"
+metafile = true
+
+[[files]]
 file = "mods/ntgl.pw.toml"
 hash = "942cfe73dab167575181675bbc75b68f1484ea68df831d412df588d05d01fbcf"
 metafile = true
