@@ -11,13 +11,13 @@
 		count: 1
 		id: "modopedia:book"
 	}
-	id: "C20B3C4D5E6F7081"
+	id: "420B3C4D5E6F7081"
 	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: [
-				"D2F05B12C1D29384"
+				"52F05B12C1D29384"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -27,11 +27,11 @@
 				count: 1
 				id: "modopedia:book"
 			}
-			id: "E4D4A0671627E8D9"
+			id: "64D4A0671627E8D9"
 			title: "Torn glider"
 			tasks: [{
 				advancement: "asi:diary/skyward_glider"
-				id: "F544D4A067162704"
+				id: "7544D4A067162704"
 				type: "advancement"
 			}]
 			x: 0.0d
@@ -39,7 +39,7 @@
 		}
 		{
 			dependencies: [
-				"D2F05B12C1D29384"
+				"52F05B12C1D29384"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -49,11 +49,11 @@
 				count: 1
 				id: "modopedia:book"
 			}
-			id: "E5E5B1782738F9EA"
+			id: "65E5B1782738F9EA"
 			title: "Torn hull"
 			tasks: [{
 				advancement: "asi:diary/skyward_airship"
-				id: "F555E5B178273805"
+				id: "7555E5B178273805"
 				type: "advancement"
 			}]
 			x: 1.5d
@@ -61,7 +61,7 @@
 		}
 		{
 			dependencies: [
-				"D2F05B12C1D29384"
+				"52F05B12C1D29384"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -71,11 +71,11 @@
 				count: 1
 				id: "modopedia:book"
 			}
-			id: "E6F6C28938490AFB"
+			id: "66F6C28938490AFB"
 			title: "Torn sky"
 			tasks: [{
 				advancement: "asi:diary/skyward_sky"
-				id: "F566F6C289384906"
+				id: "7566F6C289384906"
 				type: "advancement"
 			}]
 			x: 3.0d

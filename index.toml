@@ -4346,19 +4346,19 @@ hash = "e57d8311aec9f524911ed1313cabf138bb7fa5a2d3ba985a00a2a267ff35ef78"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/elias_trail.snbt"
-hash = "1fdfdb364e7d52780141633c61f6e7f74e89e743390534dcc5b9016fd04a1846"
+hash = "0bc322686b3876eb03e077b13f429109e89482f5403ad723d1b47922cb12a7da"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/initial_research.snbt"
-hash = "d365678e0a717f8a3e9c4582dae7790b26ec5f27dbb461f6cf58cd60b84b2664"
+hash = "929a06ffc38b1f4a5338d395997e2d8d1a4850daf544f8ab0062412f1575982f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/kaira_trail.snbt"
-hash = "4759953814ec24aff072e286ca90074a13aeaf716bcd37b603a7e4b58a8d5101"
+hash = "13b8bdc7cb4dab23fcb63f3538da398bef0efbea9e7ba611ac1a7d5a5f0446ac"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/rovan_trail.snbt"
-hash = "fe14c0adc7a6f5576ee61d548e66a4a99039be498e2a284b47883cee6c1f0c04"
+hash = "069773ab20a7940bc025b1c9a9d84f8d61f25e3228ae7b01025e0db92a39ae76"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -4366,11 +4366,11 @@ hash = "b8b7acb8166cc595562346715dd2881753451d28586780b04b6c8ded659d421e"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "0b5e07b6676473c227ecc291babd7b7f39b9bd999fe11ca948538250f1f77b05"
+hash = "2ad9917f83f4451ba1ad2c2571184353aba28f7f0f0bd8eb7ab58e21a0860ffc"
 
 [[files]]
 file = "config/ftbquests/quests/lang/ru_ru.snbt"
-hash = "d75b2e98f29565d267e8288e1b8ddcc97f982d9f472d3d1996508fe21a04e627"
+hash = "97e50928dd3386f0c23ac562c99e83aaf595e5213dff178e2d0dd34c3d8ccbd4"
 
 [[files]]
 file = "config/ftbteams-server.snbt"
