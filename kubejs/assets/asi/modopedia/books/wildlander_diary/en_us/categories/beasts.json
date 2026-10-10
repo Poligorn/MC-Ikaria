@@ -1,0 +1,13 @@
+{
+  "title": "Beasts",
+  "icon": {
+    "id": "minecraft:bone"
+  },
+  "landing_text": "The beasts leaf. Cards for what actually lives in the pack. No invented bosses.",
+  "entries": [
+    "mobs",
+    "sky_threats"
+  ],
+  "sort_num": 1,
+  "advancement": "asi:diary/wildlander_beasts"
+}

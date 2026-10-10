@@ -1,0 +1,105 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "elias_trail"
+	group: ""
+	hide_quest_until_deps_complete: true
+	icon: {
+		components: {
+			"modopedia:book": "asi:mechanist_diary"
+		}
+		count: 1
+		id: "modopedia:book"
+	}
+	id: "410A2B3C4D5E6F70"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "4A11C001D0E10001"
+			invisible: true
+			title: "His drafts sit in my pack"
+			tasks: [{
+				id: "4A11C001D0E10011"
+				stage: "asi_book_mechanist"
+				type: "gamestage"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4A11C001D0E10001"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "61A17D34E3F4B5A6"
+			title: "Torn kinetics"
+			tasks: [{
+				advancement: "asi:diary/mechanist_kinetics"
+				id: "7511A17D34E3F401"
+				type: "advancement"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4A11C001D0E10001"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "62B28E45F405C6B7"
+			title: "Torn machines"
+			tasks: [{
+				advancement: "asi:diary/mechanist_machines"
+				id: "7522B28E45F40502"
+				type: "advancement"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4A11C001D0E10001"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "63C39F560516D7C8"
+			title: "Torn alloys"
+			tasks: [{
+				advancement: "asi:diary/mechanist_progress"
+				id: "7533C39F56051603"
+				type: "advancement"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+	]
+	title: "Elias's trail"
+}

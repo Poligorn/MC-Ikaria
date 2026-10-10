@@ -1,0 +1,27 @@
+{
+  "title": "Other hulls",
+  "icon": {
+    "id": "minecraft:crossbow"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Day. Calm before a raid",
+          "text": "Hostile Skies: a spawn attempt every 15 minutes, chance 10% to 50%, up to three raids on the server. Tiers Scout → Skiff → Warship → Flagship (tier 2 after 8 captain kills, tier 3 after 25). You can take a hull with Captain's Orders if that is left on.$(br)$(br)✎ Past 1500 blocks from spawn, ground mobs carry Gunsmithing guns. That is not a raid. That is the ground."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Guns",
+          "text": "Create Radars, Big Cannons, Gunsmithing. CBC shells go through Ritchie's Projectile Library. I will not quote cannon damage — read the mod, not my log."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_sky"
+}

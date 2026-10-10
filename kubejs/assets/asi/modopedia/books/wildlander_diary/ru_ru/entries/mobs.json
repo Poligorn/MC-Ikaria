@@ -1,0 +1,59 @@
+{
+  "title": "Кто водит стаи",
+  "icon": {
+    "id": "minecraft:skeleton_skull"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Карточка: стая",
+          "text": "More Mobs — варианты гуманоидов (головы игроков / старые модели), не новые боссы с таблицей HP. Guard Villagers — стража деревень. Hordium — рейды из датапаков, без готового «финального босса» в репозитории.$(br)$(br)⚠ Незер: Piglin Proliferation (роли пиглинов) и Skyborn Piglins (пиглины на гастах). Это не ванильный бастион один в один."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 2,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:skeleton_skull"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:piglin_head"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:shield"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:crossbow"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_beasts"
+}

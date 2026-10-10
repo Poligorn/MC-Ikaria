@@ -1,0 +1,27 @@
+{
+  "title": "Чужие борта",
+  "icon": {
+    "id": "minecraft:crossbow"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "День. Штиль перед рейдом",
+          "text": "Hostile Skies: попытка спавна каждые 15 минут, шанс с 10% до 50%, до трёх рейдов на сервер. Тиры Scout → Skiff → Warship → Flagship (2-й с 8 убитых капитанов, 3-й с 25). Можно брать борт по Captain's Orders, если не выключено.$(br)$(br)✎ Дальше 1500 блоков от спавна пехота носит огнестрел Gunsmithing. Это не «рейд дирижабля», это земля."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Орудия",
+          "text": "Радары Create, Big Cannons, Gunsmithing. Снаряды CBC идут через Ritchie's Projectile Library. Я не расписываю урон пушки — смотрите мод, не мой журнал."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_sky"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "What runs in packs",
+  "icon": {
+    "id": "minecraft:skeleton_skull"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Card: pack",
+          "text": "More Mobs — humanoid variants (player heads / leftover models), not new bosses with an HP table. Guard Villagers — village guards. Hordium — datapack raids; this repo has no finished «final boss».$(br)$(br)⚠ Nether: Piglin Proliferation (roles) and Skyborn Piglins (piglins on ghasts). Not a stock bastion."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 2,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:skeleton_skull"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:piglin_head"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:shield"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:crossbow"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_beasts"
+}

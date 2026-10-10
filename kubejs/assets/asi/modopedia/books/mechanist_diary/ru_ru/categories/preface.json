@@ -1,0 +1,11 @@
+{
+  "title": "Обрыв",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "landing_text": "Чернила ещё держат линейку. Цифры после черты нет.",
+  "entries": [
+    "cover"
+  ],
+  "sort_num": 0
+}

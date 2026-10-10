@@ -10,12 +10,14 @@
 	drop_loot_crates: false
 	emergency_items_cooldown: 300
 	fallback_locale: "en_us"
+	id: "0000000000000001"
 	grid_scale: 0.5d
 	hide_excluded_quests: false
 	icon: {
 		id: "aeronautics:aviators_goggles"
 	}
 	lock_message: ""
+	title: "My journal"
 	loot_crate_no_drop: {
 		boss: 0
 		monster: 600

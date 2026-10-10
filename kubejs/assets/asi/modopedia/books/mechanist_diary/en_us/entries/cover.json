@@ -1,0 +1,26 @@
+{
+  "title": "Break",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "※ the reading slipped",
+          "text": "The line ran even. The shaft did not sing. Stress sat under the cap. Then the load vanished and the source kept turning.※ A cog on the bench is spinning by itself. I did not touch it. Something behind the workshop wall is counting with me — no steps, no shadow on the floor."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "— —",
+          "text": "I write while the ink still obeys a ruler. No digit after the dash: it is already gone. The leaf tears as if it was pulled from the inside, not the edge."
+        }
+      ]
+    }
+  ]
+}

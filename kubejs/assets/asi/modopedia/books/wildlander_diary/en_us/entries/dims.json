@@ -1,0 +1,59 @@
+{
+  "title": "Other layers",
+  "icon": {
+    "id": "minecraft:crying_obsidian"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Card: Nether / End",
+          "text": "In the Nether the wormhole mod hides names — delayed local. Amplified Nether raises Hell's ceiling. Deeper and Darker grows the Deep Dark. Stellarity reworks the End (biomes, structures, items). End's Delight is End food, not a weapon.$(br)$(br)⚠ Rating ●●●●. I will not quote Warden or Dragon HP — vanilla plus mods; use Jade."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 2,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:obsidian"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:crying_obsidian"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:ender_eye"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:echo_shard"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_portals"
+}

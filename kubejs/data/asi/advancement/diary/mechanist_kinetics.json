@@ -1,0 +1,29 @@
+{
+  "parent": "asi:diary/root",
+  "display": {
+    "icon": {
+      "id": "kubejs:diary_page_mechanist_kinetics"
+    },
+    "title": {
+      "translate": "adv.asi.diary.mechanist_kinetics.title"
+    },
+    "description": {
+      "translate": "adv.asi.diary.mechanist_kinetics.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_page": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "kubejs:diary_page_mechanist_kinetics"
+          }
+        ]
+      }
+    }
+  }
+}

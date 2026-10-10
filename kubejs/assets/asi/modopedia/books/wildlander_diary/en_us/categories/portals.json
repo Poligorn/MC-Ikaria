@@ -1,0 +1,13 @@
+{
+  "title": "Holes",
+  "icon": {
+    "id": "minecraft:ender_pearl"
+  },
+  "landing_text": "The holes leaf. Eve Wormhole Portals and other dimensions.",
+  "entries": [
+    "wormholes",
+    "dims"
+  ],
+  "sort_num": 2,
+  "advancement": "asi:diary/wildlander_portals"
+}

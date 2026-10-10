@@ -1,0 +1,27 @@
+{
+  "title": "Stone that bites",
+  "icon": {
+    "id": "minecraft:mossy_stone_bricks"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Card: dungeon",
+          "text": "When Dungeons Arise — large structures. YUNG: Better Dungeons, Mineshafts, Strongholds, Witch Huts — vanilla reworks, not new dimensions. Stoneholm — underground mazes. Sky Villages and Create: Sky Village — villages in the sky. Aero Islands — islands for Aeronautics.$(br)$(br)⚠ The «Scorched Wastes» from the art mockup is not a pack biome. Do not hunt it."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Rating",
+          "text": "●●● for size, not for a named boss. I do not keep Arise arena names in my head — Xaero and Traveler's Titles are safer."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_ruins"
+}

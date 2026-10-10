@@ -1,0 +1,26 @@
+{
+  "title": "Card with no name",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "●●●● ?",
+          "text": "Not a beast. A trail, no body. The grass lies inward, not with the wind.⚠ It watched from the empty that sits between leaves when you blink. Not a portal. I know portals: they have a rim and a hum. This waited until I wrote."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "break",
+          "text": "The quill snaps mid-word. No rating — nothing to rate. If this card is found without me, do not finish a beast. There was none. There was only what watched."
+        }
+      ]
+    }
+  ]
+}

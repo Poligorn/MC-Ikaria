@@ -26,14 +26,9 @@ ServerEvents.commandRegistry(event => {
       .then(Commands.literal('placenow')
         .executes(ctx => {
           const server = ctx.source.server;
-          const ox = ASI_ORIGIN[0], oy = ASI_ORIGIN[1], oz = ASI_ORIGIN[2];
-          server.runCommandSilent(`forceload add ${ox} ${oz}`);
-          // runCommandSilent возвращает undefined в этой сборке — результат не проверяем.
-          server.runCommandSilent(`place template ${ASI_STRUCTURE} ${ox} ${oy} ${oz}`);
-          server.persistentData.putBoolean('asi_island_placed', true);
-          server.runCommandSilent(`setworldspawn ${Math.floor(ASI_SPAWN_X)} ${ASI_SPAWN_Y} ${Math.floor(ASI_SPAWN_Z)}`);
-          server.runCommandSilent('gamerule spawnRadius 0');
-          ctx.source.sendSystemMessage(Text.green('[ASI] Остров размещён (' + ASI_STRUCTURE + ').'));
+          server.persistentData.putBoolean('asi_island_placed', false)
+          let ok = asiPlaceIsland(server)
+          ctx.source.sendSystemMessage(Text.green('[ASI] Остров: ' + (ok ? 'земля есть' : 'place вызван, земля ещё не видна') + ' (' + ASI_STRUCTURE + ').'));
           return 1;
         }))
 
@@ -43,9 +38,25 @@ ServerEvents.commandRegistry(event => {
           const player = ctx.source.player;
           if (player) {
             player.persistentData.putBoolean('asi_started', false);
-            ctx.source.sendSystemMessage(Text.yellow('[ASI] Твой флаг спавна сброшен. Перезайди — снова заспавнишься на острове с книгой.'));
+            ctx.source.sendSystemMessage(Text.yellow('[ASI] Твой флаг спавна сброшен. Перезайди — снова заспавнишься на острове.'));
           }
           return 1;
+        }))
+
+      // /asi givediaries — выдать три обложки (если спавн уже прошёл)
+      .then(Commands.literal('givediaries')
+        .executes(ctx => {
+          const player = ctx.source.player
+          if (!player) return 0
+          const diary = id => Item.of(`modopedia:book[modopedia:book="${id}"]`)
+          player.give(diary('asi:mechanist_diary'))
+          player.give(diary('asi:skyward_diary'))
+          player.give(diary('asi:wildlander_diary'))
+          player.persistentData.putBoolean('asi_got_book_mechanist', true)
+          player.persistentData.putBoolean('asi_got_book_skyward', true)
+          player.persistentData.putBoolean('asi_got_book_wildlander', true)
+          ctx.source.sendSystemMessage(Text.green('[ASI] Выданы три дневника основателей.'))
+          return 1
         }))
 
       // /asi status  — показать текущее состояние флагов
@@ -53,7 +64,9 @@ ServerEvents.commandRegistry(event => {
         .executes(ctx => {
           const server = ctx.source.server;
           const placed = server.persistentData.getBoolean('asi_island_placed');
-          ctx.source.sendSystemMessage(Text.aqua('[ASI] Остров размещён (флаг): ' + placed));
+          let level = server.getLevel(ASI_DIM)
+          let ground = asiIsSolidGround(level, ASI_SPAWN_X, ASI_SPAWN_Y, ASI_SPAWN_Z)
+          ctx.source.sendSystemMessage(Text.aqua('[ASI] Флаг: ' + placed + ', земля под спавном: ' + ground));
           return 1;
         }))
   );

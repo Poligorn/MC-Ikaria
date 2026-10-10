@@ -1,0 +1,13 @@
+{
+  "title": "Дыры",
+  "icon": {
+    "id": "minecraft:ender_pearl"
+  },
+  "landing_text": "Лист «дыры». Червоточины Eve Wormhole Portals и чужие измерения.",
+  "entries": [
+    "wormholes",
+    "dims"
+  ],
+  "sort_num": 2,
+  "advancement": "asi:diary/wildlander_portals"
+}

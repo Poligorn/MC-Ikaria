@@ -1,0 +1,27 @@
+{
+  "title": "Ship",
+  "icon": {
+    "id": "minecraft:oak_boat"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Day. Overcast, altitude ~220",
+          "text": "A ship is a Create contraption that becomes a Sable sub-level. There is no Valkyrien Skies 2 in this pack. Do not look for it.$(br)$(br)✎ Deck camera: Aeronautics Camera Sync. Hull claim: Create Aeronautics: Claims (next to OPAC)."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Fit-out",
+          "text": "Hull and cabins: Encased, Copycats+, Interiors, Design n' Decor (plus Aeronautics compat), Bells & Whistles. Frame Changer is Nether frames, not wormholes. Sky whales are Sky Whale Ship structures, not your hull."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_airship"
+}

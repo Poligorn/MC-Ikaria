@@ -1,0 +1,13 @@
+{
+  "title": "Сплавы",
+  "icon": {
+    "id": "create:brass_ingot"
+  },
+  "landing_text": "Лист «сплавы». Андезит, латунь и аддоны, которые реально стоят в этом паке.",
+  "entries": [
+    "alloys",
+    "addons"
+  ],
+  "sort_num": 3,
+  "advancement": "asi:diary/mechanist_progress"
+}

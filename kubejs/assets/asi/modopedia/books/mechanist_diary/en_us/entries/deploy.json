@@ -1,0 +1,76 @@
+{
+  "title": "Hands and air",
+  "icon": {
+    "id": "create:deployer"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Deployer, saw, fan",
+          "text": "The deployer places and uses items — a belt-fed hand. The mechanical saw cuts wood and stone by Create recipes. An encased fan pushes air: drying, smoking, washing depend on what sits in front.$(br)$(br)※ Recipes live in EMI, not in my memory."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:deployer"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:mechanical_saw"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:encased_fan"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:belt_connector"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:andesite_funnel"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:depot"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_machines",
+  "assigned_items": [
+    "create:deployer",
+    "create:mechanical_saw",
+    "create:encased_fan"
+  ]
+}

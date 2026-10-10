@@ -3,19 +3,237 @@
 	default_quest_shape: ""
 	filename: "initial_research"
 	group: ""
+	hide_quest_until_deps_complete: true
 	icon: {
-		id: "modopedia:book"
+		count: 1
+		id: "minecraft:writable_book"
 	}
 	id: "2AAF5935EA1DE955"
 	order_index: 0
 	quest_links: [ ]
-	quests: [{
-		id: "3364BA01A0AF91D8"
-		tasks: [{
-			id: "3D9CC80F7EADD53D"
-			type: "checkmark"
-		}]
-		x: -0.5d
-		y: 0.0d
-	}]
+	quests: [
+		{
+			id: "3364BA01A0AF91D8"
+			icon: {
+				count: 1
+				id: "minecraft:writable_book"
+			}
+			title: "Woke on the rock"
+			tasks: [{
+				id: "3D9CC80F7EADD53D"
+				type: "checkmark"
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "51E94A01B0C18273"
+			subtitle: "Elias Verne"
+			title: "A ruler's hand"
+			tasks: [{
+				count: 1L
+				id: "7411A001B0C18201"
+				item: {
+					components: {
+						"modopedia:book": "asi:mechanist_diary"
+					}
+					count: 1
+					id: "modopedia:book"
+				}
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				components: {
+					"modopedia:book": "asi:skyward_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "52F05B12C1D29384"
+			subtitle: "Kaira Storm"
+			title: "Watch not handed over"
+			tasks: [{
+				count: 1L
+				id: "7422B112C1D29302"
+				item: {
+					components: {
+						"modopedia:book": "asi:skyward_diary"
+					}
+					count: 1
+					id: "modopedia:book"
+				}
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				components: {
+					"modopedia:book": "asi:wildlander_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "53016C23D2E3A495"
+			subtitle: "Rovan Ash"
+			title: "A card with no name"
+			tasks: [{
+				count: 1L
+				id: "7433C223D2E3A403"
+				item: {
+					components: {
+						"modopedia:book": "asi:wildlander_diary"
+					}
+					count: 1
+					id: "modopedia:book"
+				}
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				count: 1
+				id: "aeronautics:white_envelope"
+			}
+			id: "7E4A1C90B2D83F61"
+			subtitle: "Envelope and burner"
+			title: "The bag at the rim"
+			tasks: [
+				{
+					count: 8L
+					id: "11A63E12D4FA5183"
+					item: {
+						count: 1
+						id: "aeronautics:white_envelope"
+					}
+					type: "item"
+				}
+				{
+					count: 1L
+					id: "22B74F23E50B6294"
+					item: {
+						count: 1
+						id: "aeronautics:adjustable_burner"
+					}
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"7E4A1C90B2D83F61"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				count: 1
+				id: "simulated:physics_assembler"
+			}
+			id: "1A6C3E12D4F05184"
+			subtitle: "Physics Assembler"
+			title: "A lever or the bag stays cloth"
+			tasks: [{
+				count: 1L
+				id: "71A63E12D4FA5101"
+				item: {
+					count: 1
+					id: "simulated:physics_assembler"
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"1A6C3E12D4F05184"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				count: 1
+				id: "aeronautics:andesite_propeller"
+			}
+			id: "1B7D4F23E5016295"
+			subtitle: "Andesite propeller"
+			title: "A screw for a dead shaft"
+			tasks: [{
+				count: 1L
+				id: "72B74F23E50B6202"
+				item: {
+					count: 1
+					id: "aeronautics:andesite_propeller"
+				}
+				type: "item"
+			}]
+			x: 5.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				count: 1
+				id: "paraglider:paraglider"
+			}
+			id: "0F5B2D01C3E94072"
+			subtitle: "Aerolite and paraglider"
+			title: "A wing before a ship"
+			tasks: [
+				{
+					count: 3L
+					id: "73C85034F61C7303"
+					item: {
+						count: 1
+						id: "aeroscapes:aerolite_twig"
+					}
+					type: "item"
+				}
+				{
+					count: 1L
+					id: "33C85034F61C73A5"
+					item: {
+						count: 1
+						id: "paraglider:paraglider"
+					}
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 1.5d
+		}
+	]
+	title: "A rock and three names"
 }

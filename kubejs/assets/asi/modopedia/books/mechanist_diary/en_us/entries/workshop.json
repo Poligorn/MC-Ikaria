@@ -1,0 +1,76 @@
+{
+  "title": "Press and basin",
+  "icon": {
+    "id": "create:mechanical_press"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Three machines",
+          "text": "Press — sheets and compacting. Mixer over a basin — alloys and food (Slice & Dice hooks the kitchen later). Millstone — powders.$(br)$(br)※ A mixer will not make brass without a heated basin. The Blaze Burner is a step, not décor."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:mechanical_press"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:mechanical_mixer"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:basin"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:millstone"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:blaze_burner"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:whisk"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_machines",
+  "assigned_items": [
+    "create:mechanical_press",
+    "create:mechanical_mixer",
+    "create:millstone"
+  ]
+}

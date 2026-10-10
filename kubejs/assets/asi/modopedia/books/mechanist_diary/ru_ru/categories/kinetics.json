@@ -1,0 +1,13 @@
+{
+  "title": "Кинетика",
+  "icon": {
+    "id": "create:cogwheel"
+  },
+  "landing_text": "Кинетика вырвана из тетради. Пока листа нет — эти пластины не читаются.",
+  "entries": [
+    "stress",
+    "transmission"
+  ],
+  "sort_num": 1,
+  "advancement": "asi:diary/mechanist_kinetics"
+}

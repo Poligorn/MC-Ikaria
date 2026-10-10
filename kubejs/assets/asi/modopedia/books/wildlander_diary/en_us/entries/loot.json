@@ -1,0 +1,59 @@
+{
+  "title": "What to take",
+  "icon": {
+    "id": "minecraft:chest"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Card: take",
+          "text": "Artifacts — treasure from exploring. Lootr — per-player chests. Clavis — lock minigame. Sky Whale Ship — whale loot if you reach it. Pilot licenses in the Curios slot do not drop from these chests in this repo: the server has not wired that yet.$(br)$(br)⚠ Last card. The hole behind me is humming. If there is no next leaf, do not finish an ash colossus in my name."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 2,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:chest"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:diamond"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:map"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:bone"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_ruins"
+}

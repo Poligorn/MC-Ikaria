@@ -1,0 +1,13 @@
+{
+  "title": "Станки",
+  "icon": {
+    "id": "create:mechanical_press"
+  },
+  "landing_text": "Лист «станки». Пресс, смеситель, мельница — то, что я успел собрать до исчезновения.",
+  "entries": [
+    "workshop",
+    "deploy"
+  ],
+  "sort_num": 2,
+  "advancement": "asi:diary/mechanist_machines"
+}

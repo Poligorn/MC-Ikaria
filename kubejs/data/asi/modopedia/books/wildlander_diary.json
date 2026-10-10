@@ -1,0 +1,14 @@
+{
+  "title": "book.asi.wildlander_diary.title",
+  "subtitle": "book.asi.wildlander_diary.subtitle",
+  "landing_text": "book.asi.wildlander_diary.landing",
+  "type": {
+    "id": "modopedia:classic",
+    "locked_view_type": "translucent"
+  },
+  "texture": "modopedia:red_iron",
+  "model": "asi:item/modopedia_books/wildlander_diary",
+  "text_colour": "2A1818",
+  "header_colour": "8B2020",
+  "creative_tab": "minecraft:tools_and_utilities"
+}

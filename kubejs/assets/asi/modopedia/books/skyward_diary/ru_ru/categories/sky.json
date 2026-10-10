@@ -1,0 +1,13 @@
+{
+  "title": "Небо",
+  "icon": {
+    "id": "minecraft:spyglass"
+  },
+  "landing_text": "Лист «небо». Рейды, карты, камни на палубе.",
+  "entries": [
+    "raids",
+    "nav"
+  ],
+  "sort_num": 3,
+  "advancement": "asi:diary/skyward_sky"
+}

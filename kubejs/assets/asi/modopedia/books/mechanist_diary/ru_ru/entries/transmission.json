@@ -1,0 +1,76 @@
+{
+  "title": "Вал и шестерни",
+  "icon": {
+    "id": "create:cogwheel"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Передача",
+          "text": "Вал несёт RPM без смены передачи. Малая шестерня и большая — редуктор: можно поднять момент или скорость. Корпус (andesite/brass casing) прячет вал и задаёт вид сети.$(br)$(br)※ Гаечный ключ Create — ваш карандаш. Super Glue держит контрапшен, когда он поедет."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:shaft"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:cogwheel"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:large_cogwheel"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:andesite_casing"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:wrench"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:super_glue"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_kinetics",
+  "assigned_items": [
+    "create:cogwheel",
+    "create:large_cogwheel",
+    "create:shaft"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Alloys",
+  "icon": {
+    "id": "create:brass_ingot"
+  },
+  "landing_text": "The alloys leaf. Andesite, brass, and addons that are actually in this pack.",
+  "entries": [
+    "alloys",
+    "addons"
+  ],
+  "sort_num": 3,
+  "advancement": "asi:diary/mechanist_progress"
+}

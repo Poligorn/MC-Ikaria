@@ -4,37 +4,37 @@ site_author: Ikaria Team
 site_url: https://poligorn.github.io/MC-ASI-Online/
 
 # Repository
-repo_name: poligorn/MC-ASI-Online
-repo_url: https://poligorn.github.io/MC-ASI-Online/
-edit_uri: edit/main/docs/
+repo_name: Poligorn/MC-ASI-Online
+repo_url: https://github.com/Poligorn/MC-ASI-Online
+edit_uri: edit/dev/docs/
 
 # Theme
 theme:
   name: material
   language: ru
-  
+  logo: images/icaria-icon.png
+  favicon: images/favicon.png
+
   palette:
-    # Light mode - Sky theme
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: light blue
-      accent: pink
-      toggle:
-        icon: material/weather-sunny
-        name: Переключить на тёмную тему
-    
-    # Dark mode - Night sky
+    # Dark (Icaria night sky) — default / system dark
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: pink
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Переключить на светлую тему
+    # Light (day sky) — system light
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
-        name: Переключить на светлую тему
-  
-  font:
-    text: Roboto
-    code: Courier New
+        name: Переключить на тёмную тему
+
+  # Self-hosted Minecraft Rus (docs/assets/fonts). Material's Google loader is off.
+  font: false
   
   features:
     - navigation.instant
@@ -57,9 +57,11 @@ theme:
     repo: fontawesome/brands/github
     logo: material/airplane
 
-# Custom CSS
+# Custom CSS / JS
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascripts/icaria.js
 
 # Markdown Extensions
 markdown_extensions:
@@ -123,15 +125,24 @@ nav:
       - mechanics/index.md
       - Летающие острова: mechanics/flying-islands.md
       - Воздушные корабли: mechanics/airships.md
+  - Лор:
+      - lore/index.md
+      - Отсылки к EVE Online: lore/eve-online.md
   - Гайды:
       - guides/index.md
       - Первые шаги: guides/getting-started-guide.md
+      - Книги Modopedia: guides/modopedia.md
+  - Планирование:
+      - planning/index.md
+      - Роадмап: planning/roadmap.md
+      - Бэклог: planning/backlog.md
+      - Концепция: planning/concept.md
 
 # Extra
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/Poligorn/Aeronautics-SkyIslands-Modpack
+      link: https://github.com/Poligorn/MC-ASI-Online
       name: GitHub
     - icon: fontawesome/brands/discord
       link: https://discord.gg/7zqnTUaDm2
@@ -141,5 +152,4 @@ extra:
 
 # Copyright
 copyright: |
-  Copyright &copy; 2026 Ikaria Team<br>
-  <small>🎈 Будущее имя: Aeronautics Ikaria</small>
+  Copyright &copy; 2026 Ikaria Team · Aeronautics Icaria

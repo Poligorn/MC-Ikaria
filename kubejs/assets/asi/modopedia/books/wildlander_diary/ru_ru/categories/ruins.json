@@ -1,0 +1,13 @@
+{
+  "title": "Руины",
+  "icon": {
+    "id": "minecraft:mossy_cobblestone"
+  },
+  "landing_text": "Лист «руины». Данжи и лут, которые реально генерируются.",
+  "entries": [
+    "dungeons",
+    "loot"
+  ],
+  "sort_num": 3,
+  "advancement": "asi:diary/wildlander_ruins"
+}

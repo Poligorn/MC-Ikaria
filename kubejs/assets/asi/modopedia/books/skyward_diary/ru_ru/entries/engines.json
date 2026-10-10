@@ -1,0 +1,27 @@
+{
+  "title": "Тяга",
+  "icon": {
+    "id": "minecraft:furnace"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "День. Ветер встречный",
+          "text": "Двигатели Aeronautics: пропеллеры (дерево, андезит, smart, propeller bearing), горячий воздух и пар. В конфиге пака hotAirStrength и steamStrength по умолчанию 1.5 kpg на м³. Есть лимиты горелки и парового вентиля.$(br)$(br)✎ Картофельная пушка на корабле даёт отдачу — не ставьте у борта без расчёта."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Помета",
+          "text": "Точную раскладку блоков моста не черчу: Aeronautics меняет схемы. Смотрите EMI и свой первый плот. Стресс Create на корабле никуда не девается — Механик был прав."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_airship"
+}

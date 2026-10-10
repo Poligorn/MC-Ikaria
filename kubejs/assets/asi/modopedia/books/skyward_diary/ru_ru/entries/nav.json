@@ -1,0 +1,27 @@
+{
+  "title": "Курс",
+  "icon": {
+    "id": "minecraft:compass"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "День. Просвет",
+          "text": "Create Aeronautics Discovery: пролёты, Soaring Trader с картами структур, столкновения суб-уровней. Обычные Waystones не крафтятся. На палубе Sable нужен Waystones: Sable. UI — Waystones Plus. Карта — Xaero.$(br)$(br)✎ Червоточины — не варп. Это том Следопыта."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Обрыв",
+          "text": "Высота падает. Горелка синяя. Если журнал оборвётся здесь — не ищите меня под островом, ищите по ветру."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/skyward_sky"
+}

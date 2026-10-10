@@ -1,0 +1,30 @@
+{
+  "title": "Stress and RPM",
+  "icon": {
+    "id": "create:shaft"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Network reading",
+          "text": "Create tracks shaft speed (RPM) and stress (SU). A source sets the network cap. A machine spends stress; higher RPM on that machine spends more.$(br)$(br)※ Over cap, the network stalls. It does not break. It jams."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Margins",
+          "text": "I will not write per-machine SU here — they move between Create versions. Use the Create overlay (goggles / stress gauge) and EMI.$(br)$(br)Source turns. Consumer resists. That is the whole law."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_kinetics",
+  "assigned_items": [
+    "create:shaft"
+  ]
+}

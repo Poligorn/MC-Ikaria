@@ -1,0 +1,13 @@
+{
+  "title": "Machines",
+  "icon": {
+    "id": "create:mechanical_press"
+  },
+  "landing_text": "The machines leaf. Press, mixer, mill — what I finished before I vanished.",
+  "entries": [
+    "workshop",
+    "deploy"
+  ],
+  "sort_num": 2,
+  "advancement": "asi:diary/mechanist_machines"
+}

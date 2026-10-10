@@ -1,0 +1,11 @@
+{
+  "title": "Обрыв вахты",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "landing_text": "Высота в последней строке не сходится сама с собой.",
+  "entries": [
+    "cover"
+  ],
+  "sort_num": 0
+}

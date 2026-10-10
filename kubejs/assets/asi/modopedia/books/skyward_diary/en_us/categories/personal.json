@@ -1,0 +1,13 @@
+{
+  "title": "Personal flight",
+  "icon": {
+    "id": "paraglider:paraglider"
+  },
+  "landing_text": "The glider leaf. Until it is found, this watch stays sealed.",
+  "entries": [
+    "glider",
+    "wings"
+  ],
+  "sort_num": 1,
+  "advancement": "asi:diary/skyward_glider"
+}

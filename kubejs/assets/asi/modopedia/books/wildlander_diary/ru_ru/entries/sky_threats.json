@@ -1,0 +1,27 @@
+{
+  "title": "Небо кусается",
+  "icon": {
+    "id": "minecraft:phantom_membrane"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Карточка: дикий сектор",
+          "text": "Дальше 1500 блоков от спавна KubeJS вешает на ванильных мобов револьверы и дробовики Create: Gunsmithing. Оценка ●●● — не из-за «нового моба», а из-за дистанции.$(br)$(br)⚠ Дирижабли Hostile Skies — том Небохода. Здесь только пометка: рейд приходит сверху, не из пещеры."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Пустота",
+          "text": "Forgiving Void поднимает упавшего. Это не бессмертие. Corpse оставляет тело. Не прыгайте «проверить войд» без планёра."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_beasts"
+}

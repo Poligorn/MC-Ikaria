@@ -1,0 +1,13 @@
+{
+  "title": "Hull",
+  "icon": {
+    "id": "minecraft:oak_boat"
+  },
+  "landing_text": "The hull leaf. A ship is a Create contraption on Sable, not Valkyrien Skies.",
+  "entries": [
+    "hull",
+    "engines"
+  ],
+  "sort_num": 2,
+  "advancement": "asi:diary/skyward_airship"
+}

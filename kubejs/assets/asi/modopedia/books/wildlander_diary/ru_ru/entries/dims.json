@@ -1,0 +1,59 @@
+{
+  "title": "Чужие слои",
+  "icon": {
+    "id": "minecraft:crying_obsidian"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Карточка: Незер / Энд",
+          "text": "В Незере мод дыр прячет имена — как delayed local. Amplified Nether поднимает потолок ада. Deeper and Darker расширяет Deep Dark. Stellarity перерабатывает Энд (биомы, структуры, предметы). End's Delight — еда Края, не оружие.$(br)$(br)⚠ Оценка ●●●●. Точных HP хранителей и варденов не пишу — ваниль плюс моды, смотрите Jade."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 2,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:obsidian"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:crying_obsidian"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:ender_eye"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "minecraft:echo_shard"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_portals"
+}

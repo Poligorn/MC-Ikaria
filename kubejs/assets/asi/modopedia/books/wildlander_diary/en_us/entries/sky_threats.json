@@ -1,0 +1,27 @@
+{
+  "title": "The sky bites",
+  "icon": {
+    "id": "minecraft:phantom_membrane"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Card: wild sector",
+          "text": "Past 1500 blocks from spawn, KubeJS hangs Create: Gunsmithing revolvers and shotguns on vanilla mobs. Rating ●●● is the distance, not a new species.$(br)$(br)⚠ Hostile Skies airships belong in Skyward's log. Here: the raid comes from above, not from a cave."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Void",
+          "text": "Forgiving Void lifts a fall. That is not immortality. Corpse leaves a body. Do not «test the void» without a glider."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_beasts"
+}

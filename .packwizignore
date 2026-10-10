@@ -1,0 +1,2 @@
+# Built MkDocs site must not ship inside the Minecraft pack
+site/

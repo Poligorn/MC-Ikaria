@@ -1,0 +1,76 @@
+{
+  "title": "Shafts and cogs",
+  "icon": {
+    "id": "create:cogwheel"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Gearing",
+          "text": "A shaft carries RPM with no ratio change. Small and large cogwheels are the gearbox: torque or speed. Andesite or brass casing hides the shaft and sets how the line looks.$(br)$(br)※ The Create wrench is your pencil. Super Glue holds a contraption when it starts to move."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "type": "modopedia:item_gallery",
+          "x": 0,
+          "y": 28,
+          "display": {
+            "type": "modopedia:grid",
+            "columns": 3,
+            "centered": true,
+            "padding": 18,
+            "displays": [
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:shaft"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:cogwheel"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:large_cogwheel"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:andesite_casing"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:wrench"
+                }
+              },
+              {
+                "type": "modopedia:simple",
+                "item": {
+                  "id": "create:super_glue"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/mechanist_kinetics",
+  "assigned_items": [
+    "create:cogwheel",
+    "create:large_cogwheel",
+    "create:shaft"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Звери",
+  "icon": {
+    "id": "minecraft:bone"
+  },
+  "landing_text": "Лист «звери». Карточки тех, кто уже водится в паке. Выдуманных боссов нет.",
+  "entries": [
+    "mobs",
+    "sky_threats"
+  ],
+  "sort_num": 1,
+  "advancement": "asi:diary/wildlander_beasts"
+}

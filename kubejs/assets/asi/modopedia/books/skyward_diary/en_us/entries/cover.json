@@ -1,0 +1,26 @@
+{
+  "title": "Watch breaks",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Day —. Wind, no pennant",
+          "text": "Altitude will not agree. Eye and needle differ by a whole ridge. Headwind, yet the cloth lies as if in a hold.✎ Burner running blue. I put in no wood. Between envelope and sky there is a gap with no cloud. Not a hole — an empty place. You look longer than you choose to."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "watch not ha",
+          "text": "The course is struck through by the same hand that kept this log. No one to hand the watch to. If you find the basket, do not trust the last height. It was already gone when I wrote it."
+        }
+      ]
+    }
+  ]
+}

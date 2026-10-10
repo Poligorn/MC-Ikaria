@@ -1,0 +1,11 @@
+{
+  "title": "Break",
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "landing_text": "The ink still holds a ruler. No digit after the dash.",
+  "entries": [
+    "cover"
+  ],
+  "sort_num": 0
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Камень с зубами",
+  "icon": {
+    "id": "minecraft:mossy_stone_bricks"
+  },
+  "pages": [
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Карточка: данж",
+          "text": "When Dungeons Arise — крупные структуры. YUNG: Better Dungeons, Mineshafts, Strongholds, Witch Huts — переработка ванили, не новые измерения. Stoneholm — подземные лабиринты. Sky Villages и Create: Sky Village — деревни в небе. Aero Islands — острова под Aeronautics.$(br)$(br)⚠ «Пепельные пустоши» с нейро-рефа на обложку в паке нет. Не ищите этот биом."
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "template": "modopedia:page/headered_text",
+          "header": "Оценка",
+          "text": "●●● за размер, не за имя босса. Имена конкретных арен Arise не держу в голове — карта Xaero и Traveler's Titles надежнее."
+        }
+      ]
+    }
+  ],
+  "advancement": "asi:diary/wildlander_ruins"
+}
