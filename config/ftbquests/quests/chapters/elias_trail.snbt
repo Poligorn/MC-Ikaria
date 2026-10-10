@@ -3,9 +3,13 @@
 	default_quest_shape: ""
 	filename: "elias_trail"
 	group: ""
-	hide_until_quests_available: true
+	hide_quest_until_deps_complete: true
 	icon: {
-		id: "create:cogwheel"
+		components: {
+			"modopedia:book": "asi:mechanist_diary"
+		}
+		count: 1
+		id: "modopedia:book"
 	}
 	id: "C10A2B3C4D5E6F70"
 	order_index: 1
@@ -17,7 +21,11 @@
 			]
 			hide_until_deps_complete: true
 			icon: {
-				id: "kubejs:diary_page_mechanist_kinetics"
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
 			}
 			id: "E1A17D34E3F4B5A6"
 			tasks: [{
@@ -34,7 +42,11 @@
 			]
 			hide_until_deps_complete: true
 			icon: {
-				id: "kubejs:diary_page_mechanist_machines"
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
 			}
 			id: "E2B28E45F405C6B7"
 			tasks: [{
@@ -51,7 +63,11 @@
 			]
 			hide_until_deps_complete: true
 			icon: {
-				id: "kubejs:diary_page_mechanist_progress"
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
 			}
 			id: "E3C39F560516D7C8"
 			tasks: [{
@@ -63,4 +79,5 @@
 			y: 0.0d
 		}
 	]
+	title: "Elias's trail"
 }

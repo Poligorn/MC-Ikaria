@@ -208,7 +208,7 @@ KubeJS дополнительно делает «дикий сектор» да�
 
 ### Журнал основателей — не EVE
 
-FTB-текст про Ascension и Founders (Mechanist, Skyward, Wildlander) — **оригинальный небесный миф**, не лор CCP. Иконка книги квестов: `aeronautics:aviators_goggles`. Глава квестов использует иконку `modopedia:book`.
+FTB-текст про Ascension и Founders (Mechanist, Skyward, Wildlander) — **оригинальный небесный миф**, не лор CCP. Иконка книги квестов: `aeronautics:aviators_goggles`. Квесты дневников рисуют обложку через стек `modopedia:book` с компонентом `modopedia:book` (`asi:mechanist_diary` / `asi:skyward_diary` / `asi:wildlander_diary`).
 
 Не смешивайте этот сюжет с червоточинами: в файлах квестов порталы EVE не упоминаются.
 

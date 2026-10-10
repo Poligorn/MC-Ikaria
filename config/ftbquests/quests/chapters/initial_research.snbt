@@ -3,8 +3,10 @@
 	default_quest_shape: ""
 	filename: "initial_research"
 	group: ""
+	hide_quest_until_deps_complete: true
 	icon: {
-		id: "modopedia:book"
+		count: 1
+		id: "minecraft:writable_book"
 	}
 	id: "2AAF5935EA1DE955"
 	order_index: 0
@@ -13,6 +15,7 @@
 		{
 			id: "3364BA01A0AF91D8"
 			icon: {
+				count: 1
 				id: "minecraft:writable_book"
 			}
 			tasks: [{
@@ -23,7 +26,15 @@
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
 			icon: {
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
 				id: "modopedia:book"
 			}
 			id: "D1E94A01B0C18273"
@@ -43,7 +54,15 @@
 			y: -1.5d
 		}
 		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
 			icon: {
+				components: {
+					"modopedia:book": "asi:skyward_diary"
+				}
+				count: 1
 				id: "modopedia:book"
 			}
 			id: "D2F05B12C1D29384"
@@ -63,7 +82,15 @@
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
 			icon: {
+				components: {
+					"modopedia:book": "asi:wildlander_diary"
+				}
+				count: 1
 				id: "modopedia:book"
 			}
 			id: "D3016C23D2E3A495"
@@ -83,7 +110,12 @@
 			y: 1.5d
 		}
 		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
 			icon: {
+				count: 1
 				id: "aeronautics:white_envelope"
 			}
 			id: "7E4A1C90B2D83F61"
@@ -114,7 +146,9 @@
 			dependencies: [
 				"7E4A1C90B2D83F61"
 			]
+			hide_until_deps_complete: true
 			icon: {
+				count: 1
 				id: "simulated:physics_assembler"
 			}
 			id: "9A6C3E12D4F05184"
@@ -134,7 +168,9 @@
 			dependencies: [
 				"9A6C3E12D4F05184"
 			]
+			hide_until_deps_complete: true
 			icon: {
+				count: 1
 				id: "aeronautics:andesite_propeller"
 			}
 			id: "9B7D4F23E5016295"
@@ -151,7 +187,12 @@
 			y: -1.5d
 		}
 		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
 			icon: {
+				count: 1
 				id: "paraglider:paraglider"
 			}
 			id: "8F5B2D01C3E94072"
@@ -179,4 +220,5 @@
 			y: 1.5d
 		}
 	]
+	title: "A rock and three names"
 }

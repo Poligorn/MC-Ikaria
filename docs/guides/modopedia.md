@@ -32,7 +32,7 @@
     /modopedia open book asi:skyward_diary
     ```
 
-Предмет книги — `modopedia:book`, ID тома в компоненте `modopedia:book`.
+Предмет книги — `modopedia:book`, ID тома в компоненте `modopedia:book`. Квесты FTB рисуют ту же обложку: иконка и item-задача — стек `{id:"modopedia:book", components:{"modopedia:book":"asi:<том>"}}`. Модели: `kubejs/assets/asi/models/item/modopedia_books/` → `asi:item/<том>`.
 
 ## Сбор страниц и unlock
 

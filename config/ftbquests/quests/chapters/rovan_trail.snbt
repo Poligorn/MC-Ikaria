@@ -3,9 +3,13 @@
 	default_quest_shape: ""
 	filename: "rovan_trail"
 	group: ""
-	hide_until_quests_available: true
+	hide_quest_until_deps_complete: true
 	icon: {
-		id: "minecraft:map"
+		components: {
+			"modopedia:book": "asi:wildlander_diary"
+		}
+		count: 1
+		id: "modopedia:book"
 	}
 	id: "C30C4D5E6F708192"
 	order_index: 3
@@ -17,7 +21,11 @@
 			]
 			hide_until_deps_complete: true
 			icon: {
-				id: "kubejs:diary_page_wildlander_beasts"
+				components: {
+					"modopedia:book": "asi:wildlander_diary"
+				}
+				count: 1
+				id: "modopedia:book"
 			}
 			id: "E707D39A495A1B0C"
 			tasks: [{
@@ -34,7 +42,11 @@
 			]
 			hide_until_deps_complete: true
 			icon: {
-				id: "kubejs:diary_page_wildlander_portals"
+				components: {
+					"modopedia:book": "asi:wildlander_diary"
+				}
+				count: 1
+				id: "modopedia:book"
 			}
 			id: "E818E4AB5A6B2C1D"
 			tasks: [{
@@ -51,7 +63,11 @@
 			]
 			hide_until_deps_complete: true
 			icon: {
-				id: "kubejs:diary_page_wildlander_ruins"
+				components: {
+					"modopedia:book": "asi:wildlander_diary"
+				}
+				count: 1
+				id: "modopedia:book"
 			}
 			id: "E929F5BC6B7C3D2E"
 			tasks: [{
@@ -63,4 +79,5 @@
 			y: 0.0d
 		}
 	]
+	title: "Rovan's trail"
 }
