@@ -6619,11 +6619,6 @@ hash = "c9aca350959a8936b054c7164fb55d789ab1e0d38cff2af48b78f70af2bc0c6d"
 metafile = true
 
 [[files]]
-file = "mods/blueprint.pw.toml"
-hash = "ead3aff0899e5bc61eb22fe0af86722b430f9e92990b3cd2720d5c2c1f66d023"
-metafile = true
-
-[[files]]
 file = "mods/bookshelf-lib.pw.toml"
 hash = "68d6016fa3707c434b3aca5db041c7518c70feb53d0183faa2502cc6efd4c827"
 metafile = true
@@ -6721,11 +6716,6 @@ metafile = true
 [[files]]
 file = "mods/create-aeronautics.pw.toml"
 hash = "5fab8d2e412683dfd72f08cf6750e51b03cb43192e8eb783e962ba28d20978bc"
-metafile = true
-
-[[files]]
-file = "mods/create-better-villagers.pw.toml"
-hash = "3c32f2b61b848d25bd09f139e319fb78ec505b80b62b09febb70bc45eeee198a"
 metafile = true
 
 [[files]]
@@ -6869,11 +6859,6 @@ hash = "85ba6f016d7447b4ba0013eab45ecfffd4349e99acd892d46c16bf0d2411f8cc"
 metafile = true
 
 [[files]]
-file = "mods/frame-changer.pw.toml"
-hash = "9a4208ccd7c3b192fcf70dc10d61ed4854f7dd169ab093fc18d9b51af0b91aeb"
-metafile = true
-
-[[files]]
 file = "mods/ftb-library-forge.pw.toml"
 hash = "a2aa051ec45ec685f523fbf3813f23c5fde1935d7193e248871f1427ca1dd558"
 metafile = true
@@ -6994,11 +6979,6 @@ hash = "688a2fcd58d20df93c57e571b054b3c582932a795a255dc13c65b055dc1880b1"
 metafile = true
 
 [[files]]
-file = "mods/more-mobs.pw.toml"
-hash = "3f4e59fb3ea163968601be928ee437928f3be0a435ca8dc8ad4ad73883e5caf1"
-metafile = true
-
-[[files]]
 file = "mods/more-villagers-re-employed.pw.toml"
 hash = "a9e205a10f37e99beed3961f9b6ad54f9a05fefc25196529ea0a2c9feb73f719"
 metafile = true
@@ -7084,11 +7064,6 @@ hash = "4bbc56f6983715ff095638eafab7ca8fee16f602656058b8456e3e8e7f2df918"
 metafile = true
 
 [[files]]
-file = "mods/ragdoll-reactions.pw.toml"
-hash = "89bd0f15795c70a1e06074e22bc5d80969abd48e1f540c79e3023cf8be51bef9"
-metafile = true
-
-[[files]]
 file = "mods/rhino.pw.toml"
 hash = "e55ca32b338a0e0540f4fec5170675d860566255ae0f45692a00cb4ebf2eb535"
 metafile = true
@@ -7096,11 +7071,6 @@ metafile = true
 [[files]]
 file = "mods/rpl.pw.toml"
 hash = "7815e5a589de0c02a62ae83590e1f75f4d0c269e48f2435ce2ac448976ddf49f"
-metafile = true
-
-[[files]]
-file = "mods/sable-ragdolls.pw.toml"
-hash = "bf3c84eff52457596d58a73882e72759804117f0731a0fde343cfd54d33e55ba"
 metafile = true
 
 [[files]]
