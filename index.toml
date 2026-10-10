@@ -4345,8 +4345,20 @@ file = "config/ftbquests/quests/chapter_groups.snbt"
 hash = "e57d8311aec9f524911ed1313cabf138bb7fa5a2d3ba985a00a2a267ff35ef78"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/elias_trail.snbt"
+hash = "03aeb90c36479f6951bdbc2eeae65fe117a675e3d3dacf20a58799375c472433"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/initial_research.snbt"
-hash = "4b80223144d4498809b9a155b24ff0436b340ce340e3f6f019f69383e55ecd3e"
+hash = "847c10f495633f6657b8e8430327ef02f7deffa82cb85c567644dde003a1ec56"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/kaira_trail.snbt"
+hash = "a01c01f15b051f618eea34e0a05557aeb90b1966526caf737a6b9fcf2db23c6d"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/rovan_trail.snbt"
+hash = "702c8df1887a0cf3139a79e7aaabf4c5e63880a98293bd0c68d864b50988aeed"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -4354,11 +4366,11 @@ hash = "e28586cc561c6c99c18545d742d8858b5a2e017064248572b243293653d72994"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "fb8ec26c941bcf73135505c8c951cc1352a49a19bdf30d7900eace8b794aaef5"
+hash = "0b5e07b6676473c227ecc291babd7b7f39b9bd999fe11ca948538250f1f77b05"
 
 [[files]]
 file = "config/ftbquests/quests/lang/ru_ru.snbt"
-hash = "c7d19049676f4e3907d292a87e02ea12042b3f519ce49e7cb378964e451a8d23"
+hash = "d75b2e98f29565d267e8288e1b8ddcc97f982d9f472d3d1996508fe21a04e627"
 
 [[files]]
 file = "config/ftbteams-server.snbt"
@@ -5894,7 +5906,7 @@ hash = "ef005b105530d37135ba5e2591afd175d33abfdb2572480865140a348e730d4a"
 
 [[files]]
 file = "docs/getting-started/first-launch.md"
-hash = "145c78ba94b67ca98ae99424c46564f2bd22387318aac652afbc061ccbe1a4a0"
+hash = "997ddabc6e6af9bb09e9b616316eb96d9afb1b2ac28f42adebebf4c971168400"
 
 [[files]]
 file = "docs/getting-started/index.md"
@@ -5906,7 +5918,7 @@ hash = "49b99a57f27a1d713168f48041b476a1505ff4df26dd7a109d52462072ec30d8"
 
 [[files]]
 file = "docs/guides/getting-started-guide.md"
-hash = "c08756cad2872108a968456c5830485e26754d22b2feac2ff01d808fc932df47"
+hash = "cd2e49a08df022e63cb5a2fb2b208327743365d0274ef95697a1eeddec1dfd65"
 
 [[files]]
 file = "docs/guides/index.md"
@@ -5914,7 +5926,7 @@ hash = "77e6dfb9e72d62ae2b1b21d0a3d3dcc8f6978359e5d16f9e69df64c4bcf85007"
 
 [[files]]
 file = "docs/guides/modopedia.md"
-hash = "f1a1d5b8ac922d749247ce064638815e748a2df6dba0939902bf935a95a958db"
+hash = "f626e04a44b6be47ada1986767b1ae4a7b91189c8588c8c4a4248ea6602ea22b"
 
 [[files]]
 file = "docs/images/favicon.png"
@@ -5946,7 +5958,7 @@ hash = "298681ed7fa356b0359e137dc34e5a734434a4c16721db12114a58aa8fccbe37"
 
 [[files]]
 file = "docs/lore/index.md"
-hash = "77697d2853b6c2dd026167ddfa5065aee10e2b0fcf48a7096e1eb232102f2755"
+hash = "bba69761367dee7ce2156982440150e342529dbcd8615a9f22ff7fd44b449c02"
 
 [[files]]
 file = "docs/mechanics/airships.md"
@@ -5954,7 +5966,7 @@ hash = "21b6bbda8496d2f47e4874333e22c2dc96672ec95d02086eed1ad36481c52782"
 
 [[files]]
 file = "docs/mechanics/flying-islands.md"
-hash = "32729995ef5c9af8f16a2c03e5fa81f4622d08adff7b5d9cd50c471e1d001dbf"
+hash = "e3f6f3cfc1c14009e09af7c1c393b9aa863551dfe4ea3eb1c3fa8b60f485f733"
 
 [[files]]
 file = "docs/mechanics/index.md"
@@ -5970,7 +5982,7 @@ hash = "5e6af70a2e2fdca0017e0772b22d504f418990216b683e9df87ff5a74d610216"
 
 [[files]]
 file = "docs/mods/mod-list.md"
-hash = "298bbfd5256cbf96c4f558730e5830f1ed76463bda39576d0199d49c438a74ed"
+hash = "21a5e99013c3f7c79e92daf4928ca323af3c2e516b86c1071db3e851709c8f59"
 
 [[files]]
 file = "docs/planning/backlog.md"
@@ -6426,7 +6438,7 @@ hash = "f5c8a6b40177a40c5c7266a8c74588c4158062e083de6376544d77bd69fbbf6c"
 
 [[files]]
 file = "kubejs/data/asi/structure/starter_island.nbt"
-hash = "5388ba7ece09c568d3f58c85419f6d42973d54b652aacb33c9abcf7fa08505b2"
+hash = "95a5fad2776f8f196e5bb56d1fdde1488a60f26e30ce4b8d44f74e4588cf2793"
 
 [[files]]
 file = "kubejs/data/curios/tags/item/license.json"
@@ -6446,11 +6458,11 @@ hash = "d72fb6b61f9201600efbe277e278a5d268078df5b248ec757fc9c4fdee688ec5"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_chest_loot.js"
-hash = "68971fd2dc85866c47160a720ad4888f7a4f5ee75673112658dc0666b34930f4"
+hash = "cc35c9cf4ff812a46400457eab1b85713e3018f12a59f70730d112ccae9af990"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_page_pickup.js"
-hash = "f07b3c1bf848bf84a21b8eb387575ffe7db77861888f2ffdb6c6e16512885620"
+hash = "698d82e8a3087f401affb9ab88f75f4d1fb6d9e33d0167e19073aa2226072a38"
 
 [[files]]
 file = "kubejs/server_scripts/Events/gunsmith_bunker.js"
@@ -6498,7 +6510,7 @@ hash = "1a8ff65b4ef08a0ee67dff5e21a52198f8151be3dc5aac235aabe600ef5c7e0e"
 
 [[files]]
 file = "kubejs/server_scripts/Spawn/asi_island_debug.js"
-hash = "93e2f4d976b3cc9053b582201b0f862657dbb2b59ba8ed1a8a14185f4bb5fed1"
+hash = "48f455dc3fbb07a0bcaaf90e98f8b307a6491e4733ee79976152da6fe3a97c01"
 
 [[files]]
 file = "kubejs/server_scripts/Spawn/asi_island_place.js"
@@ -6514,7 +6526,7 @@ hash = "6c59f83330ccd2841ea8070cc841c5b42ec2007a5ce7d6819e59f1374c5cd3ae"
 
 [[files]]
 file = "kubejs/startup_scripts/diary_pages.js"
-hash = "7c05a09d70c87ace1e3c0bce5e2ba7178a6040aae1bd8d973813d743755a96ed"
+hash = "3bcba341bfcd8c4730db7f8d9a3bff08e8e2818f7b17170040fdccf6c22d827a"
 
 [[files]]
 file = "kubejs/startup_scripts/pilot_license.js"
