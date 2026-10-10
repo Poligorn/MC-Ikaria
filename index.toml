@@ -4346,23 +4346,23 @@ hash = "e57d8311aec9f524911ed1313cabf138bb7fa5a2d3ba985a00a2a267ff35ef78"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/elias_trail.snbt"
-hash = "03aeb90c36479f6951bdbc2eeae65fe117a675e3d3dacf20a58799375c472433"
+hash = "1fdfdb364e7d52780141633c61f6e7f74e89e743390534dcc5b9016fd04a1846"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/initial_research.snbt"
-hash = "847c10f495633f6657b8e8430327ef02f7deffa82cb85c567644dde003a1ec56"
+hash = "d365678e0a717f8a3e9c4582dae7790b26ec5f27dbb461f6cf58cd60b84b2664"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/kaira_trail.snbt"
-hash = "a01c01f15b051f618eea34e0a05557aeb90b1966526caf737a6b9fcf2db23c6d"
+hash = "4759953814ec24aff072e286ca90074a13aeaf716bcd37b603a7e4b58a8d5101"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/rovan_trail.snbt"
-hash = "702c8df1887a0cf3139a79e7aaabf4c5e63880a98293bd0c68d864b50988aeed"
+hash = "fe14c0adc7a6f5576ee61d548e66a4a99039be498e2a284b47883cee6c1f0c04"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
-hash = "e28586cc561c6c99c18545d742d8858b5a2e017064248572b243293653d72994"
+hash = "b8b7acb8166cc595562346715dd2881753451d28586780b04b6c8ded659d421e"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
@@ -5906,7 +5906,7 @@ hash = "ef005b105530d37135ba5e2591afd175d33abfdb2572480865140a348e730d4a"
 
 [[files]]
 file = "docs/getting-started/first-launch.md"
-hash = "997ddabc6e6af9bb09e9b616316eb96d9afb1b2ac28f42adebebf4c971168400"
+hash = "0f3bed15c1a229bc697813ccc31db829a1f3ef3d05f56de90ad7675eb72d628b"
 
 [[files]]
 file = "docs/getting-started/index.md"
@@ -5918,7 +5918,7 @@ hash = "49b99a57f27a1d713168f48041b476a1505ff4df26dd7a109d52462072ec30d8"
 
 [[files]]
 file = "docs/guides/getting-started-guide.md"
-hash = "cd2e49a08df022e63cb5a2fb2b208327743365d0274ef95697a1eeddec1dfd65"
+hash = "6d901506d3301e89eb15e42a80cf9322ba190e1344a2cc8c637806e60194222a"
 
 [[files]]
 file = "docs/guides/index.md"
@@ -5926,7 +5926,7 @@ hash = "77e6dfb9e72d62ae2b1b21d0a3d3dcc8f6978359e5d16f9e69df64c4bcf85007"
 
 [[files]]
 file = "docs/guides/modopedia.md"
-hash = "f626e04a44b6be47ada1986767b1ae4a7b91189c8588c8c4a4248ea6602ea22b"
+hash = "87240272a98d97c10c2b427eff32fb9f5cd8dd0ded7ba121b2887e19efef40f4"
 
 [[files]]
 file = "docs/images/favicon.png"
@@ -5954,7 +5954,7 @@ hash = "ccd294e0c5f383470600b6bffc63194679b41ff61c864acd977c47ca94e384d4"
 
 [[files]]
 file = "docs/lore/eve-online.md"
-hash = "298681ed7fa356b0359e137dc34e5a734434a4c16721db12114a58aa8fccbe37"
+hash = "41038936ebdad2514c4f99535a77f653b3e79091b0177b07f755d7513363780c"
 
 [[files]]
 file = "docs/lore/index.md"
@@ -5982,7 +5982,7 @@ hash = "5e6af70a2e2fdca0017e0772b22d504f418990216b683e9df87ff5a74d610216"
 
 [[files]]
 file = "docs/mods/mod-list.md"
-hash = "21a5e99013c3f7c79e92daf4928ca323af3c2e516b86c1071db3e851709c8f59"
+hash = "d13819fc1e54d0e6362eaa4ba6d9b6c859a143cd029148437a160aff712869f2"
 
 [[files]]
 file = "docs/planning/backlog.md"
@@ -6458,11 +6458,11 @@ hash = "d72fb6b61f9201600efbe277e278a5d268078df5b248ec757fc9c4fdee688ec5"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_chest_loot.js"
-hash = "cc35c9cf4ff812a46400457eab1b85713e3018f12a59f70730d112ccae9af990"
+hash = "dfcbcfdeb7eede36ecf556bd8db0335bb7f67d36b3797b4c04b49689018ae2a7"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_page_pickup.js"
-hash = "698d82e8a3087f401affb9ab88f75f4d1fb6d9e33d0167e19073aa2226072a38"
+hash = "e8dae2c4a04c104053af025fc38e5c37aa9d3420574c2e1f1a7d00729a4688af"
 
 [[files]]
 file = "kubejs/server_scripts/Events/gunsmith_bunker.js"
