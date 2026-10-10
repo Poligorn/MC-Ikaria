@@ -1606,9 +1606,9 @@
 <p>Текстуры предметов — перекраска официальных иконок Modopedia (MIT, Favouriteless) плюс точка-эмблема на корешке. GUI-рамки — встроенные classic, не копия PNG в пак. Модели: <code>kubejs/assets/asi/models/item/modopedia_books/</code>.</p>
 <h2 id="_2">Как получить<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Первый вход.</strong> <code>player.give()</code> кладёт три обложки и книгу FTB. Старый <code>/item replace … ${p.username}</code> от имени игрока не срабатывал (нет прав + пустой username) — книги не появлялись. Повторная выдача: <code>/asi resetplayer</code> и перезаход или <code>/asi givediaries</code> (оператор).</li>
+<li><strong>Сундуки.</strong> Обложки и листы падают из таблиц <code>chests</code> (LootJS <code>diary_chest_loot.js</code>). На спавне книги <strong>не</strong> выдаются — только журнал FTB. Шанс обложки <strong>16%</strong> на том независимо; листа — <strong>5.5%</strong> на тип. Lootr крутит таблицу на игрока. На стартовом острове сундуков нет (два пустых бочонка без loot table).</li>
 <li><strong>Крафт обложки</strong> (<code>kubejs/server_scripts/Recipes/modopedia_books.js</code>): книга + компас / карта / кость.</li>
-<li><strong>Страницы</strong> — девять предметов <code>kubejs:diary_page_*</code> в сундуках (LootJS <code>addTableModifier</code> по таблицам <code>chests</code>, ~5.5% на тип листа). Lootr крутит таблицу на игрока.</li>
+<li><strong>Оператор.</strong> <code>/asi givediaries</code> выдаёт три тома (права 2). <code>/asi resetplayer</code> больше не кладёт дневники в инвентарь.</li>
 <li>
 <p>Куски:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/give @s modopedia:book[modopedia:book="asi:mechanist_diary"]
@@ -1626,7 +1626,7 @@
 <li>Лист в сундуке (<code>diary_chest_loot.js</code>).</li>
 <li>Advancement <code>asi:diary/&lt;key&gt;</code> — триггер <code>inventory_changed</code>.</li>
 <li>Категория и её записи ссылаются на этот advancement.</li>
-<li>Предисловие каждого тома <strong>без</strong> advancement — обложку можно читать сразу.</li>
+<li>Предисловие каждого тома <strong>без</strong> advancement — первая запись всегда открыта: обрывок в голосе автора, без инструкций «как вести дневник».</li>
 <li>Тост advancement + сообщение в чат (<code>diary_page_pickup.js</code>).</li>
 </ol>
 <p>Корень дерева: скрытый <code>asi:diary/root</code> (тик). Это ближайший рабочий вариант к «страница из сундука открывает главу» без отдельного мода-квестбука.</p>

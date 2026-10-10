@@ -1586,9 +1586,9 @@
 <li>Флаг сервера <code>asi_island_placed</code> ставится <strong>только если</strong> под точкой спавна уже есть блок (не воздух).</li>
 <li>Флаг игрока <code>asi_started</code> — только после успешного телепорта на землю; иначе вход повторит попытку.</li>
 </ul>
-<p>Сообщение при входе: «Добро пожаловать на Небесный Остров…» Книга квестов FTB и <strong>три дневника основателей</strong> (Modopedia) выдаются через <code>player.give()</code> — не командой <code>/item replace</code> (см. <a href="../../guides/modopedia/">дневники</a>).</p>
+<p>Сообщение при входе: «Добро пожаловать на Небесный Остров…» В инвентарь кладётся только книга квестов FTB. Три дневника основателей <strong>не</strong> выдаются на спавне — их и вырванные листы нужно искать в сундуках (см. <a href="../../guides/modopedia/">дневники</a>). <code>/asi givediaries</code> остаётся операторской командой.</p>
 <p>Остров ставится в <code>ServerEvents.loaded</code> <strong>сразу</strong> (без паузы 5 с). На первом входе телепорт повторяется каждые 10 тиков, пока не появится земля, максимум ~20 с.</p>
-<p>Отладочные команды: <code>/asi resetisland</code>, <code>/asi placenow</code>, <code>/asi resetplayer</code>, <code>/asi status</code> (флаг + есть ли блок под спавном).</p>
+<p>Отладочные команды: <code>/asi resetisland</code>, <code>/asi placenow</code>, <code>/asi resetplayer</code>, <code>/asi status</code>, <code>/asi givediaries</code>.</p>
 <h3 id="_3">Как проверить на новом мире<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Удалите мир (или создайте новый).</li>
@@ -1599,10 +1599,11 @@
 </ol>
 <h2 id="_4">Что взять с собой с острова<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Откройте <strong>Aeronautics Journal</strong> (FTB Quests) — текст про трёх Основателей.</li>
-<li>Откройте три <strong>дневника основателей</strong> (Modopedia). Предисловие доступно сразу; остальные главы — за листами из сундуков.</li>
+<li>Откройте <strong>Aeronautics Journal</strong> (FTB Quests) — глава «Первые исследования»: дневники, починка аэростата, параглайдер.</li>
+<li>Дневники основателей (Modopedia) лежат в сундуках по миру, не в стартовом инвентаре. Первая запись каждого тома открыта сразу; остальные главы — за вырванными листами.</li>
 <li>Не прыгайте в пустоту без плана: сработает <a href="../../mods/mod-list/">Forgiving Void</a>, но падение всё равно опасно.</li>
-<li>Для личного полёта нужен <strong>параглайдер</strong> (рецепт переведён на аэролит Aero Islands) — см. <a href="../../guides/getting-started-guide/">первые шаги</a>.</li>
+<li>Для личного полёта нужен <strong>параглайдер</strong> (палки + аэролит; оба есть на острове) — см. <a href="../../guides/getting-started-guide/">первые шаги</a>.</li>
+<li>Аэростат на краю: оболочку снимите с обломка; детали горелки — в бочонках корзины. Готовой горелки нет.</li>
 </ol>
 <h2 id="_5">Мир вокруг<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
