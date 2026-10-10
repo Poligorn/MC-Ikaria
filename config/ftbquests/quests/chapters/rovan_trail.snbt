@@ -16,8 +16,27 @@
 	quest_links: [ ]
 	quests: [
 		{
+			icon: {
+				components: {
+					"modopedia:book": "asi:wildlander_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "4A11C001D0E10003"
+			invisible: true
+			title: "His notes sit in my pack"
+			tasks: [{
+				id: "4A11C001D0E10013"
+				stage: "asi_book_wildlander"
+				type: "gamestage"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
 			dependencies: [
-				"53016C23D2E3A495"
+				"4A11C001D0E10003"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -39,7 +58,7 @@
 		}
 		{
 			dependencies: [
-				"53016C23D2E3A495"
+				"4A11C001D0E10003"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -61,7 +80,7 @@
 		}
 		{
 			dependencies: [
-				"53016C23D2E3A495"
+				"4A11C001D0E10003"
 			]
 			hide_until_deps_complete: true
 			icon: {

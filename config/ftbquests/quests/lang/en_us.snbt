@@ -61,6 +61,18 @@
 		""
 		"A twig falls from the ore on this island. The barrels hold scraps too. No leather — that recipe is gone. I will make the paraglider."
 	]
+	quest.4A11C001D0E10001.title: "His drafts sit in my pack"
+	quest.4A11C001D0E10001.quest_desc: [
+		"The Mechanist's cover is in my pack. The torn leaves can have a place now."
+	]
+	quest.4A11C001D0E10002.title: "Her log sits in my pack"
+	quest.4A11C001D0E10002.quest_desc: [
+		"Skyward's log is with me. I can follow the torn watch from here."
+	]
+	quest.4A11C001D0E10003.title: "His notes sit in my pack"
+	quest.4A11C001D0E10003.quest_desc: [
+		"The Wildlander's notes are in my pack. The scattered cards have a trail again."
+	]
 	quest.61A17D34E3F4B5A6.title: "Torn kinetics"
 	quest.61A17D34E3F4B5A6.quest_desc: [
 		"Elias is missing the kinetics leaf. I need one. When it lies in his volume, this line is done."
@@ -107,6 +119,9 @@
 	task.72B74F23E50B6202.title: "Andesite propeller"
 	task.73C85034F61C7303.title: "Three aerolite twigs"
 	task.33C85034F61C73A5.title: "Paraglider"
+	task.4A11C001D0E10011.title: "Elias's volume"
+	task.4A11C001D0E10012.title: "Kaira's volume"
+	task.4A11C001D0E10013.title: "Rovan's volume"
 	task.7511A17D34E3F401.title: "Leaf: kinetics"
 	task.7522B28E45F40502.title: "Leaf: machines"
 	task.7533C39F56051603.title: "Leaf: alloys"

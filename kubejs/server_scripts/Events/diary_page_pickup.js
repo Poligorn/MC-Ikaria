@@ -50,6 +50,41 @@ function asiKeepOneMatching(player, matchFn) {
   }
 }
 
+const ASI_BOOK_STAGE = {
+  mechanist: 'asi_book_mechanist',
+  skyward: 'asi_book_skyward',
+  wildlander: 'asi_book_wildlander'
+}
+
+function asiGrantBookStage(player, book) {
+  if (!book || !ASI_BOOK_STAGE[book]) return
+  player.persistentData.putBoolean('asi_got_book_' + book, true)
+  // FTB 2101 StageTask читает entity tags (EntityTagStageProvider), не KubeJS stages.
+  player.addTag(ASI_BOOK_STAGE[book])
+}
+
+function asiEnsureDiaryBookStages(player) {
+  if (!player || player.level.isClientSide()) return
+  let held = {
+    mechanist: false,
+    skyward: false,
+    wildlander: false
+  }
+  let inv = player.inventory
+  let slots = inv.getSlots()
+  for (let i = 0; i < slots; i++) {
+    let key = asiDiaryBookKey(inv.getStackInSlot(i))
+    if (key) held[key] = true
+  }
+  let books = ['mechanist', 'skyward', 'wildlander']
+  for (let b = 0; b < books.length; b++) {
+    let book = books[b]
+    if (held[book] || player.persistentData.getBoolean('asi_got_book_' + book)) {
+      asiGrantBookStage(player, book)
+    }
+  }
+}
+
 function asiMarkDiaryObtain(player, item) {
   let id = String(item.id)
   let pageFlag = ASI_PAGE_FLAG[id]
@@ -64,10 +99,19 @@ function asiMarkDiaryObtain(player, item) {
   }
   let book = asiDiaryBookKey(item)
   if (!book) return
-  player.persistentData.putBoolean('asi_got_book_' + book, true)
+  asiGrantBookStage(player, book)
   asiKeepOneMatching(player, function (st) { return asiDiaryBookKey(st) === book })
 }
 
 PlayerEvents.inventoryChanged(event => {
   asiMarkDiaryObtain(event.player, event.item)
+})
+
+PlayerEvents.loggedIn(event => {
+  asiEnsureDiaryBookStages(event.player)
+})
+
+PlayerEvents.tick(event => {
+  if (event.player.tickCount % 40 !== 0) return
+  asiEnsureDiaryBookStages(event.player)
 })

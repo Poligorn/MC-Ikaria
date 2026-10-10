@@ -16,8 +16,27 @@
 	quest_links: [ ]
 	quests: [
 		{
+			icon: {
+				components: {
+					"modopedia:book": "asi:skyward_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "4A11C001D0E10002"
+			invisible: true
+			title: "Her log sits in my pack"
+			tasks: [{
+				id: "4A11C001D0E10012"
+				stage: "asi_book_skyward"
+				type: "gamestage"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
 			dependencies: [
-				"52F05B12C1D29384"
+				"4A11C001D0E10002"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -39,7 +58,7 @@
 		}
 		{
 			dependencies: [
-				"52F05B12C1D29384"
+				"4A11C001D0E10002"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -61,7 +80,7 @@
 		}
 		{
 			dependencies: [
-				"52F05B12C1D29384"
+				"4A11C001D0E10002"
 			]
 			hide_until_deps_complete: true
 			icon: {

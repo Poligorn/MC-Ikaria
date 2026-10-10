@@ -4346,7 +4346,7 @@ hash = "e57d8311aec9f524911ed1313cabf138bb7fa5a2d3ba985a00a2a267ff35ef78"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/elias_trail.snbt"
-hash = "0bc322686b3876eb03e077b13f429109e89482f5403ad723d1b47922cb12a7da"
+hash = "cf1a602dea59007c4de26768267b2e6e3c1ab49d4844215e76f1626b7ed2e761"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/initial_research.snbt"
@@ -4354,11 +4354,11 @@ hash = "929a06ffc38b1f4a5338d395997e2d8d1a4850daf544f8ab0062412f1575982f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/kaira_trail.snbt"
-hash = "13b8bdc7cb4dab23fcb63f3538da398bef0efbea9e7ba611ac1a7d5a5f0446ac"
+hash = "c9c35a52649638d65a021188f5a96a9be19a7a6411c65f4cb69c4fe22e76e23b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/rovan_trail.snbt"
-hash = "069773ab20a7940bc025b1c9a9d84f8d61f25e3228ae7b01025e0db92a39ae76"
+hash = "30af399b57dd41e6fe2f202d665b06be71defe7052f5194e2e5c75819c8b9ee8"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -4366,11 +4366,11 @@ hash = "b8b7acb8166cc595562346715dd2881753451d28586780b04b6c8ded659d421e"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "2ad9917f83f4451ba1ad2c2571184353aba28f7f0f0bd8eb7ab58e21a0860ffc"
+hash = "ba6b55f444c0b94ac2b6824b1fb60c64d01a353728bc9b05a9b9fdb875987da1"
 
 [[files]]
 file = "config/ftbquests/quests/lang/ru_ru.snbt"
-hash = "97e50928dd3386f0c23ac562c99e83aaf595e5213dff178e2d0dd34c3d8ccbd4"
+hash = "b82cd6092e2032fa5bf75ed251bcd87d661966bbb201cef48471401ca65cfa54"
 
 [[files]]
 file = "config/ftbteams-server.snbt"
@@ -6462,7 +6462,7 @@ hash = "dfcbcfdeb7eede36ecf556bd8db0335bb7f67d36b3797b4c04b49689018ae2a7"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_page_pickup.js"
-hash = "e8dae2c4a04c104053af025fc38e5c37aa9d3420574c2e1f1a7d00729a4688af"
+hash = "ac75263de8bc119b3cc5c4dc885163677e84ac5097ca1be05aa270b8043c8e90"
 
 [[files]]
 file = "kubejs/server_scripts/Events/gunsmith_bunker.js"
