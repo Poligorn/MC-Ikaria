@@ -11,13 +11,32 @@
 		count: 1
 		id: "modopedia:book"
 	}
-	id: "C10A2B3C4D5E6F70"
+	id: "410A2B3C4D5E6F70"
 	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
+			icon: {
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "4A11C001D0E10001"
+			invisible: true
+			title: "His drafts sit in my pack"
+			tasks: [{
+				id: "4A11C001D0E10011"
+				stage: "asi_book_mechanist"
+				type: "gamestage"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
 			dependencies: [
-				"D1E94A01B0C18273"
+				"4A11C001D0E10001"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -27,11 +46,11 @@
 				count: 1
 				id: "modopedia:book"
 			}
-			id: "E1A17D34E3F4B5A6"
+			id: "61A17D34E3F4B5A6"
 			title: "Torn kinetics"
 			tasks: [{
 				advancement: "asi:diary/mechanist_kinetics"
-				id: "F511A17D34E3F401"
+				id: "7511A17D34E3F401"
 				type: "advancement"
 			}]
 			x: 0.0d
@@ -39,7 +58,7 @@
 		}
 		{
 			dependencies: [
-				"D1E94A01B0C18273"
+				"4A11C001D0E10001"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -49,11 +68,11 @@
 				count: 1
 				id: "modopedia:book"
 			}
-			id: "E2B28E45F405C6B7"
+			id: "62B28E45F405C6B7"
 			title: "Torn machines"
 			tasks: [{
 				advancement: "asi:diary/mechanist_machines"
-				id: "F522B28E45F40502"
+				id: "7522B28E45F40502"
 				type: "advancement"
 			}]
 			x: 1.5d
@@ -61,7 +80,7 @@
 		}
 		{
 			dependencies: [
-				"D1E94A01B0C18273"
+				"4A11C001D0E10001"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -71,11 +90,11 @@
 				count: 1
 				id: "modopedia:book"
 			}
-			id: "E3C39F560516D7C8"
+			id: "63C39F560516D7C8"
 			title: "Torn alloys"
 			tasks: [{
 				advancement: "asi:diary/mechanist_progress"
-				id: "F533C39F56051603"
+				id: "7533C39F56051603"
 				type: "advancement"
 			}]
 			x: 3.0d

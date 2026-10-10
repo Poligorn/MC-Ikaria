@@ -1,8 +1,8 @@
 {
 	chapter.2AAF5935EA1DE955.title: "A rock and three names"
-	chapter.C10A2B3C4D5E6F70.title: "Elias's trail"
-	chapter.C20B3C4D5E6F7081.title: "Kaira's trail"
-	chapter.C30C4D5E6F708192.title: "Rovan's trail"
+	chapter.410A2B3C4D5E6F70.title: "Elias's trail"
+	chapter.420B3C4D5E6F7081.title: "Kaira's trail"
+	chapter.430C4D5E6F708192.title: "Rovan's trail"
 	file.0000000000000001.title: "My journal"
 	quest.3364BA01A0AF91D8.title: "Woke on the rock"
 	quest.3364BA01A0AF91D8.quest_desc: [
@@ -12,23 +12,23 @@
 		""
 		"What they met is not written. I mark this line: I go looking."
 	]
-	quest.D1E94A01B0C18273.title: "A ruler's hand"
-	quest.D1E94A01B0C18273.quest_subtitle: "Elias Verne"
-	quest.D1E94A01B0C18273.quest_desc: [
+	quest.51E94A01B0C18273.title: "A ruler's hand"
+	quest.51E94A01B0C18273.quest_subtitle: "Elias Verne"
+	quest.51E94A01B0C18273.quest_desc: [
 		"Elias writes as if a digit matters more than sleep. I am looking for one cover: The Mechanist's Drafts. Not a second."
 		""
 		"The ruler breaks mid-stroke. What he was measuring then — I do not know yet."
 	]
-	quest.D2F05B12C1D29384.title: "Watch not handed over"
-	quest.D2F05B12C1D29384.quest_subtitle: "Kaira Storm"
-	quest.D2F05B12C1D29384.quest_desc: [
+	quest.52F05B12C1D29384.title: "Watch not handed over"
+	quest.52F05B12C1D29384.quest_subtitle: "Kaira Storm"
+	quest.52F05B12C1D29384.quest_desc: [
 		"Kaira leaves altitude and wind, not a goodbye. I need Skyward's Flight Log from a chest. One volume."
 		""
 		"The last height does not agree with itself. She did not finish why."
 	]
-	quest.D3016C23D2E3A495.title: "A card with no name"
-	quest.D3016C23D2E3A495.quest_subtitle: "Rovan Ash"
-	quest.D3016C23D2E3A495.quest_desc: [
+	quest.53016C23D2E3A495.title: "A card with no name"
+	quest.53016C23D2E3A495.quest_subtitle: "Rovan Ash"
+	quest.53016C23D2E3A495.quest_desc: [
 		"Rovan marks dots, not names. I am hunting The Wildlander's Field Notes. One. I do not need a stranger's spare."
 		""
 		"A trail. No beast. He did not name what watched."
@@ -40,80 +40,95 @@
 		""
 		"I will take eight envelope blocks. The basket barrels hold sheets, alloy, dust, a coal block — I can make a burner at a table from the planks. There is no finished burner. I will set mine under the bag in place of the fires."
 	]
-	quest.9A6C3E12D4F05184.title: "A lever or the bag stays cloth"
-	quest.9A6C3E12D4F05184.quest_subtitle: "Physics Assembler"
-	quest.9A6C3E12D4F05184.quest_desc: [
+	quest.1A6C3E12D4F05184.title: "A lever or the bag stays cloth"
+	quest.1A6C3E12D4F05184.quest_subtitle: "Physics Assembler"
+	quest.1A6C3E12D4F05184.quest_desc: [
 		"A bag without assembly is cloth on the wind. I need a Physics Assembler: a lever, two alloys, an andesite casing."
 		""
 		"Alloy and casings are in those same barrels. A lever is there too, or cobble and a stick. Crafting table. No Create machines."
 	]
-	quest.9B7D4F23E5016295.title: "A screw for a dead shaft"
-	quest.9B7D4F23E5016295.quest_subtitle: "Andesite propeller"
-	quest.9B7D4F23E5016295.quest_desc: [
+	quest.1B7D4F23E5016295.title: "A screw for a dead shaft"
+	quest.1B7D4F23E5016295.quest_subtitle: "Andesite propeller"
+	quest.1B7D4F23E5016295.quest_desc: [
 		"Three shafts sit idle. They want an andesite propeller: a Create propeller, a wooden slab, a shaft."
 		""
 		"Propellers and shafts are in the barrels. The slab comes off the oak on the pad. I will build it while the bag still holds air."
 	]
-	quest.8F5B2D01C3E94072.title: "A wing before a ship"
-	quest.8F5B2D01C3E94072.quest_subtitle: "Aerolite and paraglider"
-	quest.8F5B2D01C3E94072.quest_desc: [
+	quest.0F5B2D01C3E94072.title: "A wing before a ship"
+	quest.0F5B2D01C3E94072.quest_subtitle: "Aerolite and paraglider"
+	quest.0F5B2D01C3E94072.quest_desc: [
 		"I can leave the rock before the bag flies. There is no separate «aerolite wing» item in the pack — the wing is sewn from aerolite twigs. Three of them. Four sticks."
 		""
 		"A twig falls from the ore on this island. The barrels hold scraps too. No leather — that recipe is gone. I will make the paraglider."
 	]
-	quest.E1A17D34E3F4B5A6.title: "Torn kinetics"
-	quest.E1A17D34E3F4B5A6.quest_desc: [
+	quest.4A11C001D0E10001.title: "His drafts sit in my pack"
+	quest.4A11C001D0E10001.quest_desc: [
+		"The Mechanist's cover is in my pack. The torn leaves can have a place now."
+	]
+	quest.4A11C001D0E10002.title: "Her log sits in my pack"
+	quest.4A11C001D0E10002.quest_desc: [
+		"Skyward's log is with me. I can follow the torn watch from here."
+	]
+	quest.4A11C001D0E10003.title: "His notes sit in my pack"
+	quest.4A11C001D0E10003.quest_desc: [
+		"The Wildlander's notes are in my pack. The scattered cards have a trail again."
+	]
+	quest.61A17D34E3F4B5A6.title: "Torn kinetics"
+	quest.61A17D34E3F4B5A6.quest_desc: [
 		"Elias is missing the kinetics leaf. I need one. When it lies in his volume, this line is done."
 	]
-	quest.E2B28E45F405C6B7.title: "Torn machines"
-	quest.E2B28E45F405C6B7.quest_desc: [
+	quest.62B28E45F405C6B7.title: "Torn machines"
+	quest.62B28E45F405C6B7.quest_desc: [
 		"The machines leaf is out of Elias's book. One. Without it his press and mill will not read."
 	]
-	quest.E3C39F560516D7C8.title: "Torn alloys"
-	quest.E3C39F560516D7C8.quest_desc: [
+	quest.63C39F560516D7C8.title: "Torn alloys"
+	quest.63C39F560516D7C8.quest_desc: [
 		"He counted alloys to the last. One leaf. Find it, and that chapter of his diary is whole again."
 	]
-	quest.E4D4A0671627E8D9.title: "Torn glider"
-	quest.E4D4A0671627E8D9.quest_desc: [
+	quest.64D4A0671627E8D9.title: "Torn glider"
+	quest.64D4A0671627E8D9.quest_desc: [
 		"Kaira wrote about personal flight. The leaf is torn. I want one — her watch on the glider."
 	]
-	quest.E5E5B1782738F9EA.title: "Torn hull"
-	quest.E5E5B1782738F9EA.quest_desc: [
+	quest.65E5B1782738F9EA.title: "Torn hull"
+	quest.65E5B1782738F9EA.quest_desc: [
 		"The page on a ship's hull. One is enough. I will not take a second."
 	]
-	quest.E6F6C28938490AFB.title: "Torn sky"
-	quest.E6F6C28938490AFB.quest_desc: [
+	quest.66F6C28938490AFB.title: "Torn sky"
+	quest.66F6C28938490AFB.quest_desc: [
 		"Her sky breaks mid-word. I will find the leaf and read as far as she got."
 	]
-	quest.E707D39A495A1B0C.title: "Torn beasts"
-	quest.E707D39A495A1B0C.quest_desc: [
+	quest.6707D39A495A1B0C.title: "Torn beasts"
+	quest.6707D39A495A1B0C.quest_desc: [
 		"Rovan's beast cards are scattered. I need one — the beasts chapter."
 	]
-	quest.E818E4AB5A6B2C1D.title: "Torn holes"
-	quest.E818E4AB5A6B2C1D.quest_desc: [
+	quest.6818E4AB5A6B2C1D.title: "Torn holes"
+	quest.6818E4AB5A6B2C1D.quest_desc: [
 		"He knew a portal's rim. One leaf on the holes. He still did not name what watched between the leaves."
 	]
-	quest.E929F5BC6B7C3D2E.title: "Torn ruins"
-	quest.E929F5BC6B7C3D2E.quest_desc: [
+	quest.6929F5BC6B7C3D2E.title: "Torn ruins"
+	quest.6929F5BC6B7C3D2E.quest_desc: [
 		"His ruins have no map. I will find one leaf. Then I follow his trail, not someone else's."
 	]
 	task.3D9CC80F7EADD53D.title: "I go looking"
-	task.F411A001B0C18201.title: "Elias's cover"
-	task.F422B112C1D29302.title: "Kaira's cover"
-	task.F433C223D2E3A403.title: "Rovan's cover"
-	task.91A63E12D4FA5183.title: "Eight envelope blocks"
-	task.A2B74F23E50B6294.title: "Hot Air Burner"
-	task.F1A63E12D4FA5101.title: "Physics Assembler"
-	task.F2B74F23E50B6202.title: "Andesite propeller"
-	task.F3C85034F61C7303.title: "Three aerolite twigs"
-	task.B3C85034F61C73A5.title: "Paraglider"
-	task.F511A17D34E3F401.title: "Leaf: kinetics"
-	task.F522B28E45F40502.title: "Leaf: machines"
-	task.F533C39F56051603.title: "Leaf: alloys"
-	task.F544D4A067162704.title: "Leaf: glider"
-	task.F555E5B178273805.title: "Leaf: hull"
-	task.F566F6C289384906.title: "Leaf: sky"
-	task.F57707D39A495A07.title: "Leaf: beasts"
-	task.F58818E4AB5A6B08.title: "Leaf: holes"
-	task.F59929F5BC6B7C09.title: "Leaf: ruins"
+	task.7411A001B0C18201.title: "Elias's cover"
+	task.7422B112C1D29302.title: "Kaira's cover"
+	task.7433C223D2E3A403.title: "Rovan's cover"
+	task.11A63E12D4FA5183.title: "Eight envelope blocks"
+	task.22B74F23E50B6294.title: "Hot Air Burner"
+	task.71A63E12D4FA5101.title: "Physics Assembler"
+	task.72B74F23E50B6202.title: "Andesite propeller"
+	task.73C85034F61C7303.title: "Three aerolite twigs"
+	task.33C85034F61C73A5.title: "Paraglider"
+	task.4A11C001D0E10011.title: "Elias's volume"
+	task.4A11C001D0E10012.title: "Kaira's volume"
+	task.4A11C001D0E10013.title: "Rovan's volume"
+	task.7511A17D34E3F401.title: "Leaf: kinetics"
+	task.7522B28E45F40502.title: "Leaf: machines"
+	task.7533C39F56051603.title: "Leaf: alloys"
+	task.7544D4A067162704.title: "Leaf: glider"
+	task.7555E5B178273805.title: "Leaf: hull"
+	task.7566F6C289384906.title: "Leaf: sky"
+	task.757707D39A495A07.title: "Leaf: beasts"
+	task.758818E4AB5A6B08.title: "Leaf: holes"
+	task.759929F5BC6B7C09.title: "Leaf: ruins"
 }

@@ -11,13 +11,32 @@
 		count: 1
 		id: "modopedia:book"
 	}
-	id: "C30C4D5E6F708192"
+	id: "430C4D5E6F708192"
 	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
+			icon: {
+				components: {
+					"modopedia:book": "asi:wildlander_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			id: "4A11C001D0E10003"
+			invisible: true
+			title: "His notes sit in my pack"
+			tasks: [{
+				id: "4A11C001D0E10013"
+				stage: "asi_book_wildlander"
+				type: "gamestage"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
 			dependencies: [
-				"D3016C23D2E3A495"
+				"4A11C001D0E10003"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -27,11 +46,11 @@
 				count: 1
 				id: "modopedia:book"
 			}
-			id: "E707D39A495A1B0C"
+			id: "6707D39A495A1B0C"
 			title: "Torn beasts"
 			tasks: [{
 				advancement: "asi:diary/wildlander_beasts"
-				id: "F57707D39A495A07"
+				id: "757707D39A495A07"
 				type: "advancement"
 			}]
 			x: 0.0d
@@ -39,7 +58,7 @@
 		}
 		{
 			dependencies: [
-				"D3016C23D2E3A495"
+				"4A11C001D0E10003"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -49,11 +68,11 @@
 				count: 1
 				id: "modopedia:book"
 			}
-			id: "E818E4AB5A6B2C1D"
+			id: "6818E4AB5A6B2C1D"
 			title: "Torn holes"
 			tasks: [{
 				advancement: "asi:diary/wildlander_portals"
-				id: "F58818E4AB5A6B08"
+				id: "758818E4AB5A6B08"
 				type: "advancement"
 			}]
 			x: 1.5d
@@ -61,7 +80,7 @@
 		}
 		{
 			dependencies: [
-				"D3016C23D2E3A495"
+				"4A11C001D0E10003"
 			]
 			hide_until_deps_complete: true
 			icon: {
@@ -71,11 +90,11 @@
 				count: 1
 				id: "modopedia:book"
 			}
-			id: "E929F5BC6B7C3D2E"
+			id: "6929F5BC6B7C3D2E"
 			title: "Torn ruins"
 			tasks: [{
 				advancement: "asi:diary/wildlander_ruins"
-				id: "F59929F5BC6B7C09"
+				id: "759929F5BC6B7C09"
 				type: "advancement"
 			}]
 			x: 3.0d
