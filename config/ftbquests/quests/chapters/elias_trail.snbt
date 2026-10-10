@@ -1,0 +1,66 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "elias_trail"
+	group: ""
+	hide_until_quests_available: true
+	icon: {
+		id: "create:cogwheel"
+	}
+	id: "C10A2B3C4D5E6F70"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"D1E94A01B0C18273"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "kubejs:diary_page_mechanist_kinetics"
+			}
+			id: "E1A17D34E3F4B5A6"
+			tasks: [{
+				advancement: "asi:diary/mechanist_kinetics"
+				id: "F511A17D34E3F401"
+				type: "advancement"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"D1E94A01B0C18273"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "kubejs:diary_page_mechanist_machines"
+			}
+			id: "E2B28E45F405C6B7"
+			tasks: [{
+				advancement: "asi:diary/mechanist_machines"
+				id: "F522B28E45F40502"
+				type: "advancement"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"D1E94A01B0C18273"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "kubejs:diary_page_mechanist_progress"
+			}
+			id: "E3C39F560516D7C8"
+			tasks: [{
+				advancement: "asi:diary/mechanist_progress"
+				id: "F533C39F56051603"
+				type: "advancement"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+	]
+}

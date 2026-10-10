@@ -52,6 +52,9 @@ ServerEvents.commandRegistry(event => {
           player.give(diary('asi:mechanist_diary'))
           player.give(diary('asi:skyward_diary'))
           player.give(diary('asi:wildlander_diary'))
+          player.persistentData.putBoolean('asi_got_book_mechanist', true)
+          player.persistentData.putBoolean('asi_got_book_skyward', true)
+          player.persistentData.putBoolean('asi_got_book_wildlander', true)
           ctx.source.sendSystemMessage(Text.green('[ASI] Выданы три дневника основателей.'))
           return 1
         }))

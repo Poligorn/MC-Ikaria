@@ -1,5 +1,6 @@
-// Подсказка, какой лист только что открыл главу.
-const DIARY_PAGE_HINT = {
+// Один том / один лист на игрока. Флаг в persistentData — на игрока, не на мир:
+// каждый может прочитать. Lootr уже режет сундук по игроку.
+const ASI_PAGE_HINT = {
   'kubejs:diary_page_mechanist_kinetics': 'Чертежи Механика: глава «Кинетика»',
   'kubejs:diary_page_mechanist_machines': 'Чертежи Механика: глава «Станки»',
   'kubejs:diary_page_mechanist_progress': 'Чертежи Механика: глава «Сплавы»',
@@ -11,12 +12,71 @@ const DIARY_PAGE_HINT = {
   'kubejs:diary_page_wildlander_ruins': 'Дневник Следопыта: глава «Руины»'
 }
 
+const ASI_PAGE_FLAG = {
+  'kubejs:diary_page_mechanist_kinetics': 'asi_got_page_mechanist_kinetics',
+  'kubejs:diary_page_mechanist_machines': 'asi_got_page_mechanist_machines',
+  'kubejs:diary_page_mechanist_progress': 'asi_got_page_mechanist_progress',
+  'kubejs:diary_page_skyward_glider': 'asi_got_page_skyward_glider',
+  'kubejs:diary_page_skyward_airship': 'asi_got_page_skyward_airship',
+  'kubejs:diary_page_skyward_sky': 'asi_got_page_skyward_sky',
+  'kubejs:diary_page_wildlander_beasts': 'asi_got_page_wildlander_beasts',
+  'kubejs:diary_page_wildlander_portals': 'asi_got_page_wildlander_portals',
+  'kubejs:diary_page_wildlander_ruins': 'asi_got_page_wildlander_ruins'
+}
+
+function asiDiaryBookKey(item) {
+  if (!item || item.empty || item.id !== 'modopedia:book') return ''
+  let s = '' + item
+  if (s.indexOf('mechanist_diary') >= 0) return 'mechanist'
+  if (s.indexOf('skyward_diary') >= 0) return 'skyward'
+  if (s.indexOf('wildlander_diary') >= 0) return 'wildlander'
+  return ''
+}
+
+function asiGetInvStack(inv, i) {
+  try {
+    if (inv.getStackInSlot) return inv.getStackInSlot(i)
+  } catch (e) {}
+  try {
+    return inv.get(i)
+  } catch (e2) {}
+  return null
+}
+
+function asiKeepOneMatching(player, matchFn) {
+  let kept = false
+  let inv = player.inventory
+  for (let i = 0; i < 42; i++) {
+    let st = asiGetInvStack(inv, i)
+    if (!st || st.empty) continue
+    if (!matchFn(st)) continue
+    if (!kept) {
+      kept = true
+      if (st.count > 1) st.setCount(1)
+    } else {
+      st.setCount(0)
+    }
+  }
+}
+
+function asiMarkDiaryObtain(player, item) {
+  let id = String(item.id)
+  let pageFlag = ASI_PAGE_FLAG[id]
+  if (pageFlag) {
+    let first = !player.persistentData.getBoolean(pageFlag)
+    player.persistentData.putBoolean(pageFlag, true)
+    asiKeepOneMatching(player, function (st) { return String(st.id) === id })
+    if (first && ASI_PAGE_HINT[id]) {
+      player.tell(Text.gold('Лист лёг в дневник: ').append(Text.yellow(ASI_PAGE_HINT[id])))
+    }
+    return
+  }
+  let book = asiDiaryBookKey(item)
+  if (!book) return
+  player.persistentData.putBoolean('asi_got_book_' + book, true)
+  asiKeepOneMatching(player, function (st) { return asiDiaryBookKey(st) === book })
+}
+
 PlayerEvents.inventoryChanged(event => {
-  const id = String(event.item.id)
-  const hint = DIARY_PAGE_HINT[id]
-  if (!hint) return
-  const key = 'asi_page_' + id.replace('kubejs:', '').replace(/[^a-z0-9_]/g, '_')
-  if (event.player.persistentData.getBoolean(key)) return
-  event.player.persistentData.putBoolean(key, true)
-  event.player.tell(Text.gold('Лист лёг в дневник: ').append(Text.yellow(hint)))
+  asiMarkDiaryObtain(event.player, event.item)
 })

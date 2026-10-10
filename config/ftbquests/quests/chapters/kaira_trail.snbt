@@ -1,0 +1,66 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "kaira_trail"
+	group: ""
+	hide_until_quests_available: true
+	icon: {
+		id: "paraglider:paraglider"
+	}
+	id: "C20B3C4D5E6F7081"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"D2F05B12C1D29384"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "kubejs:diary_page_skyward_glider"
+			}
+			id: "E4D4A0671627E8D9"
+			tasks: [{
+				advancement: "asi:diary/skyward_glider"
+				id: "F544D4A067162704"
+				type: "advancement"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"D2F05B12C1D29384"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "kubejs:diary_page_skyward_airship"
+			}
+			id: "E5E5B1782738F9EA"
+			tasks: [{
+				advancement: "asi:diary/skyward_airship"
+				id: "F555E5B178273805"
+				type: "advancement"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"D2F05B12C1D29384"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				id: "kubejs:diary_page_skyward_sky"
+			}
+			id: "E6F6C28938490AFB"
+			tasks: [{
+				advancement: "asi:diary/skyward_sky"
+				id: "F566F6C289384906"
+				type: "advancement"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+	]
+}

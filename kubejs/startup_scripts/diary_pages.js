@@ -14,7 +14,7 @@ const DIARY_PAGES = [
 StartupEvents.registry('item', event => {
   DIARY_PAGES.forEach(id => {
     event.create(`diary_page_${id}`)
-      .maxStackSize(16)
+      .maxStackSize(1)
       .rarity('uncommon')
   })
 })
