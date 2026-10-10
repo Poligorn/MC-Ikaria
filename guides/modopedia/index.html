@@ -1606,7 +1606,7 @@
 <p>Текстуры предметов — перекраска официальных иконок Modopedia (MIT, Favouriteless) плюс точка-эмблема на корешке. GUI-рамки — встроенные classic, не копия PNG в пак. Модели: <code>kubejs/assets/asi/models/item/modopedia_books/</code>.</p>
 <h2 id="_2">Как получить<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Сундуки.</strong> Обложки и листы падают из таблиц <code>chests</code> (LootJS <code>diary_chest_loot.js</code>). На спавне книги <strong>не</strong> выдаются — только журнал FTB. Шанс обложки <strong>16%</strong> на том независимо; листа — <strong>5.5%</strong> на тип. Lootr крутит таблицу на игрока. На стартовом острове сундуков нет (два пустых бочонка без loot table).</li>
+<li><strong>Сундуки.</strong> Обложки и листы падают из таблиц <code>chests</code> (LootJS <code>diary_chest_loot.js</code>). На спавне книги <strong>не</strong> выдаются — только журнал FTB. Шанс обложки <strong>16%</strong> на том независимо; листа — <strong>5.5%</strong> на тип. <strong>По одному на игрока:</strong> флаг в <code>persistentData</code>, повторно не дропает; листы <code>maxStackSize(1)</code>. Lootr крутит таблицу на игрока. На стартовом острове сундуков нет (бочонки — NBT структуры).</li>
 <li><strong>Крафт обложки</strong> (<code>kubejs/server_scripts/Recipes/modopedia_books.js</code>): книга + компас / карта / кость.</li>
 <li><strong>Оператор.</strong> <code>/asi givediaries</code> выдаёт три тома (права 2). <code>/asi resetplayer</code> больше не кладёт дневники в инвентарь.</li>
 <li>
