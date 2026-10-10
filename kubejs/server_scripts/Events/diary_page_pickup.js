@@ -1,5 +1,5 @@
-// Один том / один лист на игрока. Флаг в persistentData — на игрока, не на мир:
-// каждый может прочитать. Lootr уже режет сундук по игроку.
+// Один том / один лист на игрока. Флаг в persistentData — на игрока, не на мир.
+// Инвентарь: InventoryKJS.getSlots / getStackInSlot / setStackInSlot (KubeJS 2101.7).
 const ASI_PAGE_HINT = {
   'kubejs:diary_page_mechanist_kinetics': 'Чертежи Механика: глава «Кинетика»',
   'kubejs:diary_page_mechanist_machines': 'Чертежи Механика: глава «Станки»',
@@ -33,28 +33,19 @@ function asiDiaryBookKey(item) {
   return ''
 }
 
-function asiGetInvStack(inv, i) {
-  try {
-    if (inv.getStackInSlot) return inv.getStackInSlot(i)
-  } catch (e) {}
-  try {
-    return inv.get(i)
-  } catch (e2) {}
-  return null
-}
-
 function asiKeepOneMatching(player, matchFn) {
-  let kept = false
   let inv = player.inventory
-  for (let i = 0; i < 42; i++) {
-    let st = asiGetInvStack(inv, i)
+  let slots = inv.getSlots()
+  let kept = false
+  for (let i = 0; i < slots; i++) {
+    let st = inv.getStackInSlot(i)
     if (!st || st.empty) continue
     if (!matchFn(st)) continue
     if (!kept) {
       kept = true
       if (st.count > 1) st.setCount(1)
     } else {
-      st.setCount(0)
+      inv.setStackInSlot(i, Item.of('minecraft:air'))
     }
   }
 }
