@@ -28,6 +28,7 @@
 				id: "modopedia:book"
 			}
 			id: "E707D39A495A1B0C"
+			title: "Torn beasts"
 			tasks: [{
 				advancement: "asi:diary/wildlander_beasts"
 				id: "F57707D39A495A07"
@@ -49,6 +50,7 @@
 				id: "modopedia:book"
 			}
 			id: "E818E4AB5A6B2C1D"
+			title: "Torn holes"
 			tasks: [{
 				advancement: "asi:diary/wildlander_portals"
 				id: "F58818E4AB5A6B08"
@@ -70,6 +72,7 @@
 				id: "modopedia:book"
 			}
 			id: "E929F5BC6B7C3D2E"
+			title: "Torn ruins"
 			tasks: [{
 				advancement: "asi:diary/wildlander_ruins"
 				id: "F59929F5BC6B7C09"

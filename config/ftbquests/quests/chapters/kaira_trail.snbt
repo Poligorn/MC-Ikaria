@@ -28,6 +28,7 @@
 				id: "modopedia:book"
 			}
 			id: "E4D4A0671627E8D9"
+			title: "Torn glider"
 			tasks: [{
 				advancement: "asi:diary/skyward_glider"
 				id: "F544D4A067162704"
@@ -49,6 +50,7 @@
 				id: "modopedia:book"
 			}
 			id: "E5E5B1782738F9EA"
+			title: "Torn hull"
 			tasks: [{
 				advancement: "asi:diary/skyward_airship"
 				id: "F555E5B178273805"
@@ -70,6 +72,7 @@
 				id: "modopedia:book"
 			}
 			id: "E6F6C28938490AFB"
+			title: "Torn sky"
 			tasks: [{
 				advancement: "asi:diary/skyward_sky"
 				id: "F566F6C289384906"

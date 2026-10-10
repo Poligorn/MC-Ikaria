@@ -28,6 +28,7 @@
 				id: "modopedia:book"
 			}
 			id: "E1A17D34E3F4B5A6"
+			title: "Torn kinetics"
 			tasks: [{
 				advancement: "asi:diary/mechanist_kinetics"
 				id: "F511A17D34E3F401"
@@ -49,6 +50,7 @@
 				id: "modopedia:book"
 			}
 			id: "E2B28E45F405C6B7"
+			title: "Torn machines"
 			tasks: [{
 				advancement: "asi:diary/mechanist_machines"
 				id: "F522B28E45F40502"
@@ -70,6 +72,7 @@
 				id: "modopedia:book"
 			}
 			id: "E3C39F560516D7C8"
+			title: "Torn alloys"
 			tasks: [{
 				advancement: "asi:diary/mechanist_progress"
 				id: "F533C39F56051603"
