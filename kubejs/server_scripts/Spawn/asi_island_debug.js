@@ -26,14 +26,9 @@ ServerEvents.commandRegistry(event => {
       .then(Commands.literal('placenow')
         .executes(ctx => {
           const server = ctx.source.server;
-          const ox = ASI_ORIGIN[0], oy = ASI_ORIGIN[1], oz = ASI_ORIGIN[2];
-          server.runCommandSilent(`forceload add ${ox} ${oz}`);
-          // runCommandSilent возвращает undefined в этой сборке — результат не проверяем.
-          server.runCommandSilent(`place template ${ASI_STRUCTURE} ${ox} ${oy} ${oz}`);
-          server.persistentData.putBoolean('asi_island_placed', true);
-          server.runCommandSilent(`setworldspawn ${Math.floor(ASI_SPAWN_X)} ${ASI_SPAWN_Y} ${Math.floor(ASI_SPAWN_Z)}`);
-          server.runCommandSilent('gamerule spawnRadius 0');
-          ctx.source.sendSystemMessage(Text.green('[ASI] Остров размещён (' + ASI_STRUCTURE + ').'));
+          server.persistentData.putBoolean('asi_island_placed', false)
+          let ok = asiPlaceIsland(server)
+          ctx.source.sendSystemMessage(Text.green('[ASI] Остров: ' + (ok ? 'земля есть' : 'place вызван, земля ещё не видна') + ' (' + ASI_STRUCTURE + ').'));
           return 1;
         }))
 
@@ -66,7 +61,9 @@ ServerEvents.commandRegistry(event => {
         .executes(ctx => {
           const server = ctx.source.server;
           const placed = server.persistentData.getBoolean('asi_island_placed');
-          ctx.source.sendSystemMessage(Text.aqua('[ASI] Остров размещён (флаг): ' + placed));
+          let level = server.getLevel(ASI_DIM)
+          let ground = asiIsSolidGround(level, ASI_SPAWN_X, ASI_SPAWN_Y, ASI_SPAWN_Z)
+          ctx.source.sendSystemMessage(Text.aqua('[ASI] Флаг: ' + placed + ', земля под спавном: ' + ground));
           return 1;
         }))
   );

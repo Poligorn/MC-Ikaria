@@ -12,7 +12,7 @@
 | [Create Aeronautics Discovery](https://modrinth.com/mod/create-aeronautics-discovery) | `MtpVp9HL` | Пролёты, торговец, события столкновений |
 | [Aeronautics Camera Sync](https://modrinth.com/mod/aero_cam_sync) | `ZGxtWu73` | Наклон камеры на контрапшене |
 | [Create Aeronautics: Claims](https://modrinth.com/mod/aeroclaims) | `CwZ8q37q` | Клаймы кораблей, стык с OPAC |
-| [Clockwork](https://modrinth.com/mod/clockwork_mod) | `h3OPQqBm` | Крылья, бур, оружие; рецепты правил пак |
+| [Clockwork](https://modrinth.com/mod/clockwork_mod) | `h3OPQqBm` | Только крылья (`clockwork_wings`); остальное скрыто |
 | [Paragliders](https://modrinth.com/mod/paragliders) | `esqWA0aQ` | Личный планер |
 | [Create: Hostile Skies](https://modrinth.com/mod/create-hostile-skies) | `78hqRjWm` | Рейды дирижаблей |
 | [Waystones: Sable](https://modrinth.com/mod/waystones-sable) | `BxhPGfcK` | Телепорт с суб-уровня |
