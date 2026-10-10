@@ -24,9 +24,9 @@
 	quest.7E4A1C90B2D83F61.quest_desc: [
 		"A bag hangs at the edge of the island. The envelope still holds a shape. The basket is oak planks. Under it — campfires, not a burner. The shafts do not turn."
 		""
-		"Take eight envelope blocks from the wreck; they drop as themselves. A campfire will not lift this bag. You need a Hot Air Burner: iron sheets, andesite alloy, redstone, a block of coal."
+		"Take eight envelope blocks from the wreck; they drop as themselves. A campfire will not lift this bag. You need a Hot Air Burner."
 		""
-		"Iron sits in the rock. Andesite, redstone, and a furnace do not. Make the burner elsewhere, then set it under the envelope in place of the fires."
+		"The basket barrels still hold what they did not finish assembling: iron sheets, andesite alloy, redstone, a block of coal. A crafting table from the planks on the pad. There is no finished burner. Make it, then set it under the envelope in place of the fires."
 	]
 	quest.8F5B2D01C3E94072.title: "Craft a paraglider"
 	quest.8F5B2D01C3E94072.quest_subtitle: "Sticks and aerolite"
