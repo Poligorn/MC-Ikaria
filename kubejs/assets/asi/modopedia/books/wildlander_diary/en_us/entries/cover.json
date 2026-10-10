@@ -1,5 +1,5 @@
 {
-  "title": "Wildlander",
+  "title": "Card with no name",
   "icon": {
     "id": "minecraft:writable_book"
   },
@@ -8,8 +8,8 @@
       "components": [
         {
           "template": "modopedia:page/headered_text",
-          "header": "Rovan Ash",
-          "text": "Mechanist measured shafts, Skyward altitude. I measured what bites. In the Founders' journal I am the Wildlander.$(br)$(br)⚠ Danger ratings are my scale, not HP from code. I will not invent another mob's health."
+          "header": "●●●● ?",
+          "text": "Not a beast. A trail, no body. The grass lies inward, not with the wind.⚠ It watched from the empty that sits between leaves when you blink. Not a portal. I know portals: they have a rim and a hum. This waited until I wrote."
         }
       ]
     },
@@ -17,8 +17,8 @@
       "components": [
         {
           "template": "modopedia:page/headered_text",
-          "header": "At the rim",
-          "text": "I leave the diary at the portal. If the hole closes while I am inside, the map ends. Do not sketch an «Ash Colossus» in the margin: that beast is not in the pack."
+          "header": "break",
+          "text": "The quill snaps mid-word. No rating — nothing to rate. If this card is found without me, do not finish a beast. There was none. There was only what watched."
         }
       ]
     }

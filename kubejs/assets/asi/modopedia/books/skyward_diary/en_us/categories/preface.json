@@ -1,12 +1,11 @@
 {
-  "title": "Watch",
+  "title": "Watch breaks",
   "icon": {
     "id": "minecraft:writable_book"
   },
-  "landing_text": "Kaira Storm — the Skyward of the Founders' journal. This is a flight log, not a textbook.",
+  "landing_text": "The last altitude does not agree with itself.",
   "entries": [
-    "cover",
-    "how_pages"
+    "cover"
   ],
   "sort_num": 0
 }

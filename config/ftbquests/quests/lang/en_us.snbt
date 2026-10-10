@@ -1,0 +1,42 @@
+{
+	chapter.2AAF5935EA1DE955.title: "Initial research"
+	file.0000000000000001.title: "Aeronautics Journal"
+	quest.3364BA01A0AF91D8.title: "The Journals of the Founders"
+	quest.3364BA01A0AF91D8.quest_desc: [
+		"The Journals of the Founders"
+		""
+		"No one truly knows when — or why — the earth tore free from the world below, rising into the sky to form the floating islands I now call home."
+		""
+		"The old records are fragmented and few, but they all whisper of the same thing: three Founders. Pioneers who, in the age before the Ascension, kept private journals chronicling their craft, their machines, and their boldest inventions."
+		""
+		"Each is said to have mastered a single domain:"
+		""
+		"    📖 The Mechanist — keeper of gears, contraptions, and the secrets of motion."
+		"    🌤️ The Skyward — charter of the winds, the clouds, and the art of flight."
+		"    🗺️ The Wildlander — explorer of the untamed frontier and the dangers beyond the safe shores."
+		""
+		"The three covers are not handed out at spawn. They turn up in chests across the islands, same as the torn pages that open later chapters."
+		""
+		"Objective: Recover the three lost journals of the Founders."
+	]
+	quest.7E4A1C90B2D83F61.title: "Restore the aerostat"
+	quest.7E4A1C90B2D83F61.quest_subtitle: "Envelope intact. No burner."
+	quest.7E4A1C90B2D83F61.quest_desc: [
+		"A bag hangs at the edge of the island. The envelope still holds a shape. The basket is oak planks. Under it — campfires, not a burner. The shafts do not turn."
+		""
+		"Take eight envelope blocks from the wreck; they drop as themselves. A campfire will not lift this bag. You need a Hot Air Burner: iron sheets, andesite alloy, redstone, a block of coal."
+		""
+		"Iron sits in the rock. Andesite, redstone, and a furnace do not. Make the burner elsewhere, then set it under the envelope in place of the fires."
+	]
+	quest.8F5B2D01C3E94072.title: "Craft a paraglider"
+	quest.8F5B2D01C3E94072.quest_subtitle: "Sticks and aerolite"
+	quest.8F5B2D01C3E94072.quest_desc: [
+		"You can leave the rock before you have a ship. Four sticks. Three aerolite twigs. Do not look for leather — that recipe is gone."
+		""
+		"Oak and birch stand on the pad. Aerolite shows in the stone: break it, a twig falls."
+	]
+	task.3D9CC80F7EADD53D.title: "Finding Lost Diaries"
+	task.91A63E12D4FA5183.title: "Salvage 8 envelope blocks"
+	task.A2B74F23E50B6294.title: "Craft a Hot Air Burner"
+	task.B3C85034F61C73A5.title: "Craft a paraglider"
+}

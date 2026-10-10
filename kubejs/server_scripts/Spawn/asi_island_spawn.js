@@ -15,7 +15,7 @@ function asiFinishFirstSpawn(server, uuid, attempt) {
     asiGiveStarterItems(p)
     p.persistentData.putBoolean('asi_started', true)
     p.tell(Text.gold('Добро пожаловать на Небесный Остров. Ваше приключение начинается здесь...'))
-    p.tell(Text.aqua('Три дневника основателей и книга квестов — в инвентаре. Страницы ищите в сундуках.'))
+    p.tell(Text.aqua('Книга квестов в инвентаре. Дневники основателей — в сундуках по миру.'))
     console.info('[ASI] Игрок ' + p.name.string + ' на острове (попытка ' + attempt + ').')
     return
   }

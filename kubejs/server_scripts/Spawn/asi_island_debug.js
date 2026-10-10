@@ -38,7 +38,7 @@ ServerEvents.commandRegistry(event => {
           const player = ctx.source.player;
           if (player) {
             player.persistentData.putBoolean('asi_started', false);
-            ctx.source.sendSystemMessage(Text.yellow('[ASI] Твой флаг спавна сброшен. Перезайди — снова заспавнишься на острове с дневниками.'));
+            ctx.source.sendSystemMessage(Text.yellow('[ASI] Твой флаг спавна сброшен. Перезайди — снова заспавнишься на острове.'));
           }
           return 1;
         }))

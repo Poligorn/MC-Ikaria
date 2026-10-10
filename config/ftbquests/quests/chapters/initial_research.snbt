@@ -9,13 +9,63 @@
 	id: "2AAF5935EA1DE955"
 	order_index: 0
 	quest_links: [ ]
-	quests: [{
-		id: "3364BA01A0AF91D8"
-		tasks: [{
-			id: "3D9CC80F7EADD53D"
-			type: "checkmark"
-		}]
-		x: -0.5d
-		y: 0.0d
-	}]
+	quests: [
+		{
+			id: "3364BA01A0AF91D8"
+			icon: {
+				id: "modopedia:book"
+			}
+			tasks: [{
+				id: "3D9CC80F7EADD53D"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "aeronautics:white_envelope"
+			}
+			id: "7E4A1C90B2D83F61"
+			tasks: [
+				{
+					count: 8L
+					id: "91A63E12D4FA5183"
+					item: {
+						count: 1
+						id: "aeronautics:white_envelope"
+					}
+					type: "item"
+				}
+				{
+					count: 1L
+					id: "A2B74F23E50B6294"
+					item: {
+						count: 1
+						id: "aeronautics:adjustable_burner"
+					}
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: -1.0d
+		}
+		{
+			icon: {
+				id: "paraglider:paraglider"
+			}
+			id: "8F5B2D01C3E94072"
+			tasks: [{
+				count: 1L
+				id: "B3C85034F61C73A5"
+				item: {
+					count: 1
+					id: "paraglider:paraglider"
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+	]
 }

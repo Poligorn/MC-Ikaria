@@ -76,11 +76,5 @@ function asiTeleportToIsland(player) {
 }
 
 function asiGiveStarterItems(player) {
-  let diary = function (id) {
-    return Item.of('modopedia:book[modopedia:book="' + id + '"]')
-  }
   player.give(Item.of('ftbquests:book'))
-  player.give(diary('asi:mechanist_diary'))
-  player.give(diary('asi:skyward_diary'))
-  player.give(diary('asi:wildlander_diary'))
 }

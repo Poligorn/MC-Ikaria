@@ -1,5 +1,5 @@
 {
-  "title": "Skyward on watch",
+  "title": "Watch breaks",
   "icon": {
     "id": "minecraft:writable_book"
   },
@@ -8,8 +8,8 @@
       "components": [
         {
           "template": "modopedia:page/headered_text",
-          "header": "Kaira Storm",
-          "text": "Day unnumbered. Wind from the northwest, the island rolls. They called me Skyward: wind, cloud, building in the air. Mechanist counted cogs, Wildlander tracks. I counted altitude.$(br)$(br)✎ Altitude is approximate. A Supplementaries altimeter lies in a storm."
+          "header": "Day —. Wind, no pennant",
+          "text": "Altitude will not agree. Eye and needle differ by a whole ridge. Headwind, yet the cloth lies as if in a hold.✎ Burner running blue. I put in no wood. Between envelope and sky there is a gap with no cloud. Not a hole — an empty place. You look longer than you choose to."
         }
       ]
     },
@@ -17,8 +17,8 @@
       "components": [
         {
           "template": "modopedia:page/headered_text",
-          "header": "Last sortie",
-          "text": "I went to shut a burner on a balloon over the storm archipelago. The log stayed in the basket. If a page is wet, that is rain, not blood."
+          "header": "watch not ha",
+          "text": "The course is struck through by the same hand that kept this log. No one to hand the watch to. If you find the basket, do not trust the last height. It was already gone when I wrote it."
         }
       ]
     }

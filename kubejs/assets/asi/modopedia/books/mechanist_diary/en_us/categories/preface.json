@@ -1,12 +1,11 @@
 {
-  "title": "Binding",
+  "title": "Break",
   "icon": {
     "id": "minecraft:writable_book"
   },
-  "landing_text": "Elias Verne — the Mechanist in the Aeronautics Journal. First person, like notes on a bench.",
+  "landing_text": "The ink still holds a ruler. No digit after the dash.",
   "entries": [
-    "cover",
-    "how_pages"
+    "cover"
   ],
   "sort_num": 0
 }

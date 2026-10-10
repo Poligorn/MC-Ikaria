@@ -51,7 +51,7 @@
 | **Бой в небе** | Hostile Skies, Create Gunsmithing, Big Cannons, Radars | Рейды, орудия, радары |
 | **Червоточины** | Eve Wormhole Portals | Нестабильные порталы |
 | **Экономика** | Numismatics, Marketplace | Монеты и глобальный рынок |
-| **Квесты и гайды** | FTB Quests, Modopedia | Журнал основателей и тестовые книги |
+| **Квесты и гайды** | FTB Quests, Modopedia | Журнал основателей и дневники Трёх |
 
 [Полный список 147 модов →](mods/mod-list.md){ .md-button }
 
