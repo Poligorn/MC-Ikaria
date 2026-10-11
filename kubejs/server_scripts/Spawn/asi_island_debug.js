@@ -43,9 +43,13 @@ ServerEvents.commandRegistry(event => {
           return 1;
         }))
 
-      // /asi givediaries — выдать три обложки (если спавн уже прошёл)
+      // /asi givediaries — только при ASI_DIARIES_ENABLED (права 2)
       .then(Commands.literal('givediaries')
         .executes(ctx => {
+          if (!global.ASI_DIARIES_ENABLED) {
+            ctx.source.sendSystemMessage(Text.yellow('[ASI] Дневники отложены (ASI_DIARIES_ENABLED = false).'))
+            return 0
+          }
           const player = ctx.source.player
           if (!player) return 0
           const diary = id => Item.of(`modopedia:book[modopedia:book="${id}"]`)

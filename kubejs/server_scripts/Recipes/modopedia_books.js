@@ -1,5 +1,6 @@
-// Дневники Трёх (Modopedia). Запасной крафт обложки, если потеряли том со спавна.
+// Дневники Трёх (Modopedia). Запасной крафт обложки.
 ServerEvents.recipes(event => {
+  if (!global.ASI_DIARIES_ENABLED) return
   const book = id => Item.of(`modopedia:book[modopedia:book="${id}"]`)
 
   event.shapeless(book('asi:mechanist_diary'), ['minecraft:book', 'minecraft:compass'])

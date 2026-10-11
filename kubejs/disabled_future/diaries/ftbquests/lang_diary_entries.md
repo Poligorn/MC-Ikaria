@@ -1,0 +1,1 @@
+Lang-ключи квестов следа и обложек лежат в git-истории `config/ftbquests/quests/lang/{en_us,ru_ru}.snbt` (коммит до отключения) и в title-полях `*_trail.snbt` / `cover_quests.snbt`. При включении верните блоки `chapter.410A…` / `420B…` / `430C…`, `quest.51E9…`–`5301…`, `quest.4A11…`, `quest.61A1…`–`6929…` и соответствующие `task.*`.

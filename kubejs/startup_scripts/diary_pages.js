@@ -1,4 +1,5 @@
 // Вырванные листы дневников Трёх. Текстура — kubejs:item/diary_page_<id>
+// Регистрация только при global.ASI_DIARIES_ENABLED (asi_features.js).
 const DIARY_PAGES = [
   'mechanist_kinetics',
   'mechanist_machines',
@@ -12,9 +13,10 @@ const DIARY_PAGES = [
 ]
 
 StartupEvents.registry('item', event => {
-  DIARY_PAGES.forEach(id => {
-    event.create(`diary_page_${id}`)
+  if (!global.ASI_DIARIES_ENABLED) return
+  for (let i = 0; i < DIARY_PAGES.length; i++) {
+    event.create('diary_page_' + DIARY_PAGES[i])
       .maxStackSize(1)
       .rarity('uncommon')
-  })
+  }
 })

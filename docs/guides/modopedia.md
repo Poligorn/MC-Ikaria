@@ -1,6 +1,9 @@
 # Дневники Трёх (Modopedia)
 
-В паке **Modopedia** 1.1.11 для NeoForge 1.21.1 (`mods/modopedia.pw.toml`). Три тестовых гайда заменены на **дневники основателей**: обложки целы, страницы раскиданы по сундукам.
+!!! warning "Пока не в релизе"
+    Тома, листы и квесты следа **отложены**. В сундуках их нет, в журнале FTB — нет, в EMI книги скрыты. JSON, модели и текстуры лежат в репо. Включить: `global.ASI_DIARIES_ENABLED = true` в `kubejs/startup_scripts/asi_features.js` и шаги из `kubejs/disabled_future/diaries/README.md`. На [роадмапе](../planning/roadmap.md#diaries-later) это контент «на потом».
+
+В паке **Modopedia** 1.1.11 для NeoForge 1.21.1 (`mods/modopedia.pw.toml`). Три тестовых гайда заменены на **дневники основателей**. Ниже — как система устроена, когда флаг снова `true`.
 
 Формат сверен с [Book JSON](https://moddedmc.wiki/en/project/modopedia/docs/books/book-json), [Book Textures](https://moddedmc.wiki/en/project/modopedia/docs/books/book-textures) и [Book Types](https://moddedmc.wiki/en/project/modopedia/docs/books/book-types) (classic + `locked_view_type`). Контент — только механики, которые есть в `mods/*.pw.toml` и в доках пака; нейро-рефы вроде «Ash Colossus» в текст не попали.
 
@@ -18,11 +21,13 @@
 
 Текстуры предметов — перекраска официальных иконок Modopedia (MIT, Favouriteless) плюс точка-эмблема на корешке. GUI-рамки — встроенные classic, не копия PNG в пак. Модели: `kubejs/assets/asi/models/item/modopedia_books/`.
 
-## Как получить
+## Как получить (когда флаг включён)
+
+Пока `ASI_DIARIES_ENABLED = false`, лут, крафт и `/asi givediaries` ничего не дают.
 
 1. **Сундуки.** Обложки и листы падают из таблиц `chests` (LootJS `diary_chest_loot.js`). На спавне книги **не** выдаются — только журнал FTB. Шанс обложки **16%** на том независимо; листа — **5.5%** на тип. **По одному на игрока:** флаг в `persistentData`; LootJS 3.7 `LootEntry.matchPlayerCustom` (не `playerPredicate`); листы `maxStackSize(1)`. Lootr крутит таблицу на игрока. На стартовом острове сундуков нет (бочонки — NBT структуры).
 2. **Крафт обложки** (`kubejs/server_scripts/Recipes/modopedia_books.js`): книга + компас / карта / кость.
-3. **Оператор.** `/asi givediaries` выдаёт три тома (права 2). `/asi resetplayer` больше не кладёт дневники в инвентарь.
+3. **Оператор.** `/asi givediaries` выдаёт три тома (права 2), только если флаг включён.
 4. Куски:
 
     ```
@@ -57,6 +62,8 @@ kubejs/assets/asi/modopedia/books/<book_id>/<lang>/{categories,entries}/
 kubejs/assets/asi/models/item/modopedia_books/
 kubejs/assets/asi/textures/item/
 kubejs/startup_scripts/diary_pages.js
+kubejs/startup_scripts/asi_features.js
+kubejs/disabled_future/diaries/
 ```
 
 Локали `ru_ru` и `en_us` синхронизированы по id файлов.

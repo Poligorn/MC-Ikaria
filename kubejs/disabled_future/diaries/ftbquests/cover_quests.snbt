@@ -1,0 +1,94 @@
+// Вставить в initial_research.snbt после стартера (deps на 3364BA01A0AF91D8).
+// Не загружается FTB из этой папки.
+[
+	{
+		dependencies: [
+			"3364BA01A0AF91D8"
+		]
+		hide_until_deps_complete: true
+		icon: {
+			components: {
+				"modopedia:book": "asi:mechanist_diary"
+			}
+			count: 1
+			id: "modopedia:book"
+		}
+		id: "51E94A01B0C18273"
+		subtitle: "Elias Verne"
+		title: "A ruler's hand"
+		tasks: [{
+			count: 1L
+			id: "7411A001B0C18201"
+			item: {
+				components: {
+					"modopedia:book": "asi:mechanist_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			type: "item"
+		}]
+		x: -2.5d
+		y: -1.5d
+	}
+	{
+		dependencies: [
+			"3364BA01A0AF91D8"
+		]
+		hide_until_deps_complete: true
+		icon: {
+			components: {
+				"modopedia:book": "asi:skyward_diary"
+			}
+			count: 1
+			id: "modopedia:book"
+		}
+		id: "52F05B12C1D29384"
+		subtitle: "Kaira Storm"
+		title: "Watch not handed over"
+		tasks: [{
+			count: 1L
+			id: "7422B112C1D29302"
+			item: {
+				components: {
+					"modopedia:book": "asi:skyward_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			type: "item"
+		}]
+		x: -4.0d
+		y: 0.0d
+	}
+	{
+		dependencies: [
+			"3364BA01A0AF91D8"
+		]
+		hide_until_deps_complete: true
+		icon: {
+			components: {
+				"modopedia:book": "asi:wildlander_diary"
+			}
+			count: 1
+			id: "modopedia:book"
+		}
+		id: "53016C23D2E3A495"
+		subtitle: "Rovan Ash"
+		title: "A card with no name"
+		tasks: [{
+			count: 1L
+			id: "7433C223D2E3A403"
+			item: {
+				components: {
+					"modopedia:book": "asi:wildlander_diary"
+				}
+				count: 1
+				id: "modopedia:book"
+			}
+			type: "item"
+		}]
+		x: -2.5d
+		y: 1.5d
+	}
+]
