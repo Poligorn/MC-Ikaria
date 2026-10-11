@@ -6461,6 +6461,10 @@ file = "kubejs/disabled_future/diaries/ftbquests/kaira_trail.snbt"
 hash = "c9c35a52649638d65a021188f5a96a9be19a7a6411c65f4cb69c4fe22e76e23b"
 
 [[files]]
+file = "kubejs/disabled_future/diaries/ftbquests/lang_diary_entries.md"
+hash = "539ce6c372607e4f329b3c6195fa9b2b6a1cd0b07577b1c22590e048baa36ad7"
+
+[[files]]
 file = "kubejs/disabled_future/diaries/ftbquests/rovan_trail.snbt"
 hash = "30af399b57dd41e6fe2f202d665b06be71defe7052f5194e2e5c75819c8b9ee8"
 
