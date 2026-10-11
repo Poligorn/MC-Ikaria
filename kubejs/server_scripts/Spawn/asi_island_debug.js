@@ -43,23 +43,13 @@ ServerEvents.commandRegistry(event => {
           return 1;
         }))
 
-      // /asi givediaries — только при ASI_DIARIES_ENABLED (права 2)
+      // /asi givediaries — оператор (права 2), работает и при выключенном флаге
       .then(Commands.literal('givediaries')
         .executes(ctx => {
-          if (!global.ASI_DIARIES_ENABLED) {
-            ctx.source.sendSystemMessage(Text.yellow('[ASI] Дневники отложены (ASI_DIARIES_ENABLED = false).'))
-            return 0
-          }
           const player = ctx.source.player
           if (!player) return 0
-          const diary = id => Item.of(`modopedia:book[modopedia:book="${id}"]`)
-          player.give(diary('asi:mechanist_diary'))
-          player.give(diary('asi:skyward_diary'))
-          player.give(diary('asi:wildlander_diary'))
-          player.persistentData.putBoolean('asi_got_book_mechanist', true)
-          player.persistentData.putBoolean('asi_got_book_skyward', true)
-          player.persistentData.putBoolean('asi_got_book_wildlander', true)
-          ctx.source.sendSystemMessage(Text.green('[ASI] Выданы три дневника основателей.'))
+          asiGiveFounderDiaries(player)
+          ctx.source.sendSystemMessage(Text.green('[ASI] Выданы три дневника основателей (главы открыты).'))
           return 1
         }))
 

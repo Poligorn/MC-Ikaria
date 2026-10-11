@@ -1,0 +1,22 @@
+{
+  "parent": "asi:diary/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:paper"
+    },
+    "title": {
+      "translate": "adv.asi.diary.skyward_glider.title"
+    },
+    "description": {
+      "translate": "adv.asi.diary.skyward_glider.desc"
+    },
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
