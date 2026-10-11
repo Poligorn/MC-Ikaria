@@ -1183,7 +1183,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как получить (когда флаг включён)
+        Как получить
       
     </span>
   </a>
@@ -1455,7 +1455,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как получить (когда флаг включён)
+        Как получить
       
     </span>
   </a>
@@ -1566,7 +1566,7 @@
 <h1 id="modopedia">Дневники Трёх (Modopedia)<a class="headerlink" href="#modopedia" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Пока не в релизе</p>
-<p>Тома, листы и квесты следа <strong>отложены</strong>. В сундуках их нет, в журнале FTB — нет, в EMI книги скрыты. JSON, модели и текстуры лежат в репо. Включить: <code>global.ASI_DIARIES_ENABLED = true</code> в <code>kubejs/startup_scripts/asi_features.js</code> и шаги из <code>kubejs/disabled_future/diaries/README.md</code>. На <a href="../../planning/roadmap/#diaries-later">роадмапе</a> это контент «на потом».</p>
+<p>Листы и квесты следа <strong>отложены</strong>: в сундуках их нет, в журнале FTB — нет, в EMI книги скрыты. Сами тома <strong>есть</strong> в датапаке: оператор выдаёт их <code>/asi givediaries</code> (права 2), в креативе они во вкладке <code>kubejs:asi_diaries</code>. JSON, модели и текстуры лежат в репо. Включить лут и квесты: <code>global.ASI_DIARIES_ENABLED = true</code> в <code>kubejs/startup_scripts/asi_features.js</code> и шаги из <code>kubejs/disabled_future/diaries/README.md</code>. На <a href="../../planning/roadmap/#diaries-later">роадмапе</a> это контент «на потом».</p>
 </div>
 <p>В паке <strong>Modopedia</strong> 1.1.11 для NeoForge 1.21.1 (<code>mods/modopedia.pw.toml</code>). Три тестовых гайда заменены на <strong>дневники основателей</strong>. Ниже — как система устроена, когда флаг снова <code>true</code>.</p>
 <p>Формат сверен с <a href="https://moddedmc.wiki/en/project/modopedia/docs/books/book-json">Book JSON</a>, <a href="https://moddedmc.wiki/en/project/modopedia/docs/books/book-textures">Book Textures</a> и <a href="https://moddedmc.wiki/en/project/modopedia/docs/books/book-types">Book Types</a> (classic + <code>locked_view_type</code>). Контент — только механики, которые есть в <code>mods/*.pw.toml</code> и в доках пака; нейро-рефы вроде «Ash Colossus» в текст не попали.</p>
@@ -1608,14 +1608,13 @@
 </table>
 <p>Лендинг classic: баннер = <code>title</code> / <strong>Оглавление</strong>, под лентой = <code>subtitle</code> + <code>landing_text</code> (<strong>Подзаголовок</strong>), справа список категорий (<strong>Главы</strong>). Закрытые главы видны полупрозрачно (<code>locked_view_type: translucent</code>).</p>
 <p>Текстуры предметов — перекраска официальных иконок Modopedia (MIT, Favouriteless) плюс точка-эмблема на корешке. GUI-рамки — встроенные classic, не копия PNG в пак. Модели: <code>kubejs/assets/asi/models/item/modopedia_books/</code>.</p>
-<h2 id="_2">Как получить (когда флаг включён)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Пока <code>ASI_DIARIES_ENABLED = false</code>, лут, крафт и <code>/asi givediaries</code> ничего не дают.</p>
+<h2 id="_2">Как получить<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Пока <code>ASI_DIARIES_ENABLED = false</code>, выживший <strong>не</strong> находит тома: лута нет, крафта нет, квестов нет, в EMI книг нет. Книги при этом зарегистрированы.</p>
 <ol>
-<li><strong>Сундуки.</strong> Обложки и листы падают из таблиц <code>chests</code> (LootJS <code>diary_chest_loot.js</code>). На спавне книги <strong>не</strong> выдаются — только журнал FTB. Шанс обложки <strong>16%</strong> на том независимо; листа — <strong>5.5%</strong> на тип. <strong>По одному на игрока:</strong> флаг в <code>persistentData</code>; LootJS 3.7 <code>LootEntry.matchPlayerCustom</code> (не <code>playerPredicate</code>); листы <code>maxStackSize(1)</code>. Lootr крутит таблицу на игрока. На стартовом острове сундуков нет (бочонки — NBT структуры).</li>
-<li><strong>Крафт обложки</strong> (<code>kubejs/server_scripts/Recipes/modopedia_books.js</code>): книга + компас / карта / кость.</li>
-<li><strong>Оператор.</strong> <code>/asi givediaries</code> выдаёт три тома (права 2), только если флаг включён.</li>
+<li><strong>Оператор.</strong> <code>/asi givediaries</code> (права 2) всегда выдаёт три тома и открывает все главы. Флаг на это не влияет.</li>
+<li><strong>Креатив.</strong> Вкладка <code>kubejs:asi_diaries</code> («Дневники Трёх»). EMI прячет те же стеки через <code>RecipeViewerEvents.removeEntries</code> — не <code>removeEntriesCompletely</code> и не <code>modifyCreativeTab.remove</code>, иначе вместе с EMI пропала бы и вкладка (KubeJS #1096).</li>
 <li>
-<p>Куски:</p>
+<p>Куски (креатив / консоль):</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/give @s modopedia:book[modopedia:book="asi:mechanist_diary"]
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>/give @s modopedia:book[modopedia:book="asi:skyward_diary"]
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>/give @s modopedia:book[modopedia:book="asi:wildlander_diary"]
@@ -1623,10 +1622,15 @@
 </span></code></pre></div>
 </li>
 </ol>
+<p>Когда флаг снова <code>true</code>:</p>
+<ol>
+<li><strong>Сундуки.</strong> Обложки и листы падают из таблиц <code>chests</code> (LootJS <code>diary_chest_loot.js</code>). На спавне книги <strong>не</strong> выдаются — только журнал FTB. Шанс обложки <strong>16%</strong> на том независимо; листа — <strong>5.5%</strong> на тип. <strong>По одному на игрока:</strong> флаг в <code>persistentData</code>; LootJS 3.7 <code>LootEntry.matchPlayerCustom</code> (не <code>playerPredicate</code>); листы <code>maxStackSize(1)</code>. Lootr крутит таблицу на игрока. На стартовом острове сундуков нет (бочонки — NBT структуры).</li>
+<li><strong>Крафт обложки</strong> (<code>kubejs/server_scripts/Recipes/modopedia_books.js</code>): книга + компас / карта / кость.</li>
+</ol>
 <p>Предмет книги — <code>modopedia:book</code>, ID тома в компоненте <code>modopedia:book</code>. Квесты FTB рисуют ту же обложку: иконка и item-задача — стек <code>{id:"modopedia:book", components:{"modopedia:book":"asi:&lt;том&gt;"}}</code>. Модели: <code>kubejs/assets/asi/models/item/modopedia_books/</code> → <code>asi:item/&lt;том&gt;</code>.</p>
 <h2 id="unlock">Сбор страниц и unlock<a class="headerlink" href="#unlock" title="Permanent link">&para;</a></h2>
 <p>Modopedia 1.1.11 <strong>не</strong> запирает главу предметом напрямую. Есть поле <code>advancement</code> у категории и записи.</p>
-<p>Цепочка в паке:</p>
+<p>Цепочка в паке (когда флаг <code>true</code>):</p>
 <ol>
 <li>Лист в сундуке (<code>diary_chest_loot.js</code>).</li>
 <li>Advancement <code>asi:diary/&lt;key&gt;</code> — триггер <code>inventory_changed</code>.</li>
@@ -1634,7 +1638,7 @@
 <li>Предисловие каждого тома <strong>без</strong> advancement — первая запись всегда открыта: обрывок в голосе автора, без инструкций «как вести дневник».</li>
 <li>Тост advancement + сообщение в чат (<code>diary_page_pickup.js</code>).</li>
 </ol>
-<p>Корень дерева: скрытый <code>asi:diary/root</code> (тик). Это ближайший рабочий вариант к «страница из сундука открывает главу» без отдельного мода-квестбука.</p>
+<p>Пока флаг <code>false</code> листы не регистрируются — оригинальные <code>inventory_changed</code> нельзя грузить (предупреждение о отсутствующем предмете). В <code>kubejs/data/asi/advancement/diary/</code> лежат <strong>тестерские</strong> копии: тот же id, критерий <code>minecraft:impossible</code>, <code>hidden</code>, без тоста. <code>/asi givediaries</code> и попадание тома в инвентарь (креатив / <code>/give</code>) выдают все <code>asi:diary/*</code>. Тестер читает книгу целиком; выживший эти advancement’ы сам не заработает — листов в мире нет. Оригиналы с <code>inventory_changed</code> остаются в <code>disabled_future</code>; при включении флага <strong>замените</strong> живые stub’ы ими.</p>
 <h2 id="_3">Где лежат файлы<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>kubejs/data/asi/modopedia/books/&lt;book_id&gt;.json
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>kubejs/data/asi/advancement/diary/
@@ -1642,8 +1646,10 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>kubejs/assets/asi/models/item/modopedia_books/
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>kubejs/assets/asi/textures/item/
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>kubejs/startup_scripts/diary_pages.js
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>kubejs/startup_scripts/asi_features.js
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>kubejs/disabled_future/diaries/
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>kubejs/startup_scripts/diary_tab.js
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>kubejs/startup_scripts/asi_features.js
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>kubejs/server_scripts/Events/diary_access.js
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>kubejs/disabled_future/diaries/
 </span></code></pre></div>
 <p>Локали <code>ru_ru</code> и <code>en_us</code> синхронизированы по id файлов.</p>
 <h2 id="_4">О чём тома (факты пака)<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
