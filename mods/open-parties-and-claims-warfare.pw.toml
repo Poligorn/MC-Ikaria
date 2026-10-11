@@ -1,0 +1,13 @@
+name = "Open Parties and Claims: Warfare"
+filename = "opac-warfare-1.6.7.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/kOE5HGwC/versions/7x92ZOor/opac-warfare-1.6.7.2.jar"
+hash-format = "sha512"
+hash = "753f078b63ee665953c6d91391c504931a0f99f7b36a775ae2a7ba2acac9119328d7353b168b1b00b951fdfb164f585bb98f8905c0123c86393e1011566f1101"
+
+[update]
+[update.modrinth]
+mod-id = "kOE5HGwC"
+version = "7x92ZOor"

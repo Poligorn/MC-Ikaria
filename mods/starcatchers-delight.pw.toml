@@ -1,0 +1,13 @@
+name = "Starcatcher's Delight"
+filename = "starcatcher_delight-3.2-NEOFORGE-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/NCXwQVxD/versions/xPr0G0XR/starcatcher_delight-3.2-NEOFORGE-1.21.1.jar"
+hash-format = "sha512"
+hash = "96321d31a5e507e07f48c2384bbb214e45b71eb7584a659d2b8ef96669daf9d6cc1c6a6df91b743c71b8b9cc233274cf9811ce67e9ae7ee8429a20d39243c39d"
+
+[update]
+[update.modrinth]
+mod-id = "NCXwQVxD"
+version = "xPr0G0XR"
