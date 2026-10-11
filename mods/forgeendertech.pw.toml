@@ -1,13 +1,13 @@
 name = "ForgeEndertech"
-filename = "ForgeEndertech-1.21.1-12.1.2.2-NeoForge-build.0879.jar"
+filename = "ForgeEndertech-1.21.1-12.1.4.0-NeoForge-build.1161.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/EgS8gGp8/versions/HtpCqEXI/ForgeEndertech-1.21.1-12.1.2.2-NeoForge-build.0879.jar"
+url = "https://cdn.modrinth.com/data/EgS8gGp8/versions/r9lM1yuJ/ForgeEndertech-1.21.1-12.1.4.0-NeoForge-build.1161.jar"
 hash-format = "sha512"
-hash = "3c9e6b42df5dc08894d42846c558d57fff270163306e5463485c4346f2fb26b6dee8a099a57c0f4b6f34bc348ace910d72c101f16e83875b132da07cf8cdc7ca"
+hash = "76886ee847cc140239fd430ddec2739affb4f0b7054084ca6a17ba27ddf8be480ea72a5ebbd459c1cde583a7f152f7589f59c46a754c9fcab277aa3d119a4a8a"
 
 [update]
 [update.modrinth]
 mod-id = "EgS8gGp8"
-version = "HtpCqEXI"
+version = "r9lM1yuJ"

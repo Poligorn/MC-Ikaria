@@ -1,13 +1,13 @@
 name = "Create: Hostile Skies"
-filename = "hostile_skies-0.1.0.jar"
+filename = "hostile_skies-0.2.6.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/78hqRjWm/versions/8rzacz2n/hostile_skies-0.1.0.jar"
+url = "https://cdn.modrinth.com/data/78hqRjWm/versions/HaZ4GxKd/hostile_skies-0.2.6.jar"
 hash-format = "sha512"
-hash = "28a8f04c66eb2a86301fd0b22feca929e071c67ace3fd59dd331e6a77977ea51e2c32d43542f6a1c6ff3d556d81c3c9c86cff2f19542e0c52622137c256ad63a"
+hash = "aacb60d2392aa2cf36417d60f95afd4ee334e5c4e3d0a426dfd3db1c5ff09ee012cc942995bd9f89c67b08ed19cf946c467431386e97dc893199804a817d9343"
 
 [update]
 [update.modrinth]
 mod-id = "78hqRjWm"
-version = "8rzacz2n"
+version = "HaZ4GxKd"

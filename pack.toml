@@ -1,4 +1,4 @@
-name = "MC ASI Online"
+name = "Aeronautics Ikaria"
 author = "Poligorn"
 version = "0.6.2"
 pack-format = "packwiz:1.1.0"
@@ -6,7 +6,7 @@ pack-format = "packwiz:1.1.0"
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "02881efaa44c0df9c966d06f20206ec4291baa1127b8ff586b8d46d394359a5f"
+hash = "351f8d8618fd9fbea97bf6bb40c39e4f01d50bd6b8017e60016559001c2eff70"
 
 [versions]
 minecraft = "1.21.1"
