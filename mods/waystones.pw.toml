@@ -1,13 +1,13 @@
 name = "Waystones"
-filename = "waystones-neoforge-1.21.1-21.1.37.jar"
+filename = "waystones-neoforge-1.21.1-21.1.46.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/LOpKHB2A/versions/az73Oero/waystones-neoforge-1.21.1-21.1.37.jar"
+url = "https://cdn.modrinth.com/data/LOpKHB2A/versions/6Z6MQ6os/waystones-neoforge-1.21.1-21.1.46.jar"
 hash-format = "sha512"
-hash = "d9e90a81376393b4aecd19f527dc68f44908ed0f5cb26b2e3236cdc0373b661225a5365cd448c622c112460a6d005480c14349aa6b1050138f2582261b355595"
+hash = "ca90b58d884d4bc2b08a870484ae7ede397e71d31eaaf01ff2603ad498d584763e099c2094e57031522385339705d2c011ed4910bf36efae688e64935b49ece9"
 
 [update]
 [update.modrinth]
 mod-id = "LOpKHB2A"
-version = "az73Oero"
+version = "6Z6MQ6os"
