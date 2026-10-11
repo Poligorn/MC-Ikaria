@@ -16,6 +16,7 @@ function asiLootOnce(modifier, itemId, chance, flag) {
 }
 
 LootJS.modifiers(event => {
+  if (!global.ASI_DIARIES_ENABLED) return
   let modifier = event.addTableModifier(/.*chests.*/)
   asiLootOnce(modifier, 'modopedia:book[modopedia:book="asi:mechanist_diary"]', ASI_DIARY_BOOK_CHANCE, 'asi_got_book_mechanist')
   asiLootOnce(modifier, 'modopedia:book[modopedia:book="asi:skyward_diary"]', ASI_DIARY_BOOK_CHANCE, 'asi_got_book_skyward')

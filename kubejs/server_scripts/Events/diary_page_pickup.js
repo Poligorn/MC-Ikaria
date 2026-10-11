@@ -103,15 +103,17 @@ function asiMarkDiaryObtain(player, item) {
   asiKeepOneMatching(player, function (st) { return asiDiaryBookKey(st) === book })
 }
 
-PlayerEvents.inventoryChanged(event => {
-  asiMarkDiaryObtain(event.player, event.item)
-})
+if (global.ASI_DIARIES_ENABLED) {
+  PlayerEvents.inventoryChanged(event => {
+    asiMarkDiaryObtain(event.player, event.item)
+  })
 
-PlayerEvents.loggedIn(event => {
-  asiEnsureDiaryBookStages(event.player)
-})
+  PlayerEvents.loggedIn(event => {
+    asiEnsureDiaryBookStages(event.player)
+  })
 
-PlayerEvents.tick(event => {
-  if (event.player.tickCount % 40 !== 0) return
-  asiEnsureDiaryBookStages(event.player)
-})
+  PlayerEvents.tick(event => {
+    if (event.player.tickCount % 40 !== 0) return
+    asiEnsureDiaryBookStages(event.player)
+  })
+}
