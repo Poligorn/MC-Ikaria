@@ -10,5 +10,5 @@
   "model": "asi:item/modopedia_books/skyward_diary",
   "text_colour": "1A2A40",
   "header_colour": "2A5A8A",
-  "creative_tab": "minecraft:tools_and_utilities"
+  "creative_tab": "kubejs:asi_diaries"
 }

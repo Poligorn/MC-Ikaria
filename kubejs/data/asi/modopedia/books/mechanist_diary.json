@@ -10,5 +10,5 @@
   "model": "asi:item/modopedia_books/mechanist_diary",
   "text_colour": "3D2914",
   "header_colour": "8B6914",
-  "creative_tab": "minecraft:tools_and_utilities"
+  "creative_tab": "kubejs:asi_diaries"
 }

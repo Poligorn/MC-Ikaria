@@ -10,7 +10,7 @@
 
 ## Дневники Трёх — позже {: #diaries-later }
 
-Решение владельца: тома Modopedia, вырванные листы и квесты следа **не входят в текущий релиз**. JSON, модели и текстуры остаются в репо. Выключатель: `global.ASI_DIARIES_ENABLED` в `kubejs/startup_scripts/asi_features.js`. Как вернуть главы FTB и advancements: `kubejs/disabled_future/diaries/README.md` и [гайд](../guides/modopedia.md).
+Решение владельца: вырванные листы и квесты следа **не входят в текущий релиз**. Тома остаются в датапаке (`/asi givediaries`, вкладка креатива). Выключатель лута: `global.ASI_DIARIES_ENABLED` в `kubejs/startup_scripts/asi_features.js`. Как вернуть главы FTB и оригинальные advancements: `kubejs/disabled_future/diaries/README.md` и [гайд](../guides/modopedia.md).
 
 ---
 

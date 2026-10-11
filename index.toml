@@ -5894,7 +5894,7 @@ hash = "ef005b105530d37135ba5e2591afd175d33abfdb2572480865140a348e730d4a"
 
 [[files]]
 file = "docs/getting-started/first-launch.md"
-hash = "c35699a7e24ed56a21e077966760dbb0aa39c38a7831ec20e2f47bac92a29dcd"
+hash = "3b969d39ce19b5294106e782ea06b97df7d3de8b6a66ff20781ee16edbb88d8f"
 
 [[files]]
 file = "docs/getting-started/index.md"
@@ -5906,7 +5906,7 @@ hash = "49b99a57f27a1d713168f48041b476a1505ff4df26dd7a109d52462072ec30d8"
 
 [[files]]
 file = "docs/guides/getting-started-guide.md"
-hash = "3f0cbf1f71be25377cb7a59bcc91b54483b7ba6f87241c37c475d27f9c2cb087"
+hash = "34be0db66eb2c68bc83c0ffea638056e3a73b03f4711c24b6c7f2109ef030ef8"
 
 [[files]]
 file = "docs/guides/index.md"
@@ -5914,7 +5914,7 @@ hash = "62f6d34734f68dc86404245cd1505b5ee96cf114a0372b6436aedd2de3081215"
 
 [[files]]
 file = "docs/guides/modopedia.md"
-hash = "86657f57354359b2b19a88b9c2b568f46bfd6cca602f3206bf7d7b9744ad3bbe"
+hash = "c69e77cc64ce85e12e7cce1d5dba7612c12c67da08069062238bf242a11554c3"
 
 [[files]]
 file = "docs/images/favicon.png"
@@ -5946,7 +5946,7 @@ hash = "292b9f9c51a42ec3d41c497d5423b32c55085d8d0609ad34258c5640b65609b0"
 
 [[files]]
 file = "docs/lore/index.md"
-hash = "ab41b7e8553f0a633b9267e3385de15bca7c9fa244351a258d6bf01543d4fe95"
+hash = "0f4d37e59b02af5d2e93d58248c240991fa876e2b33eb404abf1392dacfd7305"
 
 [[files]]
 file = "docs/mechanics/airships.md"
@@ -5970,7 +5970,7 @@ hash = "5e6af70a2e2fdca0017e0772b22d504f418990216b683e9df87ff5a74d610216"
 
 [[files]]
 file = "docs/mods/mod-list.md"
-hash = "acc70ec5a582ef9793ccbfdbeb1e4aa8841c6121a152f9df9cef42401cbe2f1c"
+hash = "f703b9df848450bd4c1031f1b8ead514b22f6a963adef14a475dbe1ffc944c74"
 
 [[files]]
 file = "docs/planning/backlog.md"
@@ -5978,7 +5978,7 @@ hash = "b6dcc8b28b85d7f56e47d5314211b9e6c5bed50d6b393708cb38b8aad79649aa"
 
 [[files]]
 file = "docs/planning/concept.md"
-hash = "a3c3dbda58896daf9712931529f581f437aa9b8bf54cff33f6ea75ec70d7b38b"
+hash = "b8c0f2a8abf0090da4461e3630dfa1d597a18f97744fe52080ec63bf63b5a1a3"
 
 [[files]]
 file = "docs/planning/index.md"
@@ -5986,7 +5986,7 @@ hash = "b393a20761433deb97b9def0b25835860924dfedb424d382ced0ce157a7c0e18"
 
 [[files]]
 file = "docs/planning/roadmap.md"
-hash = "22703307339c091998887de14fd06b14b42a3fe4519b78a0250622cc20730b9a"
+hash = "96eec49de185ede3e51ab06c5c6a220ebb6ac69367efedfbb2e261bc58dc322d"
 
 [[files]]
 file = "docs/stylesheets/extra.css"
@@ -6294,11 +6294,11 @@ hash = "099f055a1d99c86525874c1df94aa500dfe6669b0b5f89cd8d447b2ca0999fc3"
 
 [[files]]
 file = "kubejs/assets/kubejs/lang/en_us.json"
-hash = "4fbb25ee431c933aee8011d9fdadf9ec8879bc83460542d4c1591b2441dfd50a"
+hash = "13dac2afed4d5458dab7c0dd73c5683e792cacfa02e0ec7e18f4a67cfc50cc2d"
 
 [[files]]
 file = "kubejs/assets/kubejs/lang/ru_ru.json"
-hash = "94e170e6be08920b96d30f96c27ab058064c5f94f2d482be3909e4506192b3d9"
+hash = "b36799560d6f971c820e6931969fff39a5cbc051cdcd38100890b4cf25ec612e"
 
 [[files]]
 file = "kubejs/assets/kubejs/textures/block/example_block.png"
@@ -6370,7 +6370,47 @@ hash = "9bc815601ffc9b6cc6534341212a4ae8c04ada5d931f3389ba21fd4ab400fb42"
 
 [[files]]
 file = "kubejs/client_scripts/diary_hide.js"
-hash = "6090459c4194f7b118288bb8116f87856cf53a3c9a2f4be0665ecf3db801bf68"
+hash = "6a4b3a5892cc561f60df223858f9a8446cb98568da5344a4ae94104e923aa10f"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/mechanist_kinetics.json"
+hash = "63b93281c1a74608a42e7737273b0fe64a847cda8c1f72c95a4cdc57b7ac2af6"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/mechanist_machines.json"
+hash = "e1a1d113cf21a22e9472eb43941d1e5bb6774d7878acd121448413d1c84c89e2"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/mechanist_progress.json"
+hash = "777d666925440e43c8ba5b9e747bd865d4215ccfb1d28b6d8dd52d6d3706a15b"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/root.json"
+hash = "b2d450233d4e96be0f55e8ced9fbedeb0ec493170d42ae142ffa18fa05330e57"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/skyward_airship.json"
+hash = "9462126c0e6eeb51aeb319bae9cd307435a03b9576f4387176aaa8ed351460a4"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/skyward_glider.json"
+hash = "978d4b3b4c1cea329b024eb139c95199f3c2c7787dbeb878e4275d195e590019"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/skyward_sky.json"
+hash = "940cfeaaabde8e202346c8afe30fa12f820558024ff7c4abde43d3ba1711fc88"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/wildlander_beasts.json"
+hash = "292bbdfb01a599006e53676412fa6d4d03f51ba2b92c0448730f50a4e86d8ec3"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/wildlander_portals.json"
+hash = "989746fa3bc97c09d22c6f8b8360a6630288283bbbd0c694c85df245c99d2f13"
+
+[[files]]
+file = "kubejs/data/asi/advancement/diary/wildlander_ruins.json"
+hash = "cac6d7b41d366da0d19b249ef451d9f8bfb14c52f4c2866518a31214bbbf8d3c"
 
 [[files]]
 file = "kubejs/data/asi/function/on_join.mcfunction"
@@ -6378,15 +6418,15 @@ hash = "9f5b48ee1dc7e333b744b2c0f8e2c3b5cb0cc46c8359b4eacd9d608f0fa59730"
 
 [[files]]
 file = "kubejs/data/asi/modopedia/books/mechanist_diary.json"
-hash = "4db98b347a353b1ba95f53e61fa6d0eda7a4102d8cb57db2a0240ac7b9f96400"
+hash = "2f64f2b7ca2e86454236a9fc427d38ed2197ed113da6cf023885bf3e48489cd3"
 
 [[files]]
 file = "kubejs/data/asi/modopedia/books/skyward_diary.json"
-hash = "2daa41ff78a198dd748d34b473944ab5825c56058fa8d7ff3c2e901337f7230f"
+hash = "16e56975aee8ff6abb0d49675e6f7a2d59e14cefdd84128a54f6f8dd984aa06e"
 
 [[files]]
 file = "kubejs/data/asi/modopedia/books/wildlander_diary.json"
-hash = "f5c8a6b40177a40c5c7266a8c74588c4158062e083de6376544d77bd69fbbf6c"
+hash = "14ab87b775848db2d714277c41c45dfe64242c3203b7b336dc4617395106d6dc"
 
 [[files]]
 file = "kubejs/data/asi/structure/starter_island.nbt"
@@ -6406,7 +6446,7 @@ hash = "9fa4ee67318d216d647469f1e680d5f0bf96586a45f074b2284daff447835aee"
 
 [[files]]
 file = "kubejs/disabled_future/diaries/README.md"
-hash = "2bbeea2f434f928a41fc4e36ac7859bc41e40ed934c8a14444636f3e1d601fd4"
+hash = "eda14458b90c9059681de335a97132b0662cbc659a8f73cf2e1be7abfc14123d"
 
 [[files]]
 file = "kubejs/disabled_future/diaries/advancement/diary/mechanist_kinetics.json"
@@ -6473,6 +6513,10 @@ file = "kubejs/server_scripts/Events/clockwork_loot_hide.js"
 hash = "d72fb6b61f9201600efbe277e278a5d268078df5b248ec757fc9c4fdee688ec5"
 
 [[files]]
+file = "kubejs/server_scripts/Events/diary_access.js"
+hash = "6168fad34bab380c3fa5e12f5961fe7ac87d024c3375659aa7f76611bf0ddeba"
+
+[[files]]
 file = "kubejs/server_scripts/Events/diary_chest_loot.js"
 hash = "86a6c918a84c01b1ecdb11e69672528204972f1346371d4c347925bc6beb31ca"
 
@@ -6526,7 +6570,7 @@ hash = "1a8ff65b4ef08a0ee67dff5e21a52198f8151be3dc5aac235aabe600ef5c7e0e"
 
 [[files]]
 file = "kubejs/server_scripts/Spawn/asi_island_debug.js"
-hash = "9d1a839c675784324844a70ea9fe1f3eda17ed633c16893e463128c4b44a6a24"
+hash = "27b78e3d68e3d72260f846c5e7ba38f887aaae7a5c7beffa946313be77912779"
 
 [[files]]
 file = "kubejs/server_scripts/Spawn/asi_island_place.js"
@@ -6538,7 +6582,7 @@ hash = "631da2d1187ce96921410ae6b0301bd939e9f4952efddc1ed09173251068ea72"
 
 [[files]]
 file = "kubejs/startup_scripts/asi_features.js"
-hash = "867be5c7e76480771af169d2273e101315fff38d7762bfa8a65b22de29fe737f"
+hash = "873a5ea9f102c4800133feebeb762596c3634d406e218489c35deb62e536b99c"
 
 [[files]]
 file = "kubejs/startup_scripts/clockwork_tab.js"
@@ -6547,6 +6591,10 @@ hash = "6c59f83330ccd2841ea8070cc841c5b42ec2007a5ce7d6819e59f1374c5cd3ae"
 [[files]]
 file = "kubejs/startup_scripts/diary_pages.js"
 hash = "ad922aec3f05e1d24597dfb1aae8aa3b6d294e5d8871fb2c9000530e16f10a52"
+
+[[files]]
+file = "kubejs/startup_scripts/diary_tab.js"
+hash = "78f9a4ff80e1eb7aee6f569e6779ae3bc0c541f751957d0809032ddffd2a4697"
 
 [[files]]
 file = "kubejs/startup_scripts/pilot_license.js"
