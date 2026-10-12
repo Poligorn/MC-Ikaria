@@ -2,7 +2,7 @@
 // Предметы из assets/clockwork/lang/en_us.json и data/clockwork/recipe/*.
 // Ванильный рецепт крыльев требует clockwork:clockwork_gear — его не оставляем.
 // Пак уже крафтит крылья из элитр / латуни / аэролита / Simulated / altimeter.
-const CLOCKWORK_HIDDEN = [
+var CLOCKWORK_HIDDEN = [
   'clockwork:clockwork_gear',
   'clockwork:crossbow_barrel',
   'clockwork:clockwork_arrow',

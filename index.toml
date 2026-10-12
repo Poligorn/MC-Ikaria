@@ -6366,7 +6366,7 @@ hash = "0d089159b67ed1ad6e542e7e5235b67a35b97e7875e4d5d2266f58d0ec222faa"
 
 [[files]]
 file = "kubejs/client_scripts/clockwork_hide.js"
-hash = "9bc815601ffc9b6cc6534341212a4ae8c04ada5d931f3389ba21fd4ab400fb42"
+hash = "df36cad22d283aad030b25340bb49fc674691cc44b2016662d53c891616c550f"
 
 [[files]]
 file = "kubejs/client_scripts/diary_hide.js"
@@ -6445,6 +6445,10 @@ file = "kubejs/data/kubejs/curios/slots/license.json"
 hash = "9fa4ee67318d216d647469f1e680d5f0bf96586a45f074b2284daff447835aee"
 
 [[files]]
+file = "kubejs/data/totemfactory/recipe/totem/totem_head.json"
+hash = "cae5be0539cb5be19974b3094dfa5c4dd3734b36d24d940a8d3b2a08b6c1c89b"
+
+[[files]]
 file = "kubejs/disabled_future/diaries/README.md"
 hash = "eda14458b90c9059681de335a97132b0662cbc659a8f73cf2e1be7abfc14123d"
 
@@ -6510,35 +6514,35 @@ hash = "30af399b57dd41e6fe2f202d665b06be71defe7052f5194e2e5c75819c8b9ee8"
 
 [[files]]
 file = "kubejs/server_scripts/Events/clockwork_loot_hide.js"
-hash = "d72fb6b61f9201600efbe277e278a5d268078df5b248ec757fc9c4fdee688ec5"
+hash = "b5cab0ed2bce3efeb22c2c3eaf6341c5c518328dabb0566349b9bbf081482823"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_access.js"
-hash = "6168fad34bab380c3fa5e12f5961fe7ac87d024c3375659aa7f76611bf0ddeba"
+hash = "29d98e599a5a1992403671b1e9c5134125ccaa1965a16726a5af632af6ba7212"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_chest_loot.js"
-hash = "86a6c918a84c01b1ecdb11e69672528204972f1346371d4c347925bc6beb31ca"
+hash = "c7e50455ae3e6050dc4b412be5c26b96ec14e4804c82188e073038667dbd9980"
 
 [[files]]
 file = "kubejs/server_scripts/Events/diary_page_pickup.js"
-hash = "0450340a3318c07391c901aa59ebd250a976f80a47cf460a9e23e6d94a629e8f"
+hash = "53ab0e9656d2d8fb154c52612fd96668288b7cebfe33dc48ccd5820630ea8e7c"
 
 [[files]]
 file = "kubejs/server_scripts/Events/gunsmith_bunker.js"
-hash = "0fdc96cf28aff0e3ba0256fd7342ba06f277fbed72487a0c796f6934f46a03f3"
+hash = "694582635de1647d7bb15990f43f245b618962c344bae700acc60bc57be2d21c"
 
 [[files]]
 file = "kubejs/server_scripts/Events/gunsmithing_loot.js"
-hash = "f993eec566d91d037a1920507197463c425a5f72a65b794a5ddacf42567b1054"
+hash = "a1ef0773230df33e36275034ee758a5d441c3b817e4e647dfe6873abb99a7fca"
 
 [[files]]
 file = "kubejs/server_scripts/Events/unify_shot.js"
-hash = "590e3ef4273aa1f932afff0d654916615a96d9a52ced6b846284cea66e44947c"
+hash = "556fbbb209607ca00e79fddeefa2e20cdd081475c34572a839cfa470bdbae7f2"
 
 [[files]]
 file = "kubejs/server_scripts/Events/unify_steel.js"
-hash = "10876e7386bbe62e3b9707657cfcf7bf1ff1e767faf31a2a58a934d0b21c7c9c"
+hash = "269356c7d78a1ca515988349b66e3510aa055d5152a27647ff40a717db8d697c"
 
 [[files]]
 file = "kubejs/server_scripts/Recipes/GoldenAeroliteTwig_Recipe.js"
@@ -6546,7 +6550,7 @@ hash = "30a5ed31428435e607e6ee8e451373c37ef12b279144a57b6582705d41366413"
 
 [[files]]
 file = "kubejs/server_scripts/Recipes/clockwork_wings_only.js"
-hash = "1a7a033c667714c8ed157520af632bc58e930d49d6c189cf5fe9203d1c0cfcc1"
+hash = "92673424ed8c8a94c75d3af967f31a0192c24990648a8a1f94e62491eda61f41"
 
 [[files]]
 file = "kubejs/server_scripts/Recipes/glider_recipe.js"
@@ -6557,12 +6561,16 @@ file = "kubejs/server_scripts/Recipes/modopedia_books.js"
 hash = "861a41f12aeb83138482779bfcc0d8871239439877e017586816d9731d17482d"
 
 [[files]]
+file = "kubejs/server_scripts/Recipes/totem_factory.js"
+hash = "c4fb5c677eabc7fa526b74d3cbc44d9c5dba7129d8df05e3ea90290d827298ed"
+
+[[files]]
 file = "kubejs/server_scripts/Recipes/waystones_remove.js"
 hash = "8bee890ed08144134266e6b955977197ba69ca76e40bc4e24414587b286e8d55"
 
 [[files]]
 file = "kubejs/server_scripts/Spawn/asi_island_config.js"
-hash = "682a528219125ffbb08333e0022f257a003b3776a811ce89e556cfb03c55801c"
+hash = "a0e90aa52ec98724d68bb7c3364cda34fcb78f439fde0dd4de15c0484ca1d22c"
 
 [[files]]
 file = "kubejs/server_scripts/Spawn/asi_island_core.js"
@@ -6581,16 +6589,24 @@ file = "kubejs/server_scripts/Spawn/asi_island_spawn.js"
 hash = "631da2d1187ce96921410ae6b0301bd939e9f4952efddc1ed09173251068ea72"
 
 [[files]]
+file = "kubejs/server_scripts/pilot/pilot_exam.js"
+hash = "41452a58a7df7c0472afea520265dfdb74f6331f19cf6e8b6bf5126c862e2758"
+
+[[files]]
+file = "kubejs/server_scripts/pilot/pilotwings_claims.js"
+hash = "14fb1d7da558e439731495378be5461b71ec758de528c10623e800bdfd4ea0e2"
+
+[[files]]
 file = "kubejs/startup_scripts/asi_features.js"
 hash = "873a5ea9f102c4800133feebeb762596c3634d406e218489c35deb62e536b99c"
 
 [[files]]
 file = "kubejs/startup_scripts/clockwork_tab.js"
-hash = "6c59f83330ccd2841ea8070cc841c5b42ec2007a5ce7d6819e59f1374c5cd3ae"
+hash = "ed6134702d9165738ec1bc2a10b909771d0210f649a8e3dc5d23ca0be3e39b01"
 
 [[files]]
 file = "kubejs/startup_scripts/diary_pages.js"
-hash = "ad922aec3f05e1d24597dfb1aae8aa3b6d294e5d8871fb2c9000530e16f10a52"
+hash = "0851359c9a5729daaac93d104662829aab18504edf8fea831da3255d70906abe"
 
 [[files]]
 file = "kubejs/startup_scripts/diary_tab.js"
@@ -6598,7 +6614,7 @@ hash = "78f9a4ff80e1eb7aee6f569e6779ae3bc0c541f751957d0809032ddffd2a4697"
 
 [[files]]
 file = "kubejs/startup_scripts/pilot_license.js"
-hash = "afbec2b71cbf2b28e986a95cfb8523a644ab23c8aee994818c7dd4b5d952c2fe"
+hash = "d5576691b7d83f81433d94d0149b70abfd6281912f47a06a54a9bad78aaf4420"
 
 [[files]]
 file = "mkdocs.yml"

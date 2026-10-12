@@ -1,5 +1,5 @@
 // В jar Clockwork нет своих loot table, но прячем предметы на случай чужих таблиц.
-const CLOCKWORK_LOOT_HIDE = [
+var CLOCKWORK_LOOT_HIDE = [
   'clockwork:clockwork_gear',
   'clockwork:crossbow_barrel',
   'clockwork:clockwork_arrow',

@@ -1,5 +1,5 @@
-const CBC_SHOT = 'createbigcannons:shot_balls' // убираем
-const CGS_SHOT = 'cgs:lead_balls'              // оставляем
+var CBC_SHOT = 'createbigcannons:shot_balls' // убираем
+var CGS_SHOT = 'cgs:lead_balls'              // оставляем
 
 ServerEvents.recipes(event => {
 

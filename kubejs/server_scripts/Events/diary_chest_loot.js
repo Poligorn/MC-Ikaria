@@ -2,8 +2,8 @@
 // не имеет playerPredicate. Условие игрока — matchPlayerCustom
 // (LootConditionsContainer → PlayerParamPredicate).
 // Rhino: без spread; флаг замыкается в asiLootOnce.
-const ASI_DIARY_BOOK_CHANCE = 0.16
-const ASI_DIARY_PAGE_CHANCE = 0.055
+var ASI_DIARY_BOOK_CHANCE = 0.16
+var ASI_DIARY_PAGE_CHANCE = 0.055
 
 function asiLootOnce(modifier, itemId, chance, flag) {
   modifier.addLoot(

@@ -1,6 +1,6 @@
 // Вырванные листы дневников Трёх. Текстура — kubejs:item/diary_page_<id>
 // Регистрация только при global.ASI_DIARIES_ENABLED (asi_features.js).
-const DIARY_PAGES = [
+var DIARY_PAGES = [
   'mechanist_kinetics',
   'mechanist_machines',
   'mechanist_progress',

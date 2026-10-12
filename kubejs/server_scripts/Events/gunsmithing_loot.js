@@ -1,19 +1,12 @@
-const NITER = 'cgs:niter'   // сверь ID в JEI!
+var NITER = 'cgs:niter'
 
-LootJS.lootTables(event => {
-
-    // ===== КРИПЕР (уже работает) =====
-    let creeper = event.modifyEntityTables('minecraft:creeper')
-    creeper.removeItem('minecraft:gunpowder')
-    creeper.createPool(pool => {
-        pool.addEntry(NITER)
-    })
-
-    // ===== СУНДУКИ =====
-    // Берём все таблицы сундуков (chests/*) и меняем в них порох
-    let chests = event.modifyLootTables(/minecraft:chests\/.*/)
-    chests.removeItem('minecraft:gunpowder')
-    chests.createPool(pool => {
-        pool.addEntry(NITER)
-    })
+// LootJS 3.7: LootJS.modifiers + addEntityModifier / addTableModifier.
+// Старый lootTables().removeItem / pool.addEntry на 3.7 нет.
+LootJS.modifiers(event => {
+  event.addEntityModifier('minecraft:creeper')
+    .removeLoot('minecraft:gunpowder')
+    .addLoot(NITER)
+  event.addTableModifier(/minecraft:chests\/.*/)
+    .removeLoot('minecraft:gunpowder')
+    .addLoot(NITER)
 })
