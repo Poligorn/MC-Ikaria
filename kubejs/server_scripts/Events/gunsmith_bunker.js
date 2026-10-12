@@ -2,12 +2,12 @@
 //  Вооружённые мобы + дроп патронов + тест-команда
 // ==============================================
 
-const WILD_ZONE = 1500
-const BUNKER_SPAWN_DIST = 5000
-const FREE_GUNS_DIST = 7000
+var WILD_ZONE = 1500
+var BUNKER_SPAWN_DIST = 5000
+var FREE_GUNS_DIST = 7000
 
 // --- Оружие для каждого моба ---
-const MOB_GUNS = {
+var MOB_GUNS = {
   'minecraft:skeleton':        'cgs:revolver',
   'minecraft:zombie':          'cgs:shotgun',
   'minecraft:pillager':        'cgs:flintlock',      // Разбойник
@@ -36,7 +36,7 @@ function spawnGunRider(level, x, y, z, mountId, riderName) {
 
 // --- Патроны, которые дропает каждый тип моба ---
 // (что падает вместо оружия)
-const MOB_AMMO_DROP = {
+var MOB_AMMO_DROP = {
   'minecraft:skeleton':        { item: 'cgs:round_revolver_blank', min: 2, max: 6 },
   'minecraft:zombie':          { item: 'cgs:round_shotgun_blank',         min: 1, max: 4 },
   'minecraft:pillager':        { item: 'cgs:paper_cartridge',  min: 2, max: 5 },

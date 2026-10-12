@@ -1,6 +1,6 @@
 // Один том / один лист на игрока. Флаг в persistentData — на игрока, не на мир.
 // Инвентарь: InventoryKJS.getSlots / getStackInSlot / setStackInSlot (KubeJS 2101.7).
-const ASI_PAGE_HINT = {
+var ASI_PAGE_HINT = {
   'kubejs:diary_page_mechanist_kinetics': 'Чертежи Механика: глава «Кинетика»',
   'kubejs:diary_page_mechanist_machines': 'Чертежи Механика: глава «Станки»',
   'kubejs:diary_page_mechanist_progress': 'Чертежи Механика: глава «Сплавы»',
@@ -12,7 +12,7 @@ const ASI_PAGE_HINT = {
   'kubejs:diary_page_wildlander_ruins': 'Дневник Следопыта: глава «Руины»'
 }
 
-const ASI_PAGE_FLAG = {
+var ASI_PAGE_FLAG = {
   'kubejs:diary_page_mechanist_kinetics': 'asi_got_page_mechanist_kinetics',
   'kubejs:diary_page_mechanist_machines': 'asi_got_page_mechanist_machines',
   'kubejs:diary_page_mechanist_progress': 'asi_got_page_mechanist_progress',
@@ -22,15 +22,6 @@ const ASI_PAGE_FLAG = {
   'kubejs:diary_page_wildlander_beasts': 'asi_got_page_wildlander_beasts',
   'kubejs:diary_page_wildlander_portals': 'asi_got_page_wildlander_portals',
   'kubejs:diary_page_wildlander_ruins': 'asi_got_page_wildlander_ruins'
-}
-
-function asiDiaryBookKey(item) {
-  if (!item || item.empty || item.id !== 'modopedia:book') return ''
-  let s = '' + item
-  if (s.indexOf('mechanist_diary') >= 0) return 'mechanist'
-  if (s.indexOf('skyward_diary') >= 0) return 'skyward'
-  if (s.indexOf('wildlander_diary') >= 0) return 'wildlander'
-  return ''
 }
 
 function asiKeepOneMatching(player, matchFn) {
@@ -50,7 +41,7 @@ function asiKeepOneMatching(player, matchFn) {
   }
 }
 
-const ASI_BOOK_STAGE = {
+var ASI_BOOK_STAGE = {
   mechanist: 'asi_book_mechanist',
   skyward: 'asi_book_skyward',
   wildlander: 'asi_book_wildlander'

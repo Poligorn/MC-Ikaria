@@ -1,5 +1,5 @@
 // Скрыть всё Clockwork кроме крыльев из EMI (в паке нет JEI/REI).
-const CLOCKWORK_HIDE_ITEMS = [
+var CLOCKWORK_HIDE_ITEMS = [
   'clockwork:clockwork_gear',
   'clockwork:crossbow_barrel',
   'clockwork:clockwork_arrow',

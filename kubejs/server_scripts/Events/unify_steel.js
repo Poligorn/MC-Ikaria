@@ -1,5 +1,5 @@
-const CBC_STEEL = 'createbigcannons:steel_ingot' // убираем
-const CGS_STEEL = 'cgs:steel_ingot'              // оставляем
+var CBC_STEEL = 'createbigcannons:steel_ingot' // убираем
+var CGS_STEEL = 'cgs:steel_ingot'              // оставляем
 
 ServerEvents.recipes(event => {
 

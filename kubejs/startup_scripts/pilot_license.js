@@ -1,5 +1,5 @@
 // Лицензии пилота — 4 ранга
-const LICENSE_RANKS = [
+var LICENSE_RANKS = [
   { id: 'cadet',   name: 'Лицензия пилота: Кадет',          rarity: 'uncommon' },
   { id: 'second',  name: 'Лицензия пилота: Второй офицер',  rarity: 'rare' },
   { id: 'first',   name: 'Лицензия пилота: Первый офицер',  rarity: 'rare' },

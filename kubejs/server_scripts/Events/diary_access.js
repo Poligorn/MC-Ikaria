@@ -3,7 +3,7 @@
 // Критерии живых advancement’ов: minecraft:impossible (листы не
 // зарегистрированы при флаге false). Оригиналы inventory_changed
 // лежат в kubejs/disabled_future/diaries/advancement/.
-const ASI_DIARY_ADVANCEMENTS = [
+var ASI_DIARY_ADVANCEMENTS = [
   'asi:diary/root',
   'asi:diary/mechanist_kinetics',
   'asi:diary/mechanist_machines',
@@ -16,7 +16,7 @@ const ASI_DIARY_ADVANCEMENTS = [
   'asi:diary/wildlander_ruins'
 ]
 
-const ASI_DIARY_BOOKS = [
+var ASI_DIARY_BOOKS = [
   'asi:mechanist_diary',
   'asi:skyward_diary',
   'asi:wildlander_diary'

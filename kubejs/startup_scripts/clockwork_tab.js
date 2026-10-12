@@ -1,5 +1,5 @@
 // Вкладка мода: clockwork:clockwork_creative_tab (ClockworkCreativeTabs.class).
-const CLOCKWORK_TAB_HIDE = [
+var CLOCKWORK_TAB_HIDE = [
   'clockwork:clockwork_gear',
   'clockwork:crossbow_barrel',
   'clockwork:clockwork_arrow',
