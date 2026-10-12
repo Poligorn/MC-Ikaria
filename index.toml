@@ -57,14 +57,6 @@ file = "kubejs/server_scripts/Wild_Lands/distance_loot.js"
 hash = "48c576776669c6b21c0fc0fd81710191b33b1256255c4d6a87686244ae5d2ee9"
 
 [[files]]
-file = "kubejs/server_scripts/pilot/pilot_exam.js"
-hash = "b92d161c8e2de1834f9410d8db7d2f55f92e2a7b15764bfbac9bf734631a127d"
-
-[[files]]
-file = "kubejs/server_scripts/pilot/pilotwings_claims.js"
-hash = "b6d756d5266989fbea0f3e09629f68c30db022fc4e9435c67da780dff26bf15a"
-
-[[files]]
 file = "kubejs/server_scripts/recipes/ClockworkBarrelCrossbow_Recipe.js"
 hash = "261374c86a541b635b884cbe6c4625f630277ac1437ffbf8ffba7f8819edb0a8"
 
