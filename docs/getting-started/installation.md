@@ -37,7 +37,7 @@
 | Файл | Как ставить |
 |------|-------------|
 | `*.mrpack` | **Add Instance → Import** в Prism. FTB Quests / Library / Teams качаются с официального Maven (`maven.ftb.dev`), не из CurseForge API. |
-| `*-curseforge.zip` | Импортировать как CurseForge-пак (Prism / официальный лаунчер). **Не распаковывать руками:** FTB в `manifest.json` как projectID, а не как jar в `overrides/mods`. |
+| `*-curseforge.zip` | Импортировать как CurseForge-пак **или** распаковать: FTB есть и в `manifest.json` (projectID), и как jar в `overrides/mods` (скачаны с официального Maven на CI). |
 | `*-manual.zip` | Распаковать в `.minecraft`: внутри уже все jar, включая FTB. |
 
 FTB-моды лицензированы **All Rights Reserved** — в git лежат только URL на Maven, не сами jar.
