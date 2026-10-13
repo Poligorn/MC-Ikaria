@@ -1,32 +1,16 @@
 hash-format = "sha256"
 
 [[files]]
-file = ".github/scripts/__pycache__/build_manual_zip.cpython-313.pyc"
-hash = "3c9bca598a82329ceced98bd6350106a7e65f37b0d0825929a23049f883a3497"
-
-[[files]]
-file = ".github/scripts/__pycache__/changelog.cpython-313.pyc"
-hash = "d62fde71259f8e47fdf14bf90c96312c591a38ce78fdb6f70843de69bc69d6e3"
-
-[[files]]
-file = ".github/scripts/__pycache__/notify_dev.cpython-313.pyc"
-hash = "34b94de287a338dd48204dec81ccaeba99949b0af099bf38b373344efc63b5e4"
-
-[[files]]
-file = ".github/scripts/__pycache__/notify_release.cpython-313.pyc"
-hash = "d30e16ccfa2b7f8a25e947b46113ce47bb34795315e4f608a51c407adbc0afc5"
-
-[[files]]
-file = ".github/scripts/__pycache__/pack_meta.cpython-313.pyc"
-hash = "347d3df1acf06d3469d3ce21d7f380d200c6e842b5ae603c5769a5234349a092"
-
-[[files]]
 file = ".github/scripts/build_manual_zip.py"
-hash = "49d2513f90776787e9893766d8b6180da698c2e58efe9326e2cd16fef4981946"
+hash = "0cfb2cbcccd66145ab32caa3ecf1dd5fd66035d8793beb3de16115c741539bb5"
 
 [[files]]
 file = ".github/scripts/changelog.py"
 hash = "f9b1d93468a852ab6558684128a8a1b15214fd5202de6ccdbc15894de81329ee"
+
+[[files]]
+file = ".github/scripts/inject_cf_override_jars.py"
+hash = "a8184fe447d347d5dbe18b4e708dfbec8619a341a6b209d7254b750f3e47805a"
 
 [[files]]
 file = ".github/scripts/notify_dev.py"
@@ -50,7 +34,7 @@ hash = "c61bbdbaece50ad198d2d91aad457ae82a7a8bd4a7457478a698dbb303722c31"
 
 [[files]]
 file = ".github/workflows/release.yml"
-hash = "c4024efecf056fdc9ce83ef9102893e6e67d9171e680bc7093b71fed6dee4881"
+hash = "be1c243c2d5f8b027bcbe05a6b52cd8033e9169f1595a23e8b9c69877df2d9ec"
 
 [[files]]
 file = "config/CoroUtil/General.toml"
@@ -5902,7 +5886,7 @@ hash = "d44601a93c2f541ccb4f107f4544aba75b42a7711c7aa620f39e6b18e52998fc"
 
 [[files]]
 file = "docs/getting-started/installation.md"
-hash = "49b99a57f27a1d713168f48041b476a1505ff4df26dd7a109d52462072ec30d8"
+hash = "7dd31801c8885ac6fc03f9464062cb7d6da43ddf922f1333b6e4abdf31f2cf94"
 
 [[files]]
 file = "docs/guides/getting-started-guide.md"
@@ -6886,7 +6870,7 @@ metafile = true
 
 [[files]]
 file = "mods/eve-wormhole-portals.pw.toml"
-hash = "7af48ef8698862fba5d840da25ab5e35c9059a89d04da1f9fcfa8a659536f09a"
+hash = "31f2727eaad6bec1674a1781a593ef368276d6b4f0565ac680ca101c1128811c"
 metafile = true
 
 [[files]]
@@ -6931,17 +6915,17 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-library-forge.pw.toml"
-hash = "a2aa051ec45ec685f523fbf3813f23c5fde1935d7193e248871f1427ca1dd558"
+hash = "c03f309ace6c923afa9803cce344c0028f859da29aecfe60f99ab6d89916083e"
 metafile = true
 
 [[files]]
 file = "mods/ftb-quests-forge.pw.toml"
-hash = "d1cd2e49985872d923864aa44e4ff8b4d97e3ab9e78bf2c5fd57d2275a62901b"
+hash = "befa31f55935c1e27412e353b3234e2cb4260cdb43f88461e81e486c6505675f"
 metafile = true
 
 [[files]]
 file = "mods/ftb-teams-forge.pw.toml"
-hash = "e717bb275a54a5caadaa7cf82bc34df3589f49402074adf93c31eaac43860313"
+hash = "ad974ab2a840a9c134b29f7571b941de2f18a99d2081970fe62edd6037718444"
 metafile = true
 
 [[files]]

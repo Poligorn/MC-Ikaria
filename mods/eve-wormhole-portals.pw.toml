@@ -3,9 +3,9 @@ filename = "wormhole-portals-0.5.jar"
 side = "both"
 
 [download]
+url = "https://mediafilez.forgecdn.net/files/8982/482/wormhole-portals-0.5.jar"
 hash-format = "sha1"
 hash = "89170fede69b23d6011d7af9954f121269631729"
-mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]

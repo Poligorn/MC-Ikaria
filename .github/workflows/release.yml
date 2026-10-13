@@ -69,17 +69,22 @@ jobs:
         run: python .github/scripts/changelog.py
 
       # ---------- BUILD 1: Modrinth (.mrpack) ----------
+      # FTB Maven (maven.ftb.dev) is not on the default mrpack host whitelist.
+      # Without --restrictDomains=false those mods never enter modrinth.index.json.
       - name: Build Modrinth pack
         if: steps.tagcheck.outputs.exists == 'false'
         run: |
           mkdir -p dist
-          packwiz modrinth export -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
+          packwiz modrinth export --restrictDomains=false -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
 
       # ---------- BUILD 2: CurseForge (.zip) ----------
+      # packwiz кладёт [update.curseforge] только в manifest.json (ID), без jar.
+      # Клиентский zip без API тогда теряет FTB — дописываем jar в overrides/mods.
       - name: Build CurseForge pack
         if: steps.tagcheck.outputs.exists == 'false'
         run: |
-          packwiz curseforge export -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}-curseforge.zip"
+          packwiz curseforge export -s client -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}-curseforge.zip"
+          python .github/scripts/inject_cf_override_jars.py "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}-curseforge.zip"
 
       # ---------- BUILD 3: Manual ZIP (jars + configs) ----------
       - name: Build manual ZIP
