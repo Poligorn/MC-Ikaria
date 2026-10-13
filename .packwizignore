@@ -1,2 +1,4 @@
 # Built MkDocs site must not ship inside the Minecraft pack
 site/
+**/__pycache__/
+*.pyc

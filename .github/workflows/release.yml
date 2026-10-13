@@ -69,11 +69,13 @@ jobs:
         run: python .github/scripts/changelog.py
 
       # ---------- BUILD 1: Modrinth (.mrpack) ----------
+      # FTB Maven (maven.ftb.dev) is not on the default mrpack host whitelist.
+      # Without --restrictDomains=false those mods never enter modrinth.index.json.
       - name: Build Modrinth pack
         if: steps.tagcheck.outputs.exists == 'false'
         run: |
           mkdir -p dist
-          packwiz modrinth export -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
+          packwiz modrinth export --restrictDomains=false -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
 
       # ---------- BUILD 2: CurseForge (.zip) ----------
       - name: Build CurseForge pack
