@@ -339,6 +339,11 @@ hash = "03a2f273597c1d2bef87eaa60af9287d7d54ec68cc0a0d4b5b79e1497b16ad3e"
 metafile = true
 
 [[files]]
+file = "mods/eve-wormhole-portals.pw.toml"
+hash = "9619a35fd525471573a80a81473f06e94f48c5bfbfb0a1b81a2c5b7dfdd5d8f6"
+metafile = true
+
+[[files]]
 file = "mods/exposure.pw.toml"
 hash = "28c29922378fa19f4edf1d16fffb48287a87be159a3378647073bbdebd2a2196"
 metafile = true
