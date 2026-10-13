@@ -10,6 +10,7 @@ packwiz curseforge export кладёт такие моды ТОЛЬКО в manif
 """
 from __future__ import annotations
 
+import json
 import sys
 import tempfile
 import tomllib
@@ -64,7 +65,35 @@ def inject(zip_path: Path, mods_dir: Path) -> int:
         tmp_zip.replace(zip_path)
 
     print(f"Дописано {len(jars)} jar в {zip_path.name}")
+    verify(zip_path, tomls)
     return 0
+
+
+def verify(zip_path: Path, tomls: list[Path]) -> None:
+    """CI-проверка: ID в манифесте И jar в overrides — иначе клиент снова без FTB."""
+    with zipfile.ZipFile(zip_path) as z:
+        man = json.loads(z.read("manifest.json"))
+        ids = {(int(f["projectID"]), int(f["fileID"])) for f in man.get("files") or []}
+        names = set(z.namelist())
+    missing_ids: list[str] = []
+    missing_jars: list[str] = []
+    for toml in tomls:
+        meta = tomllib.loads(toml.read_text(encoding="utf-8"))
+        cf = (meta.get("update") or {}).get("curseforge") or {}
+        pair = (int(cf["project-id"]), int(cf["file-id"]))
+        name = meta.get("name") or toml.name
+        if pair not in ids:
+            missing_ids.append(f"{name} {pair}")
+        arc = f"overrides/mods/{meta['filename']}"
+        if arc not in names:
+            missing_jars.append(arc)
+    if missing_ids or missing_jars:
+        raise RuntimeError(
+            "CurseForge zip неполный: "
+            + (f"нет в manifest.json: {missing_ids}; " if missing_ids else "")
+            + (f"нет jar в overrides: {missing_jars}" if missing_jars else "")
+        )
+    print(f"Проверка OK: {len(tomls)} CF-мода в manifest.json и в overrides/mods/")
 
 
 def main() -> int:

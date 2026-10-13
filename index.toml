@@ -10,7 +10,7 @@ hash = "f9b1d93468a852ab6558684128a8a1b15214fd5202de6ccdbc15894de81329ee"
 
 [[files]]
 file = ".github/scripts/inject_cf_override_jars.py"
-hash = "8769987b6877da86126b3c8afc563a5964e24af5dd0c34e429a16f5e0a6b1b06"
+hash = "a8184fe447d347d5dbe18b4e708dfbec8619a341a6b209d7254b750f3e47805a"
 
 [[files]]
 file = ".github/scripts/notify_dev.py"
