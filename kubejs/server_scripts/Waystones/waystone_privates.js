@@ -2,6 +2,7 @@
 // Приваты Waystone (дикие земли). Waystones 21.1.46 + Balm 21.0.63
 // Заменяет kubejs/server_scripts/Waystones/waystone_privates.js
 // var, без spread, без top-level const (Rhino /reload).
+// KubeJS 2101.7: не звать Class.isInstance / getUUID() — ремап Rhino.
 // ============================================================
 
 var WS_PD_KEY = 'asiWaystoneClaimsJson'
@@ -22,6 +23,136 @@ var WsSyncCls = Java.loadClass('net.blay09.mods.waystones.core.WaystoneSyncManag
 var PwMgrCls = Java.loadClass('net.blay09.mods.waystones.core.PlayerWaystoneManager')
 var IdxCls = Java.loadClass('net.blay09.mods.waystones.core.WaystoneIndexManager')
 var WS_SERVER_UID = UUIDCls.fromString(WS_SERVER_UID_STR)
+var wsOnceFlags = {}
+
+function wsLogOnce(key, msg) {
+  if (wsOnceFlags[key]) return
+  wsOnceFlags[key] = true
+  console.error(msg)
+}
+
+// Java.loadClass в Rhino/KubeJS отдаёт static-side класса, не java.lang.Class:
+// у него нет isInstance/cast. instanceof с загруженным классом работает.
+function wsIsMcPlayer(entity) {
+  if (!entity) return false
+  try {
+    if (entity instanceof PlayerCls) return true
+  } catch (e1) {}
+  try {
+    if (typeof entity.isPlayer === 'function' && entity.isPlayer()) return true
+  } catch (e2) {}
+  try {
+    if (typeof entity.isServerPlayer === 'function' && entity.isServerPlayer()) return true
+  } catch (e3) {}
+  return false
+}
+
+function wsIsMutable(ws) {
+  if (!ws) return false
+  try {
+    if (ws instanceof MutableWsCls) return true
+  } catch (e1) {}
+  return !!(ws.setOwnerUid && ws.setVisibility && ws.setOwnerUsername)
+}
+
+// KubeJS 2101.7 + Rhino: mojmap getUUID на Entity ремапится в getUuid / .uuid.
+// getUUID() на сыром ServerPlayer из NativeEvents/Balm падает TypeError.
+function wsUuidStr(obj) {
+  if (!obj) return ''
+  var u
+  try {
+    if (obj.uuid != null) {
+      u = obj.uuid
+      if (u != null) return String(u)
+    }
+  } catch (e1) {}
+  try {
+    if (typeof obj.getUuid === 'function') {
+      u = obj.getUuid()
+      if (u != null) return String(u)
+    }
+  } catch (e2) {}
+  try {
+    if (typeof obj.getStringUuid === 'function') {
+      u = obj.getStringUuid()
+      if (u != null) return String(u)
+    }
+  } catch (e3) {}
+  try {
+    if (obj.stringUuid != null) return String(obj.stringUuid)
+  } catch (e4) {}
+  return ''
+}
+
+function wsServerOf(entity) {
+  if (!entity) return null
+  var s
+  try {
+    if (entity.server) return entity.server
+  } catch (e1) {}
+  try {
+    if (typeof entity.getServer === 'function') {
+      s = entity.getServer()
+      if (s) return s
+    }
+  } catch (e2) {}
+  try {
+    var lvl = entity.level
+    if (!lvl && typeof entity.getLevel === 'function') lvl = entity.getLevel()
+    if (lvl) {
+      if (lvl.server) return lvl.server
+      if (typeof lvl.getServer === 'function') return lvl.getServer()
+    }
+  } catch (e3) {}
+  return null
+}
+
+function wsTellMc(entity, msg) {
+  if (!entity || !msg) return
+  try {
+    if (typeof entity.tell === 'function') {
+      entity.tell(msg)
+      return
+    }
+  } catch (e1) {}
+  try {
+    if (typeof entity.sendSystemMessage === 'function') {
+      entity.sendSystemMessage(Text.of(msg))
+      return
+    }
+  } catch (e2) {}
+  try {
+    if (typeof entity.displayClientMessage === 'function') {
+      entity.displayClientMessage(Text.of(msg), false)
+    }
+  } catch (e3) {}
+}
+
+function wsPosStr(pos) {
+  if (!pos) return '?'
+  try {
+    if (pos.x != null && pos.y != null && pos.z != null) {
+      return pos.x + ',' + pos.y + ',' + pos.z
+    }
+  } catch (e1) {}
+  try {
+    if (typeof pos.getX === 'function') {
+      return pos.getX() + ',' + pos.getY() + ',' + pos.getZ()
+    }
+  } catch (e2) {}
+  return '?'
+}
+
+function wsNameStr(comp) {
+  if (!comp) return ''
+  try {
+    if (typeof comp.getString === 'function') return String(comp.getString())
+  } catch (e1) {}
+  try {
+    if (comp.string != null) return String(comp.string)
+  } catch (e2) {}
+  return String(comp)
+}
 
 function wsMcPlayer(player) {
   if (!player) return null
@@ -239,7 +370,7 @@ function wsRefreshIndex(server, ws) {
 }
 
 function wsApplyModAccess(server, ws, entry) {
-  if (!ws || !MutableWsCls.isInstance(ws)) return
+  if (!ws || !wsIsMutable(ws)) return
   try {
     if (wsIsServer(entry)) {
       ws.setOwnerUid(WS_SERVER_UID)
@@ -302,12 +433,12 @@ function wsRefreshHidden(server, key, entry) {
   wsEachPlayer(server, function (p) {
     var mc = wsMcPlayer(p)
     if (!mc) return
-    var hide = !wsCanUse(entry, String(p.uuid))
+    var hide = !wsCanUse(entry, wsUuidStr(p))
     try {
       PwMgrCls.setWaystoneHidden(mc, uid, hide)
       WsSyncCls.sendActivatedWaystones(mc)
     } catch (e2) {
-      console.error('[WS] setWaystoneHidden: ' + e2)
+      wsLogOnce('hidden-err', '[WS] setWaystoneHidden: ' + e2)
     }
   })
 }
@@ -320,27 +451,69 @@ function wsCancelNative(event) {
   }
 }
 
+// --- одно измерение: Waystone ведут только к Waystone в том же мире ---
+function wsDimStr(x) {
+  if (x == null || typeof x === 'function') return ''
+  var s = String(x)
+  var m = s.match(/([a-z0-9_.\-]+:[a-z0-9_.\/\-]+)\]?\s*$/)
+  return m ? m[1] : ''
+}
+function wsTryDim(f) {
+  try { return wsDimStr(f()) } catch (e) { return '' }
+}
+function wsEntityDim(e) {
+  var d = wsTryDim(function () { return e.level().dimension().location() })
+  if (!d) d = wsTryDim(function () { return e.getLevel().dimension().location() })
+  if (!d) d = wsTryDim(function () { return e.level.dimension })
+  return d
+}
+function wsWaystoneDim(ws) {
+  var d = wsTryDim(function () { return ws.getDimension().location() })
+  if (!d) d = wsTryDim(function () { return ws.getDimension() })
+  return d
+}
+function wsSameDim(e, ws) {
+  try {
+    var a = wsEntityDim(e), b = wsWaystoneDim(ws)
+    if (!a || !b) {
+      wsLogOnce('dim-unknown', '[WS-DIM] не удалось определить измерение: player=' + a + ' waystone=' + b)
+      return true
+    }
+    return a == b
+  } catch (err) {
+    wsLogOnce('dim-err', '[WS-DIM] ' + err)
+    return true
+  }
+}
+
 function wsOnTeleportPre(event) {
   try {
     var ctx = event.getContext()
+    if (!ctx) return
     var entity = ctx.getEntity()
-    if (!PlayerCls.isInstance(entity)) return
+    if (!wsIsMcPlayer(entity)) return
     var ws = ctx.getTargetWaystone()
     if (!ws) return
+    if (!wsSameDim(entity, ws)) {
+      wsCancelNative(event)
+      wsTellMc(entity, '§cWaystone не ведут в другое измерение. Используйте порталы-червоточины.')
+      return
+    }
     var key = wsUidOf(ws)
     if (!key) return
-    var server = entity.getServer ? entity.getServer() : null
-    if (!server && entity.level && entity.level.server) server = entity.level.server
+    var server = wsServerOf(entity)
     var entry = wsLoad(server)[key]
-    var uuid = String(entity.getUUID())
+    var uuid = wsUuidStr(entity)
+    if (!uuid) {
+      wsLogOnce('tp-nouuid', '[WS-TP] не удалось прочитать UUID игрока (getUUID скрыт ремапом KubeJS)')
+      return
+    }
     if (!wsCanUse(entry, uuid)) {
       wsCancelNative(event)
-      try {
-        entity.sendSystemMessage(Text.of(wsPrivateMessage(entry)))
-      } catch (eMsg) {}
+      wsTellMc(entity, wsPrivateMessage(entry))
     }
   } catch (e) {
-    console.error('[WS-TP] ' + e)
+    wsLogOnce('tp-err', '[WS-TP] ' + e)
   }
 }
 
@@ -348,9 +521,12 @@ function wsOnBuildMenu(event) {
   try {
     var player = event.getPlayer()
     if (!player) return
-    var uuid = String(player.getUUID())
-    var server = player.getServer ? player.getServer() : null
-    if (!server && player.level && player.level.server) server = player.level.server
+    var uuid = wsUuidStr(player)
+    if (!uuid) {
+      wsLogOnce('menu-nouuid', '[WS-MENU] не удалось прочитать UUID игрока (getUUID скрыт ремапом KubeJS)')
+      return
+    }
+    var server = wsServerOf(player)
     var data = wsLoad(server)
     var list = event.getWaystones()
     if (!list) return
@@ -364,7 +540,7 @@ function wsOnBuildMenu(event) {
       var key = wsUidOf(pws)
       if (!key) continue
       present[key] = true
-      if (!wsCanUse(data[key], uuid)) doomed.push(pws)
+      if (!wsCanUse(data[key], uuid) || !wsSameDim(player, pws)) doomed.push(pws)
     }
     for (i = 0; i < doomed.length; i++) {
       try {
@@ -382,6 +558,7 @@ function wsOnBuildMenu(event) {
       if (present[k]) continue
       var missing = wsGetByKey(server, k)
       if (!missing) continue
+      if (!wsSameDim(player, missing)) continue
       try {
         event.addWaystone(PwMgrCls.getPlayerDecoratedWaystone(player, missing))
       } catch (eAdd) {
@@ -389,7 +566,7 @@ function wsOnBuildMenu(event) {
       }
     }
   } catch (e) {
-    console.error('[WS-MENU] ' + e)
+    wsLogOnce('menu-err', '[WS-MENU] ' + e)
   }
 }
 
@@ -435,6 +612,15 @@ ServerEvents.loaded(function (event) {
 PlayerEvents.loggedIn(function (event) {
   var player = event.player
   var server = player.server
+  if (!wsOnceFlags['login-probe']) {
+    wsOnceFlags['login-probe'] = true
+    try {
+      var mc = wsMcPlayer(player)
+      console.info('[WS] probe instanceof Player=' + (mc instanceof PlayerCls) + ' isPlayer=' + !!(mc && typeof mc.isPlayer === 'function' && mc.isPlayer()) + ' uuid=' + wsUuidStr(mc || player))
+    } catch (eProbe) {
+      console.error('[WS] probe: ' + eProbe)
+    }
+  }
   var data = wsLoad(server)
   var mc = wsMcPlayer(player)
   var key
@@ -458,7 +644,7 @@ PlayerEvents.loggedIn(function (event) {
       }
       continue
     }
-    var hide = !wsCanUse(data[key], String(player.uuid))
+    var hide = !wsCanUse(data[key], wsUuidStr(player))
     try {
       PwMgrCls.setWaystoneHidden(mc, uid, hide)
     } catch (e2) {}
@@ -477,7 +663,7 @@ BlockEvents.rightClicked(function (event) {
   if (!key) return
   var server = event.server
   var data = wsLoad(server)
-  var uuid = String(player.uuid)
+  var uuid = wsUuidStr(player)
   var entry = data[key]
 
   if (wsIsServer(entry)) return
@@ -495,7 +681,7 @@ BlockEvents.rightClicked(function (event) {
       dim: String(event.level.dimension)
     }
     try {
-      if (ws.getName) data[key].name = String(ws.getName().getString())
+      if (ws.getName) data[key].name = wsNameStr(ws.getName())
     } catch (eName) {}
     wsSave(server, data)
     wsApplyModAccess(server, ws, data[key])
@@ -542,7 +728,7 @@ ServerEvents.commandRegistry(function (event) {
       wsTell(r.player, '§cЭто серверный Waystone. Доступ менять нельзя. §7OP: /ws release')
       return null
     }
-    if (r.data[r.key].owner !== String(r.player.uuid)) {
+    if (r.data[r.key].owner !== wsUuidStr(r.player)) {
       wsTell(r.player, '§cВы не владелец')
       return null
     }
@@ -554,12 +740,11 @@ ServerEvents.commandRegistry(function (event) {
     if (!r) return 0
     var name = ''
     try {
-      if (r.ws.getName) name = String(r.ws.getName().getString())
+      if (r.ws.getName) name = wsNameStr(r.ws.getName())
     } catch (eN) {}
     var pos = '?'
     try {
-      var p = r.ws.getPos()
-      pos = p.getX() + ',' + p.getY() + ',' + p.getZ()
+      pos = wsPosStr(r.ws.getPos())
     } catch (eP) {}
     var dim = String(r.player.level.dimension)
     r.data[r.key] = {
@@ -631,7 +816,7 @@ ServerEvents.commandRegistry(function (event) {
           var r = requireOwned(ctx)
           if (!r) return 0
           var friend = Arguments.PLAYER.getResult(ctx, 'player')
-          var fu = String(friend.uuid)
+          var fu = wsUuidStr(friend)
           var friends = wsFriendsOf(r.data[r.key])
           if (wsFriendIndex(r.data[r.key], fu) === -1) friends.push(fu)
           r.data[r.key].friends = friends
@@ -645,7 +830,7 @@ ServerEvents.commandRegistry(function (event) {
           var r = requireOwned(ctx)
           if (!r) return 0
           var friend = Arguments.PLAYER.getResult(ctx, 'player')
-          var fu = String(friend.uuid)
+          var fu = wsUuidStr(friend)
           var friends = wsFriendsOf(r.data[r.key])
           var next = []
           var i
@@ -663,7 +848,7 @@ ServerEvents.commandRegistry(function (event) {
         var r = requireOwned(ctx)
         if (!r) return 0
         var target = Arguments.PLAYER.getResult(ctx, 'player')
-        r.data[r.key].owner = String(target.uuid)
+        r.data[r.key].owner = wsUuidStr(target)
         r.data[r.key].ownerName = String(target.username)
         r.data[r.key].friends = []
         wsSave(r.player.server, r.data)
@@ -691,7 +876,7 @@ ServerEvents.commandRegistry(function (event) {
       .then(Commands.literal('list').executes(function (ctx) {
         var player = ctx.source.player
         var data = wsLoad(player.server)
-        var uuid = String(player.uuid)
+        var uuid = wsUuidStr(player)
         var n = 0
         var key
         for (key in data) {
@@ -747,12 +932,12 @@ EntityEvents.death('minecraft:player', function (event) {
     killer = event.source.actual
   } catch (e) {}
   if (!killer || !killer.isPlayer()) return
-  if (String(killer.uuid) === String(victim.uuid)) return
+  if (wsUuidStr(killer) === wsUuidStr(victim)) return
   if (!wsInWild(victim)) return
 
   var server = event.server
   var data = wsLoad(server)
-  var vu = String(victim.uuid)
+  var vu = wsUuidStr(victim)
   var lost = []
   var key
   for (key in data) {
