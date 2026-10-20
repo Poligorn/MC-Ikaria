@@ -48,7 +48,6 @@ public final class IkariaSoundControl {
         if (sound != null) {
             synchronized (JUKEBOX_INSTANCES) {
                 JUKEBOX_INSTANCES.add(sound);
-                JUKEBOX_ORDER.addLast(new WeakReference<>(sound));
             }
         }
     }
@@ -172,7 +171,7 @@ public final class IkariaSoundControl {
         }
         if (sound.getSource() == SoundSource.RECORDS && !path.startsWith("block.note_block")) {
             try {
-                if (sound.shouldStream()) {
+                if (sound.getSound() != null && sound.getSound().shouldStream()) {
                     return IkariaSoundCategory.JUKEBOX;
                 }
             } catch (Throwable ignored) {
