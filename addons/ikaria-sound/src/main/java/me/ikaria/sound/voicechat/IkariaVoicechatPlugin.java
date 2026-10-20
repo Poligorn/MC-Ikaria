@@ -56,7 +56,9 @@ public class IkariaVoicechatPlugin implements VoicechatPlugin {
                 .setId(IkariaSoundMod.SVC_RADIO_CATEGORY)
                 .setName("Live Radio")
                 .setNameTranslationKey("voicechat.category.ikariasound.live_radio")
-                .setDescription("Internet radio from Live Radio Mod. Mute this to avoid capturing copyrighted streams.")
+                .setDescription(
+                        "Internet radio from Live Radio Mod. Mute this or enable Streamer Mode to avoid capturing copyrighted streams."
+                )
                 .setDescriptionTranslationKey("voicechat.category.ikariasound.live_radio.desc")
                 .setIcon(RadioCategoryIcon.create())
                 .build();

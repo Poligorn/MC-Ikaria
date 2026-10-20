@@ -3,6 +3,9 @@ package me.ikaria.sound;
 import java.util.ArrayDeque;
 import java.util.Collections;
 import java.util.Deque;
+import java.util.EnumMap;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Set;
 import java.util.WeakHashMap;
 import me.ikaria.sound.voicechat.IkariaVoicechatPlugin;
@@ -13,18 +16,22 @@ import net.minecraft.sounds.SoundSource;
 import net.neoforged.fml.ModList;
 
 /**
- * Classifies copyright-sensitive sounds and supplies extra gain on top of vanilla SoundSource volumes.
- * Radio is handled separately (Java Sound / SVC category).
+ * Classifies sounds and supplies extra gain on top of vanilla SoundSource volumes.
+ * Radio is Java Sound / the SVC Live Radio category. Streamer mode mutes radio only.
  */
 public final class IkariaSoundControl {
     private static final ThreadLocal<Deque<SoundInstance>> PLAYING = ThreadLocal.withInitial(ArrayDeque::new);
     private static final Set<SoundInstance> JUKEBOX_INSTANCES = Collections.newSetFromMap(new WeakHashMap<>());
+    private static final Map<IkariaSoundCategory, Float> SLIDER_VOLUMES = new EnumMap<>(IkariaSoundCategory.class);
 
     private static volatile boolean streamerMode;
     private static volatile float radioSvcMultiplier = 1.0f;
-    private static volatile float melodiesVolume = 1.0f;
-    private static volatile float hornsVolume = 1.0f;
-    private static volatile float jukeboxVolume = 1.0f;
+
+    static {
+        for (IkariaSoundCategory category : IkariaSoundCategory.sliderCategories()) {
+            SLIDER_VOLUMES.put(category, 1.0f);
+        }
+    }
 
     private IkariaSoundControl() {
     }
@@ -61,7 +68,7 @@ public final class IkariaSoundControl {
 
     public static float extraMultiplier(SoundInstance sound) {
         IkariaSoundCategory category = classify(sound);
-        if (category == null) {
+        if (category == null || category == IkariaSoundCategory.RADIO) {
             return 1.0f;
         }
         return volumeOf(category);
@@ -73,15 +80,11 @@ public final class IkariaSoundControl {
     }
 
     public static float volumeOf(IkariaSoundCategory category) {
-        if (streamerMode) {
-            return 0.0f;
+        if (category == IkariaSoundCategory.RADIO) {
+            return streamerMode ? 0.0f : radioSvcMultiplier;
         }
-        return switch (category) {
-            case RADIO -> radioSvcMultiplier;
-            case MELODIES -> melodiesVolume;
-            case HORNS -> hornsVolume;
-            case JUKEBOX -> jukeboxVolume;
-        };
+        Float value = SLIDER_VOLUMES.get(category);
+        return value == null ? 1.0f : Math.max(0.0f, value);
     }
 
     public static boolean isStreamerMode() {
@@ -92,7 +95,6 @@ public final class IkariaSoundControl {
         streamerMode = enabled;
         IkariaSoundConfig.STREAMER_MODE.set(enabled);
         refreshRadioLineGain();
-        refreshPlayingSounds();
     }
 
     public static void toggleStreamerMode() {
@@ -100,34 +102,20 @@ public final class IkariaSoundControl {
     }
 
     public static void setCategoryVolume(IkariaSoundCategory category, double volume) {
-        float clamped = (float) Math.max(0.0, Math.min(1.0, volume));
-        switch (category) {
-            case MELODIES -> {
-                melodiesVolume = clamped;
-                IkariaSoundConfig.VOLUME_MELODIES.set(volume);
-            }
-            case HORNS -> {
-                hornsVolume = clamped;
-                IkariaSoundConfig.VOLUME_HORNS.set(volume);
-            }
-            case JUKEBOX -> {
-                jukeboxVolume = clamped;
-                IkariaSoundConfig.VOLUME_JUKEBOX.set(volume);
-            }
-            case RADIO -> {
-                // Radio lives in Simple Voice Chat's volume screen.
-            }
+        if (!category.hasVanillaSlider()) {
+            return;
         }
+        float clamped = (float) Math.max(0.0, Math.min(1.0, volume));
+        SLIDER_VOLUMES.put(category, clamped);
+        IkariaSoundConfig.volume(category).set(volume);
         refreshPlayingSounds();
     }
 
     public static double configuredVolume(IkariaSoundCategory category) {
-        return switch (category) {
-            case MELODIES -> IkariaSoundConfig.VOLUME_MELODIES.get();
-            case HORNS -> IkariaSoundConfig.VOLUME_HORNS.get();
-            case JUKEBOX -> IkariaSoundConfig.VOLUME_JUKEBOX.get();
-            case RADIO -> radioSvcMultiplier;
-        };
+        if (category == IkariaSoundCategory.RADIO) {
+            return radioSvcMultiplier;
+        }
+        return IkariaSoundConfig.volume(category).get();
     }
 
     public static IkariaSoundCategory classify(SoundInstance sound) {
@@ -139,34 +127,26 @@ public final class IkariaSoundControl {
                 return IkariaSoundCategory.JUKEBOX;
             }
         }
-        String className = sound.getClass().getName();
-        if (className.startsWith("immersive_melodies.") || className.contains("NoteSoundInstance")) {
-            if (className.contains("immersive_melodies")) {
-                return IkariaSoundCategory.MELODIES;
-            }
-        }
-        if (className.toLowerCase().contains("jukebox")) {
-            return IkariaSoundCategory.JUKEBOX;
-        }
 
-        ResourceLocation location;
+        ResourceLocation location = null;
         try {
             location = sound.getLocation();
         } catch (Throwable ignored) {
-            return null;
+            // fall through to class-name checks
         }
-        if (location == null) {
-            return null;
-        }
-        String namespace = location.getNamespace();
-        String path = location.getPath();
-        if ("immersive_melodies".equals(namespace)) {
-            return IkariaSoundCategory.MELODIES;
-        }
+
+        String namespace = location == null ? "" : location.getNamespace();
+        String path = location == null ? "" : location.getPath();
+        String className = sound.getClass().getName();
+
         if (path.startsWith("item.goat_horn.") || path.contains("goat_horn.sound")) {
             return IkariaSoundCategory.HORNS;
         }
-        if (path.contains("music_disc") || path.startsWith("records/") || path.contains("jukebox_song") || path.contains("jukebox")) {
+        if (path.contains("music_disc") || path.startsWith("records/")
+                || path.contains("jukebox_song") || path.contains("jukebox")) {
+            return IkariaSoundCategory.JUKEBOX;
+        }
+        if (className.toLowerCase(Locale.ROOT).contains("jukebox")) {
             return IkariaSoundCategory.JUKEBOX;
         }
         if (sound.getSource() == SoundSource.RECORDS && !path.startsWith("block.note_block")) {
@@ -178,6 +158,19 @@ public final class IkariaSoundControl {
                 // Sound not resolved yet.
             }
         }
+        if (className.contains("immersive_melodies") || "immersive_melodies".equals(namespace)) {
+            return IkariaSoundCategory.MELODIES;
+        }
+        if (!namespace.isEmpty()) {
+            for (IkariaSoundCategory category : IkariaSoundCategory.sliderCategories()) {
+                if (category.matchesNamespace(namespace)) {
+                    return category;
+                }
+            }
+            if (namespace.startsWith("create")) {
+                return IkariaSoundCategory.CREATE;
+            }
+        }
         return null;
     }
 
@@ -186,11 +179,19 @@ public final class IkariaSoundControl {
         if (configuredStreamer != streamerMode) {
             streamerMode = configuredStreamer;
             refreshRadioLineGain();
+        }
+
+        boolean soundChanged = false;
+        for (IkariaSoundCategory category : IkariaSoundCategory.sliderCategories()) {
+            float next = IkariaSoundConfig.volume(category).get().floatValue();
+            Float previous = SLIDER_VOLUMES.put(category, next);
+            if (previous == null || Float.floatToIntBits(previous) != Float.floatToIntBits(next)) {
+                soundChanged = true;
+            }
+        }
+        if (soundChanged) {
             refreshPlayingSounds();
         }
-        melodiesVolume = IkariaSoundConfig.VOLUME_MELODIES.get().floatValue();
-        hornsVolume = IkariaSoundConfig.VOLUME_HORNS.get().floatValue();
-        jukeboxVolume = IkariaSoundConfig.VOLUME_JUKEBOX.get().floatValue();
 
         float nextRadio = 1.0f;
         if (ModList.get().isLoaded("voicechat")) {
@@ -207,9 +208,11 @@ public final class IkariaSoundControl {
 
     public static void refreshPlayingSounds() {
         Minecraft mc = Minecraft.getInstance();
-        if (mc.getSoundManager() != null && mc.options != null) {
-            float records = mc.options.getSoundSourceVolume(SoundSource.RECORDS);
-            mc.getSoundManager().updateSourceVolume(SoundSource.RECORDS, records);
+        if (mc.getSoundManager() == null || mc.options == null) {
+            return;
+        }
+        for (SoundSource source : SoundSource.values()) {
+            mc.getSoundManager().updateSourceVolume(source, mc.options.getSoundSourceVolume(source));
         }
     }
 

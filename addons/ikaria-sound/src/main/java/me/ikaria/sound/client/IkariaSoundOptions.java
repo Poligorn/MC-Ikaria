@@ -4,6 +4,7 @@ import me.ikaria.sound.IkariaSoundCategory;
 import me.ikaria.sound.IkariaSoundConfig;
 import me.ikaria.sound.IkariaSoundControl;
 import net.minecraft.client.OptionInstance;
+import net.minecraft.client.gui.components.OptionsList;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 
@@ -11,30 +12,42 @@ public final class IkariaSoundOptions {
     private IkariaSoundOptions() {
     }
 
-    public static OptionInstance<Double> melodies() {
-        return volumeSlider("options.ikariasound.melodies", IkariaSoundCategory.MELODIES);
-    }
+    public static void addTo(OptionsList list) {
+        OptionInstance<?> melodies = volumeSlider(IkariaSoundCategory.MELODIES);
+        OptionInstance<?> horns = volumeSlider(IkariaSoundCategory.HORNS);
+        OptionInstance<?> jukebox = volumeSlider(IkariaSoundCategory.JUKEBOX);
+        list.addSmall(melodies, horns);
+        list.addSmall(jukebox, streamerMode());
 
-    public static OptionInstance<Double> horns() {
-        return volumeSlider("options.ikariasound.horns", IkariaSoundCategory.HORNS);
-    }
-
-    public static OptionInstance<Double> jukebox() {
-        return volumeSlider("options.ikariasound.jukebox", IkariaSoundCategory.JUKEBOX);
+        IkariaSoundCategory[] extras = {
+                IkariaSoundCategory.WHISTLES,
+                IkariaSoundCategory.CANNONS,
+                IkariaSoundCategory.GUNS,
+                IkariaSoundCategory.SHIPS,
+                IkariaSoundCategory.CREATE,
+                IkariaSoundCategory.EMOTES,
+                IkariaSoundCategory.SUPPS,
+                IkariaSoundCategory.PARAGLIDERS
+        };
+        for (int i = 0; i < extras.length; i += 2) {
+            list.addSmall(volumeSlider(extras[i]), volumeSlider(extras[i + 1]));
+        }
     }
 
     public static OptionInstance<Boolean> streamerMode() {
         return OptionInstance.createBoolean(
                 "options.ikariasound.streamer_mode",
-                OptionInstance.cachedConstantTooltip(Component.translatable("options.ikariasound.streamer_mode.tooltip")),
+                OptionInstance.cachedConstantTooltip(
+                        Component.translatable("options.ikariasound.streamer_mode.tooltip")
+                ),
                 IkariaSoundConfig.STREAMER_MODE.get(),
                 IkariaSoundControl::setStreamerMode
         );
     }
 
-    private static OptionInstance<Double> volumeSlider(String key, IkariaSoundCategory category) {
+    private static OptionInstance<Double> volumeSlider(IkariaSoundCategory category) {
         return new OptionInstance<>(
-                key,
+                category.optionKey(),
                 OptionInstance.noTooltip(),
                 IkariaSoundOptions::percentOrOff,
                 OptionInstance.UnitDouble.INSTANCE,

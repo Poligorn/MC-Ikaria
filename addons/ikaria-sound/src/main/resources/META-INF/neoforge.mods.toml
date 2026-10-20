@@ -10,8 +10,8 @@ displayName = "${mod_name}"
 displayTest = "IGNORE_SERVER_VERSION"
 authors = "MC-Ikaria"
 description = '''
-Client-only extra volume sliders and a global streamer mute for Live Radio, Immersive Melodies, goat horns, and jukeboxes/music discs.
-Does not redistribute or patch third-party jars.
+Client-only extra volume sliders for Live Radio (SVC), Immersive Melodies, goat horns, jukeboxes, and noisy pack mods.
+Streamer mode mutes Live Radio only. Does not redistribute or patch third-party jars.
 '''
 
 [[mixins]]

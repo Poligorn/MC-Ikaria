@@ -22,7 +22,6 @@ public abstract class SoundOptionsScreenMixin extends OptionsSubScreen {
         if (this.list == null) {
             return;
         }
-        this.list.addSmall(IkariaSoundOptions.melodies(), IkariaSoundOptions.horns());
-        this.list.addSmall(IkariaSoundOptions.jukebox(), IkariaSoundOptions.streamerMode());
+        IkariaSoundOptions.addTo(this.list);
     }
 }

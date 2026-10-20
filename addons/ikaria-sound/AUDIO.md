@@ -12,12 +12,10 @@
 
 ## Immersive Melodies 0.8.0+1.21.1
 
-Исходники и декомпиляция `immersive_melodies-neoforge-0.8.0+1.21.1.jar`.
-
 Ноты — `NoteSoundInstance` через `Minecraft.getSoundManager().play(...)`.
 `InstrumentItem.playNote` передаёт **`SoundSource.NEUTRAL`**. Это vanilla-ползунок «Дружелюбные существа», не SVC.
 
-Отдельный ползунок в «Музыка и звуки»; mixin `SoundEngine.calculateVolume` масштабирует по namespace `immersive_melodies` / классу `NoteSoundInstance`.
+Отдельный ползунок в «Музыка и звуки»; mixin `SoundEngine.calculateVolume` масштабирует по namespace `immersive_melodies` / классу `NoteSoundInstance`. Это MIDI-подобные ноты, не записи — режим стримера их не глушит.
 
 ## Козьи рога
 
@@ -33,6 +31,19 @@ Vanilla: `LevelRenderer.playJukeboxSong` → `SimpleSoundInstance.forJukeboxSong
 
 AudioPlayer не используется: NeoForge-порта нет.
 
+## Дополнительные категории пака
+
+Дешёвая и надёжная классификация по namespace звука (после более узких правил):
+
+- Bells & Whistles — `bellsandwhistles`
+- Пушки — `createbigcannons` (раньше общего `create*`)
+- Оружие — `ntgl`, `cgs`, `create_gunsmithing`
+- Корабли / винты — `aeronautics`, `simulated`, `sable`, `clockwork`, Hostile Skies, Sky Whale Ship
+- Машины Create — `create` и остальные namespace, начинающиеся с `create`
+- Emotecraft, Supplementaries/Amendments, Paragliders
+
+Не выносили в отдельные ползунки (мало шума / уже покрыто vanilla или Create): Fowl Play, Exposure, Pollution of the Realms (`adpother`), Pingit, декоративные Create-аддоны вроде Copycats/Interiors.
+
 ## Режим стримера
 
-Один флаг. `0` для radio gain, extra-multiplier для SoundManager-групп, `PlaySoundEvent.setSound(null)` если множитель 0.
+Только Live Radio: `0` для radio gain, HUD и кнопка в GUI радио. Остальные группы — свои ползунки в «Музыка и звуки». `PlaySoundEvent.setSound(null)` если множитель группы 0.
