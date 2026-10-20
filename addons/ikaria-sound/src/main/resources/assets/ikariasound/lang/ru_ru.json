@@ -1,0 +1,14 @@
+{
+  "key.categories.ikariasound": "Звук Ikaria",
+  "key.ikariasound.streamer_mode": "Режим стримера (радио, пластинки, рога, инструменты)",
+  "hud.ikariasound.muted": "РЕЖИМ СТРИМЕРА",
+  "message.ikariasound.streamer_on": "Режим стримера ВКЛ — радио, пластинки, рога и инструменты без звука",
+  "message.ikariasound.streamer_off": "Режим стримера ВЫКЛ — звук снова слышен",
+  "options.ikariasound.melodies": "Инструменты (Melodies)",
+  "options.ikariasound.horns": "Козьи рога",
+  "options.ikariasound.jukebox": "Проигрыватель / пластинки",
+  "options.ikariasound.streamer_mode": "Режим стримера",
+  "options.ikariasound.streamer_mode.tooltip": "На этом клиенте полностью глушит Live Radio, Immersive Melodies, козьи рога и проигрыватели/пластинки.",
+  "voicechat.category.ikariasound.live_radio": "Live Radio",
+  "voicechat.category.ikariasound.live_radio.desc": "Интернет-радио из Live Radio Mod. Заглушите, чтобы стрим не захватил чужой контент."
+}

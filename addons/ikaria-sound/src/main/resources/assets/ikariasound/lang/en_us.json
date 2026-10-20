@@ -1,0 +1,14 @@
+{
+  "key.categories.ikariasound": "Ikaria Sound",
+  "key.ikariasound.streamer_mode": "Streamer mode (mute radio, discs, horns, instruments)",
+  "hud.ikariasound.muted": "STREAMER MODE",
+  "message.ikariasound.streamer_on": "Streamer mode ON — radio, discs, horns and instruments muted",
+  "message.ikariasound.streamer_off": "Streamer mode OFF — copyright-sensitive audio audible again",
+  "options.ikariasound.melodies": "Instruments (Melodies)",
+  "options.ikariasound.horns": "Goat Horns",
+  "options.ikariasound.jukebox": "Jukebox / Discs",
+  "options.ikariasound.streamer_mode": "Streamer Mode",
+  "options.ikariasound.streamer_mode.tooltip": "Mutes Live Radio, Immersive Melodies, goat horns, and jukeboxes/music discs on this client.",
+  "voicechat.category.ikariasound.live_radio": "Live Radio",
+  "voicechat.category.ikariasound.live_radio.desc": "Internet radio from Live Radio Mod. Mute this to avoid capturing copyrighted streams."
+}
