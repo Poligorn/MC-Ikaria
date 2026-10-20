@@ -1,0 +1,9 @@
+{
+  "key.categories.radiovolume": "Громкость Live Radio",
+  "key.radiovolume.streamer_mode": "Режим стримера (выключить радио)",
+  "hud.radiovolume.muted": "РАДИО ВЫКЛ",
+  "message.radiovolume.streamer_on": "Режим стримера ВКЛ — Live Radio без звука",
+  "message.radiovolume.streamer_off": "Режим стримера ВЫКЛ — Live Radio слышно",
+  "voicechat.category.radiovolume.live_radio": "Live Radio",
+  "voicechat.category.radiovolume.live_radio.desc": "Интернет-радио из Live Radio Mod. Заглушите, чтобы стрим не захватил чужой контент."
+}

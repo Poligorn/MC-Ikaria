@@ -1,0 +1,9 @@
+{
+  "key.categories.radiovolume": "Live Radio Volume",
+  "key.radiovolume.streamer_mode": "Streamer mode (mute radio)",
+  "hud.radiovolume.muted": "RADIO MUTED",
+  "message.radiovolume.streamer_on": "Streamer mode ON — Live Radio muted",
+  "message.radiovolume.streamer_off": "Streamer mode OFF — Live Radio audible",
+  "voicechat.category.radiovolume.live_radio": "Live Radio",
+  "voicechat.category.radiovolume.live_radio.desc": "Internet radio from Live Radio Mod. Mute this to avoid capturing copyrighted streams."
+}

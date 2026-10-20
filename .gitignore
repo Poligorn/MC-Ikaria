@@ -22,3 +22,9 @@ crash-reports/
 
 # MkDocs build output
 site/
+
+# Live Radio Volume addon build
+addons/radio-volume/.gradle/
+addons/radio-volume/build/
+addons/radio-volume/run/
+addons/radio-volume/out/

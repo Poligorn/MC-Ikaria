@@ -1,0 +1,46 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/Poligorn/MC-Ikaria/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+displayTest = "IGNORE_SERVER_VERSION"
+authors = "MC-Ikaria"
+description = '''
+Client-only volume slider and streamer mute for Live Radio Mod.
+Registers a Simple Voice Chat volume category and scales the radio's Java Sound output. Does not redistribute or patch radiomod.jar.
+'''
+
+[[mixins]]
+config = "radiovolume.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "radiomod"
+type = "required"
+versionRange = "[1.0.2,)"
+ordering = "AFTER"
+side = "CLIENT"
+
+[[dependencies.${mod_id}]]
+modId = "voicechat_api"
+type = "required"
+versionRange = "[${voicechat_api_version},)"
+ordering = "AFTER"
+side = "CLIENT"

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.ikaria.radiovolume.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "RadioPlayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
