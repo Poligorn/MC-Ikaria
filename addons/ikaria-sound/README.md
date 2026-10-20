@@ -3,7 +3,7 @@
 Клиентский аддон для пака Aeronautics Ikaria (Minecraft 1.21.1, NeoForge 21.1.250).
 Один jar: отдельные ползунки для Live Radio, инструментов, рогов, пластинок и шумных модов пака плюс mute Live Radio для стрима.
 
-Готовый файл: `artifacts/ikariasound-neoforge-1.21.1-1.1.0.jar`.
+Готовый файл: `artifacts/ikariasound-neoforge-1.21.1-1.1.1.jar`.
 
 ## Куда какие ползунки
 
@@ -24,7 +24,7 @@
 
 Vanilla-ползунок «Проигрыватель/нотоблоки» по-прежнему влияет на нотоблоки и как множитель на рога/пластинки. Наши ползунки — дополнительный множитель.
 
-**Режим стримера глушит только Live Radio** (Immersive Melodies — MIDI-ноты, не записи). Клавиша в настройках управления (по умолчанию не назначена), тумблер в «Музыка и звуки», кнопка в GUI радио. Пока включён, в углу HUD горит `РЕЖИМ СТРИМЕРА — РАДИО ВЫКЛ`. Пишется в `config/ikariasound-client.toml`.
+**Режим стримера глушит только Live Radio** (Immersive Melodies — MIDI-ноты, не записи). Клавиша в настройках управления (по умолчанию не назначена), тумблер в «Музыка и звуки», кнопка в GUI радио справа на строке громкости (`Стример: выкл` / `Стример: вкл`). Пока включён, в углу HUD горит `РЕЖИМ СТРИМЕРА — РАДИО ВЫКЛ`. Пишется в `config/ikariasound-client.toml`.
 
 AudioPlayer (henkelmax) в NeoForge 1.21.1 нет — аддон на него не опирается.
 
@@ -34,14 +34,14 @@ AudioPlayer (henkelmax) в NeoForge 1.21.1 нет — аддон на него �
 
 1. Live Radio (`radiomod-1.0.2.jar`) — клиент **и** сервер, если радио используется.
 2. Immersive Melodies и Simple Voice Chat уже в паке.
-3. `ikariasound-neoforge-1.21.1-1.1.0.jar` → папка `mods` клиента.
+3. `ikariasound-neoforge-1.21.1-1.1.1.jar` → папка `mods` клиента.
 
 ## Сборка
 
 ```bash
 cd addons/ikaria-sound
 ./gradlew build
-# jar: build/libs/ikariasound-neoforge-1.21.1-1.1.0.jar
+# jar: build/libs/ikariasound-neoforge-1.21.1-1.1.1.jar
 ```
 
 Цели: Minecraft 1.21.1, NeoForge 21.1.250, voicechat-api 2.6.20+ (в паке SVC 2.6.22).

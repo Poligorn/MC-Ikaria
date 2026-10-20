@@ -20,12 +20,23 @@ import org.lwjgl.glfw.GLFW;
 
 public final class IkariaSoundClient {
     private static final String RADIO_SCREEN = "com.radiomod.screen.RadioScreen";
+    /** Matches {@code RadioScreen} image size / volume strip. */
     private static final int RADIO_IMAGE_WIDTH = 256;
     private static final int RADIO_IMAGE_HEIGHT = 248;
-    private static final int BUTTON_W = 88;
-    private static final int BUTTON_H = 16;
-    private static final int BUTTON_X_OFF = RADIO_IMAGE_WIDTH - 8 - BUTTON_W;
-    private static final int BUTTON_Y_OFF = 6;
+    private static final int RADIO_MARGIN = 8;
+    private static final int RADIO_VOL_Y = 194;
+    private static final int RADIO_VOL_W = 230;
+    private static final int BUTTON_H = 14;
+    // Same ARGB values as RadioScreen.drawStyledButton.
+    private static final int COL_ACCENT = 0xFFB26430;
+    private static final int COL_BTN_BORDER = 0xFF695A20;
+    private static final int COL_BTN_BG = 0xFF3E3828;
+    private static final int COL_BTN_BG_HOVER = 0xFF695A20;
+    private static final int COL_TOP = 0xFF504828;
+    private static final int COL_TOP_HOVER = 0xFF9A8430;
+    private static final int COL_TEXT = 0xFFE8DCC8;
+    private static final int COL_TEXT_DIM = 0xFF8A7E60;
+    private static final int COL_TEXT_ON = 0xFFFF5555;
 
     public static final KeyMapping STREAMER_MODE_KEY = new KeyMapping(
             "key.ikariasound.streamer_mode",
@@ -95,33 +106,24 @@ public final class IkariaSoundClient {
         if (!isRadioScreen(event.getScreen())) {
             return;
         }
-        Screen screen = event.getScreen();
-        int left = radioLeft(screen);
-        int top = radioTop(screen);
-        int bx = left + BUTTON_X_OFF;
-        int by = top + BUTTON_Y_OFF;
-        boolean hovered = inButton(event.getMouseX(), event.getMouseY(), screen);
-        boolean muted = IkariaSoundControl.isStreamerMode();
-        int border = hovered ? 0xFFB25A30 : 0xFF694A20;
-        int fill = muted ? 0xFF6B1C1C : 0xFF3D3328;
+        RadioStreamerButton button = radioStreamerButton(event.getScreen());
+        boolean hovered = button.contains(event.getMouseX(), event.getMouseY());
+        boolean on = IkariaSoundControl.isStreamerMode();
         GuiGraphics gfx = event.getGuiGraphics();
-        gfx.fill(bx - 1, by - 1, bx + BUTTON_W + 1, by + BUTTON_H + 1, border);
-        gfx.fill(bx, by, bx + BUTTON_W, by + BUTTON_H, fill);
-        Component label = Component.translatable(
-                muted ? "gui.ikariasound.radio_streamer_on" : "gui.ikariasound.radio_streamer_off"
+        gfx.fill(button.x - 1, button.y - 1, button.x + button.w + 1, button.y + button.h + 1,
+                hovered ? COL_ACCENT : COL_BTN_BORDER);
+        gfx.fill(button.x, button.y, button.x + button.w, button.y + button.h,
+                hovered ? COL_BTN_BG_HOVER : COL_BTN_BG);
+        gfx.fill(button.x, button.y, button.x + button.w, button.y + 1,
+                hovered ? COL_TOP_HOVER : COL_TOP);
+        int textColor = on ? COL_TEXT_ON : (hovered ? COL_TEXT : COL_TEXT_DIM);
+        gfx.drawCenteredString(
+                event.getScreen().getMinecraft().font,
+                button.label,
+                button.x + button.w / 2,
+                button.y + 3,
+                textColor
         );
-        Font font = screen.getMinecraft().font;
-        gfx.drawCenteredString(font, label, bx + BUTTON_W / 2, by + 4, muted ? 0xFFFF5555 : 0xFFE8D4A8);
-        if (muted) {
-            gfx.drawString(
-                    font,
-                    Component.translatable("gui.ikariasound.radio_streamer_hint"),
-                    left + 10,
-                    top + 196,
-                    0xFFFF5555,
-                    false
-            );
-        }
     }
 
     @SubscribeEvent
@@ -129,7 +131,7 @@ public final class IkariaSoundClient {
         if (event.getButton() != GLFW.GLFW_MOUSE_BUTTON_LEFT || !isRadioScreen(event.getScreen())) {
             return;
         }
-        if (!inButton(event.getMouseX(), event.getMouseY(), event.getScreen())) {
+        if (!radioStreamerButton(event.getScreen()).contains(event.getMouseX(), event.getMouseY())) {
             return;
         }
         IkariaSoundControl.toggleStreamerMode();
@@ -140,17 +142,28 @@ public final class IkariaSoundClient {
         return RADIO_SCREEN.equals(screen.getClass().getName());
     }
 
-    private static int radioLeft(Screen screen) {
-        return (screen.width - RADIO_IMAGE_WIDTH) / 2;
+    /**
+     * Same origin as {@code AbstractContainerScreen.leftPos/topPos}: centered panel in scaled GUI pixels.
+     */
+    private static RadioStreamerButton radioStreamerButton(Screen screen) {
+        Font font = screen.getMinecraft().font;
+        boolean on = IkariaSoundControl.isStreamerMode();
+        Component label = Component.translatable(
+                on ? "gui.ikariasound.radio_streamer_on" : "gui.ikariasound.radio_streamer_off"
+        );
+        int left = (screen.width - RADIO_IMAGE_WIDTH) / 2;
+        int top = (screen.height - RADIO_IMAGE_HEIGHT) / 2;
+        int stripX = left + RADIO_MARGIN;
+        int stripY = top + RADIO_VOL_Y;
+        int width = Math.max(72, font.width(label) + 10);
+        int x = stripX + RADIO_VOL_W - width;
+        int y = stripY + 6;
+        return new RadioStreamerButton(x, y, width, BUTTON_H, label);
     }
 
-    private static int radioTop(Screen screen) {
-        return (screen.height - RADIO_IMAGE_HEIGHT) / 2;
-    }
-
-    private static boolean inButton(double mx, double my, Screen screen) {
-        int bx = radioLeft(screen) + BUTTON_X_OFF;
-        int by = radioTop(screen) + BUTTON_Y_OFF;
-        return mx >= bx && mx < bx + BUTTON_W && my >= by && my < by + BUTTON_H;
+    private record RadioStreamerButton(int x, int y, int w, int h, Component label) {
+        boolean contains(double mx, double my) {
+            return mx >= x && mx < x + w && my >= y && my < y + h;
+        }
     }
 }

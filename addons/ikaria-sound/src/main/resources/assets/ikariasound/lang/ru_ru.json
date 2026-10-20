@@ -18,9 +18,8 @@
   "options.ikariasound.paragliders": "Параглайдеры",
   "options.ikariasound.streamer_mode": "Режим стримера",
   "options.ikariasound.streamer_mode.tooltip": "На этом клиенте глушит только Live Radio. Инструменты, рога, пластинки и остальные ползунки не трогает.",
-  "gui.ikariasound.radio_streamer_on": "Радио выкл",
-  "gui.ikariasound.radio_streamer_off": "Стример-mute",
-  "gui.ikariasound.radio_streamer_hint": "Режим стримера: Live Radio молчит (ползунок SVC / Музыка и звуки).",
+  "gui.ikariasound.radio_streamer_on": "Стример: вкл",
+  "gui.ikariasound.radio_streamer_off": "Стример: выкл",
   "voicechat.category.ikariasound.live_radio": "Live Radio",
   "voicechat.category.ikariasound.live_radio.desc": "Интернет-радио из Live Radio Mod. Заглушите ползунок или включите режим стримера, чтобы стрим не захватил чужой контент."
 }
