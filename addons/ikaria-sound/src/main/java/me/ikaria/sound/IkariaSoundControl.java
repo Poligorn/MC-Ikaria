@@ -139,9 +139,6 @@ public final class IkariaSoundControl {
         String path = location == null ? "" : location.getPath();
         String className = sound.getClass().getName();
 
-        if (path.startsWith("item.goat_horn.") || path.contains("goat_horn.sound")) {
-            return IkariaSoundCategory.HORNS;
-        }
         if (path.contains("music_disc") || path.startsWith("records/")
                 || path.contains("jukebox_song") || path.contains("jukebox")) {
             return IkariaSoundCategory.JUKEBOX;
@@ -149,7 +146,8 @@ public final class IkariaSoundControl {
         if (className.toLowerCase(Locale.ROOT).contains("jukebox")) {
             return IkariaSoundCategory.JUKEBOX;
         }
-        if (sound.getSource() == SoundSource.RECORDS && !path.startsWith("block.note_block")) {
+        if (sound.getSource() == SoundSource.RECORDS && !path.startsWith("block.note_block")
+                && !path.startsWith("item.goat_horn.") && !path.contains("goat_horn.sound")) {
             try {
                 if (sound.getSound() != null && sound.getSound().shouldStream()) {
                     return IkariaSoundCategory.JUKEBOX;
@@ -160,16 +158,6 @@ public final class IkariaSoundControl {
         }
         if (className.contains("immersive_melodies") || "immersive_melodies".equals(namespace)) {
             return IkariaSoundCategory.MELODIES;
-        }
-        if (!namespace.isEmpty()) {
-            for (IkariaSoundCategory category : IkariaSoundCategory.sliderCategories()) {
-                if (category.matchesNamespace(namespace)) {
-                    return category;
-                }
-            }
-            if (namespace.startsWith("create")) {
-                return IkariaSoundCategory.CREATE;
-            }
         }
         return null;
     }

@@ -17,13 +17,6 @@
 
 Отдельный ползунок в «Музыка и звуки»; mixin `SoundEngine.calculateVolume` масштабирует по namespace `immersive_melodies` / классу `NoteSoundInstance`. Это MIDI-подобные ноты, не записи — режим стримера их не глушит.
 
-## Козьи рога
-
-Vanilla 1.21.1: `InstrumentItem.play` → `SoundSource.RECORDS`, события `minecraft:item.goat_horn.sound.0`–`7`.
-Тот же слайдер, что у проигрывателя и нотоблоков (MC-251832, Works As Intended).
-
-Классификация по id звука `item.goat_horn.*`, отдельный слайдер в настройках звука. Нотоблоки (`block.note_block.*`) не трогаем.
-
 ## Проигрыватель и пластинки
 
 Vanilla: `LevelRenderer.playJukeboxSong` → `SimpleSoundInstance.forJukeboxSong` (`SoundSource.RECORDS`, stream из `sounds.json`).
@@ -31,19 +24,8 @@ Vanilla: `LevelRenderer.playJukeboxSong` → `SimpleSoundInstance.forJukeboxSong
 
 AudioPlayer не используется: NeoForge-порта нет.
 
-## Дополнительные категории пака
-
-Дешёвая и надёжная классификация по namespace звука (после более узких правил):
-
-- Bells & Whistles — `bellsandwhistles`
-- Пушки — `createbigcannons` (раньше общего `create*`)
-- Оружие — `ntgl`, `cgs`, `create_gunsmithing`
-- Корабли / винты — `aeronautics`, `simulated`, `sable`, `clockwork`, Hostile Skies, Sky Whale Ship
-- Машины Create — `create` и остальные namespace, начинающиеся с `create`
-- Emotecraft, Supplementaries/Amendments, Paragliders
-
-Не выносили в отдельные ползунки (мало шума / уже покрыто vanilla или Create): Fowl Play, Exposure, Pollution of the Realms (`adpother`), Pingit, декоративные Create-аддоны вроде Copycats/Interiors.
+Отдельный слайдер Melodies/пластинок в «Музыка и звуки». Козьи рога и шум пака (Create, пушки, корабли и т.д.) снова только на ванильных категориях — доп. ползунки убраны.
 
 ## Режим стримера
 
-Только Live Radio: `0` для radio gain, HUD и кнопка в GUI радио. Остальные группы — свои ползунки в «Музыка и звуки». `PlaySoundEvent.setSound(null)` если множитель группы 0.
+Только Live Radio: `0` для radio gain. В GUI радио — маленькая иконка динамика справа на строке Volume (не наезжает на +1/+10). На HUD — та же иконка, полупрозрачная. `PlaySoundEvent.setSound(null)` если множитель Melodies/пластинок 0.

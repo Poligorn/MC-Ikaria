@@ -15,7 +15,7 @@ public final class IkariaSoundConfig {
         STREAMER_MODE = builder
                 .comment(
                         "When true, Live Radio is fully muted on this client (OBS-safe).",
-                        "Immersive Melodies, goat horns, jukeboxes and other sliders stay independent."
+                        "Immersive Melodies and jukebox sliders stay independent."
                 )
                 .define("streamerMode", false);
         builder.push("volumes");

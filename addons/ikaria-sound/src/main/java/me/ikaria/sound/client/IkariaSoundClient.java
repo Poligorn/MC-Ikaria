@@ -26,17 +26,19 @@ public final class IkariaSoundClient {
     private static final int RADIO_MARGIN = 8;
     private static final int RADIO_VOL_Y = 194;
     private static final int RADIO_VOL_W = 230;
-    private static final int BUTTON_H = 14;
+    /** RadioScreen volume +/- buttons sit at volY + 22; keep a gap above them. */
+    private static final int ICON = 12;
+    private static final int ICON_Y_OFF = 2;
+    private static final int HUD_ICON = 8;
     // Same ARGB values as RadioScreen.drawStyledButton.
     private static final int COL_ACCENT = 0xFFB26430;
     private static final int COL_BTN_BORDER = 0xFF695A20;
     private static final int COL_BTN_BG = 0xFF3E3828;
     private static final int COL_BTN_BG_HOVER = 0xFF695A20;
-    private static final int COL_TOP = 0xFF504828;
-    private static final int COL_TOP_HOVER = 0xFF9A8430;
-    private static final int COL_TEXT = 0xFFE8DCC8;
-    private static final int COL_TEXT_DIM = 0xFF8A7E60;
-    private static final int COL_TEXT_ON = 0xFFFF5555;
+    private static final int COL_GLYPH = 0xFF8A7E60;
+    private static final int COL_GLYPH_HOVER = 0xFFE8DCC8;
+    private static final int COL_GLYPH_ON = 0xFFCC5555;
+    private static final int COL_HUD = 0x88AA5555;
 
     public static final KeyMapping STREAMER_MODE_KEY = new KeyMapping(
             "key.ikariasound.streamer_mode",
@@ -89,16 +91,12 @@ public final class IkariaSoundClient {
             return;
         }
         Minecraft mc = Minecraft.getInstance();
-        if (mc.options.hideGui) {
+        if (mc.options.hideGui || isRadioScreen(mc.screen)) {
             return;
         }
-        GuiGraphics graphics = event.getGuiGraphics();
-        Component label = Component.translatable("hud.ikariasound.muted");
-        int width = mc.font.width(label);
-        int x = 4;
-        int y = mc.getWindow().getGuiScaledHeight() - 38;
-        graphics.fill(x - 2, y - 2, x + width + 2, y + 10, 0xAA000000);
-        graphics.drawString(mc.font, label, x, y, 0xFFFF5555, false);
+        int x = 3;
+        int y = mc.getWindow().getGuiScaledHeight() - 20;
+        drawSpeaker(event.getGuiGraphics(), x, y, HUD_ICON, true, COL_HUD);
     }
 
     @SubscribeEvent
@@ -106,24 +104,24 @@ public final class IkariaSoundClient {
         if (!isRadioScreen(event.getScreen())) {
             return;
         }
-        RadioStreamerButton button = radioStreamerButton(event.getScreen());
-        boolean hovered = button.contains(event.getMouseX(), event.getMouseY());
+        Screen screen = event.getScreen();
+        int x = radioIconX(screen);
+        int y = radioIconY(screen);
+        boolean hovered = inRadioIcon(event.getMouseX(), event.getMouseY(), screen);
         boolean on = IkariaSoundControl.isStreamerMode();
         GuiGraphics gfx = event.getGuiGraphics();
-        gfx.fill(button.x - 1, button.y - 1, button.x + button.w + 1, button.y + button.h + 1,
-                hovered ? COL_ACCENT : COL_BTN_BORDER);
-        gfx.fill(button.x, button.y, button.x + button.w, button.y + button.h,
-                hovered ? COL_BTN_BG_HOVER : COL_BTN_BG);
-        gfx.fill(button.x, button.y, button.x + button.w, button.y + 1,
-                hovered ? COL_TOP_HOVER : COL_TOP);
-        int textColor = on ? COL_TEXT_ON : (hovered ? COL_TEXT : COL_TEXT_DIM);
-        gfx.drawCenteredString(
-                event.getScreen().getMinecraft().font,
-                button.label,
-                button.x + button.w / 2,
-                button.y + 3,
-                textColor
-        );
+        gfx.fill(x - 1, y - 1, x + ICON + 1, y + ICON + 1, hovered ? COL_ACCENT : COL_BTN_BORDER);
+        gfx.fill(x, y, x + ICON, y + ICON, hovered ? COL_BTN_BG_HOVER : COL_BTN_BG);
+        int glyph = on ? COL_GLYPH_ON : (hovered ? COL_GLYPH_HOVER : COL_GLYPH);
+        drawSpeaker(gfx, x + 1, y + 1, ICON - 2, on, glyph);
+        if (hovered) {
+            Component tip = Component.translatable(
+                    on ? "gui.ikariasound.radio_streamer_on" : "gui.ikariasound.radio_streamer_off"
+            );
+            Font font = screen.getMinecraft().font;
+            int tipX = x - 4 - font.width(tip);
+            gfx.drawString(font, tip, tipX, y + 2, glyph, false);
+        }
     }
 
     @SubscribeEvent
@@ -131,7 +129,7 @@ public final class IkariaSoundClient {
         if (event.getButton() != GLFW.GLFW_MOUSE_BUTTON_LEFT || !isRadioScreen(event.getScreen())) {
             return;
         }
-        if (!radioStreamerButton(event.getScreen()).contains(event.getMouseX(), event.getMouseY())) {
+        if (!inRadioIcon(event.getMouseX(), event.getMouseY(), event.getScreen())) {
             return;
         }
         IkariaSoundControl.toggleStreamerMode();
@@ -139,31 +137,54 @@ public final class IkariaSoundClient {
     }
 
     private static boolean isRadioScreen(Screen screen) {
-        return RADIO_SCREEN.equals(screen.getClass().getName());
+        return screen != null && RADIO_SCREEN.equals(screen.getClass().getName());
     }
 
-    /**
-     * Same origin as {@code AbstractContainerScreen.leftPos/topPos}: centered panel in scaled GUI pixels.
-     */
-    private static RadioStreamerButton radioStreamerButton(Screen screen) {
-        Font font = screen.getMinecraft().font;
-        boolean on = IkariaSoundControl.isStreamerMode();
-        Component label = Component.translatable(
-                on ? "gui.ikariasound.radio_streamer_on" : "gui.ikariasound.radio_streamer_off"
-        );
-        int left = (screen.width - RADIO_IMAGE_WIDTH) / 2;
-        int top = (screen.height - RADIO_IMAGE_HEIGHT) / 2;
-        int stripX = left + RADIO_MARGIN;
-        int stripY = top + RADIO_VOL_Y;
-        int width = Math.max(72, font.width(label) + 10);
-        int x = stripX + RADIO_VOL_W - width;
-        int y = stripY + 6;
-        return new RadioStreamerButton(x, y, width, BUTTON_H, label);
+    private static int radioLeft(Screen screen) {
+        return (screen.width - RADIO_IMAGE_WIDTH) / 2;
     }
 
-    private record RadioStreamerButton(int x, int y, int w, int h, Component label) {
-        boolean contains(double mx, double my) {
-            return mx >= x && mx < x + w && my >= y && my < y + h;
+    private static int radioTop(Screen screen) {
+        return (screen.height - RADIO_IMAGE_HEIGHT) / 2;
+    }
+
+    private static int radioIconX(Screen screen) {
+        return radioLeft(screen) + RADIO_MARGIN + RADIO_VOL_W - ICON;
+    }
+
+    private static int radioIconY(Screen screen) {
+        return radioTop(screen) + RADIO_VOL_Y + ICON_Y_OFF;
+    }
+
+    private static boolean inRadioIcon(double mx, double my, Screen screen) {
+        int x = radioIconX(screen);
+        int y = radioIconY(screen);
+        return mx >= x && mx < x + ICON && my >= y && my < y + ICON;
+    }
+
+    private static void drawSpeaker(GuiGraphics gfx, int x, int y, int size, boolean muted, int color) {
+        int s = Math.max(6, size);
+        int bodyX1 = x + Math.max(1, s / 6);
+        int bodyX2 = x + s / 2 - 1;
+        int bodyY1 = y + s / 4;
+        int bodyY2 = y + s - s / 4 - 1;
+        gfx.fill(bodyX1, bodyY1, bodyX2 + 1, bodyY2 + 1, color);
+        int hornX = bodyX2 + 1;
+        gfx.fill(hornX, y + s / 6, hornX + Math.max(1, s / 8), y + s - s / 6, color);
+        if (muted) {
+            int x0 = x + 1;
+            int y0 = y + 1;
+            int x1 = x + s - 2;
+            int y1 = y + s - 2;
+            for (int i = 0; i <= s - 3; i++) {
+                int px = x0 + i;
+                int py = y0 + (i * (y1 - y0) + (s - 3) / 2) / Math.max(1, s - 3);
+                gfx.fill(px, py, px + 1, py + 1, color);
+            }
+        } else {
+            int wave = hornX + Math.max(2, s / 5);
+            gfx.fill(wave, y + s / 3, wave + 1, y + s - s / 3, color);
+            gfx.fill(wave + 2, y + s / 5, wave + 3, y + s - s / 5, color);
         }
     }
 }
