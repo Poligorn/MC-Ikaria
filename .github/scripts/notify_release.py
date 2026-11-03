@@ -70,6 +70,8 @@ def main() -> int:
     repo = os.environ.get("REPO", "")
     summary = os.environ.get("MODS_SUMMARY", "")
     role_id = os.environ.get("PING_ROLE_ID", "").strip()
+    platform = os.environ.get("RELEASE_PLATFORM", "").strip()
+    platform_label = {"modrinth": "Modrinth", "curseforge": "CurseForge"}.get(platform, "")
 
     body = ""
     cl = Path("CHANGELOG_RELEASE.md")
@@ -81,22 +83,40 @@ def main() -> int:
     release_url = f"https://github.com/{repo}/releases/tag/{tag}"
     loader_label = f"{loader.capitalize()} {loader_version}".strip()
 
+    if platform == "modrinth":
+        downloads = (
+            f"• [Modrinth / .mrpack]({release_url})\n"
+            f"• [Ручная установка / jars]({release_url})"
+        )
+    elif platform == "curseforge":
+        downloads = (
+            f"• [CurseForge / .zip]({release_url})\n"
+            f"• [Серверный пак]({release_url})"
+        )
+    else:
+        downloads = (
+            f"• [Modrinth / .mrpack]({release_url})\n"
+            f"• [CurseForge / .zip]({release_url})\n"
+            f"• [Ручная установка / jars]({release_url})"
+        )
+
+    title = f"🚀 {name} {tag}"
+    if platform_label:
+        title = f"🚀 {name} {tag} ({platform_label})"
+
     embed = {
-        "title": f"🚀 {name} {tag}",
+        "title": title,
         "url": release_url,
         "description": body or "Новая версия доступна для загрузки.",
         "color": COLOR_RELEASE,
         "fields": [
             {"name": "Minecraft", "value": mc, "inline": True},
             {"name": "Загрузчик", "value": loader_label or "—", "inline": True},
+            {"name": "Платформа", "value": platform_label or "—", "inline": True},
             {"name": "Моды", "value": summary or "—", "inline": True},
             {
                 "name": "📥 Скачать",
-                "value": (
-                    f"• [Modrinth / .mrpack]({release_url})\n"
-                    f"• [CurseForge / .zip]({release_url})\n"
-                    f"• [Ручная установка / jars]({release_url})"
-                ),
+                "value": downloads,
                 "inline": False,
             },
         ],
@@ -109,7 +129,8 @@ def main() -> int:
         "allowed_mentions": {"parse": [], "roles": [role_id] if role_id else []},
     }
     if role_id:
-        payload["content"] = f"<@&{role_id}> вышла новая версия — **{tag}**"
+        where = f" для {platform_label}" if platform_label else ""
+        payload["content"] = f"<@&{role_id}> вышла новая версия{where} — **{tag}**"
 
     return 0 if send(webhook, payload) else 1
 
