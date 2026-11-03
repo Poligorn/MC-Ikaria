@@ -1,16 +1,19 @@
-name: Release -> 3 builds + announce
+name: Release
 
-# Любой push/merge в main собирает 3 билда, создаёт Release и постит анонс.
+# Push to `modrinth` → .mrpack + manual zip (all jars).
+# Push to `curseforge` → CF client zip (manifest) + server zip.
+# Tags: v<version>-modrinth / v<version>-curseforge so they never collide.
+# Skip + no Discord if that tag already exists.
 on:
   push:
-    branches: [main]
+    branches: [modrinth, curseforge]
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: release-main
+  group: release-${{ github.ref_name }}
   cancel-in-progress: false
 
 jobs:
@@ -21,6 +24,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Resolve platform
+        id: plat
+        run: |
+          REF="${{ github.ref_name }}"
+          if [ "$REF" = "curseforge" ]; then
+            echo "platform=curseforge" >> "$GITHUB_OUTPUT"
+          else
+            echo "platform=modrinth" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -45,6 +58,8 @@ jobs:
 
       - name: Read pack metadata
         id: meta
+        env:
+          RELEASE_PLATFORM: ${{ steps.plat.outputs.platform }}
         run: python .github/scripts/pack_meta.py
 
       - name: Check if tag already exists
@@ -68,27 +83,17 @@ jobs:
           TAG: ${{ steps.meta.outputs.tag }}
         run: python .github/scripts/changelog.py
 
-      # ---------- BUILD 1: Modrinth (.mrpack) ----------
+      # ---------- Modrinth: .mrpack ----------
       # FTB Maven (maven.ftb.dev) is not on the default mrpack host whitelist.
-      # Without --restrictDomains=false those mods never enter modrinth.index.json.
       - name: Build Modrinth pack
-        if: steps.tagcheck.outputs.exists == 'false'
+        if: steps.tagcheck.outputs.exists == 'false' && steps.plat.outputs.platform == 'modrinth'
         run: |
           mkdir -p dist
           packwiz modrinth export --restrictDomains=false -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
 
-      # ---------- BUILD 2: CurseForge (.zip) ----------
-      # packwiz кладёт [update.curseforge] только в manifest.json (ID), без jar.
-      # Клиентский zip без API тогда теряет FTB — дописываем jar в overrides/mods.
-      - name: Build CurseForge pack
-        if: steps.tagcheck.outputs.exists == 'false'
-        run: |
-          packwiz curseforge export -s client -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}-curseforge.zip"
-          python .github/scripts/inject_cf_override_jars.py "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}-curseforge.zip"
-
-      # ---------- BUILD 3: Manual ZIP (jars + configs) ----------
+      # ---------- Modrinth: manual ZIP (all jars + config/kubejs/resourcepacks) ----------
       - name: Build manual ZIP
-        if: steps.tagcheck.outputs.exists == 'false'
+        if: steps.tagcheck.outputs.exists == 'false' && steps.plat.outputs.platform == 'modrinth'
         id: manual
         env:
           SLUG: ${{ steps.meta.outputs.slug }}
@@ -97,6 +102,19 @@ jobs:
           LOADER: ${{ steps.meta.outputs.loader }}
           LOADER_VERSION: ${{ steps.meta.outputs.loader_version }}
         run: python .github/scripts/build_manual_zip.py
+
+      # ---------- CurseForge: client zip (manifest IDs, no injected mod jars) ----------
+      - name: Build CurseForge client pack
+        if: steps.tagcheck.outputs.exists == 'false' && steps.plat.outputs.platform == 'curseforge'
+        run: |
+          mkdir -p dist
+          packwiz curseforge export -s client -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}-curseforge.zip"
+
+      # ---------- CurseForge: server zip (same manifest model, server-side mods) ----------
+      - name: Build CurseForge server pack
+        if: steps.tagcheck.outputs.exists == 'false' && steps.plat.outputs.platform == 'curseforge'
+        run: |
+          packwiz curseforge export -s server -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}-curseforge-server.zip"
 
       - name: List artifacts
         if: steps.tagcheck.outputs.exists == 'false'
@@ -126,4 +144,5 @@ jobs:
           LOADER_VERSION: ${{ steps.meta.outputs.loader_version }}
           MODS_SUMMARY: ${{ steps.changelog.outputs.mods_summary }}
           REPO: ${{ github.repository }}
+          RELEASE_PLATFORM: ${{ steps.plat.outputs.platform }}
         run: python .github/scripts/notify_release.py
