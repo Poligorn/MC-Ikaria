@@ -11,3 +11,7 @@ hash = "f0a8e65828f4a36c500f4f2cad99dce89f4899711f3ebe4b8a691bf26a8be9ac8f833865
 [update.modrinth]
 mod-id = "Jdbbtt0i"
 version = "kVi3TESX"
+
+[update.curseforge]
+file-id = 8745418
+project-id = 889722

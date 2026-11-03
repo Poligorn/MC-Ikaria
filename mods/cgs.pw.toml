@@ -11,3 +11,7 @@ hash = "599e072de61ee1c0dc70da087b493948cb58752c50b511a130dde7c5e13fd88c9816de0a
 [update.modrinth]
 mod-id = "7KCNsGPM"
 version = "AmBZCjMo"
+
+[update.curseforge]
+file-id = 8501347
+project-id = 1194036

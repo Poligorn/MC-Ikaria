@@ -11,3 +11,7 @@ hash = "6ced9b88562a3f14f3fc2cbc8b496557a7b1e5908b27f5813bc5784a9246bd7560f83b60
 [update.modrinth]
 mod-id = "tGVwBATM"
 version = "bzJ2edxy"
+
+[update.curseforge]
+file-id = 8607775
+project-id = 1561022

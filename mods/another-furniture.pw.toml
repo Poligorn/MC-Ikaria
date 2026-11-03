@@ -11,3 +11,7 @@ hash = "790a07c354b4e729553150cdc8e7129ca7ab1260d5db5b46ced852edf284789ab69e1250
 [update.modrinth]
 mod-id = "ulloLmqG"
 version = "cugGiMKt"
+
+[update.curseforge]
+file-id = 8955672
+project-id = 610492

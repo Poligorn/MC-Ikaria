@@ -11,3 +11,7 @@ hash = "04409013edce65678d02489a7b830ba7d5e18e7c705243c8208f52661da62e7e337a09fe
 [update.modrinth]
 mod-id = "XaDC71GB"
 version = "qPASucBM"
+
+[update.curseforge]
+file-id = 8378498
+project-id = 936015

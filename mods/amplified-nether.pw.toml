@@ -11,3 +11,7 @@ hash = "1d778f0df10a97b967dea225b7e30e2699a3cd90682fcc1035eb386c6620a682104ac88a
 [update.modrinth]
 mod-id = "wXiGiyGX"
 version = "agiByWs3"
+
+[update.curseforge]
+file-id = 8425271
+project-id = 552176

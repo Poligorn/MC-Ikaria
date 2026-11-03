@@ -11,3 +11,7 @@ hash = "2f6f77d90ee117efbd14737a7ef58afce1c80074b0cec7045b2a6b5faf657577ebc3fb83
 [update.modrinth]
 mod-id = "1vkzEZjE"
 version = "dtmmErtS"
+
+[update.curseforge]
+file-id = 7966159
+project-id = 271009

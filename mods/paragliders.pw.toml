@@ -11,3 +11,7 @@ hash = "b2d986b5eb21b12ad59b0b4ac3f4ac00457562031064eada7870c023f22ba06b57712d67
 [update.modrinth]
 mod-id = "esqWA0aQ"
 version = "tkTruHIA"
+
+[update.curseforge]
+file-id = 7795089
+project-id = 289240

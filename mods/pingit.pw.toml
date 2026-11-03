@@ -11,3 +11,7 @@ hash = "0da8e22d704150858409353c67a23208cd832f29ab93ebdbb679142f4d7ca3a7bebb8870
 [update.modrinth]
 mod-id = "hdLwGiza"
 version = "v1H3jjtB"
+
+[update.curseforge]
+file-id = 8494656
+project-id = 1596806
