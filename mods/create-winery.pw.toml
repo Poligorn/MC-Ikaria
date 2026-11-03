@@ -11,3 +11,7 @@ hash = "8812fd4b3299d229c6edfc8a46a8c93610a2c857793a0ffb04538edf01466cf359a8afc1
 [update.modrinth]
 mod-id = "zBuk6egG"
 version = "vTUNDdDM"
+
+[update.curseforge]
+file-id = 7831305
+project-id = 1161283

@@ -11,3 +11,7 @@ hash = "3435cf8b033838f6584c7293e16a6f33b108be78562e56f61d9b5561c7771c43e591f8ac
 [update.modrinth]
 mod-id = "hAnl9nbm"
 version = "YSOT3roi"
+
+[update.curseforge]
+file-id = 8400701
+project-id = 1105855

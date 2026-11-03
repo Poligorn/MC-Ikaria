@@ -27,6 +27,13 @@ def main() -> int:
     version = pack.get("version", "0.0.0")
     slug = "".join(c if c.isalnum() or c in "-_" else "-" for c in name.lower()).strip("-")
 
+    platform = os.environ.get("RELEASE_PLATFORM", "").strip()
+    if platform not in ("modrinth", "curseforge"):
+        ref = os.environ.get("GITHUB_REF_NAME", "").strip()
+        platform = ref if ref in ("modrinth", "curseforge") else ""
+    # v<version>-modrinth / v<version>-curseforge — same pack version, no tag clash
+    tag = f"v{version}-{platform}" if platform else f"v{version}"
+
     data = {
         "name": name,
         "slug": slug,
@@ -34,7 +41,8 @@ def main() -> int:
         "mc": mc,
         "loader": loader,
         "loader_version": loader_version,
-        "tag": f"v{version}",
+        "platform": platform or "unknown",
+        "tag": tag,
     }
 
     out = os.environ.get("GITHUB_OUTPUT")

@@ -11,3 +11,7 @@ hash = "d5fd85561fe022127c5453954d3f94175ef6baacc1220469a0294201b05fba07b5a2e00a
 [update.modrinth]
 mod-id = "5m2kV8xK"
 version = "imvFmxur"
+
+[update.curseforge]
+file-id = 8501185
+project-id = 998474

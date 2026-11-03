@@ -11,3 +11,7 @@ hash = "eed7ed02277e32f374da0999bbb24410c04543ca39e6e349ca9e441c468e218cf0cad591
 [update.modrinth]
 mod-id = "JtifUr64"
 version = "2y01mBUy"
+
+[update.curseforge]
+file-id = 6294123
+project-id = 1015155

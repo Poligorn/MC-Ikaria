@@ -11,3 +11,7 @@ hash = "61016f2105abffea09f57a9ad047e192d67c8ac9faea62f6d2d6af3228edabc353dba563
 [update.modrinth]
 mod-id = "ae2lDuIP"
 version = "YsRIzAhz"
+
+[update.curseforge]
+file-id = 8249929
+project-id = 978675

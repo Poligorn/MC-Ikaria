@@ -11,3 +11,7 @@ hash = "ea8bb83fd10a9936d52c72b7952ab46674ca3426d741a7e42f301df19e1474b47594ab9a
 [update.modrinth]
 mod-id = "pvcsfne4"
 version = "csBO1q5h"
+
+[update.curseforge]
+file-id = 7314829
+project-id = 832983

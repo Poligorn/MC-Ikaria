@@ -11,3 +11,7 @@ hash = "9bec55e25a6efeae2aea3b6eed754815a3e2f4f84b62e1f15e453fca849451996fb70e4e
 [update.modrinth]
 mod-id = "SYrakyVL"
 version = "VlvXeRGz"
+
+[update.curseforge]
+file-id = 8043293
+project-id = 1132038

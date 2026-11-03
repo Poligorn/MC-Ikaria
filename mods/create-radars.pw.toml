@@ -11,3 +11,7 @@ hash = "9ce111ea7e39fe979a6d423766820bbdd8c7e61ecf72db35b94539330aadc0cd45b5eed4
 [update.modrinth]
 mod-id = "BLu2Yqfq"
 version = "AntNFNAx"
+
+[update.curseforge]
+file-id = 8227753
+project-id = 1152836

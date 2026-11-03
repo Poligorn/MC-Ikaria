@@ -11,3 +11,7 @@ hash = "6e4a98011c30e2157a7e8aa64bd05a23ce2dbc56c46aa673c40147f3743f1a3cdcdd68dd
 [update.modrinth]
 mod-id = "KmyhssPl"
 version = "tTkOkmZ6"
+
+[update.curseforge]
+file-id = 8172510
+project-id = 1123746

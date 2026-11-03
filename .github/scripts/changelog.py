@@ -14,9 +14,16 @@ def sh(*args: str) -> str:
 
 
 def prev_tag(current: str) -> str:
-    """Предыдущий тег вида vX.Y.Z, отсортированный по версии."""
+    """Предыдущий тег той же платформы (vX.Y.Z-modrinth / -curseforge), иначе vX.Y.Z."""
     tags = [t for t in sh("git", "tag", "--list", "v*", "--sort=-v:refname").splitlines() if t]
     tags = [t for t in tags if t != current]
+    for suffix in ("-modrinth", "-curseforge"):
+        if current.endswith(suffix):
+            same = [t for t in tags if t.endswith(suffix)]
+            if same:
+                return same[0]
+            unsuffixed = [t for t in tags if re.fullmatch(r"v\d+(?:\.\d+)*", t)]
+            return unsuffixed[0] if unsuffixed else (tags[0] if tags else "")
     return tags[0] if tags else ""
 
 

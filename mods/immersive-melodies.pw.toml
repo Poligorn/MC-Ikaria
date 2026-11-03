@@ -11,3 +11,7 @@ hash = "79bf2f8dccb5b0db017f77956d73721d54e093416ebe4785f378515fc791ca9a2098d103
 [update.modrinth]
 mod-id = "TaSmHw8V"
 version = "RLpigSXC"
+
+[update.curseforge]
+file-id = 8898367
+project-id = 904471

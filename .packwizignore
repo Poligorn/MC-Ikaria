@@ -2,3 +2,6 @@
 site/
 **/__pycache__/
 *.pyc
+
+# Jars are downloaded by packwiz/CI; never index them as pack overrides
+mods/*.jar

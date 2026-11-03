@@ -11,3 +11,7 @@ hash = "8f9d9d9800bb028897333754b7eacb49d64fb41ccb85e308cc38de5c74bbd9572fe12ce2
 [update.modrinth]
 mod-id = "DnNYdJsx"
 version = "wC0uTsko"
+
+[update.curseforge]
+file-id = 8376908
+project-id = 892086

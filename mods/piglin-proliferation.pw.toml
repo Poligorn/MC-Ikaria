@@ -11,3 +11,7 @@ hash = "bc13e37709d8466da392ab869aa352143b42c8c93107e0b6b99695cd990ea474d0229acc
 [update.modrinth]
 mod-id = "iRE67WIn"
 version = "NsVkx365"
+
+[update.curseforge]
+file-id = 8282482
+project-id = 657831
