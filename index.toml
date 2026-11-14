@@ -7373,10 +7373,6 @@ file = "options.txt"
 hash = "301b15c58d0785ad1243d76ef610c80db75c2d5fa5a306e4e9867ffdcbadedfa"
 
 [[files]]
-file = "resourcepacks/ASI RU.zip"
-hash = "801bd058b4c773a7ba52ca5ddf544478dfb4543ba945ff513fdcf22ae23677ff"
-
-[[files]]
 file = "resourcepacks/Create FTB Quests.zip"
 hash = "7b9c330b8ab96c240ccb4da619df4d76b6cbf68a37364fe06998af91e59e2628"
 
@@ -7387,6 +7383,10 @@ hash = "ff589668f31a907ee2b6da5af21926577f9975d4a868e5cf316bbe22fa7d9d1b"
 [[files]]
 file = "resourcepacks/CreateSophBackpacks.zip"
 hash = "cb63a5a33c142ce588f1df020c7d4615f57f0e312064e03d4e7901060803905d"
+
+[[files]]
+file = "resourcepacks/Ikaria RU.zip"
+hash = "0aca769c022552ad1669ad43bb7e04b4183f69eae0e0206dc22091796b77397d"
 
 [[files]]
 file = "servers.dat"
