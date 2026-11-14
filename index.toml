@@ -7370,7 +7370,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "301b15c58d0785ad1243d76ef610c80db75c2d5fa5a306e4e9867ffdcbadedfa"
+hash = "acd9559a6c82ac7cd933c514a2a0c019a1f0c445ee9d9d1fa7b2850218ac992b"
 
 [[files]]
 file = "resourcepacks/Create FTB Quests.zip"
@@ -7386,7 +7386,7 @@ hash = "cb63a5a33c142ce588f1df020c7d4615f57f0e312064e03d4e7901060803905d"
 
 [[files]]
 file = "resourcepacks/Ikaria RU.zip"
-hash = "0aca769c022552ad1669ad43bb7e04b4183f69eae0e0206dc22091796b77397d"
+hash = "79fdc2e933100f041815f867d2a6da5f6335d07a1cab31e95ce6023172b6abd1"
 
 [[files]]
 file = "servers.dat"

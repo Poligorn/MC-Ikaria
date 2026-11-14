@@ -48,7 +48,7 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","generated/fragmentum_layer","mod_resources","moonlight:merged_pack","file/Create Style Interface 1.21.zip","file/Create FTB Quests.zip","file/CreateSophBackpacks.zip","file/ASI RU.zip"]
+resourcePacks:["vanilla","generated/fragmentum_layer","mod_resources","moonlight:merged_pack","file/Create Style Interface 1.21.zip","file/Create FTB Quests.zip","file/CreateSophBackpacks.zip","file/Ikaria RU"]
 incompatibleResourcePacks:["file/Create FTB Quests.zip"]
 lastServer:185.9.145.235:30975
 lang:ru_ru
@@ -221,11 +221,11 @@ key_gui.xaero_toggle_dimension:key.keyboard.unknown
 key_key.sophisticatedbackpacks.open_backpack:key.keyboard.i
 key_key.sophisticatedbackpacks.inventory_interaction:key.keyboard.i:SHIFT
 key_key.sophisticatedbackpacks.tool_swap:key.keyboard.c
+key_key.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.4:SHIFT
+key_key.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.5:SHIFT
 key_key.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.1:SHIFT
 key_key.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.2:SHIFT
 key_key.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.3:SHIFT
-key_key.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.4:SHIFT
-key_key.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.5:SHIFT
 key_simulated.keyinfo.rotate_mode:key.keyboard.tab
 key_simulated.keyinfo.scroll_up:key.keyboard.unknown
 key_simulated.keyinfo.scroll_down:key.keyboard.unknown
