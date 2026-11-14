@@ -4,9 +4,9 @@ side = "both"
 pin = true
 
 [download]
+url = "https://mediafilez.forgecdn.net/files/9470/330/wormhole-portals-0.6.jar"
 hash-format = "sha1"
 hash = "c51cbac0912c3f8f74aca97b4d7f3e04c367226f"
-mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
