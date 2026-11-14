@@ -7385,9 +7385,5 @@ file = "resourcepacks/CreateSophBackpacks.zip"
 hash = "cb63a5a33c142ce588f1df020c7d4615f57f0e312064e03d4e7901060803905d"
 
 [[files]]
-file = "resourcepacks/Ikaria RU.zip"
-hash = "0aca769c022552ad1669ad43bb7e04b4183f69eae0e0206dc22091796b77397d"
-
-[[files]]
 file = "servers.dat"
 hash = "17602e29d79e15ad8a37c1cfc008a41423713d35b813185e784b3eefef2cbd20"
