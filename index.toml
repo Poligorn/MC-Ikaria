@@ -7130,8 +7130,8 @@ hash = "ebf498efc7d46c761dbef61bf69af37500c962fbf7d8aa8cd86f153ccb77e2b7"
 metafile = true
 
 [[files]]
-file = "mods/opac-towny.pw.toml"
-hash = "e14af10292001b9838f840e50f4ba3fdcb9fdcaa88c47d24f8ba543375812bf7"
+file = "mods/open-parties-and-claims-warfare.pw.toml"
+hash = "682a5b60733b22e2f8ae64e4456aa92c32184e94cdc57a15fd6efa084e0aaced"
 metafile = true
 
 [[files]]
