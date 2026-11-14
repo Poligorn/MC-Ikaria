@@ -1,6 +1,7 @@
 name = "Eve Wormhole Portals"
 filename = "wormhole-portals-0.6.jar"
 side = "both"
+pin = true
 
 [download]
 hash-format = "sha1"
