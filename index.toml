@@ -13,6 +13,10 @@ file = ".github/scripts/inject_cf_override_jars.py"
 hash = "a8184fe447d347d5dbe18b4e708dfbec8619a341a6b209d7254b750f3e47805a"
 
 [[files]]
+file = ".github/scripts/inject_mrpack_overrides.py"
+hash = "7e1605f4e4b0ca9fb2930ba0bcf7fe9dea038ab1a1406b69464bc246b68f87f2"
+
+[[files]]
 file = ".github/scripts/notify_dev.py"
 hash = "506b52b3f18a0b7579e8084c74fb6102df90df66e5cbf3d1558c27d2276ec30a"
 
@@ -34,7 +38,7 @@ hash = "c61bbdbaece50ad198d2d91aad457ae82a7a8bd4a7457478a698dbb303722c31"
 
 [[files]]
 file = ".github/workflows/release.yml"
-hash = "be1c243c2d5f8b027bcbe05a6b52cd8033e9169f1595a23e8b9c69877df2d9ec"
+hash = "4c5869ed7c89a0acbc88ee85db3c0da119ae6e961a89f0981e8451c96ac36411"
 
 [[files]]
 file = "config/CoroUtil/General.toml"

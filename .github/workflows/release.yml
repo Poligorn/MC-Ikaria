@@ -77,6 +77,13 @@ jobs:
           mkdir -p dist
           packwiz modrinth export --restrictDomains=false -o "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
 
+      # Hosts outside the Modrinth whitelist (maven.ftb.dev, Forge CDN, …)
+      # are downloaded, hashed, placed in overrides/ (or client-/server-overrides/)
+      # and dropped from modrinth.index.json so the .mrpack can be uploaded.
+      - name: Move disallowed hosts into mrpack overrides
+        if: steps.tagcheck.outputs.exists == 'false'
+        run: python .github/scripts/inject_mrpack_overrides.py "dist/${{ steps.meta.outputs.slug }}-${{ steps.meta.outputs.version }}.mrpack"
+
       # ---------- BUILD 2: CurseForge (.zip) ----------
       # packwiz кладёт [update.curseforge] только в manifest.json (ID), без jar.
       # Клиентский zip без API тогда теряет FTB — дописываем jar в overrides/mods.
