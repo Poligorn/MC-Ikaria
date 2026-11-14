@@ -6916,7 +6916,7 @@ metafile = true
 
 [[files]]
 file = "mods/eve-wormhole-portals.pw.toml"
-hash = "b549bafface6ffb654286a2197f4722d7b9e9e5f17cbb015301ea66a38ddd301"
+hash = "e74fbc9607c7b9b4d98cf323ff722afc0e9a05715362e9b5f4328187e654a0da"
 metafile = true
 
 [[files]]
@@ -7386,7 +7386,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "2621c36144a4efa550423dc0e5a21ed582c0f2d2a6a3b9363f4a39cbd6c72c9f"
+hash = "301b15c58d0785ad1243d76ef610c80db75c2d5fa5a306e4e9867ffdcbadedfa"
 
 [[files]]
 file = "resourcepacks/ASI RU.zip"
