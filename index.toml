@@ -6900,7 +6900,7 @@ metafile = true
 
 [[files]]
 file = "mods/eve-wormhole-portals.pw.toml"
-hash = "e74fbc9607c7b9b4d98cf323ff722afc0e9a05715362e9b5f4328187e654a0da"
+hash = "88be8f28a5629cf9599b2bc2b49074899b067895d5781d6b0d3f2a8a9bedb2a9"
 metafile = true
 
 [[files]]
@@ -6990,7 +6990,7 @@ metafile = true
 
 [[files]]
 file = "mods/inventory-tweaks-refoxed.pw.toml"
-hash = "23a6d125c91c8f4257c4e73fe320ce81f0b2a0c1d6316664296edca6b41acb70"
+hash = "4fbe04bd9f15b5c0f861472a9be7d95ca743c7ed820119cfb7e3caed12e071fb"
 metafile = true
 
 [[files]]
