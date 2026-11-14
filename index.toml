@@ -6825,6 +6825,11 @@ hash = "49e07d5f482e7acdb24e90a3f9c96ee772c2229ebaeb25b29f2960960cca75de"
 metafile = true
 
 [[files]]
+file = "mods/create-live-radio.pw.toml"
+hash = "83a2a36bb52b800e82fd104cf01085dd00ee8c234c7f120b756f499768a463b9"
+metafile = true
+
+[[files]]
 file = "mods/create-marketplace.pw.toml"
 hash = "6f0d92f8ee27a14c5676f693ecbb8f8b5b8126146f9954f38c35d90708522eac"
 metafile = true
@@ -6977,6 +6982,11 @@ metafile = true
 [[files]]
 file = "mods/hordium.pw.toml"
 hash = "d1b17356cd09dc9f7d18a4402f09ecdb587f0f5c4b89f0348e74de5fcc3dd2b2"
+metafile = true
+
+[[files]]
+file = "mods/ikaria-sound-categories.pw.toml"
+hash = "3b6712884a2e9202ca015432a44cafb80328b80068c2f326aa06f85413efe426"
 metafile = true
 
 [[files]]

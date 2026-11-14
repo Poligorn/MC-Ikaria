@@ -1,0 +1,8 @@
+name = "Ikaria Sound Categories"
+filename = "ikariasound-neoforge-1.21.1-1.1.2.jar"
+side = "client"
+
+[download]
+url = "https://github.com/Poligorn/MC-Ikaria/releases/download/Ikaria-Sounds/ikariasound-neoforge-1.21.1-1.1.2.jar"
+hash-format = "sha256"
+hash = "ea7b9f8fca932c0bffdb67d2f3811f26578eecff66da5b8730432690c2428036"
