@@ -1,12 +1,12 @@
-name = "Aeronautics Sky Islands"
+name = "Aeronautics Ikaria"
 author = "Poligorn"
-version = "0.6.2"
+version = "0.6.3"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "bf85a112f273a584f05bea2c323870dc4e2b888130d25c1708f0f69aa2a99d0d"
+hash = "af6fac29bb85a799d1ee769660240e4396db02948ef844a5fb284a4d659add02"
 
 [versions]
 minecraft = "1.21.1"

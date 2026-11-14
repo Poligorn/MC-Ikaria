@@ -6870,7 +6870,7 @@ metafile = true
 
 [[files]]
 file = "mods/eve-wormhole-portals.pw.toml"
-hash = "61d8e7f5bdd735830a20de43c954eb8e4df679086fc8d71299f3a3e1c6772b3d"
+hash = "610fec075dcd2d10d620885f75479fe62066068695e5ec86c07fce98798bb7f1"
 metafile = true
 
 [[files]]
@@ -6955,7 +6955,7 @@ metafile = true
 
 [[files]]
 file = "mods/inventory-tweaks-refoxed.pw.toml"
-hash = "23a6d125c91c8f4257c4e73fe320ce81f0b2a0c1d6316664296edca6b41acb70"
+hash = "4fbe04bd9f15b5c0f861472a9be7d95ca743c7ed820119cfb7e3caed12e071fb"
 metafile = true
 
 [[files]]
@@ -7318,10 +7318,6 @@ file = "options.txt"
 hash = "2621c36144a4efa550423dc0e5a21ed582c0f2d2a6a3b9363f4a39cbd6c72c9f"
 
 [[files]]
-file = "resourcepacks/ASI RU.zip"
-hash = "801bd058b4c773a7ba52ca5ddf544478dfb4543ba945ff513fdcf22ae23677ff"
-
-[[files]]
 file = "resourcepacks/Create FTB Quests.zip"
 hash = "7b9c330b8ab96c240ccb4da619df4d76b6cbf68a37364fe06998af91e59e2628"
 
@@ -7332,6 +7328,10 @@ hash = "ff589668f31a907ee2b6da5af21926577f9975d4a868e5cf316bbe22fa7d9d1b"
 [[files]]
 file = "resourcepacks/CreateSophBackpacks.zip"
 hash = "cb63a5a33c142ce588f1df020c7d4615f57f0e312064e03d4e7901060803905d"
+
+[[files]]
+file = "resourcepacks/Ikaria RU.zip"
+hash = "0aca769c022552ad1669ad43bb7e04b4183f69eae0e0206dc22091796b77397d"
 
 [[files]]
 file = "servers.dat"
