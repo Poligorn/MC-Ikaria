@@ -1,62 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "kubejs/server_scripts/Dimensions/dimension_rings.js"
-hash = "fe0f0f7d4820c8fedf1a9ee9c83b41c5c0ac67eb9551a6832700929005dde553"
-
-[[files]]
-file = "kubejs/server_scripts/Dimensions/dimension_wall.js"
-hash = "1c3f80fce88b744fd756a2b458c84d7f0eb88ee33af4a778775eac891a281fc9"
-
-[[files]]
-file = "kubejs/server_scripts/Dimensions/nether_rules.js"
-hash = "2b54b68f0b1becc55b1ea3134ba03614b1e72ba174d31c4e94dd961b5134daa6"
-
-[[files]]
-file = "kubejs/server_scripts/Dimensions/zones.js"
-hash = "5b51cf1a3ebb90f5f6c4fdbb729e033f6cdf0e04f85ef233c7331101fc2f9b25"
-
-[[files]]
-file = "kubejs/server_scripts/Events/gunsmith_bunker.js"
-hash = "0fdc96cf28aff0e3ba0256fd7342ba06f277fbed72487a0c796f6934f46a03f3"
-
-[[files]]
-file = "kubejs/server_scripts/Events/gunsmithing_loot.js"
-hash = "f993eec566d91d037a1920507197463c425a5f72a65b794a5ddacf42567b1054"
-
-[[files]]
-file = "kubejs/server_scripts/Events/lead_ore_control.js"
-hash = "1e942928dfadd73665bb53d8054287b5fb7027565d214157e04a0b791063d01a"
-
-[[files]]
-file = "kubejs/server_scripts/Events/unify_shot.js"
-hash = "590e3ef4273aa1f932afff0d654916615a96d9a52ced6b846284cea66e44947c"
-
-[[files]]
-file = "kubejs/server_scripts/Events/unify_steel.js"
-hash = "10876e7386bbe62e3b9707657cfcf7bf1ff1e767faf31a2a58a934d0b21c7c9c"
-
-[[files]]
-file = "kubejs/server_scripts/Waystones/waystone_privates.js"
-hash = "07b2e4ec8d844082c4e4fd250328a0877925efc5aff9e0dd59c9b1fc0e0c7da9"
-
-[[files]]
-file = "kubejs/server_scripts/Waystones/waystones_remove.js"
-hash = "8bee890ed08144134266e6b955977197ba69ca76e40bc4e24414587b286e8d55"
-
-[[files]]
-file = "kubejs/server_scripts/Wild_Lands/danger_indicator.js"
-hash = "d5ce6abf74f496f6b0ab8217501a7ee239f530e6d47370f19877c9470df36d32"
-
-[[files]]
-file = "kubejs/server_scripts/Wild_Lands/distance_difficulty.js"
-hash = "15a6718b3c7be44ea6a1c2b4b1dfeb91d562bd5ceea3d35247881c18cc7d68f6"
-
-[[files]]
-file = "kubejs/server_scripts/Wild_Lands/distance_loot.js"
-hash = "48c576776669c6b21c0fc0fd81710191b33b1256255c4d6a87686244ae5d2ee9"
-
-[[files]]
 file = "mods/aero_cam_sync.pw.toml"
 hash = "e8b4080963d59ce2e54a3c9771f0bf7f00c1fcd7d04b963f705b485eea47de03"
 metafile = true
