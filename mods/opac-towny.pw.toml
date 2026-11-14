@@ -1,0 +1,13 @@
+name = "Opac-Towny"
+filename = "opactowny-1.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/UdSfaTW3/versions/Lz0ebzCO/opactowny-1.0.2.jar"
+hash-format = "sha512"
+hash = "15d3551cf731597288fc75993e8a4e8304d8059b508f284120c9d1236b317bcf4b22277441cf6f7589cdcbcf51434acf5ec0fbd889508f7b8a72d142ed0c04df"
+
+[update]
+[update.modrinth]
+mod-id = "UdSfaTW3"
+version = "Lz0ebzCO"

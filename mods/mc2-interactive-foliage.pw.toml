@@ -1,0 +1,13 @@
+name = "Interactive Foliage"
+filename = "mc2_interactivefoliage-2.2.1-neoforge+1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/ba5MV2CF/versions/oKmXJIL5/mc2_interactivefoliage-2.2.1-neoforge%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "020d877d0e266fc360ff0e0c2b9f3b471ca1a74acc11da34bc5707fe6d3eebd74048bf725314d204f71adc639e134b0b3f0ce9dfef9724fcb1c51f2f3e80ca82"
+
+[update]
+[update.modrinth]
+mod-id = "ba5MV2CF"
+version = "oKmXJIL5"
