@@ -10,6 +10,8 @@ playerdata/
 logs/
 crash-reports/
 *.log
+__pycache__/
+*.pyc
 
 # Кэши лаунчеров и системы
 .mixin.out/

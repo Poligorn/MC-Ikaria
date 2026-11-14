@@ -30,13 +30,27 @@
 
 ---
 
+## GitHub Release
+
+Релиз собирается в **MC-Ikaria** (репозиторий `Aeronautics-SkyIslands-Modpack` только зеркалит те же файлы). Три артефакта:
+
+| Файл | Как ставить |
+|------|-------------|
+| `*.mrpack` | **Add Instance → Import** в Prism. FTB Quests / Library / Teams качаются с официального Maven (`maven.ftb.dev`), не из CurseForge API. |
+| `*-curseforge.zip` | Импортировать как CurseForge-пак **или** распаковать: FTB есть и в `manifest.json` (projectID), и как jar в `overrides/mods` (скачаны с официального Maven на CI). |
+| `*-manual.zip` | Распаковать в `.minecraft`: внутри уже все jar, включая FTB. |
+
+FTB-моды лицензированы **All Rights Reserved** — в git лежат только URL на Maven, не сами jar.
+
+---
+
 ## Способ 1: Prism Launcher (рекомендуется)
 
-Packwiz-репозиторий удобно ставить через Prism:
+Удобнее всего импортировать `.mrpack` с GitHub Release (таблица выше). Packwiz-репозиторий тоже ставится через Prism:
 
 1. Установите [Prism Launcher](https://prismlauncher.org/).
 2. **Add Instance → Import** (или «Packwiz / URL», если доступно в вашей версии).
-3. Укажите этот GitHub-репозиторий / ветку с `pack.toml`.
+3. Укажите `.mrpack` из GitHub Release **или** этот GitHub-репозиторий / ветку с `pack.toml`.
 4. Дождитесь загрузки модов по `index.toml`.
 5. В настройках инстанса: Java 21, `-Xmx6G` или больше.
 
@@ -94,7 +108,7 @@ Packwiz-репозиторий удобно ставить через Prism:
 
 ## Проверка установки
 
-- [ ] В списке модов есть **Create Aeronautics**, **Create**, **Sable**, **Eve Wormhole Portals**, **Modopedia**
+- [ ] В списке модов есть **Create Aeronautics**, **Create**, **Sable**, **Eve Wormhole Portals**, **Modopedia**, **FTB Quests**, **FTB Library**, **FTB Teams**
 - [ ] Нет Fabric API как загрузчика (это NeoForge-пак)
 - [ ] При создании мира появляется стартовый остров, а не обычный оверворлд «с нуля на земле»
 
