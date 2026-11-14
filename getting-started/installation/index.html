@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -624,6 +624,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Release
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1541,6 +1552,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#github-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Release
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-prism-launcher" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1744,12 +1766,38 @@
 <p>В лаунчере выделите не меньше <strong>6144 MB</strong>. Create Aeronautics и суб-уровни Sable требовательны к RAM.</p>
 </div>
 <hr />
+<h2 id="github-release">GitHub Release<a class="headerlink" href="#github-release" title="Permanent link">&para;</a></h2>
+<p>Релиз собирается в <strong>MC-Ikaria</strong> (репозиторий <code>Aeronautics-SkyIslands-Modpack</code> только зеркалит те же файлы). Три артефакта:</p>
+<table>
+<thead>
+<tr>
+<th>Файл</th>
+<th>Как ставить</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*.mrpack</code></td>
+<td><strong>Add Instance → Import</strong> в Prism. FTB Quests / Library / Teams качаются с официального Maven (<code>maven.ftb.dev</code>), не из CurseForge API.</td>
+</tr>
+<tr>
+<td><code>*-curseforge.zip</code></td>
+<td>Импортировать как CurseForge-пак <strong>или</strong> распаковать: FTB есть и в <code>manifest.json</code> (projectID), и как jar в <code>overrides/mods</code> (скачаны с официального Maven на CI).</td>
+</tr>
+<tr>
+<td><code>*-manual.zip</code></td>
+<td>Распаковать в <code>.minecraft</code>: внутри уже все jar, включая FTB.</td>
+</tr>
+</tbody>
+</table>
+<p>FTB-моды лицензированы <strong>All Rights Reserved</strong> — в git лежат только URL на Maven, не сами jar.</p>
+<hr />
 <h2 id="1-prism-launcher">Способ 1: Prism Launcher (рекомендуется)<a class="headerlink" href="#1-prism-launcher" title="Permanent link">&para;</a></h2>
-<p>Packwiz-репозиторий удобно ставить через Prism:</p>
+<p>Удобнее всего импортировать <code>.mrpack</code> с GitHub Release (таблица выше). Packwiz-репозиторий тоже ставится через Prism:</p>
 <ol>
 <li>Установите <a href="https://prismlauncher.org/">Prism Launcher</a>.</li>
 <li><strong>Add Instance → Import</strong> (или «Packwiz / URL», если доступно в вашей версии).</li>
-<li>Укажите этот GitHub-репозиторий / ветку с <code>pack.toml</code>.</li>
+<li>Укажите <code>.mrpack</code> из GitHub Release <strong>или</strong> этот GitHub-репозиторий / ветку с <code>pack.toml</code>.</li>
 <li>Дождитесь загрузки модов по <code>index.toml</code>.</li>
 <li>В настройках инстанса: Java 21, <code>-Xmx6G</code> или больше.</li>
 </ol>
@@ -1805,7 +1853,7 @@
 <hr />
 <h2 id="_8">Проверка установки<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> В списке модов есть <strong>Create Aeronautics</strong>, <strong>Create</strong>, <strong>Sable</strong>, <strong>Eve Wormhole Portals</strong>, <strong>Modopedia</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> В списке модов есть <strong>Create Aeronautics</strong>, <strong>Create</strong>, <strong>Sable</strong>, <strong>Eve Wormhole Portals</strong>, <strong>Modopedia</strong>, <strong>FTB Quests</strong>, <strong>FTB Library</strong>, <strong>FTB Teams</strong></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Нет Fabric API как загрузчика (это NeoForge-пак)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> При создании мира появляется стартовый остров, а не обычный оверворлд «с нуля на земле»</li>
 </ul>
@@ -1934,10 +1982,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../../javascripts/icaria.js"></script>
       
