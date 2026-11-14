@@ -6900,7 +6900,7 @@ metafile = true
 
 [[files]]
 file = "mods/eve-wormhole-portals.pw.toml"
-hash = "88be8f28a5629cf9599b2bc2b49074899b067895d5781d6b0d3f2a8a9bedb2a9"
+hash = "610fec075dcd2d10d620885f75479fe62066068695e5ec86c07fce98798bb7f1"
 metafile = true
 
 [[files]]
