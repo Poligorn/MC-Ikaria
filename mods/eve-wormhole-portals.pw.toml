@@ -1,13 +1,13 @@
 name = "Eve Wormhole Portals"
-filename = "wormhole-portals-0.5.1.jar"
+filename = "wormhole-portals-0.6.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "159fd9034db889206c26b56aaf6afd73acf83cd5"
+hash = "c51cbac0912c3f8f74aca97b4d7f3e04c367226f"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9155444
+file-id = 9470330
 project-id = 1713071
