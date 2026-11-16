@@ -7094,11 +7094,6 @@ hash = "381953b94e1187e81a1c48b72b910efee862aa3b30812c77df79dd613f97a43c"
 metafile = true
 
 [[files]]
-file = "mods/ntgl.pw.toml"
-hash = "942cfe73dab167575181675bbc75b68f1484ea68df831d412df588d05d01fbcf"
-metafile = true
-
-[[files]]
 file = "mods/nukateams-gun-lib.pw.toml"
 hash = "8b4af86dc4c1846469326cc3fe73350a98a119650be241e499c6bd575c2e2482"
 metafile = true
