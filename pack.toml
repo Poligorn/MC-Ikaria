@@ -1,13 +1,13 @@
 name = "MC ASI Online"
 author = "Poligorn"
-version = "0.1.0"
+version = "0.6.3"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "fbf4ecac77d83c1c875ae4e614e507fcd270e8d185f791a10fbc66630ee3261d"
+hash = "cd8bbf9eb58737a2d1ce5f39a9a0ee2527cdbad2f807d89d72923dfc0e5b0d03"
 
 [versions]
 minecraft = "1.21.1"
-neoforge = "21.1.235"
+neoforge = "21.1.250"

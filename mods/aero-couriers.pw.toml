@@ -1,0 +1,13 @@
+name = "Create Aeronautics Couriers"
+filename = "aerocouriers-0.3.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "74c4f1f6f5a910def141fbf662b87ac1f4c020e1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9419085
+project-id = 1779110

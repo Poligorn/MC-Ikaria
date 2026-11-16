@@ -1,0 +1,13 @@
+name = "Create: Gunsmithing Aeronautics Combat"
+filename = "cgs-aeronautics-compat-1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "145e837b7c934cc5e079c84ef9fe1e4b90272046"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9410969
+project-id = 1780533
