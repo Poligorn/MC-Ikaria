@@ -3,6 +3,7 @@ filename = "aeroportals-1.21.1-1.3.6.jar"
 side = "both"
 
 [download]
+url = "https://mediafilez.forgecdn.net/files/9281/419/aeroportals-1.21.1-1.3.6.jar"
 hash-format = "sha1"
 hash = "0638ae05d712b3d0bbbb5c3a1ea39553b526ffa0"
 mode = "metadata:curseforge"

@@ -3,6 +3,7 @@ filename = "cgs-aeronautics-compat-1.1.0.jar"
 side = "both"
 
 [download]
+url = "https://mediafilez.forgecdn.net/files/9410/969/cgs-aeronautics-compat-1.1.0.jar"
 hash-format = "sha1"
 hash = "145e837b7c934cc5e079c84ef9fe1e4b90272046"
 mode = "metadata:curseforge"

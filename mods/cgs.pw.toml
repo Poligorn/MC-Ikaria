@@ -3,6 +3,7 @@ filename = "create-gunsmithing-1.21.1-1.4.9.jar"
 side = "both"
 
 [download]
+url = "https://mediafilez.forgecdn.net/files/8501/347/create-gunsmithing-1.21.1-1.4.9.jar"
 hash-format = "sha1"
 hash = "b93931be985419f5ac021116e8fd166ce62e92de"
 mode = "metadata:curseforge"
