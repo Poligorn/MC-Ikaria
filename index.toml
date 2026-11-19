@@ -1,11 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "mods/aero-couriers.pw.toml"
-hash = "db7630eb951d469e2e3df25feb6e5c876d656d5281695afc2d291d1464fc79a1"
-metafile = true
-
-[[files]]
 file = "mods/aero_cam_sync.pw.toml"
 hash = "e8b4080963d59ce2e54a3c9771f0bf7f00c1fcd7d04b963f705b485eea47de03"
 metafile = true
