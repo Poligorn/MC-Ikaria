@@ -131,6 +131,7 @@ nav:
   - Гайды:
       - guides/index.md
       - Первые шаги: guides/getting-started-guide.md
+      - Главы FTB Quests: guides/ftb-quests-chapters.md
       - Книги Modopedia: guides/modopedia.md
   - Планирование:
       - planning/index.md
