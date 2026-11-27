@@ -144,6 +144,69 @@
 			x: 1.0d
 			y: 1.5d
 		}
+		{
+			dependencies: [
+				"3364BA01A0AF91D8"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				count: 1
+				id: "eveportalnether:portal_detector"
+			}
+			id: "A4C91E70B2D84F01"
+			can_repeat: true
+			subtitle: "A one-use detector"
+			title: "A hole that must be read"
+			tasks: [{
+				id: "B5D02F81C3E95012"
+				type: "checkmark"
+			}]
+			rewards: [
+				{
+					id: "E8A35214F61C8345"
+					autoclaim: "no_toast"
+					type: "item"
+					item: {
+						count: 1
+						id: "eveportalnether:portal_detector"
+						components: {
+							"minecraft:max_damage": 1
+							"minecraft:damage": 0
+						}
+					}
+				}
+				{
+					id: "E9B46325A72D9456"
+					autoclaim: "no_toast"
+					type: "command"
+					command: "/eveportal demo {p}"
+					permission_level: 2
+					silent: true
+				}
+			]
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"A4C91E70B2D84F01"
+			]
+			hide_until_deps_complete: true
+			icon: {
+				count: 1
+				id: "eveportalnether:portal_detector"
+			}
+			id: "C6E13092D4FA6123"
+			subtitle: "Scan and step back"
+			title: "Read it before it dies"
+			tasks: [{
+				advancement: "eveportalnether:decrypt"
+				id: "D7F24103E50B7234"
+				type: "advancement"
+			}]
+			x: -0.5d
+			y: 2.0d
+		}
 	]
 	title: "A rock and three names"
 }
