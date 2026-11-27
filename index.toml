@@ -4334,7 +4334,7 @@ hash = "e57d8311aec9f524911ed1313cabf138bb7fa5a2d3ba985a00a2a267ff35ef78"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/initial_research.snbt"
-hash = "bbc253789b7442356b298c857744f1edf471dbc7768033c63bf0b39ab927322e"
+hash = "4f10d70b625bb9311c1e52753f9506cb57ebd7674e628766a5a99d312c9e1a94"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -4342,11 +4342,11 @@ hash = "b8b7acb8166cc595562346715dd2881753451d28586780b04b6c8ded659d421e"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "e2705279b83187e7f73b1a980f6cb4845f3a5eff17cd82b653621c34b169c18a"
+hash = "de39c5fe18a89887fefeb02bce0538d3a5b7e1f0ad0b53d31bfa26d991eba4b0"
 
 [[files]]
 file = "config/ftbquests/quests/lang/ru_ru.snbt"
-hash = "4625a5febd73ad6007e0f25b2f26aadfa78fec28f02398568a235ae02e77999d"
+hash = "b9995483068021e37b8494e15ba29f46c63234db54649c5668e1380a53aee3be"
 
 [[files]]
 file = "config/ftbteams-server.snbt"

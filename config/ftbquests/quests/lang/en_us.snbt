@@ -44,4 +44,20 @@
 	task.72B74F23E50B6202.title: "Andesite propeller"
 	task.73C85034F61C7303.title: "Three aerolite twigs"
 	task.33C85034F61C73A5.title: "Paraglider"
+	quest.A4C91E70B2D84F01.title: "A hole that must be read"
+	quest.A4C91E70B2D84F01.quest_subtitle: "A one-use detector"
+	quest.A4C91E70B2D84F01.quest_desc: [
+		"In the wild the holes open on their own. They have to be read with a Portal Detector — otherwise I will not know how long they have, or how many passages remain. Stand too close when one dies, and the implosion kills."
+		""
+		"I will mark this line — a training hole will stand in front of me, and a one-use detector will be in my hand. It does not lead to the Nether. I need open ground: if the stones are in the way, the mark will say so, and I can press it again. If I lose the scanner, or the hole is already gone, I can press it again."
+	]
+	quest.C6E13092D4FA6123.title: "Read it before it dies"
+	quest.C6E13092D4FA6123.quest_subtitle: "Scan and step back"
+	quest.C6E13092D4FA6123.quest_desc: [
+		"Keep the detector in hand and stay close while it decrypts. When the signature comes through, the training hole begins to die at once: a warning, a shake, a sound, the implosion."
+		""
+		"The training strike is not lethal, there are no shards, the blocks stay. The lesson is the same: a real one must be read first — and I must step back when it starts to tremble."
+	]
+	task.B5D02F81C3E95012.title: "Summon the training portal"
+	task.D7F24103E50B7234.title: "Scan the portal"
 }
